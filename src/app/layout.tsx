@@ -8,12 +8,12 @@ const Matter = localFont({
   src: [
     {
       path: "../../public/fonts/Matter-Regular.db893963.ttf",
-      weight: "300",
+      weight: "400",
       style: "normal",
     },
     {
       path: "../../public/fonts/Matter-Medium.2d3e576a.ttf",
-      weight: "400",
+      weight: "500",
       style: "normal",
     },
   ],
@@ -39,7 +39,7 @@ export default function RootLayout({
     <html lang="en" className="dark">
       <body className={`${Matter.variable} ${systemMono.variable} antialiased`}>
         <div
-          className="min-h-screen max-w-[1512px] flex flex-col"
+          className="min-h-screen max-w-[1512px] mx-auto flex flex-col"
           style={{ scrollBehavior: "smooth" }}
         >
           <Header />

@@ -41,12 +41,28 @@
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
+
+  --color-text-primary: var(--TEXT-PRIMARY);
+  --color-text-secondary: var(--TEXT-SECONDARY);
+  --color-text-tertiary: var(--TEXT-TERTIARY);
+ 
+  --color-bg-dark: var(--BG-DARK);
+  --color-bg-white: var(--BG-WHITE);
+  --color-bg-white-20: var(--BG-WHITE-20);
+  --color-bg-white-12: var(--BG-WHITE-12);
+  --color-bg-white-10: var(--BG-WHITE-10);
+  --color-bg-white-6: var(--BG-WHITE-6);
+
+  --color-line-white-24: var(--LINE-WHITE-24);
+  --color-line-white-16: var(--LINE-WHITE-16);
+
+  --color-accent-green: var(--ACCENT-GREEN);
 }
 
 :root {
   --radius: 0.625rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.145 0 0);
+  --background: var(--BG-WHITE);
+  --foreground: var(--BG-DARK);
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.145 0 0);
   --popover: oklch(1 0 0);
@@ -76,11 +92,27 @@
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
+
+  --TEXT-PRIMARY: #ffffff;
+  --TEXT-SECONDARY: #ffffffb8;
+  --TEXT-TERTIARY: #ffffff99;
+
+  --BG-DARK: #000000;
+  --BG-WHITE: #ffffff;
+  --BG-WHITE-20: #ffffff33;
+  --BG-WHITE-12: #ffffff1f;
+  --BG-WHITE-10: #ffffff1a;
+  --BG-WHITE-6: #ffffff0f;
+
+  --LINE-WHITE-24: #ffffff3d;
+  --LINE-WHITE-16: #ffffff29;
+
+  --ACCENT-GREEN: #02bf46;
 }
 
 .dark {
-  --background: oklch(0.145 0 0);
-  --foreground: oklch(0.985 0 0);
+  --background: var(--BG-DARK);
+  --foreground: var(--BG-WHITE);
   --card: oklch(0.205 0 0);
   --card-foreground: oklch(0.985 0 0);
   --popover: oklch(0.205 0 0);
@@ -110,6 +142,22 @@
   --sidebar-accent-foreground: oklch(0.985 0 0);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.556 0 0);
+
+  --TEXT-PRIMARY: #ffffff;
+  --TEXT-SECONDARY: #ffffffb8;
+  --TEXT-TERTIARY: #ffffff99;
+
+  --BG-DARK: #000000;
+  --BG-WHITE: #ffffff;
+  --BG-WHITE-20: #ffffff33;
+  --BG-WHITE-12: #ffffff1f;
+  --BG-WHITE-10: #ffffff1a;
+  --BG-WHITE-6: #ffffff0f;
+
+  --LINE-WHITE-24: #ffffff3d;
+  --LINE-WHITE-16: #ffffff29;
+
+  --ACCENT-GREEN: #02bf46;
 }
 
 @layer base {
@@ -132,6 +180,330 @@
 
 .font-matter {
   font-family: var(--font-matter), system-ui, sans-serif !important;
+}
+
+/* TEXT_DESKTOP */
+.matter-h1-reg {
+  font-family: var(--font-matter), system-ui, sans-serif !important;
+  font-weight: 400;
+  font-size: 78px;
+  line-height: 98%;
+  letter-spacing: -0.02em;
+}
+
+.matter-h2-reg {
+  font-family: var(--font-matter), system-ui, sans-serif !important;
+  font-weight: 400;
+  font-size: 68px;
+  line-height: 104%;
+  letter-spacing: -0.04em;
+}
+
+.matter-h3-reg {
+  font-family: var(--font-matter), system-ui, sans-serif !important;
+  font-weight: 400;
+  font-size: 62px;
+  line-height: 104%;
+  letter-spacing: -0.04em;
+}
+
+.matter-h4-reg {
+  font-family: var(--font-matter), system-ui, sans-serif !important;
+  font-weight: 400;
+  font-size: 56px;
+  line-height: 110%;
+  letter-spacing: -0.02em;
+}
+
+.matter-h5-reg {
+  font-family: var(--font-matter), system-ui, sans-serif !important;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 98%;
+  letter-spacing: -0.04em;
+}
+
+.matter-h6-reg {
+  font-family: var(--font-matter), system-ui, sans-serif !important;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 132%;
+  letter-spacing: -0.02em;
+}
+
+.matter-p1-reg {
+  font-family: var(--font-matter), system-ui, sans-serif !important;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 28px;
+  letter-spacing: -0.02em;
+}
+
+.matter-p1-med {
+  font-family: var(--font-matter), system-ui, sans-serif !important;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 28px;
+  letter-spacing: -0.02em;
+}
+
+.matter-p2-reg {
+  font-family: var(--font-matter), system-ui, sans-serif !important;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 120%;
+  letter-spacing: -0.02em;
+}
+
+.matter-p2-med {
+  font-family: var(--font-matter), system-ui, sans-serif !important;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 120%;
+  letter-spacing: -0.02em;
+}
+
+.matter-p3-reg {
+  font-family: var(--font-matter), system-ui, sans-serif !important;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: -0.02em;
+}
+
+.matter-p3-med {
+  font-family: var(--font-matter), system-ui, sans-serif !important;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: -0.02em;
+}
+
+.matter-p4-reg {
+  font-family: var(--font-matter), system-ui, sans-serif !important;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 142%;
+  letter-spacing: -0.02em;
+}
+
+.matter-p4-med {
+  font-family: var(--font-matter), system-ui, sans-serif !important;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 142%;
+  letter-spacing: -0.02em;
+}
+
+.matter-s1-reg {
+  font-family: var(--font-matter), system-ui, sans-serif !important;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: -0.02em;
+}
+
+.matter-s1-med {
+  font-family: var(--font-matter), system-ui, sans-serif !important;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: -0.02em;
+}
+
+.matter-s2-reg {
+  font-family: var(--font-matter), system-ui, sans-serif !important;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: -0.02em;
+}
+
+.matter-s2-med {
+  font-family: var(--font-matter), system-ui, sans-serif !important;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: -0.02em;
+}
+
+.matter-button-link-big {
+  font-family: var(--font-matter), system-ui, sans-serif !important;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: -0.02em;
+}
+
+.matter-button-link-med {
+  font-family: var(--font-matter), system-ui, sans-serif !important;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: -0.02em;
+}
+
+/* TEXT_MOBILE */
+@media screen and (max-width: 768px) {
+  .matter-h1-reg {
+    font-family: var(--font-matter), system-ui, sans-serif !important;
+    font-weight: 400;
+    font-size: 46px;
+    line-height: 104%;
+    letter-spacing: -0.02em;
+  }
+
+  .matter-h2-reg {
+    font-family: var(--font-matter), system-ui, sans-serif !important;
+    font-weight: 400;
+    font-size: 38px;
+    line-height: 104%;
+    letter-spacing: -0.04em;
+  }
+
+  .matter-h3-reg {
+    font-family: var(--font-matter), system-ui, sans-serif !important;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 104%;
+    letter-spacing: -0.04em;
+  }
+
+  .matter-h4-reg {
+    font-family: var(--font-matter), system-ui, sans-serif !important;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 120%;
+    letter-spacing: -0.02em;
+  }
+
+  .matter-h5-reg {
+    font-family: var(--font-matter), system-ui, sans-serif !important;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 120%;
+    letter-spacing: -0.02em;
+  }
+
+  .matter-h6-reg {
+    font-family: var(--font-matter), system-ui, sans-serif !important;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 120%;
+    letter-spacing: -0.02em;
+  }
+
+  .matter-p1-reg {
+    font-family: var(--font-matter), system-ui, sans-serif !important;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: -0.02em;
+  }
+
+  .matter-p1-med {
+    font-family: var(--font-matter), system-ui, sans-serif !important;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: -0.02em;
+  }
+
+  .matter-p2-reg {
+    font-family: var(--font-matter), system-ui, sans-serif !important;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.02em;
+  }
+
+  .matter-p2-med {
+    font-family: var(--font-matter), system-ui, sans-serif !important;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.02em;
+  }
+
+  .matter-p3-reg {
+    font-family: var(--font-matter), system-ui, sans-serif !important;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: -0.02em;
+  }
+
+  .matter-p3-med {
+    font-family: var(--font-matter), system-ui, sans-serif !important;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: -0.02em;
+  }
+
+  .matter-p4-reg {
+    font-family: var(--font-matter), system-ui, sans-serif !important;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 142%;
+    letter-spacing: -0.02em;
+  }
+
+  .matter-p4-med {
+    font-family: var(--font-matter), system-ui, sans-serif !important;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 142%;
+    letter-spacing: -0.02em;
+  }
+
+  .matter-s1-reg {
+    font-family: var(--font-matter), system-ui, sans-serif !important;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: -0.02em;
+  }
+
+  .matter-s1-med {
+    font-family: var(--font-matter), system-ui, sans-serif !important;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: -0.02em;
+  }
+
+  .matter-s2-reg {
+    font-family: var(--font-matter), system-ui, sans-serif !important;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 14px;
+    letter-spacing: -0.02em;
+  }
+
+  .matter-s2-med {
+    font-family: var(--font-matter), system-ui, sans-serif !important;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 14px;
+    letter-spacing: -0.02em;
+  }
+
+  .matter-button-link-big {
+    font-family: var(--font-matter), system-ui, sans-serif !important;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: -0.02em;
+  }
+
+  .matter-button-link-med {
+    font-family: var(--font-matter), system-ui, sans-serif !important;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+    letter-spacing: -0.02em;
+  }
 }
 
 /* Адаптивні кольори для хедера - точно як на Rejouice */
