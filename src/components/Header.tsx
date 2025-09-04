@@ -29,7 +29,7 @@ export default function Header() {
       <div className="flex w-full h-full flex-row px-4 md:px-[121px] justify-between ">
         <div className="flex items-center header-logo">Logo</div>
         <div className="flex items-center">
-          <nav className="hidden md:flex space-x-4 lg:space-x-8 hoves-p2-reg">
+          <nav className="hidden md:flex space-x-4 lg:space-x-8 font-matter">
             <Link
               href="/#solutions"
               className={`relative group header-text ${

@@ -17,7 +17,7 @@ const Matter = localFont({
       style: "normal",
     },
   ],
-  variable: "--font-tt-hoves",
+  variable: "--font-matter",
   display: "swap",
 });
 
