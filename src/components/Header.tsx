@@ -1,13 +1,24 @@
 "use client";
 import Link from "next/link";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import { Button } from "./ui/button";
 
 export default function Header() {
   const pathname = usePathname();
+  const [currentHash, setCurrentHash] = useState("");
 
   useEffect(() => {
+    // Встановлюємо поточний hash
+    setCurrentHash(window.location.hash);
+
+    // Слухаємо зміни hash
+    const handleHashChange = () => {
+      setCurrentHash(window.location.hash);
+    };
+
+    window.addEventListener("hashchange", handleHashChange);
+
     const groups = document.querySelectorAll(".group");
 
     groups.forEach((group) => {
@@ -22,6 +33,11 @@ export default function Header() {
         group.removeEventListener("mouseenter", handleMouseEnter);
       };
     });
+
+    // Cleanup
+    return () => {
+      window.removeEventListener("hashchange", handleHashChange);
+    };
   }, []);
 
   return (
@@ -33,7 +49,7 @@ export default function Header() {
             <Link
               href="/#solutions"
               className={`relative group header-text ${
-                pathname === "/" && window.location.hash === "#solutions"
+                pathname === "/" && currentHash === "#solutions"
                   ? "header-text-active"
                   : ""
               }`}
@@ -44,7 +60,7 @@ export default function Header() {
             <Link
               href="/#how-it-works"
               className={`relative group header-text ${
-                pathname === "/" && window.location.hash === "#how-it-works"
+                pathname === "/" && currentHash === "#how-it-works"
                   ? "header-text-active"
                   : ""
               }`}
@@ -55,7 +71,7 @@ export default function Header() {
             <Link
               href="/#case-studies"
               className={`relative group header-text ${
-                pathname === "/" && window.location.hash === "#case-studies"
+                pathname === "/" && currentHash === "#case-studies"
                   ? "header-text-active"
                   : ""
               }`}
@@ -66,7 +82,7 @@ export default function Header() {
             <Link
               href="/#pricing"
               className={`relative group header-text ${
-                pathname === "/" && window.location.hash === "#pricing"
+                pathname === "/" && currentHash === "#pricing"
                   ? "header-text-active"
                   : ""
               }`}
