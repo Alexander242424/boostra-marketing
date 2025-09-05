@@ -31,7 +31,8 @@ export default function CopilotSections() {
           <div className="relative z-10 w-full max-w-[520px]">
             <Input
               className="w-full"
-              placeholder="Paste your page URL..."
+              placeholder="Tell me why users don't buy?"
+              btnText="Ask Boostra"
               onBtnClick={() => console.log("Analyze clicked")}
             />
           </div>

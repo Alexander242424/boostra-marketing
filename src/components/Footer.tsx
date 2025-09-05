@@ -1,6 +1,3 @@
-import InputDemo from "./InputDemo";
-import { Button } from "./ui/button";
-
 export default function Footer() {
   return (
     <footer>

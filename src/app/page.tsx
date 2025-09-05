@@ -1,11 +1,12 @@
 import BrandSections from "@/components/BrandSections";
 import CopilotSections from "@/components/CopilotSections";
 import CostSections from "@/components/CostSections";
+import EnterpriseGrade from "@/components/EnterpriseGrade";
 import HeroSections from "@/components/HeroSections";
 import InfoCard from "@/components/InfoCard";
+import QuestionsSection from "@/components/QuestionsSection";
 import RevenueOpportunities from "@/components/RevenueOpportunities";
 import TextBlock from "@/components/TextBlock";
-import Image from "next/image";
 
 export default function Home() {
   return (
@@ -43,6 +44,9 @@ export default function Home() {
       <RevenueOpportunities />
       <CopilotSections />
       <CostSections />
+      {/* payment sections */}
+      <QuestionsSection />
+      <EnterpriseGrade />
     </div>
   );
 }

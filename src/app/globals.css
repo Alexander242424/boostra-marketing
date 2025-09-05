@@ -60,11 +60,16 @@
 
   --color-brand-blue: #1c42ff;
   --color-brand-blue-light: #4a68ff;
-  
+
   --brand-blue: linear-gradient(93.54deg, #1c42ff -3.63%, #3c99ff 98.73%);
   --brand-blue-light: linear-gradient(93.54deg, #4a68ff -3.63%, #67b0ff 98.73%);
-  --gradient-blue: linear-gradient(90deg, #0F53FF 0%, #63AFFF 40.87%);
-  --gradient-blue-block: linear-gradient(90deg, #1C61FF -8.4%, #64AEFE 46.88%, #64AEFE 67.41%);
+  --gradient-blue: linear-gradient(90deg, #0f53ff 0%, #63afff 40.87%);
+  --gradient-blue-block: linear-gradient(
+    90deg,
+    #1c61ff -8.4%,
+    #64aefe 46.88%,
+    #64aefe 67.41%
+  );
 }
 
 :root {
@@ -549,49 +554,26 @@
 }
 
 /* Адаптивні кольори для хедера - точно як на Rejouice */
-header {
-  isolation: isolate;
-  mix-blend-mode: difference;
-}
 
 .header-text {
   color: #ffffff;
-  mix-blend-mode: difference;
-  isolation: isolate;
 }
 
 .header-text:hover {
   color: #ffffff;
-  mix-blend-mode: difference;
-  isolation: isolate;
-  opacity: 0.8;
 }
 
 .header-text-active {
   color: #ffffff;
-  mix-blend-mode: difference;
-  isolation: isolate;
   opacity: 0.6;
-}
-
-.header-logo {
-  mix-blend-mode: difference;
-  isolation: isolate;
 }
 
 .header-logo:hover {
   opacity: 0.8;
 }
 
-.header-icon {
-  mix-blend-mode: difference;
-  isolation: isolate;
-}
-
 .header-underline {
   background-color: #ffffff;
-  mix-blend-mode: difference;
-  isolation: isolate;
 }
 
 /* Початковий стан - підкреслення невидиме */

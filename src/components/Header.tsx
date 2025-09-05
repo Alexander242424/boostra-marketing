@@ -1,13 +1,17 @@
 "use client";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
 import { Button } from "./ui/button";
 import BigLogo from "@/assets/big-logo.svg";
+import { useNearestParentScrollListener } from "@/hooks/use-nearest-parent-scroll-listener";
 
 export default function Header() {
   const pathname = usePathname();
+  const headerRef = useRef<HTMLDivElement>(null);
   const [currentHash, setCurrentHash] = useState("");
+  const [isScrolled, setIsScrolled] = useState(false);
+  useNearestParentScrollListener(headerRef, setIsScrolled);
 
   useEffect(() => {
     // Встановлюємо поточний hash
@@ -42,9 +46,20 @@ export default function Header() {
   }, []);
 
   return (
-    <header className="flex bg-transparent min-h-[66px] md:min-h-[72px] sticky top-0 z-50 items-center">
+    <header
+      ref={headerRef}
+      className="flex bg-transparent min-h-[66px] md:min-h-[72px] sticky top-0 z-50 items-center"
+      style={
+        isScrolled
+          ? {
+              backdropFilter: "blur(160px)",
+              WebkitBackdropFilter: "blur(160px)",
+            }
+          : undefined
+      }
+    >
       <div className="flex w-full h-full flex-row px-4 md:px-[121px] justify-between ">
-        <div className="flex items-center">
+        <div className="flex items-center header-logo cursor-pointer">
           <BigLogo />
         </div>
         <div className="flex items-center">

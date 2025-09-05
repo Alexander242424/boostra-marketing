@@ -6,7 +6,7 @@ export interface InputProps
   extends React.InputHTMLAttributes<HTMLInputElement> {
   iconLeft?: React.ReactNode;
   onBtnClick?: () => void;
-  analyzeText?: string;
+  btnText?: string;
 }
 
 const Input = React.forwardRef<HTMLInputElement, InputProps>(
@@ -16,7 +16,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
       type,
       iconLeft,
       onBtnClick,
-      analyzeText = "Analyze",
+      btnText = "Analyze",
       ...props
     },
     ref
@@ -42,7 +42,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
           {onBtnClick && (
             <div className="absolute right-2">
               <Button size="lg" onClick={onBtnClick}>
-                {analyzeText}
+                {btnText}
               </Button>
             </div>
           )}
