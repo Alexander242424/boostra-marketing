@@ -37,6 +37,7 @@ export default function SplitText({ children, className }: SplitTextProps) {
                 ease: "easeOut",
               }}
               className="inline-block mr-2"
+              style={{ display: "inline-block" }}
             >
               {word}
             </motion.span>
@@ -47,7 +48,7 @@ export default function SplitText({ children, className }: SplitTextProps) {
         const childProps = child.props as { children?: React.ReactNode };
         const processedChild = processChildren(childProps.children);
         result.push(
-          React.cloneElement(child as React.ReactElement<any>, {
+          React.cloneElement(child as React.ReactElement<{ children?: React.ReactNode }>, {
             key: `element-${wordIndex}`,
             children: processedChild,
           })
