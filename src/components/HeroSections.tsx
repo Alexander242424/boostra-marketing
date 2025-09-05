@@ -20,7 +20,7 @@ export default function HeroSections() {
         </div>
         <div className="flex flex-col gap-5 md:gap-4">
           <Input
-            placeholder="Paste your page URL..."
+            placeholder="Page URL..."
             iconLeft={<GlobeIcon />}
             onBtnClick={() => console.log("Analyze clicked")}
           />
@@ -40,7 +40,7 @@ export default function HeroSections() {
           preload="metadata"
           webkit-playsinline="true"
         >
-          <source src="/video/011MG_141_animation_1.webm" type="video/webm" />
+          <source src="/video/Screen Recording 2025-09-05 at 12.25.01.mov" />
           Your browser does not support the video tag.
         </video>
       </div>

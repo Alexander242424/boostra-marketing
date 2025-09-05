@@ -21,9 +21,9 @@ export default function InfoCard({
     <div className="flex flex-col w-full max-w-[788px] gap-8 md:gap-[48px] items-center mt-[64px] mb-[48px] md:mb-[160px] md:mt-0">
       <div className="flex flex-col gap-6 md:gap-8 items-center">
         <div className="flex flex-col gap-3 md:gap-6">
-          <h1 className="matter-h3-reg text-center">
+          <h3 className="matter-h3-reg text-center">
             {title[0]} <span className="text-gradient-blue">{title[1]} </span>
-          </h1>
+          </h3>
           <p className="matter-p1-reg text-text-tertiary text-center">
             {description}
           </p>

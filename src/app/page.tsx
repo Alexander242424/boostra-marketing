@@ -1,6 +1,8 @@
 import BrandSections from "@/components/BrandSections";
+import CopilotSections from "@/components/CopilotSections";
 import HeroSections from "@/components/HeroSections";
 import InfoCard from "@/components/InfoCard";
+import RevenueOpportunities from "@/components/RevenueOpportunities";
 import TextBlock from "@/components/TextBlock";
 import Image from "next/image";
 
@@ -36,6 +38,9 @@ export default function Home() {
           videoSrc={"/video/011MG_141_animation_1.webm"}
         />
       </div>
+      {/* carusel section */}
+      <RevenueOpportunities />
+      <CopilotSections />
     </div>
   );
 }
