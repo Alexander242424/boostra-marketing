@@ -32,14 +32,15 @@ export default function HeroSections() {
       </div>
       <div className="w-full h-full flex flex-col self-center rounded-[40px] overflow-hidden bg-[#FFFFFF05]">
         <video
-          className="w-full h-full"
+          className="w-full h-full object-cover"
           autoPlay
           muted
           loop
           playsInline
-          preload="auto"
+          preload="metadata"
+          webkit-playsinline="true"
         >
-          <source src="/video/MG_141_animation_1.webm" type="video/webm" />
+          <source src="/video/011MG_141_animation_1.webm" type="video/webm" />
           Your browser does not support the video tag.
         </video>
       </div>

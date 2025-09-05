@@ -63,7 +63,7 @@
   
   --brand-blue: linear-gradient(93.54deg, #1c42ff -3.63%, #3c99ff 98.73%);
   --brand-blue-light: linear-gradient(93.54deg, #4a68ff -3.63%, #67b0ff 98.73%);
-  --gradient-blue: linear-gradient(180deg, #0F53FF 0%, #63AFFF 40.87%);
+  --gradient-blue: linear-gradient(90deg, #0F53FF 0%, #63AFFF 40.87%);
 }
 
 :root {
