@@ -22,7 +22,7 @@ export default function BrandSections() {
         Join over <span className="text-gradient-blue">5000</span> businesses
         using Boostra
       </p>
-      <div className="flex flex-wrap gap-2 md:gap-4">
+      <div className="flex flex-wrap gap-2 md:gap-4 justify-center">
         {logos.map((logo, index) => (
           <div
             key={index}

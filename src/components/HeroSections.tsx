@@ -24,7 +24,7 @@ export default function HeroSections() {
             iconLeft={<GlobeIcon />}
             onBtnClick={() => console.log("Analyze clicked")}
           />
-          <div className="flex matter-s1-reg text-text-tertiary items-center gap-[5px] md:pl-6 justify-center md:justify-start">
+          <div className="flex matter-s1-reg text-text-tertiary items-center gap-[5px] md:pl-6">
             <CreditCardIcon />
             <p>No credit card required</p>
           </div>
