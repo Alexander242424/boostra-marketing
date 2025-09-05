@@ -2,7 +2,6 @@ import React from "react";
 
 interface CostCardProps {
   icon: React.ReactNode;
-  number: string;
   title: string;
   description: string;
 }
