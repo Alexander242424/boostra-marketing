@@ -64,6 +64,7 @@
   --brand-blue: linear-gradient(93.54deg, #1c42ff -3.63%, #3c99ff 98.73%);
   --brand-blue-light: linear-gradient(93.54deg, #4a68ff -3.63%, #67b0ff 98.73%);
   --gradient-blue: linear-gradient(90deg, #0F53FF 0%, #63AFFF 40.87%);
+  --gradient-blue-block: linear-gradient(90deg, #1C61FF -8.4%, #64AEFE 46.88%, #64AEFE 67.41%);
 }
 
 :root {
@@ -206,6 +207,13 @@
 /* Gradient text */
 .text-gradient-blue {
   background: var(--gradient-blue);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-gradient-blue-block {
+  background: var(--gradient-blue-block);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
