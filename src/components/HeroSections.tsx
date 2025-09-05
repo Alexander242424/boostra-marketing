@@ -14,8 +14,8 @@ export default function HeroSections() {
             & Revenue engine.
           </h1>
           <p className="matter-p1-reg text-text-tertiary text-center md:text-left">
-            Find what&apos;s broken, fix usability & conversions, boost revenue — in
-            minutes, not weeks.
+            Find what&apos;s broken, fix usability & conversions, boost revenue
+            — in minutes, not weeks.
           </p>
         </div>
         <div className="flex flex-col gap-5 md:gap-4">
@@ -24,7 +24,7 @@ export default function HeroSections() {
             iconLeft={<GlobeIcon />}
             onBtnClick={() => console.log("Analyze clicked")}
           />
-          <div className="flex matter-s1-reg text-text-tertiary items-center gap-[5px] md:pl-6 justify-center md:justify-baseline">
+          <div className="flex matter-s1-reg text-text-tertiary items-center gap-[5px] md:pl-6 justify-center md:justify-start">
             <CreditCardIcon />
             <p>No credit card required</p>
           </div>
