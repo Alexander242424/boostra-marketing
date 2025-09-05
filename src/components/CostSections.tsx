@@ -3,6 +3,7 @@ import CostCard from "./CostCard";
 import CostImage1 from "@/assets/costmoney/image 5.svg";
 import CostImage2 from "@/assets/costmoney/image 6.svg";
 import CostImage3 from "@/assets/costmoney/image 5-1.svg";
+import SplitText from "./SplitText";
 
 export default function CostSections() {
   const cards = [
@@ -29,12 +30,12 @@ export default function CostSections() {
   return (
     <div className="flex flex-col w-full h-full gap-8 md:gap-12 items-center mt-[96px] md:mt-[160px] mb-[96px] md:mb-[160px]">
       <div className="flex flex-col items-center text-center gap-3 md:gap-5">
-        <p className="matter-p2-med text-gradient-blue">
+        <SplitText className="matter-p2-med text-gradient-blue">
           Revenue-based Benefits
-        </p>
+        </SplitText>
         <div className="max-w-[800px]">
-          <h2 className="matter-h2-reg">Find what</h2>
-          <h2 className="matter-h2-reg">cost you money</h2>
+          <SplitText className="matter-h2-reg">Find what</SplitText>
+          <SplitText className="matter-h2-reg">cost you money</SplitText>
         </div>
       </div>
       <div className="flex flex-col lg:flex-row gap-6 md:gap-8">

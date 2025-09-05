@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import SplitText from "./SplitText";
 
 export default function BrandSections() {
   const logos = [
@@ -18,10 +19,10 @@ export default function BrandSections() {
   ];
   return (
     <div className="flex flex-col py-[64px] md:pt-[130px] md:pb-[65px] gap-4 md:gap-[34px]">
-      <p className="matter-p2-med self-center">
+      <SplitText className="matter-p2-med self-center">
         Join over <span className="text-gradient-blue">5000</span> businesses
         using Boostra
-      </p>
+      </SplitText>
       <div className="flex flex-wrap gap-2 md:gap-4 justify-center">
         {logos.map((logo, index) => (
           <div

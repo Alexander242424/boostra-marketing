@@ -2,6 +2,7 @@ import React from "react";
 import RevenueCard from "./RevenueCard";
 import { Button } from "./ui/button";
 import AvatarIcon from "@/assets/Ellipse 29.svg";
+import SplitText from "./SplitText";
 
 export default function RevenueOpportunities() {
   const cards = [
@@ -31,12 +32,12 @@ export default function RevenueOpportunities() {
   return (
     <div className="flex flex-col w-full h-full gap-8 md:gap-12 items-center mb-[96px] md:mb-[160px]">
       <div className="flex flex-col items-center text-center gap-3 md:gap-5">
-        <p className="matter-p2-med text-gradient-blue">
+        <SplitText className="matter-p2-med text-gradient-blue">
           Revenue-based Benefits
-        </p>
-        <h2 className="matter-h2-reg max-w-[800px]">
+        </SplitText>
+        <SplitText className="matter-h2-reg max-w-[800px]">
           Find revenue opportunities in 3 steps
-        </h2>
+        </SplitText>
       </div>
       <div className="flex flex-col lg:flex-row gap-6 md:gap-8">
         {cards.map((card, index) => (
