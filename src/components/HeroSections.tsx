@@ -14,7 +14,7 @@ export default function HeroSections() {
             & Revenue engine.
           </h1>
           <p className="matter-p1-reg text-text-tertiary text-center md:text-left">
-            Find what's broken, fix usability & conversions, boost revenue — in
+            Find what&apos;s broken, fix usability & conversions, boost revenue — in
             minutes, not weeks.
           </p>
         </div>
