@@ -40,7 +40,7 @@ export default function HeroSections() {
           preload="metadata"
           webkit-playsinline="true"
         >
-          <source src="/video/Screen Recording 2025-09-05 at 12.25.01.mov" />
+          <source src="/video/141_1.mp4" />
           Your browser does not support the video tag.
         </video>
       </div>

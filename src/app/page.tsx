@@ -1,5 +1,6 @@
 import BrandSections from "@/components/BrandSections";
 import CopilotSections from "@/components/CopilotSections";
+import CostSections from "@/components/costSections";
 import HeroSections from "@/components/HeroSections";
 import InfoCard from "@/components/InfoCard";
 import RevenueOpportunities from "@/components/RevenueOpportunities";
@@ -41,6 +42,7 @@ export default function Home() {
       {/* carusel section */}
       <RevenueOpportunities />
       <CopilotSections />
+      <CostSections/>
     </div>
   );
 }
