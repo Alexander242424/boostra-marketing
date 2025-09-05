@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import HeaderBg from "@/assets/background/header-bg.svg";
 
 const Matter = localFont({
   src: [
@@ -39,11 +40,17 @@ export default function RootLayout({
     <html lang="en" className="dark">
       <body className={`${Matter.variable} ${systemMono.variable} antialiased`}>
         <div
-          className="min-h-screen max-w-[1512px] mx-auto flex flex-col"
+          className="min-h-screen max-w-[1512px] mx-auto flex flex-col relative"
           style={{ scrollBehavior: "smooth" }}
         >
+          {/* Header background */}
+          <div className="absolute top-0 left-0 w-full h-[400px] lg:h-[736px] z-0">
+            <HeaderBg className="w-full h-full object-cover" />
+          </div>
           <Header />
-          <main className="flex-1 overflow-x-hidden">{children}</main>
+          <main className="flex-1 overflow-x-hidden relative z-10">
+            {children}
+          </main>
           <Footer />
         </div>
       </body>

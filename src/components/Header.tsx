@@ -3,6 +3,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import { Button } from "./ui/button";
+import BigLogo from "@/assets/big-logo.svg";
 
 export default function Header() {
   const pathname = usePathname();
@@ -43,7 +44,9 @@ export default function Header() {
   return (
     <header className="flex bg-transparent min-h-[66px] md:min-h-[72px] sticky top-0 z-50 items-center">
       <div className="flex w-full h-full flex-row px-4 md:px-[121px] justify-between ">
-        <div className="flex items-center header-logo">Logo</div>
+        <div className="flex items-center">
+          <BigLogo />
+        </div>
         <div className="flex items-center">
           <nav className="hidden md:flex space-x-4 lg:space-x-8 font-matter">
             <Link
