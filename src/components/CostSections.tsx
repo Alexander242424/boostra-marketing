@@ -4,6 +4,7 @@ import CostImage1 from "@/assets/costmoney/image 5.svg";
 import CostImage2 from "@/assets/costmoney/image 6.svg";
 import CostImage3 from "@/assets/costmoney/image 5-1.svg";
 import SplitText from "./SplitText";
+import FadeInUp from "./FadeInUp";
 
 export default function CostSections() {
   const cards = [
@@ -38,7 +39,7 @@ export default function CostSections() {
           <SplitText className="matter-h2-reg">cost you money</SplitText>
         </div>
       </div>
-      <div className="flex flex-col lg:flex-row gap-6 md:gap-8">
+      <FadeInUp className="flex flex-col lg:flex-row gap-6 md:gap-8">
         {cards.map((card, index) => (
           <CostCard
             key={index}
@@ -47,7 +48,7 @@ export default function CostSections() {
             description={card.description}
           />
         ))}
-      </div>
+      </FadeInUp>
     </div>
   );
 }

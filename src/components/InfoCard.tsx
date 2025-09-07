@@ -2,6 +2,7 @@
 import React from "react";
 import { Button } from "./ui/button";
 import SplitText from "./SplitText";
+import FadeInUp from "./FadeInUp";
 
 interface InfoCardProps {
   title: [string, string];
@@ -29,24 +30,28 @@ export default function InfoCard({
             {description}
           </SplitText>
         </div>
-        <Button className="max-w-fit" size="lg" onClick={btnOnClick}>
-          {btnText}
-        </Button>
+        <FadeInUp>
+          <Button className="max-w-fit" size="lg" onClick={btnOnClick}>
+            {btnText}
+          </Button>
+        </FadeInUp>
       </div>
-      {videoSrc && (
-        <video
-          className="w-[343px] h-[353px] md:w-[788px] md:h-[512px] object-cover rounded-[22px] md:rounded-[24px] bg-bg-white-6"
-          autoPlay
-          muted
-          loop
-          playsInline
-          preload="metadata"
-          webkit-playsinline="true"
-        >
-          <source src={videoSrc} />
-          Your browser does not support the video tag.
-        </video>
-      )}
+      <FadeInUp>
+        {videoSrc && (
+          <video
+            className="w-[343px] h-[353px] md:w-[788px] md:h-[512px] object-cover rounded-[22px] md:rounded-[24px] bg-bg-white-6"
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="metadata"
+            webkit-playsinline="true"
+          >
+            <source src={videoSrc} />
+            Your browser does not support the video tag.
+          </video>
+        )}
+      </FadeInUp>
     </div>
   );
 }

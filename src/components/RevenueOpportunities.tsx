@@ -3,6 +3,7 @@ import RevenueCard from "./RevenueCard";
 import { Button } from "./ui/button";
 import AvatarIcon from "@/assets/Ellipse 29.svg";
 import SplitText from "./SplitText";
+import FadeInUp from "./FadeInUp";
 
 export default function RevenueOpportunities() {
   const cards = [
@@ -39,7 +40,7 @@ export default function RevenueOpportunities() {
           Find revenue opportunities in 3 steps
         </SplitText>
       </div>
-      <div className="flex flex-col lg:flex-row gap-6 md:gap-8">
+      <FadeInUp className="flex flex-col lg:flex-row gap-6 md:gap-8">
         {cards.map((card, index) => (
           <RevenueCard
             key={index}
@@ -49,11 +50,13 @@ export default function RevenueOpportunities() {
             description={card.description}
           />
         ))}
-      </div>
-      <Button className="max-w-fit" size="lg">
-        Get Started
-      </Button>
-      <div className="flex flex-col max-w-[253px] gap-[18px] ">
+      </FadeInUp>
+      <FadeInUp>
+        <Button className="max-w-fit" size="lg">
+          Get Started
+        </Button>
+      </FadeInUp>
+      <FadeInUp className="flex flex-col max-w-[253px] gap-[18px] ">
         <p className="matter-p4-reg text-center">
           “We increased our revenue to $10,000 with Boostra”
         </p>
@@ -66,7 +69,7 @@ export default function RevenueOpportunities() {
             </p>
           </div>
         </div>
-      </div>
+      </FadeInUp>
     </div>
   );
 }

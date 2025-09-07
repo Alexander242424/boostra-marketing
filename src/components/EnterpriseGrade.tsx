@@ -1,6 +1,7 @@
 import React from "react";
 import GlobalStandartsIcon from "@/assets/standartsIcon.svg";
 import SplitText from "./SplitText";
+import FadeInUp from "./FadeInUp";
 
 export default function EnterpriseGrade() {
   const cards = [
@@ -32,9 +33,11 @@ export default function EnterpriseGrade() {
           and GDPR compliant, trusted by thousands of businesses to build secure
           and compliant AI Agents.
         </SplitText>
-        <GlobalStandartsIcon />
+        <FadeInUp>
+          <GlobalStandartsIcon />
+        </FadeInUp>
       </div>
-      <div className="flex flex-col lg:flex-row gap-6 md:gap-8">
+      <FadeInUp className="flex flex-col lg:flex-row gap-6 md:gap-8">
         {cards.map((card, index) => (
           <div
             key={index}
@@ -48,7 +51,7 @@ export default function EnterpriseGrade() {
             </div>
           </div>
         ))}
-      </div>
+      </FadeInUp>
     </div>
   );
 }

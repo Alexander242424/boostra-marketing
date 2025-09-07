@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import SplitText from "./SplitText";
+import FadeInUp from "./FadeInUp";
 
 export default function BrandSections() {
   const logos = [
@@ -18,7 +19,7 @@ export default function BrandSections() {
     { name: "Verkada", src: "/brands_logo/Verkada.svg" },
   ];
   return (
-    <div className="flex flex-col py-[64px] md:pt-[130px] md:pb-[65px] gap-4 md:gap-[34px]">
+    <FadeInUp className="flex flex-col py-[64px] md:pt-[130px] md:pb-[65px] gap-4 md:gap-[34px]">
       <SplitText className="matter-p2-med self-center">
         Join over <span className="text-gradient-blue">5000</span> businesses
         using Boostra
@@ -33,6 +34,6 @@ export default function BrandSections() {
           </div>
         ))}
       </div>
-    </div>
+    </FadeInUp>
   );
 }
