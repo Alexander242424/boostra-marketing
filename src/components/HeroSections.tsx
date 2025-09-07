@@ -42,7 +42,7 @@ export default function HeroSections() {
           preload="metadata"
           webkit-playsinline="true"
         >
-          <source src="/video/G_animaiton141_v1.mp4" />
+          <source src="/video/02MG_141_2_v1.webm" />
           Your browser does not support the video tag.
         </video>
       </div>
