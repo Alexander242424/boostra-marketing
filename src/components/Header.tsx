@@ -58,7 +58,7 @@ export default function Header() {
           : undefined
       }
     >
-      <div className="flex w-full h-full flex-row px-4 md:px-[121px] justify-between ">
+      <div className="flex w-full h-full flex-row px-4 md:px-[121px] justify-between max-w-[1512px] mx-auto">
         <div className="flex items-center header-logo cursor-pointer">
           <BigLogo />
         </div>

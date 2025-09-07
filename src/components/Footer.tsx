@@ -1,10 +1,128 @@
+import SplitText from "./SplitText";
+import { Button } from "./ui/button";
+import FooterBg from "@/assets/background/footer-bg.svg";
+import GlobalStandartsIcon from "@/assets/standartsIcon.svg";
+import BigLogo from "@/assets/big-logo.svg";
+import CreditCardIcon from "@/assets/credit-card.svg";
+import XTwitterIcon from "@/assets/X(twitter)Icon.svg";
+import InstagramIcon from "@/assets/instagramIcon.svg";
+import LogoMain from "@/assets/logo-main";
+import Link from "next/link";
+
 export default function Footer() {
   return (
-    <footer>
-      <div className="flex w-full flex-col px-4 md:px-[121px]">
-        <h1>Footer</h1>
+    <div className="lex flex-col relative">
+      {/* <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-screen h-[665px] lg:h-[859px] z-0">
+        <FooterBg className="w-full h-full object-cover" />
+      </div> */}
+      <div className="flex w-full h-full flex-col px-4 md:px-[121px] max-w-[1512px] mx-auto">
+        <div className="flex flex-col items-center gap-8 my-[96px] md:mt-[89px] md:mb-[146px]">
+          <div className="flex flex-col items-center text-center gap-3 md:gap-5 max-w-[740px]">
+            <SplitText className="matter-h2-reg">
+              Your Next Growth Boost Starts Here
+            </SplitText>
+            <SplitText className="matter-p2-reg text-text-tertiary">
+              From friction points to hidden opportunities, our reports give you
+              a clear path to higher conversions and better UX.
+            </SplitText>
+          </div>
+          <div className="flex flex-col max-w-[740px] gap-5 md:gap-3">
+            <Button className="max-w-fit" size={"lg"}>
+              Get Started
+            </Button>
+            <div className="flex matter-s1-reg text-text-tertiary items-center gap-[5px]">
+              <CreditCardIcon />
+              <p>No credit card required</p>
+            </div>
+          </div>
+        </div>
+        <footer className="flex flex-col relative">
+          <div className="absolute top-0 border-t-[1px] border-line-white-16 left-1/2 transform -translate-x-1/2 w-screen z-0" />
+          <div className="flex flex-col md:flex-row mt-8 md:mt-[48px] justify-between">
+            <div className="flex flex-col items-center md:items-start">
+              <div className="fle flex-col gap-3">
+                <div className="flex w-full justify-center md:justify-start">
+                  <BigLogo />
+                </div>
+                <p className="matter-p3-reg text-text-tertiary">
+                  © Boostra 2025. All rights reserved
+                </p>
+              </div>
+              <div className="flex items-center gap-6 mt-5">
+                <XTwitterIcon />
+                <InstagramIcon />
+              </div>
+              <GlobalStandartsIcon className="mt-8 md:mt-6 md:-ml-[6px]" />
+            </div>
+
+            <div className="flex justify-between w-full max-w-[354px] mt-8 md:mt-0">
+              <div className="flex flex-col gap-4">
+                <p className="matter-p3-med">Product</p>
+                <Link
+                  href="/"
+                  className="relative group matter-p4-reg max-w-fit"
+                >
+                  Features
+                  <span className="absolute bottom-0 left-0 w-0 h-[1px] header-underline underline-animation"></span>
+                </Link>
+                <Link
+                  href="/"
+                  className="relative group matter-p4-reg max-w-fit"
+                >
+                  Case Studies
+                  <span className="absolute bottom-0 left-0 w-0 h-[1px] header-underline underline-animation"></span>
+                </Link>
+                <Link
+                  href="/"
+                  className="relative group matter-p4-reg max-w-fit"
+                >
+                  How It Works
+                  <span className="absolute bottom-0 left-0 w-0 h-[1px] header-underline underline-animation"></span>
+                </Link>
+                <Link
+                  href="/"
+                  className="relative group matter-p4-reg max-w-fit"
+                >
+                  Pricing
+                  <span className="absolute bottom-0 left-0 w-0 h-[1px] header-underline underline-animation"></span>
+                </Link>
+                <Link
+                  href="/"
+                  className="relative group matter-p4-reg max-w-fit"
+                >
+                  FAQ
+                  <span className="absolute bottom-0 left-0 w-0 h-[1px] header-underline underline-animation"></span>
+                </Link>
+              </div>
+              <div className="flex flex-col gap-4 min-w-[155px] md:min-w-fit">
+                <p className="matter-p3-med">Company</p>
+                <Link
+                  href="/"
+                  className="relative group matter-p4-reg max-w-fit"
+                >
+                  Terms of Use
+                  <span className="absolute bottom-0 left-0 w-0 h-[1px] header-underline underline-animation"></span>
+                </Link>
+                <Link
+                  href="/"
+                  className="relative group matter-p4-reg max-w-fit"
+                >
+                  Privacy Policy
+                  <span className="absolute bottom-0 left-0 w-0 h-[1px] header-underline underline-animation"></span>
+                </Link>
+                <Link
+                  href="/"
+                  className="relative group matter-p4-reg max-w-fit"
+                >
+                  Cookies Policy
+                  <span className="absolute bottom-0 left-0 w-0 h-[1px] header-underline underline-animation"></span>
+                </Link>
+              </div>
+            </div>
+          </div>
+          <LogoMain />
+        </footer>
       </div>
-      {/* <InputDemo /> */}
-    </footer>
+    </div>
   );
 }

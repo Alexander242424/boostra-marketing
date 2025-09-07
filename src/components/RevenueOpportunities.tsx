@@ -9,23 +9,23 @@ export default function RevenueOpportunities() {
     {
       icon: <div className="w-8 h-8 bg-blue-500 rounded-full" />, // Replace with actual icon
       number: "01",
-      title: "Analyze Your Data",
+      title: "Business & page analyzis",
       description:
-        "Upload your customer data and let our AI analyze patterns and trends to identify potential revenue opportunities.",
+        "Reviewing your page, purpose, and metrics to align insights with your goals.",
     },
     {
       icon: <div className="w-8 h-8 bg-green-500 rounded-full" />, // Replace with actual icon
       number: "02",
-      title: "Get Insights",
+      title: "Identifying critical issues",
       description:
-        "Receive detailed insights and recommendations on how to optimize your revenue streams and customer engagement.",
+        "Reviewing your page, purpose, and metrics to align insights with your goals.",
     },
     {
       icon: <div className="w-8 h-8 bg-purple-500 rounded-full" />, // Replace with actual icon
       number: "03",
-      title: "Take Action",
+      title: "Get validated solutions",
       description:
-        "Implement the suggested strategies and track your progress with real-time analytics and performance metrics.",
+        "Reviewing your page, purpose, and metrics to align insights with your goals.",
     },
   ];
 

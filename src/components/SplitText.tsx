@@ -37,7 +37,6 @@ export default function SplitText({ children, className }: SplitTextProps) {
                 ease: "easeOut",
               }}
               className="inline-block mr-2"
-              style={{ display: "inline-block" }}
             >
               {word}
             </motion.span>
@@ -45,14 +44,39 @@ export default function SplitText({ children, className }: SplitTextProps) {
         });
         wordIndex += words.length;
       } else if (React.isValidElement(child)) {
-        const childProps = child.props as { children?: React.ReactNode };
-        const processedChild = processChildren(childProps.children);
-        result.push(
-          React.cloneElement(child as React.ReactElement<{ children?: React.ReactNode }>, {
-            key: `element-${wordIndex}`,
-            children: processedChild,
-          })
-        );
+        // Для span елементів - розбиваємо текст всередині на слова і застосовуємо клас до кожного слова
+        const childProps = child.props as { children?: React.ReactNode; className?: string };
+        
+        if (typeof childProps.children === "string") {
+          const words = splitTextIntoWords(childProps.children);
+          words.forEach((word, index) => {
+            result.push(
+              <motion.span
+                key={`word-${wordIndex + index}`}
+                initial={{ opacity: 0, y: 20 }}
+                animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+                transition={{
+                  duration: 0.5,
+                  delay: (wordIndex + index) * 0.1,
+                  ease: "easeOut",
+                }}
+                className={`inline-block mr-2 ${childProps.className || ""}`}
+              >
+                {word}
+              </motion.span>
+            );
+          });
+          wordIndex += words.length;
+        } else {
+          // Якщо children не строка, обробляємо рекурсивно
+          const processedChild = processChildren(childProps.children);
+          result.push(
+            React.cloneElement(child as React.ReactElement<{ children?: React.ReactNode; className?: string }>, {
+              key: `span-${wordIndex}`,
+              children: processedChild,
+            })
+          );
+        }
       } else {
         result.push(child);
       }

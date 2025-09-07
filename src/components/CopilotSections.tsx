@@ -19,7 +19,7 @@ export default function CopilotSections() {
             Meet Boostra <span className="text-gradient-blue">Copilot </span>
           </h3>
           <p className="matter-p1-reg text-center text-text-secondary">
-            Interact as a human, huge knowlege base. Get answers to any
+            Interact as a human, huge knowlege base. <br /> Get answers to any
             questions.
           </p>
         </div>

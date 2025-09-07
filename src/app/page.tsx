@@ -10,7 +10,7 @@ import TextBlock from "@/components/TextBlock";
 
 export default function Home() {
   return (
-    <div className="w-full h-full flex flex-col px-4 md:px-[121px]">
+    <div className="w-full h-full flex flex-col px-4 md:px-[121px] max-w-[1512px] mx-auto">
       <HeroSections />
       <BrandSections />
       <TextBlock />
@@ -18,7 +18,7 @@ export default function Home() {
         <InfoCard
           title={["Boost", "Conversions"]}
           description={
-            "Fix what's costing you money. Get a detailed CRO & UX analysis to unlock more conversions — instantly."
+            "Increase revenue growth by uncovering hidden funnel leaks and converting more visitors into customers. Make every page conversion-ready."
           }
           btnText={"Improve Conversions"}
           videoSrc={"/video/011MG_141_animation_1.webm"}
@@ -26,7 +26,7 @@ export default function Home() {
         <InfoCard
           title={["Boost", "Usability"]}
           description={
-            "Fix what's costing you money. Get a detailed CRO & UX analysis to unlock more conversions — instantly."
+            "Don't let users leave by confused interface. Identify friction points and turn them into smooth, intuitive experiences"
           }
           btnText={"Improve Usability"}
           videoSrc={"/video/011MG_141_animation_1.webm"}
@@ -34,7 +34,7 @@ export default function Home() {
         <InfoCard
           title={["Boost", "Accessibility"]}
           description={
-            "Fix what's costing you money. Get a detailed CRO & UX analysis to unlock more conversions — instantly."
+            "Accessibility gaps cost customers and compliance. Detect barriers and make your site usable for every visitor"
           }
           btnText={"Improve Accessibility"}
           videoSrc={"/video/011MG_141_animation_1.webm"}
