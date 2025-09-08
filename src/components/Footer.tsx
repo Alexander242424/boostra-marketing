@@ -37,7 +37,7 @@ export default function Footer() {
             </FadeInUp>
             <FadeInUp delay={0.2}>
             <p className="matter-p2-reg text-text-tertiary">
-            Guaranteed or it's free
+            Guaranteed or it&apos;s free
             </p>
             </FadeInUp>
           </div>
