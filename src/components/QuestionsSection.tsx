@@ -11,7 +11,7 @@ export default function QuestionsSection() {
   return (
     <div className="flex flex-col mt-[96px] md:mt-[160px] gap-8 md:gap-[48px] items-center">
       <div className="flex flex-col gap-3 md:gap-6">
-        <SplitText className="matter-h2-reg text-center">
+        <SplitText className="matter-h2-reg text-center" spacingWords="mx-1.5">
           Have Questions?
         </SplitText>
         <SplitText className="matter-p1-reg text-text-tertiary text-center">

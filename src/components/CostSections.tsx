@@ -35,8 +35,12 @@ export default function CostSections() {
           Revenue-based Benefits
         </SplitText>
         <div className="max-w-[800px]">
-          <SplitText className="matter-h2-reg">Find what</SplitText>
-          <SplitText className="matter-h2-reg">cost you money</SplitText>
+          <SplitText className="matter-h2-reg" spacingWords="mx-1.5">
+            Find what
+          </SplitText>
+          <SplitText className="matter-h2-reg" spacingWords="mx-1.5">
+            cost you money
+          </SplitText>
         </div>
       </div>
       <FadeInUp className="flex flex-col lg:flex-row gap-6 md:gap-8">

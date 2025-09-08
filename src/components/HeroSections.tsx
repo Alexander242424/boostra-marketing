@@ -14,13 +14,14 @@ export default function HeroSections() {
             Meet your <span className="text-gradient-blue">AI Conversion</span>{" "}
             & Revenue engine.
           </SplitText>
-          <SplitText className="matter-p1-reg text-text-tertiary text-center md:text-left">
+          <SplitText className="matter-p1-reg text-text-tertiary text-center md:text-left md:max-w-[495px]">
             Find what&apos;s broken, fix usability & conversions, boost revenue
             — in minutes, not weeks.
           </SplitText>
         </div>
-        <div className="flex flex-col gap-5 md:gap-4 items-center md:items-start">
+        <div className="flex flex-col gap-5 md:gap-4 items-center md:items-stretch md:max-w-[592px]">
           <Input
+            className=""
             placeholder="Page URL..."
             iconLeft={<GlobeIcon />}
             btnText="Boost Page"
@@ -32,7 +33,7 @@ export default function HeroSections() {
           </div>
         </div>
       </div>
-      <div className="w-full h-full flex flex-col self-center border-[0.5px] border-[#FFFFFF0D] rounded-[40px] overflow-hidden bg-[#FFFFFF05]">
+      <div className="w-full h-full flex flex-col md:max-w-[536px] md:max-h-[528px] self-center border-[0.5px] border-[#FFFFFF0D] rounded-[40px] overflow-hidden bg-[#FFFFFF05]">
         <video
           className="w-full h-full object-cover"
           autoPlay

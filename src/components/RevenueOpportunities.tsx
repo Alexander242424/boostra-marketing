@@ -36,7 +36,10 @@ export default function RevenueOpportunities() {
         <SplitText className="matter-p2-med text-gradient-blue">
           Revenue-based Benefits
         </SplitText>
-        <SplitText className="matter-h2-reg max-w-[800px]">
+        <SplitText
+          className="matter-h2-reg max-w-[800px]"
+          spacingWords="mx-1.5"
+        >
           Find revenue opportunities in 3 steps
         </SplitText>
       </div>
