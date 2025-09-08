@@ -7,7 +7,7 @@ import SplitText from "./SplitText";
 
 export default function HeroSections() {
   return (
-    <div className="flex flex-col md:flex-row justify-between gap-8 md:gap-12 pb-10 pt-8 md:pt-[96px]">
+    <div className="flex flex-col md:flex-row justify-between items-center gap-8 md:gap-12 pb-10 pt-8">
       <div className="w-full flex flex-col max-w-[632px] gap-8 md:gap-12">
         <div className="flex flex-col gap-4 md:gap-8">
           <SplitText className="matter-h1-reg text-center md:text-left">
