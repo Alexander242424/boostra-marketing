@@ -5,6 +5,7 @@ import CostSections from "@/components/CostSections";
 import EnterpriseGrade from "@/components/EnterpriseGrade";
 import HeroSections from "@/components/HeroSections";
 import InfoCard from "@/components/InfoCard";
+import PlansSections from "@/components/PlansSections";
 import QuestionsSection from "@/components/QuestionsSection";
 import RevenueOpportunities from "@/components/RevenueOpportunities";
 import TextBlock from "@/components/TextBlock";
@@ -15,7 +16,7 @@ export default function Home() {
       <HeroSections />
       <BrandSections />
       <TextBlock />
-      <div className="flex flex-col items-center md:mt-[130px]">
+      <div id="solutions" className="flex flex-col items-center md:mt-[130px]">
         <InfoCard
           title={["Boost", "Conversions"]}
           description={
@@ -41,12 +42,20 @@ export default function Home() {
           videoSrc={"/video/011MG_141_animation_1.webm"}
         />
       </div>
-      <CarouselSection />
-      <RevenueOpportunities />
+      <div id="how-it-works">
+        <CarouselSection />
+      </div>
+      <div id="case-studies">
+        <RevenueOpportunities />
+      </div>
       <CopilotSections />
       <CostSections />
-      {/* payment sections */}
-      <QuestionsSection />
+      <div id="pricing">
+        <PlansSections />
+      </div>
+      <div id="faq">
+        <QuestionsSection />
+      </div>
       <EnterpriseGrade />
     </div>
   );

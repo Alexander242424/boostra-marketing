@@ -15,6 +15,21 @@ import FadeInUp from "./FadeInUp";
 export default function Footer() {
   const isMobile = useIsMobile();
 
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      const isMobile = window.innerWidth < 768;
+      const headerHeight = isMobile ? 66 : 72;
+      const elementPosition = element.offsetTop;
+      const offsetPosition = elementPosition - headerHeight;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth"
+      });
+    }
+  };
+
   return (
     <div className="lex flex-col relative">
       <div
@@ -25,6 +40,7 @@ export default function Footer() {
             : 'url("/Gradients/Desktop/Gradient Background  04.webp")',
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
+          backgroundPosition: "center",
         }}
       />
       <div className="flex w-full h-full flex-col px-4 md:px-[121px] max-w-[1512px] mx-auto">
@@ -75,46 +91,46 @@ export default function Footer() {
             <div className="flex justify-between w-full max-w-[354px] mt-8 md:mt-0">
               <div className="flex flex-col gap-4">
                 <p className="matter-p3-med">Product</p>
-                <Link
-                  href="/"
-                  className="relative group matter-p4-reg max-w-fit"
+                <button
+                  onClick={() => scrollToSection("solutions")}
+                  className="relative group matter-p4-reg max-w-fit text-left"
                 >
                   Features
                   <span className="absolute bottom-0 left-0 w-0 h-[1px] header-underline underline-animation"></span>
-                </Link>
-                <Link
-                  href="/"
-                  className="relative group matter-p4-reg max-w-fit"
+                </button>
+                <button
+                  onClick={() => scrollToSection("case-studies")}
+                  className="relative group matter-p4-reg max-w-fit text-left"
                 >
                   Case Studies
                   <span className="absolute bottom-0 left-0 w-0 h-[1px] header-underline underline-animation"></span>
-                </Link>
-                <Link
-                  href="/"
-                  className="relative group matter-p4-reg max-w-fit"
+                </button>
+                <button
+                  onClick={() => scrollToSection("how-it-works")}
+                  className="relative group matter-p4-reg max-w-fit text-left"
                 >
                   How It Works
                   <span className="absolute bottom-0 left-0 w-0 h-[1px] header-underline underline-animation"></span>
-                </Link>
-                <Link
-                  href="/"
-                  className="relative group matter-p4-reg max-w-fit"
+                </button>
+                <button
+                  onClick={() => scrollToSection("pricing")}
+                  className="relative group matter-p4-reg max-w-fit text-left"
                 >
                   Pricing
                   <span className="absolute bottom-0 left-0 w-0 h-[1px] header-underline underline-animation"></span>
-                </Link>
-                <Link
-                  href="/"
-                  className="relative group matter-p4-reg max-w-fit"
+                </button>
+                <button
+                  onClick={() => scrollToSection("faq")}
+                  className="relative group matter-p4-reg max-w-fit text-left"
                 >
                   FAQ
                   <span className="absolute bottom-0 left-0 w-0 h-[1px] header-underline underline-animation"></span>
-                </Link>
+                </button>
               </div>
               <div className="flex flex-col gap-4 min-w-[155px] md:min-w-fit">
                 <p className="matter-p3-med">Company</p>
                 <Link
-                  href="/terms_of_use"
+                  href="/terms_of_services"
                   className="relative group matter-p4-reg max-w-fit"
                 >
                   Terms of Use

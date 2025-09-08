@@ -238,6 +238,7 @@ export default function CarouselSection() {
           'url("/Gradients/Desktop/Gradient Background  02.webp")',
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
+        backgroundPosition: "center",
       }}
     >
       <div className="mx-auto px-4">

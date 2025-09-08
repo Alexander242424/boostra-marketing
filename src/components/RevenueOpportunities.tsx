@@ -49,17 +49,18 @@ export default function RevenueOpportunities() {
         </h2>
         </FadeInUp>
       </div>
-      <FadeInUp delay={0.4} className="flex flex-col lg:flex-row gap-6 md:gap-8">
+      <div className="flex flex-col lg:flex-row gap-6 md:gap-8">
         {cards.map((card, index) => (
+          <FadeInUp key={index}>
           <RevenueCard
-            key={index}
             icon={card.icon}
             number={card.number}
             title={card.title}
             description={card.description}
           />
+          </FadeInUp>
         ))}
-      </FadeInUp>
+      </div>
       <FadeInUp delay={0.4}>
         <Button className="max-w-fit" size="lg">
           Get Started

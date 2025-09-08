@@ -22,7 +22,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
     ref
   ) => {
     return (
-      <div className="relative flex items-center h-[72px]">
+      <div className="relative flex items-center h-[72px] max-w-[343px] sm:max-w-none">
         <div className="relative shadow-[0px_0px_0px_6px_#FFFFFF08] flex items-center w-full h-full bg-bg-white-10 border border-line-white-16 rounded-[59px] px-6 py-2 hover:border-line-white-24 focus-within:border-brand-blue focus-within:bg-bg-white-12 focus-within:hover:border-brand-blue transition-all duration-200">
           {iconLeft && (
             <div className="flex items-center justify-center mr-3 text-text-secondary">

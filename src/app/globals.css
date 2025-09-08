@@ -183,6 +183,7 @@
   }
   html {
     font-family: var(--font-matter), system-ui, sans-serif;
+    scroll-behavior: smooth;
   }
 }
 

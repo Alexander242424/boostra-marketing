@@ -11,18 +11,35 @@ export default function Header() {
   const headerRef = useRef<HTMLDivElement>(null);
   const [currentHash, setCurrentHash] = useState("");
   const [isScrolled, setIsScrolled] = useState(false);
+  const [activeSection, setActiveSection] = useState("");
   useNearestParentScrollListener(headerRef, setIsScrolled);
 
   useEffect(() => {
-    // Встановлюємо поточний hash
     setCurrentHash(window.location.hash);
 
-    // Слухаємо зміни hash
     const handleHashChange = () => {
       setCurrentHash(window.location.hash);
     };
 
+    const handleScroll = () => {
+      const sections = ['solutions', 'how-it-works', 'case-studies', 'pricing', 'faq'];
+      const isMobile = window.innerWidth < 768;
+      const headerHeight = isMobile ? 66 : 72;
+      const scrollPosition = window.scrollY + headerHeight + 50;
+
+      for (let i = sections.length - 1; i >= 0; i--) {
+        const section = document.getElementById(sections[i]);
+        if (section && section.offsetTop <= scrollPosition) {
+          setActiveSection(sections[i]);
+          break;
+        }
+      }
+    };
+
     window.addEventListener("hashchange", handleHashChange);
+    window.addEventListener("scroll", handleScroll);
+
+    handleScroll();
 
     const groups = document.querySelectorAll(".group");
 
@@ -33,17 +50,31 @@ export default function Header() {
 
       group.addEventListener("mouseenter", handleMouseEnter);
 
-      // Cleanup
       return () => {
         group.removeEventListener("mouseenter", handleMouseEnter);
       };
     });
 
-    // Cleanup
     return () => {
       window.removeEventListener("hashchange", handleHashChange);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      const isMobile = window.innerWidth < 768;
+      const headerHeight = isMobile ? 66 : 72;
+      const elementPosition = element.offsetTop;
+      const offsetPosition = elementPosition - headerHeight;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth"
+      });
+    }
+  };
 
   return (
     <header
@@ -64,50 +95,50 @@ export default function Header() {
         </Link>
         <div className="flex items-center">
           <nav className="hidden md:flex space-x-4 lg:space-x-8 font-matter">
-            <Link
-              href="/#solutions"
+            <button
+              onClick={() => scrollToSection("solutions")}
               className={`relative group header-text ${
-                pathname === "/" && currentHash === "#solutions"
+                pathname === "/" && activeSection === "solutions"
                   ? "header-text-active"
                   : ""
               }`}
             >
               Solutions
               <span className="absolute bottom-0 left-0 w-0 h-[1px] header-underline underline-animation"></span>
-            </Link>
-            <Link
-              href="/#how-it-works"
+            </button>
+            <button
+              onClick={() => scrollToSection("how-it-works")}
               className={`relative group header-text ${
-                pathname === "/" && currentHash === "#how-it-works"
+                pathname === "/" && activeSection === "how-it-works"
                   ? "header-text-active"
                   : ""
               }`}
             >
               How it works
               <span className="absolute bottom-0 left-0 w-0 h-[1px] header-underline underline-animation"></span>{" "}
-            </Link>
-            <Link
-              href="/#case-studies"
+            </button>
+            <button
+              onClick={() => scrollToSection("case-studies")}
               className={`relative group header-text ${
-                pathname === "/" && currentHash === "#case-studies"
+                pathname === "/" && activeSection === "case-studies"
                   ? "header-text-active"
                   : ""
               }`}
             >
               Case Studies
               <span className="absolute bottom-0 left-0 w-0 h-[1px] header-underline underline-animation"></span>{" "}
-            </Link>
-            <Link
-              href="/#pricing"
+            </button>
+            <button
+              onClick={() => scrollToSection("pricing")}
               className={`relative group header-text ${
-                pathname === "/" && currentHash === "#pricing"
+                pathname === "/" && activeSection === "pricing"
                   ? "header-text-active"
                   : ""
               }`}
             >
               Pricing
               <span className="absolute bottom-0 left-0 w-0 h-[1px] header-underline underline-animation"></span>{" "}
-            </Link>
+            </button>
           </nav>
         </div>
         <Button variant={"secondary"}>Login</Button>
