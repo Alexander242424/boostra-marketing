@@ -26,7 +26,7 @@ export default function Home() {
         <InfoCard
           title={["Boost", "Usability"]}
           description={
-            "Don't let users leave by confused interface. Identify friction points and turn them into smooth, intuitive experiences"
+            "Don&apos;t let users leave by confused interface. Identify friction points and turn them into smooth, intuitive experiences"
           }
           btnText={"Improve Usability"}
           videoSrc={"/video/011MG_141_animation_1.webm"}

@@ -7,8 +7,8 @@ export default function TermsOfServices() {
         <div className="flex flex-col gap-4 md:gap-6">
           <h2 className="matter-h2-reg">Terms of services</h2>
           <p className="matter-p4-reg text-text-secondary">
-            These Terms of Service ("Terms") govern your use of our website,
-            services, and platform (collectively, the "Service"). By accessing
+            These Terms of Service (&ldquo;Terms&rdquo;) govern your use of our website,
+            services, and platform (collectively, the &ldquo;Service&rdquo;). By accessing
             or using our Service, you agree to comply with and be bound by these
             Terms. Please read them carefully before using our Service.
           </p>

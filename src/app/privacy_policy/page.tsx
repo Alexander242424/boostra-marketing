@@ -53,7 +53,7 @@ export default function PrivacyPolicy() {
                 platform because one of our clients has uploaded your details
                 within their account on our platform. In such circumstances, we
                 are the processor of your personal data, and we shall only
-                process your personal data in accordance with the client`s
+                process your personal data in accordance with the client&apos;s
                 instructions.
               </p>
               <p className="matter-p4-reg text-text-secondary">
@@ -61,11 +61,11 @@ export default function PrivacyPolicy() {
                 access to the Attio API in order to develop certain applications
                 enabling interoperation between a third-party platform and the
                 Attio services (each an “Integration App”). Each Integration App
-                will be developed independently and at the developer`s own risk.
+                will be developed independently and at the developer&apos;s own risk.
                 Accordingly, each developer of an Integration App shall be
                 deemed to be a separate and independent controller of any
                 personal data you may share by using such Integration App, and
-                you will be subject to the Integration App`s separate terms and
+                you will be subject to the Integration App&apos;s separate terms and
                 privacy policy. We encourage you to read the terms and privacy
                 policy of every Integration App you may use in connection with
                 our services.
