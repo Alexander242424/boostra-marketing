@@ -59,9 +59,9 @@ export default function Header() {
       }
     >
       <div className="flex w-full h-full flex-row px-4 md:px-[121px] justify-between max-w-[1512px] mx-auto">
-        <div className="flex items-center header-logo cursor-pointer">
+        <Link href="/" className="flex items-center header-logo cursor-pointer">
           <BigLogo />
-        </div>
+        </Link>
         <div className="flex items-center">
           <nav className="hidden md:flex space-x-4 lg:space-x-8 font-matter">
             <Link

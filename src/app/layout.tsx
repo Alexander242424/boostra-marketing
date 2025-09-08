@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import HeaderBackground from "@/components/HeaderBackground";
 
 const Matter = localFont({
   src: [
@@ -43,14 +44,7 @@ export default function RootLayout({
           style={{ scrollBehavior: "smooth" }}
         >
           {/* Header background */}
-          <div
-            className="absolute top-0 left-1/2 transform -translate-x-1/2 w-screen h-[70dvh] z-0"
-            style={{
-              backgroundImage: 'url("/image 11.png")',
-              backgroundSize: "cover",
-              backgroundRepeat: "no-repeat",
-            }}
-          />
+          <HeaderBackground />
           <Header />
           <main className="flex-1 overflow-x-hidden relative z-10">
             {children}

@@ -614,3 +614,117 @@
     left: 100%;
   }
 }
+
+/* Embla Carousel */
+.embla {
+  width: 100%;
+  margin: auto;
+  --slide-height: 100%;
+  --slide-spacing: 1rem;
+  --slide-size: 59%;
+}
+.embla__viewport {
+  overflow: hidden;
+}
+.embla__container {
+  display: flex;
+  touch-action: pan-y pinch-zoom;
+  margin-left: calc(var(--slide-spacing) * -1);
+}
+.embla__slide {
+  transform: translate3d(0, 0, 0);
+  flex: 0 0 var(--slide-size);
+  min-width: 0;
+  padding-left: var(--slide-spacing);
+  max-width: fit-content;
+  max-height: fit-content;
+}
+.embla__slide__content {
+  height: var(--slide-height);
+  user-select: none;
+  max-width: fit-content;
+  max-height: fit-content;
+}
+.embla__controls {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.8rem;
+}
+.embla__buttons {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+.embla__button {
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0.1);
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: var(--BG-WHITE-10);
+  touch-action: manipulation;
+  display: inline-flex;
+  text-decoration: none;
+  cursor: pointer;
+  border: 0;
+  padding: 12px;
+  margin: 0;
+  box-shadow: none;
+  width: 50px;
+  height: 50px;
+  z-index: 1;
+  border-radius: 30px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease;
+}
+.embla__button:disabled {
+  color: #666666;
+  background-color: #222222;
+}
+
+.embla__button__svg {
+}
+
+.embla__dots {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.6rem;
+}
+.embla__dot {
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0.1);
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: transparent;
+  touch-action: manipulation;
+  display: inline-flex;
+  text-decoration: none;
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  width: 12px;
+  height: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+.embla__dot:after {
+  background-color: var(--BG-WHITE-10);
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  content: '';
+  transition: background-color 0.2s ease;
+}
+.embla__dot--selected:after {
+  background-color: #FFFFFF;
+}
+.embla__slide__content {
+  backface-visibility: hidden;
+}

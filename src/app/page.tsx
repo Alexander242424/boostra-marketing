@@ -1,4 +1,5 @@
 import BrandSections from "@/components/BrandSections";
+import CarouselSection from "@/components/CarouselSection";
 import CopilotSections from "@/components/CopilotSections";
 import CostSections from "@/components/CostSections";
 import EnterpriseGrade from "@/components/EnterpriseGrade";
@@ -40,7 +41,7 @@ export default function Home() {
           videoSrc={"/video/011MG_141_animation_1.webm"}
         />
       </div>
-      {/* carusel section */}
+      <CarouselSection />
       <RevenueOpportunities />
       <CopilotSections />
       <CostSections />

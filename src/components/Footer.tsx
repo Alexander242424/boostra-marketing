@@ -1,3 +1,4 @@
+"use client";
 import SplitText from "./SplitText";
 import { Button } from "./ui/button";
 import FooterBg from "@/assets/background/footer-bg.svg";
@@ -8,24 +9,39 @@ import XTwitterIcon from "@/assets/X(twitter)Icon.svg";
 import InstagramIcon from "@/assets/instagramIcon.svg";
 import LogoMain from "@/assets/logo-main";
 import Link from "next/link";
+import { useIsMobile } from "@/hooks/useIsMobile";
+import FadeInUp from "./FadeInUp";
 
 export default function Footer() {
+  const isMobile = useIsMobile();
+
   return (
     <div className="lex flex-col relative">
-      {/* <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-screen h-[665px] lg:h-[859px] z-0">
-        <FooterBg className="w-full h-full object-cover" />
-      </div> */}
+      <div
+        className="absolute md:-top-[130px] left-1/2 transform -translate-x-1/2 w-screen h-[400px] md:h-[730px] -z-[1]"
+        style={{
+          backgroundImage: isMobile 
+            ? 'url("/Gradients/Mobile/Mobile Gradient Background  04-3.webp")'
+            : 'url("/Gradients/Desktop/Gradient Background  04.webp")',
+          backgroundSize: "cover",
+          backgroundRepeat: "no-repeat",
+        }}
+      />
       <div className="flex w-full h-full flex-col px-4 md:px-[121px] max-w-[1512px] mx-auto">
         <div className="flex flex-col items-center gap-8 my-[96px] md:mt-[89px] md:mb-[146px]">
-          <div className="flex flex-col items-center text-center gap-3 md:gap-5 max-w-[740px]">
-            <SplitText className="matter-h2-reg">
-              Your Next Growth Boost Starts Here
-            </SplitText>
-            <SplitText className="matter-p2-reg text-text-tertiary">
-              From friction points to hidden opportunities, our reports give you
-              a clear path to higher conversions and better UX.
-            </SplitText>
+          <div className="flex flex-col items-center text-center gap-3 md:gap-5 max-w-[800px]">
+            <FadeInUp>
+            <h2 className="matter-h2-reg">
+              Start using Boostra today. Boost conversions at 20%.
+            </h2>
+            </FadeInUp>
+            <FadeInUp delay={0.2}>
+            <p className="matter-p2-reg text-text-tertiary">
+            Guaranteed or it's free
+            </p>
+            </FadeInUp>
           </div>
+          <FadeInUp delay={0.4}>
           <div className="flex flex-col max-w-[740px] gap-5 md:gap-3">
             <Button className="max-w-fit" size={"lg"}>
               Get Started
@@ -35,6 +51,7 @@ export default function Footer() {
               <p>No credit card required</p>
             </div>
           </div>
+          </FadeInUp>
         </div>
         <footer className="flex flex-col relative">
           <div className="absolute top-0 border-t-[1px] border-line-white-16 left-1/2 transform -translate-x-1/2 w-screen z-0" />
@@ -97,14 +114,14 @@ export default function Footer() {
               <div className="flex flex-col gap-4 min-w-[155px] md:min-w-fit">
                 <p className="matter-p3-med">Company</p>
                 <Link
-                  href="/"
+                  href="/terms_of_use"
                   className="relative group matter-p4-reg max-w-fit"
                 >
                   Terms of Use
                   <span className="absolute bottom-0 left-0 w-0 h-[1px] header-underline underline-animation"></span>
                 </Link>
                 <Link
-                  href="/"
+                  href="/privacy_policy"
                   className="relative group matter-p4-reg max-w-fit"
                 >
                   Privacy Policy

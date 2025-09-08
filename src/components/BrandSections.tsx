@@ -20,10 +20,12 @@ export default function BrandSections() {
   ];
   return (
     <FadeInUp className="flex flex-col py-[64px] md:pt-[130px] md:pb-[65px] gap-4 md:gap-[34px]">
-      <SplitText className="matter-p2-med self-center">
-        Join over <span className="text-gradient-blue">5000</span> businesses
-        using Boostra
-      </SplitText>
+      <FadeInUp className="self-center">
+        <p className="matter-p2-med self-center">
+          Join over <span className="text-gradient-blue">5000</span> businesses
+          using Boostra
+        </p>
+      </FadeInUp>
       <div className="flex flex-wrap gap-2 md:gap-4 justify-center">
         {logos.map((logo, index) => (
           <div
@@ -32,7 +34,7 @@ export default function BrandSections() {
           >
             <Image src={logo.src} alt={logo.name} width={120} height={40} />
             {logo.btnText && (
-              <div className="absolute -bottom-4 right-0 text-[#3B95FE] cursor-pointer bg-bg-white-12 rounded-[100px] px-[8.2px] py-[5px] md:px-[10px] md:py-[8.5px]">
+              <div className="absolute -bottom-4 right-0 text-[#3B95FE] cursor-pointer bg-bg-white-12 rounded-[100px] w-full h-full flex items-center justify-center max-w-[57.410255432128906px] max-h-[16px] md:max-w-[81px] md:max-h-[25px]">
                 <p className="matter-s2-med">{logo.btnText}</p>
               </div>
             )}

@@ -12,19 +12,23 @@ export default function HeroSections() {
       <div className="w-full flex flex-col max-w-[632px] gap-8 md:gap-12">
         <div className="flex flex-col gap-4 md:gap-8">
           <FadeInUp delay={0.1}>
-          <h1 className="matter-h1-reg text-center md:text-left">
-            Meet your <span className="text-gradient-blue">AI Conversion</span>{" "}
-            & Revenue engine.
-          </h1>
+            <h1 className="matter-h1-reg text-center md:text-left">
+              Meet your{" "}
+              <span className="text-gradient-blue">AI Conversion</span> &
+              Revenue engine.
+            </h1>
           </FadeInUp>
           <FadeInUp delay={0.3}>
-          <h1 className="matter-p1-reg text-text-tertiary text-center md:text-left md:max-w-[495px]">
-            Find what&apos;s broken, fix usability & conversions, boost revenue
-            — in minutes, not weeks.
-          </h1>
+            <h1 className="matter-p1-reg text-text-tertiary text-center md:text-left md:max-w-[495px]">
+              Find what&apos;s broken, fix usability & conversions, boost
+              revenue — in minutes, not weeks.
+            </h1>
           </FadeInUp>
         </div>
-        <FadeInUp delay={0.6} className="flex flex-col gap-5 md:gap-4 items-center md:items-stretch md:max-w-[592px]">
+        <FadeInUp
+          delay={0.6}
+          className="flex flex-col gap-5 md:gap-4 items-center md:items-stretch md:max-w-[592px]"
+        >
           <Input
             className=""
             placeholder="Page URL..."
