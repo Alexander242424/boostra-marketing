@@ -13,7 +13,6 @@ export default function HeaderBackground() {
         : 'url("/Gradients/Desktop/Gradient Background  01.webp")',
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
-        backgroundPosition: "center",
       }}
     />
   );
