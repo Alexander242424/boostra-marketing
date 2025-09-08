@@ -7,13 +7,13 @@ export default function BrandSections() {
   const logos = [
     { name: "Anthropic", src: "/brands_logo/Anthropic.svg" },
     { name: "Asana", src: "/brands_logo/Asana.svg" },
-    { name: "Asos", src: "/brands_logo/Asos.svg" },
+    { name: "Asos", src: "/brands_logo/Asos.svg", btnText: "Case Study" },
     { name: "Buffer", src: "/brands_logo/Buffer.svg" },
     { name: "Dropbox", src: "/brands_logo/Dropbox.svg" },
-    { name: "Gymshark", src: "/brands_logo/Gymshark.svg" },
+    { name: "Gymshark", src: "/brands_logo/Gymshark.svg", btnText: "Case Study" },
     { name: "HubSpot", src: "/brands_logo/HubSpot.svg" },
     { name: "Intercom", src: "/brands_logo/Intercom.svg" },
-    { name: "Okta", src: "/brands_logo/Okta.svg" },
+    { name: "Okta", src: "/brands_logo/Okta.svg", btnText: "Case Study" },
     { name: "Ramp", src: "/brands_logo/Ramp.svg" },
     { name: "Vanta", src: "/brands_logo/Vanta.svg" },
     { name: "Verkada", src: "/brands_logo/Verkada.svg" },
@@ -28,9 +28,14 @@ export default function BrandSections() {
         {logos.map((logo, index) => (
           <div
             key={index}
-            className="flex items-center justify-center w-[109px] h-[64px] md:w-[192px] md:h-[88px]"
+            className="flex items-center justify-center w-[109px] h-[64px] md:w-[192px] md:h-[88px] relative"
           >
             <Image src={logo.src} alt={logo.name} width={120} height={40} />
+            {logo.btnText && (
+              <div className="absolute -bottom-4 right-0 text-[#3B95FE] cursor-pointer bg-bg-white-12 rounded-[100px] px-[8.2px] py-[5px] md:px-[10px] md:py-[8.5px]">
+                <p className="matter-s2-med">{logo.btnText}</p>
+              </div>
+            )}
           </div>
         ))}
       </div>
