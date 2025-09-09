@@ -37,7 +37,8 @@ function AccordionTrigger({
         data-slot="accordion-trigger"
         className={cn(
           "flex flex-1 items-center justify-between gap-4 bg-bg-white-10 p-5 md:p-6 text-left outline-none hover:bg-bg-white-12 focus-visible:ring-[3px] focus-visible:ring-ring/50 disabled:pointer-events-none disabled:opacity-50",
-          "rounded-[24px]", // default закрито: всі кути 24px
+          "rounded-t-[24px] transition-all duration-100", // за замовчуванням тільки верхні кути
+          "[&[data-state=closed]]:rounded-b-[24px] [&[data-state=closed]]:delay-100", // закрито: додаємо нижні кути з затримкою
           "[&[data-state=open]]:rounded-t-[24px] [&[data-state=open]]:rounded-b-[0px]",
           "[&[data-state=open]>.plus]:hidden",
           "[&[data-state=open]>.minus]:block",
