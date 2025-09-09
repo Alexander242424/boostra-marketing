@@ -37,7 +37,8 @@ const categoriesData = {
         height: 408,
       },
       logo: <RoyalQueenSeeds />,
-      title: "+45% Revenue Growth in 2 Months with Getboostra Marketing Strategy",
+      title:
+        "+45% Revenue Growth in 2 Months with Getboostra Marketing Strategy",
       author: {
         name: "Jane Smith",
         position: "CMO",
@@ -87,7 +88,8 @@ const categoriesData = {
         height: 408,
       },
       logo: <RoyalQueenSeeds />,
-      title: "Reduced Customer Acquisition Cost by 60% with Getboostra Optimization",
+      title:
+        "Reduced Customer Acquisition Cost by 60% with Getboostra Optimization",
       author: {
         name: "David Brown",
         position: "Growth Lead",
@@ -228,14 +230,18 @@ export default function CarouselSection() {
     />
   ));
 
-  const categories: Category[] = ["eCommerce", "SaaS", "Startups", "Enterprises"];
+  const categories: Category[] = [
+    "eCommerce",
+    "SaaS",
+    "Startups",
+    "Enterprises",
+  ];
 
   return (
     <div
       className="w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] py-[96px] md:py-[160px]"
       style={{
-        backgroundImage:
-          'url("/Gradients/Desktop/Gradient Background  02.webp")',
+        backgroundImage: 'url("/boostra-updated/Gradient Background 02.webp")',
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
         backgroundPosition: "center",
@@ -263,12 +269,7 @@ export default function CarouselSection() {
           ))}
         </div>
       </div>
-      <FadeInUp 
-        key={activeCategory} 
-        duration={0.5} 
-        delay={0.1}
-        yOffset={30}
-      >
+      <FadeInUp key={activeCategory} duration={0.5} delay={0.1} yOffset={30}>
         <EmblaCarousel slides={slides} options={OPTIONS} />
       </FadeInUp>
     </div>

@@ -1,6 +1,5 @@
 import React from "react";
 import Image from "next/image";
-import SplitText from "./SplitText";
 import FadeInUp from "./FadeInUp";
 
 export default function BrandSections() {

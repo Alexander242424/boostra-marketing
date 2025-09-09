@@ -12,21 +12,21 @@ export default function HeroSections() {
 
   const handleBoostPage = () => {
     if (url.trim()) {
-      const baseUrl = process.env.NEXT_PUBLIC_BOOSTRA_URL || '';
-      
+      const baseUrl = process.env.NEXT_PUBLIC_BOOSTRA_URL || "";
+
       let userUrl = url.trim();
-      if (!userUrl.startsWith('http://') && !userUrl.startsWith('https://')) {
-        userUrl = 'https://' + userUrl;
+      if (!userUrl.startsWith("http://") && !userUrl.startsWith("https://")) {
+        userUrl = "https://" + userUrl;
       }
-      
+
       const targetUrl = `${baseUrl}/url-loader?url=${userUrl}`;
-      
+
       window.location.href = targetUrl;
     }
   };
-  
+
   return (
-    <div className="flex flex-col md:flex-row justify-between items-center gap-8 md:gap-12 pb-10 pt-8 md:pt-[48px]">
+    <div className="flex flex-col md:flex-row justify-between items-center gap-8 md:gap-12 pb-10 pt-8 md:pt-[72px]">
       <div className="w-full flex flex-col max-w-[632px] gap-8 md:gap-12">
         <div className="flex flex-col gap-4 md:gap-8">
           <FadeInUp delay={0.1}>
@@ -48,7 +48,7 @@ export default function HeroSections() {
           className="flex flex-col gap-5 md:gap-4 items-center md:items-stretch md:max-w-[592px]"
         >
           <Input
-            className=""
+            className="cursor-pointer"
             placeholder="Page URL..."
             iconLeft={<GlobeIcon />}
             btnText="Boost Page"

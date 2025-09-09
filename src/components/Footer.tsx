@@ -25,7 +25,7 @@ export default function Footer() {
 
       window.scrollTo({
         top: offsetPosition,
-        behavior: "smooth"
+        behavior: "smooth",
       });
     }
   };
@@ -33,11 +33,11 @@ export default function Footer() {
   return (
     <div className="lex flex-col relative">
       <div
-        className="absolute md:-top-[130px] left-1/2 transform -translate-x-1/2 w-screen h-[400px] md:h-[730px] -z-[1]"
+        className="absolute md:-top-[210px] left-1/2 transform -translate-x-1/2 w-screen h-[400px] md:h-[730px] -z-[1]"
         style={{
-          backgroundImage: isMobile 
-            ? 'url("/Gradients/Mobile/Mobile Gradient Background  04-3.webp")'
-            : 'url("/Gradients/Desktop/Gradient Background  04.webp")',
+          backgroundImage: isMobile
+            ? 'url("/boostra-updated/Mobile Gradient Background 04.webp")'
+            : 'url("/boostra-updated/Gradient Background 04.webp")',
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
           backgroundPosition: "center",
@@ -47,26 +47,26 @@ export default function Footer() {
         <div className="flex flex-col items-center gap-8 my-[96px] md:mt-[89px] md:mb-[146px]">
           <div className="flex flex-col items-center text-center gap-3 md:gap-5 max-w-[800px]">
             <FadeInUp>
-            <h2 className="matter-h2-reg">
-              Start using Boostra today. Boost conversions at 20%.
-            </h2>
+              <h2 className="matter-h2-reg">
+                Start using Boostra today. Boost conversions at 20%.
+              </h2>
             </FadeInUp>
             <FadeInUp delay={0.2}>
-            <p className="matter-p2-reg text-text-tertiary">
-            Guaranteed or it&apos;s free
-            </p>
+              <p className="matter-p2-reg text-text-tertiary">
+                Guaranteed or it&apos;s free
+              </p>
             </FadeInUp>
           </div>
           <FadeInUp delay={0.4}>
-          <div className="flex flex-col max-w-[740px] gap-5 md:gap-3">
-            <Button className="max-w-fit" size={"lg"}>
-              Get Started
-            </Button>
-            <div className="flex matter-s1-reg text-text-tertiary items-center gap-[5px]">
-              <CreditCardIcon />
-              <p>No credit card required</p>
+            <div className="flex flex-col max-w-[740px] gap-5 md:gap-3">
+              <Button className="max-w-fit" size={"lg"}>
+                Get Started
+              </Button>
+              <div className="flex matter-s1-reg text-text-tertiary items-center gap-[5px]">
+                <CreditCardIcon />
+                <p>No credit card required</p>
+              </div>
             </div>
-          </div>
           </FadeInUp>
         </div>
         <footer className="flex flex-col relative">

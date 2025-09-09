@@ -202,13 +202,16 @@
 
 /* Button styles with gradients */
 .button-default {
-  background: linear-gradient(93.54deg, #1c42ff -3.63%, #3c99ff 98.73%);
-  transition: background 0.4s ease-in-out;
+  --from: #1c42ff;
+  --to: #3c99ff;
+
+  background: linear-gradient(93.54deg, var(--from) -3.63%, var(--to) 98.73%);
+  transition: var(--from) 0.4s ease, var(--to) 0.4s ease;
 }
 
 .button-default:hover {
-  background: linear-gradient(93.54deg, #4a68ff -3.63%, #67b0ff 98.73%);
-  transition: background 0.4s ease-in-out;
+  --from: #4a68ff;
+  --to: #67b0ff;
 }
 
 /* Gradient text */
@@ -684,6 +687,10 @@
   background-color: #222222;
 }
 
+.embla__button:hover {
+  background-color: var(--BG-WHITE-6);
+}
+
 .embla__button__svg {
 }
 
@@ -720,11 +727,11 @@
   border-radius: 50%;
   display: flex;
   align-items: center;
-  content: '';
+  content: "";
   transition: background-color 0.2s ease;
 }
 .embla__dot--selected:after {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
 }
 .embla__slide__content {
   backface-visibility: hidden;

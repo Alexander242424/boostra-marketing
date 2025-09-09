@@ -23,8 +23,8 @@ export default function PlansSections() {
       className="w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] py-[96px] md:py-[160px]"
       style={{
         backgroundImage: isMobile
-          ? 'url("/Gradients/Mobile/Mobile Gradient Background  04-2.webp")'
-          : 'url("/Gradients/Desktop/Gradient Background  03.webp")',
+          ? 'url("/boostra-updated/Mobile Gradient Background 03.webp")'
+          : 'url("/boostra-updated/Gradient Background 03.webp")',
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
         backgroundPosition: "center",
@@ -51,9 +51,9 @@ export default function PlansSections() {
             >
               <p>{tab}</p>
               {tab === "Yearly" && (
-              <div className="w-full h-full min-w-[75px] min-h-[24px] items-center justify-center flex bg-[#02BF46] rounded-[100px] ml-2.5">
-                <p className="matter-s2-med text-center">Save 20%</p>
-              </div>
+                <div className="w-full h-full min-w-[75px] min-h-[24px] items-center justify-center flex bg-[#02BF46] rounded-[100px] ml-2.5">
+                  <p className="matter-s2-med text-center">Save 20%</p>
+                </div>
               )}
             </button>
           ))}
@@ -120,19 +120,19 @@ export default function PlansSections() {
           </div>
         </FadeInUp>
         <FadeInUp className="flex flex-col mx-auto max-w-[253px] gap-[18px] pt-8 md:pt-12">
-        <p className="matter-p4-reg text-center">
-          “We increased our revenue to $10,000 with Boostra”
-        </p>
-        <div className="flex items-center justify-center">
-          <AvatarIcon />
-          <div className="flex flex-col ml-3">
-            <p className="matter-s1-med">Morgan Sowden</p>
-            <p className="matter-s2-med text-text-tertiary">
-              CEO, Journalist.net
-            </p>
+          <p className="matter-p4-reg text-center">
+            “We increased our revenue to $10,000 with Boostra”
+          </p>
+          <div className="flex items-center justify-center">
+            <AvatarIcon />
+            <div className="flex flex-col ml-3">
+              <p className="matter-s1-med">Morgan Sowden</p>
+              <p className="matter-s2-med text-text-tertiary">
+                CEO, Journalist.net
+              </p>
+            </div>
           </div>
-        </div>
-      </FadeInUp>
+        </FadeInUp>
       </div>
     </div>
   );
