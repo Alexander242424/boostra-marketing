@@ -253,7 +253,7 @@ export default function CarouselSection() {
           <h2 className="matter-h2-reg">Verified by big Ol famous brands</h2>
         </div>
         {/* Tabs with categories */}
-        <div className="flex max-w-fit mx-auto bg-bg-white-12 border border-bg-white-12 p-2 rounded-[30px] matter-p4-reg mb-[40px]">
+        <div className="flex max-w-fit mx-auto bg-bg-white-12 border border-bg-white-12 p-2 rounded-[30px] matter-p4-reg mb-[40px] overflow-x-scroll no-scrollbar">
           {categories.map((category) => (
             <button
               key={category}

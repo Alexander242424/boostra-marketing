@@ -627,6 +627,13 @@
   --slide-spacing: 1rem;
   --slide-size: 59%;
 }
+@media screen and (max-width: 768px) {
+  .embla {
+    --slide-height: 100%;
+    --slide-spacing: 1rem;
+    --slide-size: 100%;
+  }
+}
 .embla__viewport {
   overflow: hidden;
 }
@@ -735,4 +742,9 @@
 }
 .embla__slide__content {
   backface-visibility: hidden;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }
