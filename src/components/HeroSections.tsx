@@ -1,12 +1,30 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import { Input } from "./ui/input";
 import GlobeIcon from "@/assets/globus.svg";
 import CreditCardIcon from "@/assets/credit-card.svg";
-import SplitText from "./SplitText";
 import FadeInUp from "./FadeInUp";
+import { useUrlValidation } from "@/hooks/useUrlValidation";
 
 export default function HeroSections() {
+  const [url, setUrl] = useState("");
+  const { isValidUrl } = useUrlValidation();
+
+  const handleBoostPage = () => {
+    if (url.trim()) {
+      const baseUrl = process.env.NEXT_PUBLIC_BOOSTRA_URL || '';
+      
+      let userUrl = url.trim();
+      if (!userUrl.startsWith('http://') && !userUrl.startsWith('https://')) {
+        userUrl = 'https://' + userUrl;
+      }
+      
+      const targetUrl = `${baseUrl}/url-loader?url=${userUrl}`;
+      
+      window.location.href = targetUrl;
+    }
+  };
+  
   return (
     <div className="flex flex-col md:flex-row justify-between items-center gap-8 md:gap-12 pb-10 pt-8 md:pt-[48px]">
       <div className="w-full flex flex-col max-w-[632px] gap-8 md:gap-12">
@@ -34,7 +52,11 @@ export default function HeroSections() {
             placeholder="Page URL..."
             iconLeft={<GlobeIcon />}
             btnText="Boost Page"
-            onBtnClick={() => console.log("Analyze clicked")}
+            value={url}
+            onChange={(e) => setUrl(e.target.value)}
+            onBtnClick={handleBoostPage}
+            isError={url.trim() !== "" && !isValidUrl(url)}
+            isDisabled={url.trim() === "" || !isValidUrl(url)}
           />
           <div className="flex matter-s1-reg text-text-tertiary items-center gap-[5px] md:pl-6">
             <CreditCardIcon />

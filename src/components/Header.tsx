@@ -141,7 +141,9 @@ export default function Header() {
             </button>
           </nav>
         </div>
-        <Button variant={"secondary"}>Login</Button>
+        <Button variant={"secondary"} onClick={() => {
+          window.location.href = `${process.env.NEXT_PUBLIC_BOOSTRA_URL}/login`;
+        }}>Login</Button>
       </div>
     </header>
   );
