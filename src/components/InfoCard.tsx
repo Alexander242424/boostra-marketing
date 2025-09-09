@@ -3,6 +3,7 @@ import React from "react";
 import { Button } from "./ui/button";
 import SplitText from "./SplitText";
 import FadeInUp from "./FadeInUp";
+import VideoPlayer from "./VideoPlayer";
 
 interface InfoCardProps {
   title: [string, string];
@@ -42,18 +43,16 @@ export default function InfoCard({
       </div>
       <FadeInUp>
         {videoSrc && (
-          <video
-            className="w-[343px] h-[353px] md:w-[788px] md:h-[512px] object-cover rounded-[22px] md:rounded-[24px] bg-bg-white-6"
-            autoPlay
-            muted
-            loop
-            playsInline
-            preload="metadata"
-            webkit-playsinline="true"
-          >
-            <source src={videoSrc} />
-            Your browser does not support the video tag.
-          </video>
+          <div className="w-[343px] h-[353px] md:w-[788px] md:h-[512px] object-cover rounded-[22px] md:rounded-[24px] bg-bg-white-6">
+          <VideoPlayer
+            src={videoSrc}
+            className="w-full h-full object-cover"
+            autoPlay={true}
+            muted={true}
+            loop={true}
+            controls={false}
+          />
+          </div>
         )}
       </FadeInUp>
     </div>
