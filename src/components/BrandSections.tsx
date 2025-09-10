@@ -6,30 +6,44 @@ import BrandTooltipCard from "./BrandTooltipCard";
 
 export default function BrandSections() {
   const logos = [
-    { name: "asos_logo", src: "/brands_logo/asos_logo.svg" },
-    { name: "buffer_logo", src: "/brands_logo/buffer_logo.svg" },
+    {
+      name: "nespresso_logo",
+      src: "/brands_logo/nespresso_logo.svg",
+      btnText: "Case Study",
+    },
     {
       name: "claude_logo",
       src: "/brands_logo/claude_logo.svg",
+    },
+    {
+      name: "zara_logo",
+      src: "/brands_logo/zara_logo.svg",
       btnText: "Case Study",
     },
-    { name: "deliveroo_logo", src: "/brands_logo/deliveroo_logo.svg" },
-    { name: "dropbox_logo", src: "/brands_logo/dropbox_logo.svg" },
+    { name: "gs_logo", src: "/brands_logo/gs_logo.svg", btnText: "Case Study" },
+    { name: "asos_logo", src: "/brands_logo/asos_logo.svg" },
     {
       name: "forbes_logo",
       src: "/brands_logo/forbes_logo.svg",
       btnText: "Case Study",
     },
-    { name: "gs_logo", src: "/brands_logo/gs_logo.svg" },
-    { name: "nespresso_logo", src: "/brands_logo/nespresso_logo.svg" },
     {
       name: "okta_logo",
       src: "/brands_logo/okta_logo.svg",
+    },
+    {
+      name: "deliveroo_logo",
+      src: "/brands_logo/deliveroo_logo.svg",
+      btnText: "Case Study",
+    },
+    { name: "buffer_logo", src: "/brands_logo/buffer_logo.svg" },
+    { name: "dropbox_logo", src: "/brands_logo/dropbox_logo.svg" },
+    {
+      name: "schneider_electric",
+      src: "/brands_logo/schneider_electric.svg",
       btnText: "Case Study",
     },
     { name: "ramp_logo", src: "/brands_logo/ramp_logo.svg" },
-    { name: "schneider_electric", src: "/brands_logo/schneider_electric.svg" },
-    { name: "zara_logo", src: "/brands_logo/zara_logo.svg" },
   ];
   return (
     <FadeInUp className="flex flex-col py-[64px] md:pt-[130px] md:pb-[65px] gap-4 md:gap-[34px]">
