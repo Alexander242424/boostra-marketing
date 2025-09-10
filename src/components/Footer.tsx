@@ -5,7 +5,7 @@ import BigLogo from "@/assets/big-logo.svg";
 import CreditCardIcon from "@/assets/credit-card.svg";
 import XTwitterIcon from "@/assets/X(twitter)Icon.svg";
 import InstagramIcon from "@/assets/instagramIcon.svg";
-import LogoMain from "@/assets/logo-main";
+import LogoMain from "@/assets/logo-main.tsx";
 import Link from "next/link";
 import { useIsMobile } from "@/hooks/useIsMobile";
 import FadeInUp from "./FadeInUp";

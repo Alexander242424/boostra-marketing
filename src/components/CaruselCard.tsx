@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import Stars from "@/assets/stars";
+import Stars from "@/assets/stars.tsx";
 import { useState, useLayoutEffect } from "react";
 
 interface CaruselCardProps {
