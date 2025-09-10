@@ -1,6 +1,7 @@
+"use client";
 import Image from "next/image";
 import Stars from "@/assets/stars";
-import { useIsMobile } from "@/hooks/useIsMobile";
+import { useState, useLayoutEffect } from "react";
 
 interface CaruselCardProps {
   image: {
@@ -25,24 +26,40 @@ export default function CaruselCard({
   title,
   author,
 }: CaruselCardProps) {
-  const isMobile = useIsMobile();
+  const [isSmallScreen, setIsSmallScreen] = useState(false);
+
+  useLayoutEffect(() => {
+    const checkScreenSize = () => {
+      const newIsSmallScreen = window.innerWidth < 1280;
+      console.log("Screen width:", window.innerWidth, "isSmallScreen:", newIsSmallScreen);
+      setIsSmallScreen(newIsSmallScreen);
+    };
+
+    checkScreenSize();
+    window.addEventListener("resize", checkScreenSize);
+
+    return () => window.removeEventListener("resize", checkScreenSize);
+  }, []);
+
+  console.log("Render - isSmallScreen:", isSmallScreen);
+
   return (
-    <div className="flex flex-col md:flex-row md:gap-10 p-2 rounded-[32px] bg-bg-white-12 w-full h-full min-w-[343px] max-w-[343px] md:max-h-[496px] md:max-w-[1032px]">
+    <div className="flex flex-col xl:flex-row xl:gap-10 p-2 rounded-[32px] bg-bg-white-12 w-full h-full min-w-[343px] max-w-[343px] xl:max-h-[496px] xl:max-w-[1032px]">
       <Image
-        className="w-full h-full max-w-[327px] max-h-[327px] md:max-w-[408px] md:max-h-[408px] rounded-[20px]"
+        className="w-full h-full max-w-[327px] max-h-[327px] xl:max-w-[408px] xl:max-h-[408px] rounded-[20px]"
         src={image.src}
         alt={image.alt}
         width={image.width}
         height={image.height}
       />
-      <div className="flex flex-col md:mr-10 px-4 md:px-0 my-6 md:my-8">
-        {!isMobile ? (
+      <div className="flex flex-col xl:mr-10 px-4 xl:px-0 my-6 xl:my-8">
+        {!isSmallScreen ? (
           <>
-            <div className="flex flex-col gap-[21.33px] md:gap-[28px]">
+            <div className="flex flex-col gap-[21.33px] xl:gap-[28px]">
               {logo}
               <h6 className="matter-h6-reg">{title}</h6>
             </div>
-            <div className="flex gap-3 items-center mt-[64px] md:mt-auto">
+            <div className="flex gap-3 items-center mt-[64px] xl:mt-auto">
               {author.avatar}
               <div className="flex flex-col gap-[5px]">
                 <p className="matter-p3-reg">

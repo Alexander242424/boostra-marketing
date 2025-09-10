@@ -1,7 +1,5 @@
 "use client";
-import SplitText from "./SplitText";
 import { Button } from "./ui/button";
-import FooterBg from "@/assets/background/footer-bg.svg";
 import GlobalStandartsIcon from "@/assets/standartsIcon.svg";
 import BigLogo from "@/assets/big-logo.svg";
 import CreditCardIcon from "@/assets/credit-card.svg";

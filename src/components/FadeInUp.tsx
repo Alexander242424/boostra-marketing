@@ -25,8 +25,6 @@ export default function FadeInUp({
     threshold,
   });
 
-  return null;
-
   return (
     <motion.div
       ref={ref}
