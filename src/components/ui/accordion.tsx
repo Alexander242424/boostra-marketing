@@ -72,7 +72,7 @@ function AccordionContent({
     >
       <div
         className={cn(
-          "rounded-bl-[24px] rounded-br-[24px] bg-bg-white-10 p-6",
+          "rounded-bl-[24px] rounded-br-[24px] bg-bg-white-10 not-md:pt-0 p-6",
           className
         )}
       >

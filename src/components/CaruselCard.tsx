@@ -43,7 +43,7 @@ export default function CaruselCard({
   return (
     <div className="flex flex-col xl:flex-row xl:gap-10 p-2 rounded-[32px] bg-bg-white-12 w-full h-full min-w-[343px] max-w-[343px] xl:max-h-[496px] xl:max-w-[1032px]">
       <Image
-        className="w-full h-full max-w-[327px] max-h-[327px] xl:max-w-[408px] xl:max-h-[408px] rounded-[20px]"
+        className="w-full h-full max-w-[327px] xl:max-w-[408px] xl:max-h-[408px] rounded-[20px]"
         src={image.src}
         alt={image.alt}
         width={image.width}
@@ -83,7 +83,7 @@ export default function CaruselCard({
                 <span className="text-text-tertiary">· {author.position}</span>
               </p>
             </div>
-            <div className="flex flex-col mt-10 gap-16">
+            <div className="flex flex-col mt-10 gap-4">
               <div className="flex -ml-[34px] scale-[0.8]">{logo}</div>
               <div className="flex justify-between items-center">
                 <a href="#" className="matter-p4-reg text-gradient-blue">
