@@ -1,10 +1,11 @@
-import type { Metadata } from "next";
 import localFont from "next/font/local";
 import Script from "next/script";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import HeaderBackground from "@/components/HeaderBackground";
+import { type Config } from "mixpanel-browser";
+import { MixpanelProvider } from "@/providers/mixpanel";
 
 const Matter = localFont({
   src: [
@@ -25,6 +26,10 @@ const Matter = localFont({
 
 const systemMono = {
   variable: "--font-system-mono",
+};
+
+const mixpanelConfig: Partial<Config> = {
+  api_host: process.env.NEXT_PUBLIC_MIXPANEL_API_URL,
 };
 
 export default function RootLayout({
@@ -78,18 +83,20 @@ export default function RootLayout({
         </Script>
       </head>
       <body className={`${Matter.variable} ${systemMono.variable} antialiased`}>
-        <div
-          className="min-h-screen flex flex-col relative"
-          style={{ scrollBehavior: "smooth" }}
-        >
-          {/* Header background */}
-          <HeaderBackground />
-          <Header />
-          <main className="flex-1 overflow-x-hidden relative z-10">
-            {children}
-          </main>
-          <Footer />
-        </div>
+        <MixpanelProvider config={mixpanelConfig}>
+          <div
+            className="min-h-screen flex flex-col relative"
+            style={{ scrollBehavior: "smooth" }}
+          >
+            {/* Header background */}
+            <HeaderBackground />
+            <Header />
+            <main className="flex-1 overflow-x-hidden relative z-10">
+              {children}
+            </main>
+            <Footer />
+          </div>
+        </MixpanelProvider>
       </body>
     </html>
   );

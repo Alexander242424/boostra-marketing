@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import { Button } from "./ui/button";
 import BigLogo from "@/assets/big-logo.svg";
 import { useNearestParentScrollListener } from "@/hooks/use-nearest-parent-scroll-listener";
+import { useBuildPortalUrl } from "@/hooks/use-build-portal-url";
 
 export default function Header() {
   const pathname = usePathname();
@@ -13,6 +14,7 @@ export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState("");
   useNearestParentScrollListener(headerRef, setIsScrolled);
+  const buildPortalUrl = useBuildPortalUrl();
 
   useEffect(() => {
     setCurrentHash(window.location.hash);
@@ -150,7 +152,7 @@ export default function Header() {
         <Button
           variant={"secondary"}
           onClick={() => {
-            window.location.href = `${process.env.NEXT_PUBLIC_BOOSTRA_URL}/login`;
+            window.location.href = buildPortalUrl({ pathname: "/login" });
           }}
         >
           Login

@@ -12,8 +12,12 @@ import {
 } from "./ui/select";
 import FadeInUp from "./FadeInUp";
 import AvatarIcon from "@/assets/Ellipse 29.svg";
+import { useTrackEvent } from "@/hooks/telemetry";
+import { useBuildPortalUrl } from "@/hooks/use-build-portal-url";
 
 export default function PlansSections() {
+  const trackEvent = useTrackEvent();
+  const buildPortalUrl = useBuildPortalUrl();
   const isMobile = useIsMobile();
   const [activeTab, setActiveTab] = useState<string>("Monthly");
   const tabs = ["Monthly", "Yearly"];
@@ -77,7 +81,18 @@ export default function PlansSections() {
                   <SelectItem value="system">10 report / mo</SelectItem>
                 </SelectContent>
               </Select>
-              <Button size="lg">Get Started for Free</Button>
+              <Button
+                size="lg"
+                onClick={() => {
+                  trackEvent(`Get Started for Free Clicked`, undefined, () => {
+                    window.location.href = buildPortalUrl({
+                      pathname: "/register",
+                    });
+                  });
+                }}
+              >
+                Get Started for Free
+              </Button>
             </div>
             <p className="matter-s1-med pt-3 text-center">
               Cancel any time.{" "}
