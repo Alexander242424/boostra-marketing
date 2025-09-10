@@ -21,6 +21,7 @@ const Matter = localFont({
   ],
   variable: "--font-matter",
   display: "swap",
+  preload: true, // Додати preload
 });
 
 const systemMono = {
