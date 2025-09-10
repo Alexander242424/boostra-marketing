@@ -12,7 +12,7 @@ import TextBlock from "@/components/TextBlock";
 
 export default function Home() {
   return (
-    <div className="w-full h-full flex flex-col px-4 md:px-[121px] max-w-[1512px] mx-auto">
+    <div className="w-full h-full flex flex-col px-4 lg:px-[121px] max-w-[1512px] mx-auto">
       <HeroSections />
       <BrandSections />
       <TextBlock />

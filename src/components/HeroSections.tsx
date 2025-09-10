@@ -24,6 +24,7 @@ export default function HeroSections() {
 
       window.location.href = targetUrl;
     }
+    // Якщо інпут пустий, нічого не робимо
   };
 
   return (
@@ -57,7 +58,7 @@ export default function HeroSections() {
             onChange={(e) => setUrl(e.target.value)}
             onBtnClick={handleBoostPage}
             isError={url.trim() !== "" && !isValidUrl(url)}
-            isDisabled={url.trim() === "" || !isValidUrl(url)}
+            isDisabled={url.trim() !== "" && !isValidUrl(url)}
           />
           <div className="flex matter-s1-reg text-text-tertiary items-center gap-[5px] md:pl-6">
             <CreditCardIcon />

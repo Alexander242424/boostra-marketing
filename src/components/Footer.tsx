@@ -43,7 +43,7 @@ export default function Footer() {
           backgroundPosition: "center",
         }}
       />
-      <div className="flex w-full h-full flex-col px-4 md:px-[121px] max-w-[1512px] mx-auto">
+      <div className="flex w-full h-full flex-col px-4 lg:px-[121px] max-w-[1512px] mx-auto">
         <div className="flex flex-col items-center gap-8 my-[96px] md:mt-[89px] md:mb-[146px]">
           <div className="flex flex-col items-center text-center gap-3 md:gap-5 max-w-[800px]">
             <FadeInUp>

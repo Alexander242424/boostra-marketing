@@ -2,7 +2,7 @@ import React from "react";
 
 export default function PrivacyPolicy() {
   return (
-    <div className="w-full h-full flex flex-col px-4 md:px-[121px] max-w-[1512px] mx-auto items-center mt-8">
+    <div className="w-full h-full flex flex-col px-4 lg:px-[121px] max-w-[1512px] mx-auto items-center mt-8">
       <div className="flex flex-col max-w-[710px] gap-12">
         <div className="flex flex-col gap-4 md:gap-6">
           <h2 className="matter-h2-reg">Privacy Policy</h2>
@@ -61,14 +61,14 @@ export default function PrivacyPolicy() {
                 access to the Attio API in order to develop certain applications
                 enabling interoperation between a third-party platform and the
                 Attio services (each an “Integration App”). Each Integration App
-                will be developed independently and at the developer&apos;s own risk.
-                Accordingly, each developer of an Integration App shall be
+                will be developed independently and at the developer&apos;s own
+                risk. Accordingly, each developer of an Integration App shall be
                 deemed to be a separate and independent controller of any
                 personal data you may share by using such Integration App, and
-                you will be subject to the Integration App&apos;s separate terms and
-                privacy policy. We encourage you to read the terms and privacy
-                policy of every Integration App you may use in connection with
-                our services.
+                you will be subject to the Integration App&apos;s separate terms
+                and privacy policy. We encourage you to read the terms and
+                privacy policy of every Integration App you may use in
+                connection with our services.
               </p>
               <p className="matter-p4-reg text-text-secondary">
                 This website is not intended for children, and we do not

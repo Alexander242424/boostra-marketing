@@ -22,7 +22,13 @@ export default function Header() {
     };
 
     const handleScroll = () => {
-      const sections = ['solutions', 'how-it-works', 'case-studies', 'pricing', 'faq'];
+      const sections = [
+        "solutions",
+        "how-it-works",
+        "case-studies",
+        "pricing",
+        "faq",
+      ];
       const isMobile = window.innerWidth < 768;
       const headerHeight = isMobile ? 66 : 72;
       const scrollPosition = window.scrollY + headerHeight + 50;
@@ -71,7 +77,7 @@ export default function Header() {
 
       window.scrollTo({
         top: offsetPosition,
-        behavior: "smooth"
+        behavior: "smooth",
       });
     }
   };
@@ -89,7 +95,7 @@ export default function Header() {
           : undefined
       }
     >
-      <div className="flex w-full h-full flex-row px-4 md:px-[121px] justify-between max-w-[1512px] mx-auto">
+      <div className="flex w-full h-full flex-row px-4 lg:px-[121px] justify-between max-w-[1512px] mx-auto">
         <Link href="/" className="flex items-center header-logo cursor-pointer">
           <BigLogo />
         </Link>
@@ -141,9 +147,14 @@ export default function Header() {
             </button>
           </nav>
         </div>
-        <Button variant={"secondary"} onClick={() => {
-          window.location.href = `${process.env.NEXT_PUBLIC_BOOSTRA_URL}/login`;
-        }}>Login</Button>
+        <Button
+          variant={"secondary"}
+          onClick={() => {
+            window.location.href = `${process.env.NEXT_PUBLIC_BOOSTRA_URL}/login`;
+          }}
+        >
+          Login
+        </Button>
       </div>
     </header>
   );

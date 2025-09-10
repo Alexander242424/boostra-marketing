@@ -2,15 +2,16 @@ import React from "react";
 
 export default function TermsOfServices() {
   return (
-    <div className="w-full h-full flex flex-col px-4 md:px-[121px] max-w-[1512px] mx-auto items-center mt-8">
+    <div className="w-full h-full flex flex-col px-4 lg:px-[121px] max-w-[1512px] mx-auto items-center mt-8">
       <div className="flex flex-col max-w-[710px] gap-12">
         <div className="flex flex-col gap-4 md:gap-6">
           <h2 className="matter-h2-reg">Terms of services</h2>
           <p className="matter-p4-reg text-text-secondary">
-            These Terms of Service (&ldquo;Terms&rdquo;) govern your use of our website,
-            services, and platform (collectively, the &ldquo;Service&rdquo;). By accessing
-            or using our Service, you agree to comply with and be bound by these
-            Terms. Please read them carefully before using our Service.
+            These Terms of Service (&ldquo;Terms&rdquo;) govern your use of our
+            website, services, and platform (collectively, the
+            &ldquo;Service&rdquo;). By accessing or using our Service, you agree
+            to comply with and be bound by these Terms. Please read them
+            carefully before using our Service.
           </p>
         </div>
         <div className="flex flex-col gap-8 md:gap-12">
