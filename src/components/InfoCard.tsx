@@ -47,14 +47,14 @@ export default function InfoCard({
       <FadeInUp>
         {videoSrc && (
           <div className="w-[343px] h-[353px] md:w-[788px] md:h-[512px] object-cover rounded-[22px] md:rounded-[24px] bg-bg-white-6">
-            {/* <VideoPlayer
+            <VideoPlayer
               src={videoSrc}
               className="w-full h-full object-cover"
               autoPlay={true}
               muted={true}
               loop={true}
               controls={false}
-            /> */}
+            />
           </div>
         )}
       </FadeInUp>
