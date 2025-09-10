@@ -5,11 +5,25 @@ import { Input } from "./ui/input";
 import GlobeIcon from "@/assets/globus.svg";
 import ArrowRight from "@/assets/arrow right.svg";
 import { useState, useEffect } from "react";
+import { useBuildPortalUrl } from "@/hooks/use-build-portal-url";
+import {
+  useTrackEvent,
+  useTrackFirstValueChangeEffect,
+} from "@/hooks/telemetry";
 
 export default function FloatingInput() {
   const [url, setUrl] = useState("");
   const { isValidUrl } = useUrlValidation();
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const buildPortalUrl = useBuildPortalUrl();
+  const trackEvent = useTrackEvent();
+
+  useTrackFirstValueChangeEffect(
+    "URL Input Started",
+    { "Is Floating Input": true },
+    [url]
+  );
 
   useEffect(() => {
     const handleScroll = () => {
@@ -24,17 +38,17 @@ export default function FloatingInput() {
   }, []);
 
   const handleBoostPage = () => {
-    if (url.trim()) {
-      const baseUrl = process.env.NEXT_PUBLIC_BOOSTRA_URL || "";
-
-      let userUrl = url.trim();
-      if (!userUrl.startsWith("http://") && !userUrl.startsWith("https://")) {
-        userUrl = "https://" + userUrl;
-      }
-
-      const targetUrl = `${baseUrl}/url-loader?url=${userUrl}`;
-
-      window.location.href = targetUrl;
+    if (isSubmitting) return;
+    if (isValidUrl(url)) {
+      const finalUrl = url.trim();
+      setIsSubmitting(true);
+      trackEvent(`Icon Button Clicked`, { url: finalUrl }, () => {
+        window.location.href = buildPortalUrl({
+          pathname: "/url-loader",
+          searchParams: { url: finalUrl },
+        });
+        setIsSubmitting(false);
+      });
     }
   };
 

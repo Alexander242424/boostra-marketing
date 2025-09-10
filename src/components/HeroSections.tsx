@@ -1,29 +1,41 @@
 "use client";
-import React, { useState } from "react";
-import { Input } from "./ui/input";
-import GlobeIcon from "@/assets/globus.svg";
 import CreditCardIcon from "@/assets/credit-card.svg";
-import FadeInUp from "./FadeInUp";
+import HeroVideoAnimation from "@/assets/data.json";
+import GlobeIcon from "@/assets/globus.svg";
+import {
+  useTrackEvent,
+  useTrackFirstValueChangeEffect,
+} from "@/hooks/telemetry";
+import { useBuildPortalUrl } from "@/hooks/use-build-portal-url";
 import { useUrlValidation } from "@/hooks/useUrlValidation";
 import Lottie from "lottie-react";
-import HeroVideoAnimation from "@/assets/data.json";
+import { useState } from "react";
+import FadeInUp from "./FadeInUp";
+import { Input } from "./ui/input";
+
+const buttonText = "Boost Page";
 
 export default function HeroSections() {
   const [url, setUrl] = useState("");
   const { isValidUrl } = useUrlValidation();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const buildPortalUrl = useBuildPortalUrl();
+  const trackEvent = useTrackEvent();
+
+  useTrackFirstValueChangeEffect("URL Input Started", undefined, [url]);
 
   const handleBoostPage = () => {
-    if (url.trim()) {
-      const baseUrl = process.env.NEXT_PUBLIC_BOOSTRA_URL || "";
-
-      let userUrl = url.trim();
-      if (!userUrl.startsWith("http://") && !userUrl.startsWith("https://")) {
-        userUrl = "https://" + userUrl;
-      }
-
-      const targetUrl = `${baseUrl}/url-loader?url=${userUrl}`;
-
-      window.location.href = targetUrl;
+    if (isSubmitting) return;
+    if (isValidUrl(url)) {
+      const finalUrl = url.trim();
+      setIsSubmitting(true);
+      trackEvent(`${buttonText} Clicked`, { url: finalUrl }, () => {
+        window.location.href = buildPortalUrl({
+          pathname: "/url-loader",
+          searchParams: { url: finalUrl },
+        });
+        setIsSubmitting(false);
+      });
     }
     // Якщо інпут пустий, нічого не робимо
   };
@@ -55,7 +67,7 @@ export default function HeroSections() {
               className="cursor-pointer"
               placeholder="Page URL..."
               iconLeft={<GlobeIcon />}
-              btnText="Boost Page"
+              btnText={buttonText}
               value={url}
               onChange={(e) => setUrl(e.target.value)}
               onBtnClick={handleBoostPage}

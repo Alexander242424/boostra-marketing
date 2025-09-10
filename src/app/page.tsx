@@ -1,3 +1,5 @@
+"use client";
+
 import BrandSections from "@/components/BrandSections";
 import CarouselSection from "@/components/CarouselSection";
 import CopilotSections from "@/components/CopilotSections";
@@ -10,8 +12,11 @@ import PlansSections from "@/components/PlansSections";
 import QuestionsSection from "@/components/QuestionsSection";
 import RevenueOpportunities from "@/components/RevenueOpportunities";
 import TextBlock from "@/components/TextBlock";
+import { useTrackPageViewEffect } from "@/hooks/telemetry";
 
-export default function Home() {
+export default function RootPage() {
+  useTrackPageViewEffect("Landing Root");
+
   return (
     <>
       <div className="w-full h-full flex flex-col px-4 lg:px-[121px] max-w-[1512px] mx-auto">

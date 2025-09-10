@@ -9,9 +9,13 @@ import LogoMain from "@/assets/logo-main";
 import Link from "next/link";
 import { useIsMobile } from "@/hooks/useIsMobile";
 import FadeInUp from "./FadeInUp";
+import { useTrackEvent } from "@/hooks/telemetry";
+import { useBuildPortalUrl } from "@/hooks/use-build-portal-url";
 
 export default function Footer() {
   const isMobile = useIsMobile();
+  const trackEvent = useTrackEvent();
+  const buildPortalUrl = useBuildPortalUrl();
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -55,7 +59,17 @@ export default function Footer() {
           </div>
           <FadeInUp delay={0.4}>
             <div className="flex flex-col max-w-[740px] gap-5 md:gap-3">
-              <Button className="max-w-fit" size={"lg"}>
+              <Button
+                className="max-w-fit"
+                size={"lg"}
+                onClick={() => {
+                  trackEvent(`Get Started Clicked`, undefined, () => {
+                    window.location.href = buildPortalUrl({
+                      pathname: "/register",
+                    });
+                  });
+                }}
+              >
                 Get Started
               </Button>
               <div className="flex matter-s1-reg text-text-tertiary items-center gap-[5px]">

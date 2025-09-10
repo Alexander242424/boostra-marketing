@@ -7,8 +7,13 @@ import FadeInUp from "./FadeInUp";
 import SearchIcon from "@/assets/opportunuties/Heart-Rate-Search--Streamline-Core-Neon.svg";
 import BrowserIcon from "@/assets/opportunuties/Browser-Delete--Streamline-Core-Neon.svg";
 import PazzeleIcon from "@/assets/opportunuties/Module-Puzzle-3--Streamline-Core-Neon.svg";
+import { useTrackEvent } from "@/hooks/telemetry";
+import { useBuildPortalUrl } from "@/hooks/use-build-portal-url";
 
 export default function RevenueOpportunities() {
+  const trackEvent = useTrackEvent();
+  const buildPortalUrl = useBuildPortalUrl();
+
   const cards = [
     {
       icon: <SearchIcon />,
@@ -60,7 +65,17 @@ export default function RevenueOpportunities() {
         ))}
       </div>
       <FadeInUp delay={0.4}>
-        <Button className="max-w-fit" size="lg">
+        <Button
+          className="max-w-fit"
+          size="lg"
+          onClick={() => {
+            trackEvent(`Get Started Clicked`, undefined, () => {
+              window.location.href = buildPortalUrl({
+                pathname: "/register",
+              });
+            });
+          }}
+        >
           Get Started
         </Button>
       </FadeInUp>

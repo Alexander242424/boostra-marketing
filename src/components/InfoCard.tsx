@@ -1,7 +1,8 @@
 "use client";
-import React from "react";
-import { Button } from "./ui/button";
+import { useTrackEvent } from "@/hooks/telemetry";
+import { useBuildPortalUrl } from "@/hooks/use-build-portal-url";
 import FadeInUp from "./FadeInUp";
+import { Button } from "./ui/button";
 import VideoPlayer from "./VideoPlayer";
 
 interface InfoCardProps {
@@ -17,6 +18,9 @@ export default function InfoCard({
   btnText,
   videoSrc,
 }: InfoCardProps) {
+  const trackEvent = useTrackEvent();
+  const buildPortalUrl = useBuildPortalUrl();
+
   return (
     <div className="flex flex-col w-full max-w-[788px] gap-8 md:gap-[48px] items-center mt-[64px] mb-[48px] md:mb-[160px] md:mt-0">
       <div className="flex flex-col gap-6 md:gap-8 items-center">
@@ -37,7 +41,11 @@ export default function InfoCard({
             className="max-w-fit"
             size="lg"
             onClick={() => {
-              window.location.href = `${process.env.NEXT_PUBLIC_BOOSTRA_URL}/register`;
+              trackEvent(`${btnText} Clicked`, undefined, () => {
+                window.location.href = buildPortalUrl({
+                  pathname: "/register",
+                });
+              });
             }}
           >
             {btnText}
