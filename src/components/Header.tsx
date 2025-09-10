@@ -103,7 +103,7 @@ export default function Header() {
           <nav className="hidden md:flex space-x-4 lg:space-x-8 font-matter">
             <button
               onClick={() => scrollToSection("solutions")}
-              className={`relative group header-text cursor-pointer ${
+              className={`relative group header-text ${
                 pathname === "/" && activeSection === "solutions"
                   ? "header-text-active"
                   : ""
@@ -114,7 +114,7 @@ export default function Header() {
             </button>
             <button
               onClick={() => scrollToSection("how-it-works")}
-              className={`relative group header-text cursor-pointer ${
+              className={`relative group header-text ${
                 pathname === "/" && activeSection === "how-it-works"
                   ? "header-text-active"
                   : ""
@@ -125,7 +125,7 @@ export default function Header() {
             </button>
             <button
               onClick={() => scrollToSection("case-studies")}
-              className={`relative group header-text cursor-pointer ${
+              className={`relative group header-text ${
                 pathname === "/" && activeSection === "case-studies"
                   ? "header-text-active"
                   : ""
@@ -136,7 +136,7 @@ export default function Header() {
             </button>
             <button
               onClick={() => scrollToSection("pricing")}
-              className={`relative group header-text cursor-pointer ${
+              className={`relative group header-text ${
                 pathname === "/" && activeSection === "pricing"
                   ? "header-text-active"
                   : ""

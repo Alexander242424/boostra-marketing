@@ -570,6 +570,7 @@
 
 .header-text {
   color: #ffffff;
+  cursor: pointer;
 }
 
 .header-text:hover {

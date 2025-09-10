@@ -50,17 +50,19 @@ export default function HeroSections() {
           delay={0.6}
           className="flex flex-col gap-5 md:gap-4 items-center md:items-stretch md:max-w-[592px]"
         >
-          <Input
-            className="cursor-pointer"
-            placeholder="Page URL..."
-            iconLeft={<GlobeIcon />}
-            btnText="Boost Page"
-            value={url}
-            onChange={(e) => setUrl(e.target.value)}
-            onBtnClick={handleBoostPage}
-            isError={url.trim() !== "" && !isValidUrl(url)}
-            isDisabled={url.trim() !== "" && !isValidUrl(url)}
-          />
+          <div className="hover:scale-[1.05] transition-all duration-300">
+            <Input
+              className="cursor-pointer"
+              placeholder="Page URL..."
+              iconLeft={<GlobeIcon />}
+              btnText="Boost Page"
+              value={url}
+              onChange={(e) => setUrl(e.target.value)}
+              onBtnClick={handleBoostPage}
+              isError={url.trim() !== "" && !isValidUrl(url)}
+              isDisabled={url.trim() !== "" && !isValidUrl(url)}
+            />
+          </div>
           <div className="flex matter-s1-reg text-text-tertiary items-center gap-[5px] md:pl-6">
             <CreditCardIcon />
             <p>No credit card required</p>
