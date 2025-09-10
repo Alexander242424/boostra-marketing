@@ -11,7 +11,8 @@ export function useNearestParentScrollListener(
   callbackRef.current = callback;
 
   useEffect(() => {
-    if (!elementRef.current) return;
+    // Перевіряємо, чи window існує (клієнтська сторона)
+    if (typeof window === "undefined" || !elementRef.current) return;
 
     const scrollParent = findScrollableParent(elementRef.current);
 

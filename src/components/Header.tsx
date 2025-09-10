@@ -17,6 +17,9 @@ export default function Header() {
   const buildPortalUrl = useBuildPortalUrl();
 
   useEffect(() => {
+    // Перевіряємо, чи window існує (клієнтська сторона)
+    if (typeof window === "undefined") return;
+
     setCurrentHash(window.location.hash);
 
     const handleHashChange = () => {
@@ -70,6 +73,8 @@ export default function Header() {
   }, []);
 
   const scrollToSection = (sectionId: string) => {
+    if (typeof window === "undefined") return;
+    
     const element = document.getElementById(sectionId);
     if (element) {
       const isMobile = window.innerWidth < 768;

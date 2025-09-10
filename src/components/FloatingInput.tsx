@@ -26,6 +26,9 @@ export default function FloatingInput() {
   );
 
   useEffect(() => {
+    // Перевіряємо, чи window існує (клієнтська сторона)
+    if (typeof window === "undefined") return;
+
     const handleScroll = () => {
       const scrollY = window.scrollY;
       setIsScrolled(scrollY > 500);
@@ -43,10 +46,12 @@ export default function FloatingInput() {
       const finalUrl = url.trim();
       setIsSubmitting(true);
       trackEvent(`Icon Button Clicked`, { url: finalUrl }, () => {
-        window.location.href = buildPortalUrl({
-          pathname: "/url-loader",
-          searchParams: { url: finalUrl },
-        });
+        if (typeof window !== "undefined") {
+          window.location.href = buildPortalUrl({
+            pathname: "/url-loader",
+            searchParams: { url: finalUrl },
+          });
+        }
         setIsSubmitting(false);
       });
     }
