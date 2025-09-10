@@ -38,8 +38,8 @@ export default function Stars() {
           y2="12.1417"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#4A68FF" />
-          <stop offset="1" stop-color="#67B0FF" />
+          <stop stopColor="#4A68FF" />
+          <stop offset="1" stopColor="#67B0FF" />
         </linearGradient>
         <linearGradient
           id="paint1_linear_872_8948"
@@ -49,8 +49,8 @@ export default function Stars() {
           y2="12.1417"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#4A68FF" />
-          <stop offset="1" stop-color="#67B0FF" />
+          <stop stopColor="#4A68FF" />
+          <stop offset="1" stopColor="#67B0FF" />
         </linearGradient>
         <linearGradient
           id="paint2_linear_872_8948"
@@ -60,8 +60,8 @@ export default function Stars() {
           y2="12.1417"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#4A68FF" />
-          <stop offset="1" stop-color="#67B0FF" />
+          <stop stopColor="#4A68FF" />
+          <stop offset="1" stopColor="#67B0FF" />
         </linearGradient>
         <linearGradient
           id="paint3_linear_872_8948"
@@ -71,8 +71,8 @@ export default function Stars() {
           y2="12.1419"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#4A68FF" />
-          <stop offset="1" stop-color="#67B0FF" />
+          <stop stopColor="#4A68FF" />
+          <stop offset="1" stopColor="#67B0FF" />
         </linearGradient>
         <linearGradient
           id="paint4_linear_872_8948"
@@ -82,8 +82,8 @@ export default function Stars() {
           y2="12.1417"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#4A68FF" />
-          <stop offset="1" stop-color="#67B0FF" />
+          <stop stopColor="#4A68FF" />
+          <stop offset="1" stopColor="#67B0FF" />
         </linearGradient>
       </defs>
     </svg>
