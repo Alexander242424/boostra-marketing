@@ -31,7 +31,6 @@ export default function CaruselCard({
   useLayoutEffect(() => {
     const checkScreenSize = () => {
       const newIsSmallScreen = window.innerWidth < 1280;
-      console.log("Screen width:", window.innerWidth, "isSmallScreen:", newIsSmallScreen);
       setIsSmallScreen(newIsSmallScreen);
     };
 
@@ -40,8 +39,6 @@ export default function CaruselCard({
 
     return () => window.removeEventListener("resize", checkScreenSize);
   }, []);
-
-  console.log("Render - isSmallScreen:", isSmallScreen);
 
   return (
     <div className="flex flex-col xl:flex-row xl:gap-10 p-2 rounded-[32px] bg-bg-white-12 w-full h-full min-w-[343px] max-w-[343px] xl:max-h-[496px] xl:max-w-[1032px]">
@@ -72,7 +69,7 @@ export default function CaruselCard({
                   {author.website}
                 </a>
               </div>
-              <div className="self-start">
+              <div className="self-start ml-auto">
                 <Stars />
               </div>
             </div>

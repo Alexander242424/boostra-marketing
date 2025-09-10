@@ -35,7 +35,7 @@ export default function Footer() {
         style={{
           backgroundImage: isMobile
             ? 'url("/boostra-updated/Mobile Gradient Background 04.webp")'
-            : 'url("/boostra-updated/Gradient Background 04.webp")',
+            : 'url("/boostra-updated/1.jpg',
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
           backgroundPosition: "center",
@@ -78,8 +78,20 @@ export default function Footer() {
                 </p>
               </div>
               <div className="flex items-center gap-6 mt-5">
-                <XTwitterIcon />
-                <InstagramIcon />
+                <a
+                  href="https://x.com/getboostra?s=11"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <XTwitterIcon />
+                </a>
+                <a
+                  href="https://www.instagram.com/get_boostra?igsh=MTRqZnE4enNla2kwZg=="
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <InstagramIcon />
+                </a>
               </div>
               <GlobalStandartsIcon className="mt-8 md:mt-6 md:-ml-[6px]" />
             </div>

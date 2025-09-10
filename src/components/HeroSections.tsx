@@ -50,7 +50,7 @@ export default function HeroSections() {
           delay={0.6}
           className="flex flex-col gap-5 md:gap-4 items-center md:items-stretch lg:max-w-[592px]"
         >
-          <div className="hover:scale-[1.05] transition-all duration-300">
+          <div className="hover:scale-[1.02] transition-all duration-300">
             <Input
               className="cursor-pointer"
               placeholder="Page URL..."

@@ -10,7 +10,7 @@ export default function HeaderBackground() {
       style={{
         backgroundImage: isMobile
           ? 'url("/boostra-updated/Mobile Gradient Background 01.webp")'
-          : 'url("/boostra-updated/Gradient Background 01.webp")',
+          : 'url("/boostra-updated/jpeg-optimizer_Frame 2147229936.jpg")',
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
       }}

@@ -365,21 +365,22 @@ export default function CarouselSection() {
     <div
       className="w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] py-[96px] md:py-[160px]"
       style={{
-        backgroundImage: 'url("/boostra-updated/Gradient Background 02.webp")',
+        backgroundImage:
+          'url("/boostra-updated/jpeg-optimizer_Frame 2147230109.jpg")',
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
         backgroundPosition: "center",
       }}
     >
       <div className="mx-auto px-4">
-        <div className="flex flex-col items-center text-center gap-3 md:gap-5 mb-[48px]">
+        <FadeInUp className="flex flex-col items-center text-center gap-3 md:gap-5 mb-[48px]">
           <p className="matter-p2-med text-gradient-blue">Case Studies</p>
           <h2 className="matter-h2-reg max-w-[978px]">
             Proven conversion lifts for enterprises and online businesses
           </h2>
-        </div>
+        </FadeInUp>
         {/* Tabs with categories */}
-        <div className="flex max-w-fit mx-auto bg-bg-white-12 border border-bg-white-12 p-2 rounded-[30px] matter-p4-reg mb-[40px] overflow-x-scroll no-scrollbar">
+        <FadeInUp className="flex max-w-fit mx-auto bg-bg-white-12 border border-bg-white-12 p-2 rounded-[30px] matter-p4-reg mb-[40px] overflow-x-scroll no-scrollbar">
           {categories.map((category) => (
             <button
               key={category}
@@ -393,7 +394,7 @@ export default function CarouselSection() {
               <p>{category}</p>
             </button>
           ))}
-        </div>
+        </FadeInUp>
       </div>
       <FadeInUp key={activeCategory} duration={0.5} delay={0.1} yOffset={30}>
         <EmblaCarousel slides={slides} options={OPTIONS} />
