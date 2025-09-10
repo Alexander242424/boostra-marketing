@@ -29,7 +29,7 @@ export default function CaruselCard({
   return (
     <div className="flex flex-col md:flex-row md:gap-10 p-2 rounded-[32px] bg-bg-white-12 w-full h-full min-w-[343px] max-w-[343px] md:max-h-[496px] md:max-w-[1032px]">
       <Image
-        className="w-full h-full max-w-[327px] max-h-[327px] md:max-w-[408px] md:max-h-[408px]"
+        className="w-full h-full max-w-[327px] max-h-[327px] md:max-w-[408px] md:max-h-[408px] rounded-[20px]"
         src={image.src}
         alt={image.alt}
         width={image.width}

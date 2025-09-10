@@ -13,23 +13,23 @@ export default function RevenueOpportunities() {
     {
       icon: <SearchIcon />,
       number: "01",
-      title: "Business & page analyzis",
+      title: "Deep business & page analysis",
       description:
-        "Reviewing your page, purpose, and metrics to align insights with your goals.",
+        "Comprehensive review of your website structure, purpose, user personas and key metrics to uncover hidden conversion blockers and lost revenue opportunities.",
     },
     {
-      icon: <BrowserIcon/>,
+      icon: <BrowserIcon />,
       number: "02",
-      title: "Identifying critical issues",
+      title: "Identify critical conversion issues",
       description:
-        "Reviewing your page, purpose, and metrics to align insights with your goals.",
+        "Pinpoint usability problems, friction points, and design flaws that increase bounce rates and stop visitors from becoming customers.",
     },
     {
       icon: <PazzeleIcon />,
       number: "03",
-      title: "Get validated solutions",
+      title: "Get validated proven solutions",
       description:
-        "Reviewing your page, purpose, and metrics to align insights with your goals.",
+        "Receive prioritized, ready-to-implement fixes backed by data. On average, businesses achieve a +10-12% lift in conversions with Boostra insights.",
     },
   ];
 
@@ -37,27 +37,25 @@ export default function RevenueOpportunities() {
     <div className="flex flex-col w-full h-full gap-8 md:gap-12 items-center mb-[96px] md:mb-[160px]">
       <div className="flex flex-col items-center text-center gap-3 md:gap-5">
         <FadeInUp>
-        <p className="matter-p2-med text-gradient-blue">
-          Revenue-based Benefits
-        </p>
+          <p className="matter-p2-med text-gradient-blue">
+            Revenue-based Benefits
+          </p>
         </FadeInUp>
         <FadeInUp delay={0.2}>
-        <h2
-          className="matter-h2-reg max-w-[800px]"
-        >
-          Find revenue opportunities in 3 steps
-        </h2>
+          <h2 className="matter-h2-reg max-w-[700px]">
+            Boost your conversions in 3 simple steps
+          </h2>
         </FadeInUp>
       </div>
       <div className="flex flex-col lg:flex-row gap-6 md:gap-8">
         {cards.map((card, index) => (
           <FadeInUp key={index}>
-          <RevenueCard
-            icon={card.icon}
-            number={card.number}
-            title={card.title}
-            description={card.description}
-          />
+            <RevenueCard
+              icon={card.icon}
+              number={card.number}
+              title={card.title}
+              description={card.description}
+            />
           </FadeInUp>
         ))}
       </div>

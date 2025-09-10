@@ -34,7 +34,7 @@ export default function PlansSections() {
         <FadeInUp className="flex flex-col items-center text-center gap-3 md:gap-5 mb-[48px]">
           <p className="matter-p2-med text-gradient-blue">Pricing</p>
           <h2 className="matter-h2-reg max-w-[752px]">
-            Analysis-based plans to match your growth
+            Proven conversion lifts — for less than a coffee
           </h2>
         </FadeInUp>
         {/* Tabs with plans */}
@@ -81,7 +81,7 @@ export default function PlansSections() {
             </div>
             <p className="matter-s1-med pt-3 text-center">
               Cancel any time.{" "}
-              <span className="text-text-tertiary">No questions asked!</span>
+              <span className="matter-s1-reg">No questions asked!</span>
             </p>
           </div>
           <div className="border-l border-bg-white-6" />
@@ -90,19 +90,21 @@ export default function PlansSections() {
             <div className="flex flex-col gap-3">
               <div className="flex gap-3">
                 <CheckIcon />
-                <p className="matter-p4-reg">Access to all features</p>
+                <p className="matter-p4-reg">Conversion solutions</p>
               </div>
               <div className="flex gap-3">
                 <CheckIcon />
-                <p className="matter-p4-reg">Fixed Usability</p>
+                <p className="matter-p4-reg">Usability solutions</p>
               </div>
               <div className="flex gap-3">
                 <CheckIcon />
-                <p className="matter-p4-reg">Fixed Accessibility</p>
+                <p className="matter-p4-reg">
+                  Accessibility Usability Improvements
+                </p>
               </div>
               <div className="flex gap-3">
                 <CheckIcon />
-                <p className="matter-p4-reg">Fixed Above-the-fold</p>
+                <p className="matter-p4-reg">Above-the-fold analysis</p>
               </div>
               <div className="flex gap-3">
                 <CheckIcon />
@@ -115,6 +117,10 @@ export default function PlansSections() {
               <div className="flex gap-3">
                 <CheckIcon />
                 <p className="matter-p4-reg">User Persona Insights</p>
+              </div>
+              <div className="flex gap-3">
+                <CheckIcon />
+                <p className="matter-p4-reg">Sharable results with your team</p>
               </div>
             </div>
           </div>

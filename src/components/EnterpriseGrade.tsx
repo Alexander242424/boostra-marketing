@@ -8,17 +8,12 @@ export default function EnterpriseGrade() {
     {
       title: "Your data stays yours",
       description:
-        "Your data is only accessible to your AI agent and is never used to train models.",
+        "Your website data is only used to make an analysis and provide effective solutions. We never sell or share it with third parties.",
     },
     {
       title: "Data encryption",
       description:
-        "All data is encrypted at rest and in transit. We use industry-standard encryption algorithms.",
-    },
-    {
-      title: "Secure integrations",
-      description:
-        "We use verified variables to ensure users can access only their own data in your systems.",
+        "We use standard encryption practices to keep your information safe during processing. All reports remain private and visible only to you.",
     },
   ];
   return (
@@ -29,11 +24,11 @@ export default function EnterpriseGrade() {
           <h4 className="matter-h4-reg">security & privacy</h4>
         </FadeInUp>
         <FadeInUp delay={0.2}>
-        <p className="matter-p2-reg text-text-tertiary">
-          We take security and compliance seriously. Chatbase is SOC 2 Type II
-          and GDPR compliant, trusted by thousands of businesses to build secure
-          and compliant AI Agents.
-        </p>
+          <p className="matter-p2-reg text-text-tertiary">
+            Boostra is built with privacy by default. We collect only
+            what&apos;s required for your analysis and keep all reports fully
+            secure and accessible only to you.
+          </p>
         </FadeInUp>
         <FadeInUp delay={0.4}>
           <GlobalStandartsIcon />
@@ -43,7 +38,7 @@ export default function EnterpriseGrade() {
         {cards.map((card, index) => (
           <div
             key={index}
-            className="flex flex-col bg-bg-white-10 rounded-[24px] gap-8 md:gap-[48px] p-8"
+            className="flex flex-col bg-bg-white-10 rounded-[24px] gap-8 md:gap-[48px] p-8 max-w-[407px]"
           >
             <div className="flex flex-col gap-3">
               <h6 className="matter-p1-reg">{card.title}</h6>

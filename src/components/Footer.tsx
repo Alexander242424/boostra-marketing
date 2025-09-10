@@ -47,9 +47,7 @@ export default function Footer() {
         <div className="flex flex-col items-center gap-8 my-[96px] md:mt-[89px] md:mb-[146px]">
           <div className="flex flex-col items-center text-center gap-3 md:gap-5 max-w-[800px]">
             <FadeInUp>
-              <h2 className="matter-h2-reg">
-                Start using Boostra today. Boost conversions at 20%.
-              </h2>
+              <h2 className="matter-h2-reg">Unlock Conversions. Today.</h2>
             </FadeInUp>
             <FadeInUp delay={0.2}>
               <p className="matter-p2-reg text-text-tertiary">
