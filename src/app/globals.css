@@ -202,16 +202,25 @@
 
 /* Button styles with gradients */
 .button-default {
-  --from: #1c42ff;
-  --to: #3c99ff;
-
-  background: linear-gradient(93.54deg, var(--from) -3.63%, var(--to) 98.73%);
-  transition: var(--from) 0.4s ease, var(--to) 0.4s ease;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  background: linear-gradient(93.54deg, #1c42ff -3.63%, #3c99ff 98.73%);
+  transition: background 0.3s ease;
 }
 
-.button-default:hover {
-  --from: #4a68ff;
-  --to: #67b0ff;
+.button-default::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(93.54deg, #4a68ff -3.63%, #67b0ff 98.73%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: -1;
+}
+
+.button-default:hover::before {
+  opacity: 1;
 }
 
 /* Gradient text */
@@ -561,6 +570,7 @@
 
 .header-text {
   color: #ffffff;
+  cursor: pointer;
 }
 
 .header-text:hover {

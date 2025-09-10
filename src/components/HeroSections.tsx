@@ -1,5 +1,6 @@
 "use client";
 import CreditCardIcon from "@/assets/credit-card.svg";
+import HeroVideoAnimation from "@/assets/data.json";
 import GlobeIcon from "@/assets/globus.svg";
 import {
   useTrackEvent,
@@ -7,10 +8,10 @@ import {
 } from "@/hooks/telemetry";
 import { useBuildPortalUrl } from "@/hooks/use-build-portal-url";
 import { useUrlValidation } from "@/hooks/useUrlValidation";
+import Lottie from "lottie-react";
 import { useState } from "react";
 import FadeInUp from "./FadeInUp";
 import { Input } from "./ui/input";
-import VideoPlayer from "./VideoPlayer";
 
 const buttonText = "Boost Page";
 
@@ -40,8 +41,8 @@ export default function HeroSections() {
   };
 
   return (
-    <div className="flex flex-col lg:flex-row justify-between items-center gap-8 md:gap-12 pb-10 pt-8 md:pt-[72px]">
-      <div className="w-full flex flex-col max-w-[632px] gap-8 md:gap-12">
+    <div className="flex flex-col lg:flex-row justify-between items-center sm:items-start lg:items-center gap-8 md:gap-12 pb-10 pt-8 md:pt-[72px]">
+      <div className="w-full flex flex-col lg:max-w-[632px] gap-8 md:gap-12">
         <div className="flex flex-col gap-4 md:gap-8">
           <FadeInUp delay={0.1}>
             <h1 className="matter-h1-reg text-center md:text-left">
@@ -51,7 +52,7 @@ export default function HeroSections() {
             </h1>
           </FadeInUp>
           <FadeInUp delay={0.3}>
-            <h1 className="matter-p1-reg text-text-tertiary text-center md:text-left md:max-w-[495px]">
+            <h1 className="matter-p1-reg text-text-tertiary text-center lg:text-left lg:max-w-[495px]">
               Find what&apos;s broken, fix usability & conversions, boost
               revenue — in minutes, not weeks.
             </h1>
@@ -59,19 +60,21 @@ export default function HeroSections() {
         </div>
         <FadeInUp
           delay={0.6}
-          className="flex flex-col gap-5 md:gap-4 items-center md:items-stretch md:max-w-[592px]"
+          className="flex flex-col gap-5 md:gap-4 items-center md:items-stretch lg:max-w-[592px]"
         >
-          <Input
-            className="cursor-pointer"
-            placeholder="Page URL..."
-            iconLeft={<GlobeIcon />}
-            btnText={buttonText}
-            value={url}
-            onChange={(e) => setUrl(e.target.value)}
-            onBtnClick={handleBoostPage}
-            isError={url.trim() !== "" && !isValidUrl(url)}
-            isDisabled={url.trim() !== "" && !isValidUrl(url)}
-          />
+          <div className="hover:scale-[1.02] transition-all duration-300">
+            <Input
+              className="cursor-pointer"
+              placeholder="Page URL..."
+              iconLeft={<GlobeIcon />}
+              btnText={buttonText}
+              value={url}
+              onChange={(e) => setUrl(e.target.value)}
+              onBtnClick={handleBoostPage}
+              isError={url.trim() !== "" && !isValidUrl(url)}
+              isDisabled={url.trim() !== "" && !isValidUrl(url)}
+            />
+          </div>
           <div className="flex matter-s1-reg text-text-tertiary items-center gap-[5px] md:pl-6">
             <CreditCardIcon />
             <p>No credit card required</p>
@@ -79,14 +82,7 @@ export default function HeroSections() {
         </FadeInUp>
       </div>
       <div className="w-full h-full flex flex-col md:max-w-[536px] md:max-h-[528px] self-center border-[0.5px] border-[#FFFFFF0D] rounded-[40px] overflow-hidden bg-[#FFFFFF05]">
-        <VideoPlayer
-          src="/video/02MG_141_2_v1.webm"
-          className="w-full h-full object-cover"
-          autoPlay={true}
-          muted={true}
-          loop={true}
-          controls={false}
-        />
+        <Lottie animationData={HeroVideoAnimation} loop={true} />
       </div>
     </div>
   );

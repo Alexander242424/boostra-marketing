@@ -5,7 +5,6 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "./ui/accordion";
-import SplitText from "./SplitText";
 import FadeInUp from "./FadeInUp";
 
 export default function QuestionsSection() {

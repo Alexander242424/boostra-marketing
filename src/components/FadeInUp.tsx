@@ -16,7 +16,7 @@ export default function FadeInUp({
   children,
   className = "",
   threshold = 0.5,
-  duration = 0.6,
+  duration = 0.8,
   delay = 0,
   yOffset = 80,
 }: FadeInUpProps) {
@@ -30,10 +30,10 @@ export default function FadeInUp({
       ref={ref}
       initial={{ opacity: 0, y: yOffset }}
       animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: yOffset }}
-      transition={{ 
-        duration, 
+      transition={{
+        duration,
         delay,
-        ease: "easeInOut" 
+        ease: "easeInOut",
       }}
       className={className}
     >
