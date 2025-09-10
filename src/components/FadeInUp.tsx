@@ -33,7 +33,7 @@ export default function FadeInUp({
       transition={{ 
         duration, 
         delay,
-        ease: "easeOut" 
+        ease: "easeInOut" 
       }}
       className={className}
     >
