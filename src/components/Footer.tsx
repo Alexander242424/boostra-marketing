@@ -39,7 +39,7 @@ export default function Footer() {
         style={{
           backgroundImage: isMobile
             ? 'url("/boostra-updated/Mobile Gradient Background 04.webp")'
-            : 'url("/boostra-updated/1.jpg',
+            : 'url("/boostra-updated/1.jpg")',
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
           backgroundPosition: "center",
