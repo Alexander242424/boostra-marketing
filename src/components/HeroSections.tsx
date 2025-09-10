@@ -67,14 +67,14 @@ export default function HeroSections() {
         </FadeInUp>
       </div>
       <div className="w-full h-full flex flex-col md:max-w-[536px] md:max-h-[528px] self-center border-[0.5px] border-[#FFFFFF0D] rounded-[40px] overflow-hidden bg-[#FFFFFF05]">
-        <VideoPlayer
+        {/* <VideoPlayer
           src="/video/02MG_141_2_v1.webm"
           className="w-full h-full object-cover"
           autoPlay={true}
           muted={true}
           loop={true}
           controls={false}
-        />
+        /> */}
       </div>
     </div>
   );
