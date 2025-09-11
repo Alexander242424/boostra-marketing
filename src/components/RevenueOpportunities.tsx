@@ -1,7 +1,7 @@
 import React from "react";
 import RevenueCard from "./RevenueCard";
 import { Button } from "./ui/button";
-import AvatarIcon from "@/assets/Ellipse 29.svg";
+import AvatarIcon from "@/assets/Verizon Team.svg";
 import SplitText from "./SplitText";
 import FadeInUp from "./FadeInUp";
 import SearchIcon from "@/assets/opportunuties/Heart-Rate-Search--Streamline-Core-Neon.svg";
@@ -79,18 +79,13 @@ export default function RevenueOpportunities() {
           Get Started
         </Button>
       </FadeInUp>
-      <FadeInUp delay={0.4} className="flex flex-col max-w-[253px] gap-[18px] ">
-        <p className="matter-p4-reg text-center">
-          “We increased our revenue to $10,000 with Boostra”
+      <FadeInUp delay={0.4} className="flex flex-col max-w-[253px] gap-[20px] ">
+        <p className="matter-p1-reg text-center">
+          “Minutes of analysis saved us months of spend”
         </p>
-        <div className="flex items-center justify-center">
+        <div className="flex items-center justify-center gap-3">
           <AvatarIcon />
-          <div className="flex flex-col ml-3">
-            <p className="matter-s1-med">Morgan Sowden</p>
-            <p className="matter-s2-med text-text-tertiary">
-              CEO, Journalist.net
-            </p>
-          </div>
+          <p className="matter-p4-med">Verizon Team</p>
         </div>
       </FadeInUp>
     </div>
