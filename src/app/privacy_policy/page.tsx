@@ -7,10 +7,10 @@ export default function PrivacyPolicy() {
         <div className="flex flex-col gap-4 md:gap-6">
           <h2 className="matter-h2-reg">Privacy Policy</h2>
           <p className="matter-p4-reg text-text-secondary">
-            At GetBoostra ("Boostra", "we", "our", or "us"), your privacy is
+            At GetBoostra (&quot;Boostra&quot;, &quot;we&quot;, &quot;our&quot;, or &quot;us&quot;), your privacy is
             important to us. This Privacy Policy explains how we collect, use,
             and protect your personal information when you use our website,
-            services, and products (collectively, the "Service"). By using the
+            services, and products (collectively, the &quot;Service&quot;). By using the
             Service, you consent to the practices described in this Privacy
             Policy.
           </p>
@@ -216,7 +216,7 @@ export default function PrivacyPolicy() {
             <div>
               <p className="matter-p4-reg text-text-secondary">
                 We may update this Privacy Policy from time to time. Updates
-                will be posted on this page with a revised “Effective Date.” We
+                will be posted on this page with a revised &quot;Effective Date.&quot; We
                 encourage you to review this Policy periodically.
               </p>
             </div>

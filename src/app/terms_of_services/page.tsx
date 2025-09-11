@@ -7,9 +7,9 @@ export default function TermsOfServices() {
         <div className="flex flex-col gap-4 md:gap-6">
           <h2 className="matter-h2-reg">Terms of services</h2>
           <p className="matter-p4-reg text-text-secondary">
-            Welcome to GetBoostra ("Boostra", "we", "our", or "us"). These Terms
-            of Service ("Terms") govern your use of our website, products, and
-            services (collectively, the "Service"). By accessing or using the
+            Welcome to GetBoostra (&quot;Boostra&quot;, &quot;we&quot;, &quot;our&quot;, or &quot;us&quot;). These Terms
+            of Service (&quot;Terms&quot;) govern your use of our website, products, and
+            services (collectively, the &quot;Service&quot;). By accessing or using the
             Service, you agree to be bound by these Terms. If you do not agree,
             you may not use the Service.
           </p>
@@ -137,7 +137,7 @@ export default function TermsOfServices() {
             <h6 className="matter-h6-reg">Disclaimer of Warranties</h6>
             <div>
               <p className="matter-p4-reg text-text-secondary">
-                The Service is provided on an “as is” and “as available” basis.
+                The Service is provided on an &quot;as is&quot; and &quot;as available&quot; basis.
                 Boostra disclaims all warranties of any kind, express or
                 implied, including fitness for a particular purpose and
                 non-infringement.
@@ -194,7 +194,7 @@ export default function TermsOfServices() {
             <div>
               <p className="matter-p4-reg text-text-secondary">
                 We may update these Terms from time to time. Updates will be
-                posted on this page with a revised “Effective Date.” Your
+                posted on this page with a revised &quot;Effective Date.&quot; Your
                 continued use of the Service after changes are posted
                 constitutes your acceptance of the revised Terms.
               </p>
