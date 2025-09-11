@@ -223,6 +223,27 @@
   opacity: 1;
 }
 
+.tooltip-btn {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  transition: background 0.3s ease;
+}
+
+.tooltip-btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(93.54deg, #1C42FF -3.63%, #3C99FF 98.73%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: -1;
+}
+
+.tooltip-btn:hover::before {
+  opacity: 0.3;
+}
+
 /* Gradient text */
 .text-gradient-blue {
   background: var(--gradient-blue);
