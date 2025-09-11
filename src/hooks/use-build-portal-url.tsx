@@ -34,11 +34,18 @@ export function useBuildPortalUrl() {
         portalUrl.searchParams.set("device", deviceId);
       }
 
+      let utmCampaign: string | undefined;
       if (mixpanel) {
-        const utmCampaign = mixpanel.get_property("utm_campaign");
-        if (utmCampaign) {
-          portalUrl.searchParams.set("utm_campaign", String(utmCampaign));
-        }
+        utmCampaign = mixpanel.get_property("utm_campaign");
+      }
+
+      if (!utmCampaign && typeof window !== "undefined") {
+        const currentUrl = new URL(window.location.href);
+        utmCampaign = currentUrl.searchParams.get("utm_campaign") || undefined;
+      }
+
+      if (utmCampaign) {
+        portalUrl.searchParams.set("utm_campaign", String(utmCampaign));
       }
 
       return portalUrl.toString();
