@@ -15,13 +15,13 @@ export default function QuestionsSection() {
           <h2 className="matter-h2-reg text-center">Have Questions?</h2>
         </FadeInUp>
         <FadeInUp delay={0.2}>
-          <p className="matter-p1-reg text-text-tertiary text-center max-w-[634px]">
+          <p className="matter-p1-reg text-text-tertiary text-center xl:max-w-[634px]">
             Still have questions? Ask us directly and get expert guidance
             tailored to your business.
           </p>
         </FadeInUp>
       </div>
-      <FadeInUp className="w-full max-w-[838px]" delay={0.4}>
+      <FadeInUp className="w-full xl:max-w-[838px]" delay={0.4}>
         <Accordion type="single" collapsible>
           <AccordionItem value="item-1">
             <AccordionTrigger className="matter-p2-reg">

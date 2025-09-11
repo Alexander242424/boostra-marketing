@@ -22,7 +22,7 @@ export default function InfoCard({
   const buildPortalUrl = useBuildPortalUrl();
 
   return (
-    <div className="flex flex-col w-full max-w-[788px] gap-8 md:gap-[48px] items-center mt-[64px] mb-[48px] md:mb-[160px] md:mt-0">
+    <div className="flex flex-col w-full xl:max-w-[788px] gap-8 md:gap-[48px] items-center mt-[64px] mb-[48px] md:mb-[160px] md:mt-0">
       <div className="flex flex-col gap-6 md:gap-8 items-center">
         <div className="flex flex-col gap-3 md:gap-6">
           <FadeInUp>
@@ -54,7 +54,7 @@ export default function InfoCard({
       </div>
       <FadeInUp>
         {videoSrc && (
-          <div className="w-[343px] h-[353px] md:w-[788px] md:h-[512px] object-cover rounded-[22px] md:rounded-[24px] bg-bg-white-6">
+          <div className=" xl:w-[788px] xl:h-[512px] object-cover rounded-[22px] md:rounded-[24px] bg-bg-white-6">
             <VideoPlayer
               src={videoSrc}
               className="w-full h-full object-cover"

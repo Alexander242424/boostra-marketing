@@ -41,8 +41,8 @@ export default function HeroSections() {
   };
 
   return (
-    <div className="flex flex-col lg:flex-row justify-between items-center sm:items-start lg:items-center gap-8 md:gap-12 pb-10 pt-8 md:pt-[72px]">
-      <div className="w-full flex flex-col lg:max-w-[632px] gap-8 md:gap-12">
+    <div className="flex flex-col xl:flex-row justify-between items-center sm:items-start xl:items-center gap-8 md:gap-12 pb-10 pt-8 md:pt-[72px]">
+      <div className="w-full flex flex-col xl:max-w-[632px] gap-8 md:gap-12">
         <div className="flex flex-col gap-4 md:gap-8">
           <FadeInUp delay={0.1}>
             <h1 className="matter-h1-reg text-center md:text-left">
@@ -52,7 +52,7 @@ export default function HeroSections() {
             </h1>
           </FadeInUp>
           <FadeInUp delay={0.3}>
-            <h1 className="matter-p1-reg text-text-tertiary text-center lg:text-left lg:max-w-[495px]">
+            <h1 className="matter-p1-reg text-text-tertiary text-center md:text-left xl:max-w-[495px]">
               Find what&apos;s broken, fix usability & conversions, boost
               revenue — in minutes, not weeks.
             </h1>
@@ -60,7 +60,7 @@ export default function HeroSections() {
         </div>
         <FadeInUp
           delay={0.6}
-          className="flex flex-col gap-5 md:gap-4 items-center md:items-stretch lg:max-w-[592px]"
+          className="flex flex-col gap-5 md:gap-4 items-center md:items-stretch xl:max-w-[592px]"
         >
           <div className="hover:scale-[1.02] transition-all duration-300">
             <Input
@@ -81,8 +81,8 @@ export default function HeroSections() {
           </div>
         </FadeInUp>
       </div>
-      <div className="w-full h-full flex flex-col md:max-w-[536px] md:max-h-[528px] self-center border-[0.5px] border-[#FFFFFF0D] rounded-[40px] overflow-hidden bg-[#FFFFFF05]">
-        <Lottie animationData={HeroVideoAnimation} loop={true} />
+      <div className="w-full h-full flex flex-col xl:max-w-[536px] xl:max-h-[528px] self-center border-[0.5px] border-[#FFFFFF0D] rounded-[40px] overflow-hidden bg-[#FFFFFF05]">
+        <Lottie className="w-full h-full" animationData={HeroVideoAnimation} loop={true} />
       </div>
     </div>
   );
