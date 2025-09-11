@@ -1,6 +1,6 @@
 "use client";
 import { useIsMobile } from "@/hooks/useIsMobile";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Button } from "./ui/button";
 import CheckIcon from "@/assets/check.svg";
 import {
@@ -15,12 +15,93 @@ import AvatarIcon from "@/assets/Ellipse 29.svg";
 import { useTrackEvent } from "@/hooks/telemetry";
 import { useBuildPortalUrl } from "@/hooks/use-build-portal-url";
 
+// Types for API data
+interface Price {
+  price_id: string;
+  price: number;
+  credits: number;
+}
+
+interface Plan {
+  name: string;
+  description: string;
+  prices: Price[];
+}
+
+interface SubscriptionsData {
+  monthly: Plan[];
+  yearly: Plan[];
+}
+
+// Request function
+const request = async (endpoint: string) => {
+  const apiUrl = process.env.NEXT_PUBLIC_API_URL;
+  if (!apiUrl) {
+    console.error('NEXT_PUBLIC_API_URL is not defined');
+    return null;
+  }
+  
+  try {
+    const response = await fetch(`${apiUrl}${endpoint}`);
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.error('Request failed:', error);
+    return null;
+  }
+};
+
 export default function PlansSections() {
   const trackEvent = useTrackEvent();
   const buildPortalUrl = useBuildPortalUrl();
   const isMobile = useIsMobile();
   const [activeTab, setActiveTab] = useState<string>("Monthly");
+  const [subscriptionsData, setSubscriptionsData] = useState<SubscriptionsData | null>(null);
+  const [selectedPriceIndex, setSelectedPriceIndex] = useState<number>(0);
+  const [isLoading, setIsLoading] = useState(true);
   const tabs = ["Monthly", "Yearly"];
+
+  // API call effect
+  useEffect(() => {
+    const fetchSubscriptions = async () => {
+      const data = await request(`/api/payment/subscriptions`);
+      console.log('Subscriptions data:', data);
+      if (data) {
+        setSubscriptionsData(data);
+        setIsLoading(false);
+      }
+    };
+    
+    fetchSubscriptions();
+  }, []);
+
+  // Get current plan data based on active tab
+  const currentPlan = subscriptionsData?.[activeTab.toLowerCase() as keyof SubscriptionsData]?.[0];
+  const currentPrices = currentPlan?.prices || [];
+  const selectedPrice = currentPrices[selectedPriceIndex];
+
+  // Handle tab change
+  const handleTabChange = (tab: string) => {
+    setActiveTab(tab);
+    setSelectedPriceIndex(0); // Reset to first price option when changing tabs
+  };
+
+  // Handle price selection
+  const handlePriceChange = (value: string) => {
+    const index = parseInt(value);
+    setSelectedPriceIndex(index);
+  };
+
+  if (isLoading) {
+    return (
+      <div className="w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] py-[96px] md:py-[160px] flex items-center justify-center">
+        <div className="text-white">Loading...</div>
+      </div>
+    );
+  }
 
   return (
     <div
@@ -46,7 +127,7 @@ export default function PlansSections() {
           {tabs.map((tab) => (
             <button
               key={tab}
-              onClick={() => setActiveTab(tab)}
+              onClick={() => handleTabChange(tab)}
               className={`flex rounded-[30px] px-[12px] py-[8px] transition-all duration-200 cursor-pointer ${
                 activeTab === tab
                   ? "bg-bg-white-12 text-white"
@@ -64,21 +145,27 @@ export default function PlansSections() {
         </FadeInUp>
         <FadeInUp className="flex flex-col mx-auto border border-[#1C42FF] md:flex-row p-6 md:pt-8 md:py-8 md:pb-6 bg-bg-white-6 rounded-[24px] gap-6 md:gap-8 max-w-[838px] shadow-[0px_0px_0px_5px_#3586FF3D]">
           <div className="flex flex-col w-full md:max-w-[274px]">
-            <h6 className="matter-h6-reg">All in One</h6>
+            <h6 className="matter-h6-reg">{currentPlan?.name || "All in One"}</h6>
             <div className="flex pt-6 md:pt-[15px] items-end">
-              <h1 className="matter-h1-reg">$9</h1>
-              <p className="matter-p2-reg text-text-tertiary">$29 / monthly</p>
+              <h1 className="matter-h4-reg">
+                ${selectedPrice ? selectedPrice.price.toFixed(selectedPrice.price % 1 === 0 ? 0 : 2) : "Nan"}
+              </h1>
+              <p className="matter-p2-reg text-text-tertiary">
+                {activeTab === "Monthly" ? "/ monthly" : "/ yearly"}
+              </p>
             </div>
             <div className="flex flex-col gap-[20px] pt-6 md:pt-8">
               {/* Dropdown with features */}
-              <Select>
+              <Select value={selectedPriceIndex.toString()} onValueChange={handlePriceChange}>
                 <SelectTrigger className="w-full">
-                  <SelectValue placeholder="1 report / mo" />
+                  <SelectValue placeholder="Select plan" />
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectItem value="light">5 report / mo</SelectItem>
-                  <SelectItem value="dark">6 report / mo</SelectItem>
-                  <SelectItem value="system">10 report / mo</SelectItem>
+                  {currentPrices.map((price, index) => (
+                    <SelectItem key={price.price_id} value={index.toString()}>
+                      {price.credits} report{price.credits > 1 ? 's' : ''} / {activeTab === "Monthly" ? 'mo' : 'year'}
+                    </SelectItem>
+                  ))}
                 </SelectContent>
               </Select>
               <Button
@@ -142,7 +229,7 @@ export default function PlansSections() {
         </FadeInUp>
         <FadeInUp className="flex flex-col mx-auto max-w-[253px] gap-[18px] pt-8 md:pt-12">
           <p className="matter-p4-reg text-center">
-            “We increased our revenue to $10,000 with Boostra”
+            "We increased our revenue to $10,000 with Boostra"
           </p>
           <div className="flex items-center justify-center">
             <AvatarIcon />
