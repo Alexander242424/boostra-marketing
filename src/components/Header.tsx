@@ -10,7 +10,6 @@ import { useBuildPortalUrl } from "@/hooks/use-build-portal-url";
 export default function Header() {
   const pathname = usePathname();
   const headerRef = useRef<HTMLDivElement>(null);
-  const [currentHash, setCurrentHash] = useState("");
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState("");
   useNearestParentScrollListener(headerRef, setIsScrolled);
@@ -20,11 +19,6 @@ export default function Header() {
     // Перевіряємо, чи window існує (клієнтська сторона)
     if (typeof window === "undefined") return;
 
-    setCurrentHash(window.location.hash);
-
-    const handleHashChange = () => {
-      setCurrentHash(window.location.hash);
-    };
 
     const handleScroll = () => {
       const sections = [
@@ -58,7 +52,6 @@ export default function Header() {
       setActiveSection(currentSection);
     };
 
-    window.addEventListener("hashchange", handleHashChange);
     window.addEventListener("scroll", handleScroll);
 
     handleScroll();
@@ -78,7 +71,6 @@ export default function Header() {
     });
 
     return () => {
-      window.removeEventListener("hashchange", handleHashChange);
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);

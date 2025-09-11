@@ -2,7 +2,6 @@ import React from "react";
 import RevenueCard from "./RevenueCard";
 import { Button } from "./ui/button";
 import AvatarIcon from "@/assets/Verizon Team.svg";
-import SplitText from "./SplitText";
 import FadeInUp from "./FadeInUp";
 import SearchIcon from "@/assets/opportunuties/Heart-Rate-Search--Streamline-Core-Neon.svg";
 import BrowserIcon from "@/assets/opportunuties/Browser-Delete--Streamline-Core-Neon.svg";

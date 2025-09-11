@@ -1,7 +1,6 @@
 "use client";
 import React from "react";
 import CopilotHeaderIcon from "@/assets/copilot.svg";
-import CopilotBg from "@/assets/background/copilot-bg.svg";
 import StarsBg from "@/assets/background/stars-bg.svg";
 import { Input } from "./ui/input";
 import { useIsMobile } from "@/hooks/useIsMobile";
