@@ -52,23 +52,27 @@ export default function CaruselCard({
       <div className="flex flex-col xl:mr-10 px-4 xl:px-0 my-6 xl:my-8">
         {!isSmallScreen ? (
           <>
-            <div className="flex flex-col gap-[21.33px] xl:gap-[28px]">
-              {logo}
+            <div className="flex flex-col gap-[21.33px] md:gap-[28px]">
+              <div className="flex items-center">
+                {logo}
+                <div className="ml-auto">
+                  <Stars />
+                </div>
+              </div>
               <h6 className="matter-h6-reg">{title}</h6>
             </div>
-            <div className="flex gap-3 items-center mt-[64px] xl:mt-auto">
-              <div className="min-h-[56px] min-w-[56px]">{author.avatar}</div>
+            <div className="flex gap-3 items-center mt-[64px] md:mt-auto">
+              <div className="flex items-center">{author.avatar}</div>
               <div className="flex flex-col gap-[5px]">
-                <div>
-                  <p className="matter-p3-reg">{author.name}</p>
-                  <p className="text-text-tertiary">{author.position}</p>
-                </div>
+                <p className="matter-p3-reg">
+                  {author.name}{" "}
+                  <span className="text-text-tertiary">
+                    · {author.position}
+                  </span>
+                </p>
                 <a href="#" className="matter-p4-reg text-gradient-blue">
                   {author.website}
                 </a>
-              </div>
-              <div className="self-start ml-auto">
-                <Stars />
               </div>
             </div>
           </>

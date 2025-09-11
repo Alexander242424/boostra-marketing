@@ -1,27 +1,26 @@
 import React from "react";
 import CostCard from "./CostCard";
-import CostImage1 from "@/assets/costmoney/image 5.svg";
-import CostImage2 from "@/assets/costmoney/image 6.svg";
-import CostImage3 from "@/assets/costmoney/image 5-1.svg";
-import SplitText from "./SplitText";
+import CostImage1 from "@/assets/costmoney/1-min.png";
+import CostImage2 from "@/assets/costmoney/2-min.png";
+import CostImage3 from "@/assets/costmoney/3-min.png";
 import FadeInUp from "./FadeInUp";
 
 export default function CostSections() {
   const cards = [
     {
-      icon: <CostImage1 />,
+      icon: CostImage1,
       title: "Increase revenue with the same traffic",
       description:
         "Boostra helps you increase your conversion rate and unlock hidden revenue opportunities without spending more on advertising.",
     },
     {
-      icon: <CostImage2 />,
+      icon: CostImage2,
       title: "Increase customer retention and engagement",
       description:
         "Fix website friction points, reduce bounce rates, and keep visitors engaged until they become paying customers.",
     },
     {
-      icon: <CostImage3 />,
+      icon: CostImage3,
       title: "Get proven conversion and revenue growth",
       description:
         "On average, businesses achieve a +10-12% lift in conversions and measurable revenue growth using Boostra analysis.",
