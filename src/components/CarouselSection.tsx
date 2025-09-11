@@ -6,6 +6,24 @@ import CaruselCard from "./CaruselCard";
 import FadeInUp from "./FadeInUp";
 import RoyalQueenSeeds from "@/assets/royal-queen-seeds.svg";
 import Avatar from "@/assets/Ellipse 29.svg";
+import ArchiveAvatar from "@/assets/logo Case Studies/archive.svg";
+import CalendlyAvatar from "@/assets/logo Case Studies/calendly.svg";
+import DeliverooAvatar from "@/assets/logo Case Studies/deliveroo.svg";
+import DiamondCbdAvatar from "@/assets/logo Case Studies/diamond cbd.svg";
+import ForbesAvatar from "@/assets/logo Case Studies/forbes.svg";
+import GymsharkAvatar from "@/assets/logo Case Studies/gymshark.svg";
+import LoomAvatar from "@/assets/logo Case Studies/loom.svg";
+import MarioCapasaAvatar from "@/assets/logo Case Studies/mario capasa.svg";
+import MarioCapasaPngAvatar from "@/assets/logo Case Studies/mario capasa.png";
+import MdisruptAvatar from "@/assets/logo Case Studies/mdisrupt.svg";
+import NespressoAvatar from "@/assets/logo Case Studies/nespresso.svg";
+import PaydeskAvatar from "@/assets/logo Case Studies/paydesk.svg";
+import RedBullAvatar from "@/assets/logo Case Studies/red bull.svg";
+import SchneiderAvatar from "@/assets/logo Case Studies/schneider.svg";
+import TeamexAvatar from "@/assets/logo Case Studies/teamex.svg";
+import TrudyAvatar from "@/assets/logo Case Studies/trudy.svg";
+import WellowAvatar from "@/assets/logo Case Studies/wellow.svg";
+import ZaraAvatar from "@/assets/logo Case Studies/zara.svg";
 
 const OPTIONS: EmblaOptionsType = { loop: true };
 
@@ -364,13 +382,13 @@ export default function CarouselSection() {
   return (
     <div
       className="w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] py-[96px] md:py-[160px]"
-      style={{
-        backgroundImage:
-          'url("/boostra-updated/jpeg-optimizer_Frame 2147230109.jpg")',
-        backgroundSize: "cover",
-        backgroundRepeat: "no-repeat",
-        backgroundPosition: "center",
-      }}
+      // style={{
+      //   backgroundImage:
+      //     'url("/boostra-updated/jpeg-optimizer_Frame 2147230109.jpg")',
+      //   backgroundSize: "cover",
+      //   backgroundRepeat: "no-repeat",
+      //   backgroundPosition: "center",
+      // }}
     >
       <div className="mx-auto px-4">
         <FadeInUp className="flex flex-col items-center text-center gap-3 md:gap-5 mb-[48px]">
