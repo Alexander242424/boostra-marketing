@@ -6,24 +6,24 @@ import CaruselCard from "./CaruselCard";
 import FadeInUp from "./FadeInUp";
 import RoyalQueenSeeds from "@/assets/royal-queen-seeds.svg";
 import Avatar from "@/assets/Ellipse 29.svg";
-import ArchiveAvatar from "@/assets/logo Case Studies/archive.svg";
-import CalendlyAvatar from "@/assets/logo Case Studies/calendly.svg";
-import DeliverooAvatar from "@/assets/logo Case Studies/deliveroo.svg";
-import DiamondCbdAvatar from "@/assets/logo Case Studies/diamond cbd.svg";
-import ForbesAvatar from "@/assets/logo Case Studies/forbes.svg";
-import GymsharkAvatar from "@/assets/logo Case Studies/gymshark.svg";
-import LoomAvatar from "@/assets/logo Case Studies/loom.svg";
-import MarioCapasaAvatar from "@/assets/logo Case Studies/mario capasa.svg";
-import MarioCapasaPngAvatar from "@/assets/logo Case Studies/mario capasa.png";
-import MdisruptAvatar from "@/assets/logo Case Studies/mdisrupt.svg";
-import NespressoAvatar from "@/assets/logo Case Studies/nespresso.svg";
-import PaydeskAvatar from "@/assets/logo Case Studies/paydesk.svg";
-import RedBullAvatar from "@/assets/logo Case Studies/red bull.svg";
-import SchneiderAvatar from "@/assets/logo Case Studies/schneider.svg";
-import TeamexAvatar from "@/assets/logo Case Studies/teamex.svg";
-import TrudyAvatar from "@/assets/logo Case Studies/trudy.svg";
-import WellowAvatar from "@/assets/logo Case Studies/wellow.svg";
-import ZaraAvatar from "@/assets/logo Case Studies/zara.svg";
+import ArchiveLogo from "@/assets/logo Case Studies/archive.svg";
+import CalendlyLogo from "@/assets/logo Case Studies/calendly.svg";
+import DeliverooLogo from "@/assets/logo Case Studies/deliveroo.svg";
+import DiamondCbdLogo from "@/assets/logo Case Studies/diamond cbd.svg";
+import ForbesLogo from "@/assets/logo Case Studies/forbes.svg";
+import GymsharkLogo from "@/assets/logo Case Studies/gymshark.svg";
+import LoomLogo from "@/assets/logo Case Studies/loom.svg";
+import MarioCapasaLogo from "@/assets/logo Case Studies/mario capasa.svg";
+import MdisruptLogo from "@/assets/logo Case Studies/mdisrupt.svg";
+import NespressoLogo from "@/assets/logo Case Studies/nespresso.svg";
+import PaydeskLogo from "@/assets/logo Case Studies/paydesk.svg";
+import RedBullLogo from "@/assets/logo Case Studies/red bull.svg";
+import SchneiderLogo from "@/assets/logo Case Studies/schneider.svg";
+import TeamexLogo from "@/assets/logo Case Studies/teamex.svg";
+import TrudyLogo from "@/assets/logo Case Studies/trudy.svg";
+import WellowLogo from "@/assets/logo Case Studies/wellow.svg";
+import ZaraLogo from "@/assets/logo Case Studies/zara.svg";
+import { useIsMobile } from "@/hooks/useIsMobile";
 
 const OPTIONS: EmblaOptionsType = { loop: true };
 
@@ -38,7 +38,7 @@ const categoriesData = {
         width: 408,
         height: 408,
       },
-      logo: <RoyalQueenSeeds />,
+      logo: <NespressoLogo />,
       title: "+17% Subscription Orders in 4 Weeks After a 5-Minute Getboostra Analysis of Nespresso",
       author: {
         name: "Claire Dubois",
@@ -54,7 +54,7 @@ const categoriesData = {
         width: 408,
         height: 408,
       },
-      logo: <RoyalQueenSeeds />,
+      logo: <ZaraLogo />,
       title:
         "+22% Mobile Checkout Rate in 3 Weeks After a 5-Minute Getboostra Analysis of Zara US",
       author: {
@@ -71,7 +71,7 @@ const categoriesData = {
         width: 408,
         height: 408,
       },
-      logo: <RoyalQueenSeeds />,
+      logo: <GymsharkLogo />,
       title: "+28% Account Sign-Ups in 3 Weeks After a 5-Minute Getboostra Analysis of Gymshark.com",
       author: {
         name: "Sophie Bennett",
@@ -103,7 +103,7 @@ const categoriesData = {
         width: 408,
         height: 408,
       },
-      logo: <RoyalQueenSeeds />,
+      logo: <DiamondCbdLogo />,
       title: "+26% Add-to-Cart Rate in 3 Weeks After a 5-Minute Getboostra Analysis of DiamondCBD.com",
       author: {
         name: "Rachel Kim",
@@ -119,7 +119,7 @@ const categoriesData = {
         width: 408,
         height: 408,
       },
-      logo: <RoyalQueenSeeds />,
+      logo: <WellowLogo />,
       title: "+31% First-Time Orders in 1 Month After a 5-Minute Getboostra Analysis of WearWellow.com",
       author: {
         name: "David Lam",
@@ -135,7 +135,7 @@ const categoriesData = {
         width: 408,
         height: 408,
       },
-      logo: <RoyalQueenSeeds />,
+      logo: <MarioCapasaLogo />,
       title: "+24% Returning Customers in 4 Weeks After a 5-Minute Getboostra Analysis of MarioCasapa.com",
       author: {
         name: "Lucia Romano",
@@ -153,7 +153,7 @@ const categoriesData = {
         width: 408,
         height: 408,
       },
-      logo: <RoyalQueenSeeds />,
+      logo: <ArchiveLogo />,
       title: "+34% Demo Requests in 3 Weeks After a 5-Minute Getboostra Analysis of Archive.com",
       author: {
         name: "Alex Chen",
@@ -169,7 +169,7 @@ const categoriesData = {
         width: 408,
         height: 408,
       },
-      logo: <RoyalQueenSeeds />,
+      logo: <PaydeskLogo />,
       title: "+38% Sign-Ups in 3 Weeks After a 5-Minute Getboostra Analysis of Journalist.net",
       author: {
         name: "Emily Harper",
@@ -185,7 +185,7 @@ const categoriesData = {
         width: 408,
         height: 408,
       },
-      logo: <RoyalQueenSeeds />,
+      logo: <TeamexLogo />,
       title: "+23% Trial Activations in 2 Weeks After a 5-Minute Getboostra Analysis of Teamex.io",
       author: {
         name: "Martin Keller",
@@ -201,7 +201,7 @@ const categoriesData = {
         width: 408,
         height: 408,
       },
-      logo: <RoyalQueenSeeds />,
+      logo: <LoomLogo />,
       title: "+18% User Retention in 1 Month After a 5-Minute Getboostra Analysis of Loom.com",
       author: {
         name: "Priya Patel",
@@ -217,7 +217,7 @@ const categoriesData = {
         width: 408,
         height: 408,
       },
-      logo: <RoyalQueenSeeds />,
+      logo: <MdisruptLogo />,
       title: "+27% Qualified Leads in 3 Weeks After a 5-Minute Getboostra Analysis of mDisrupt.com",
       author: {
         name: "Daniel Ortiz",
@@ -233,7 +233,7 @@ const categoriesData = {
         width: 408,
         height: 408,
       },
-      logo: <RoyalQueenSeeds />,
+      logo: <CalendlyLogo />,
       title: "+32% Paid Upgrades in 1 Month After a 5-Minute Getboostra Analysis of Calendly.com",
       author: {
         name: "Hannah Lee",
@@ -249,7 +249,7 @@ const categoriesData = {
         width: 408,
         height: 408,
       },
-      logo: <RoyalQueenSeeds />,
+      logo: <TrudyLogo />,
       title: "+25% Active Daily Users in 3 Weeks After a 5-Minute Getboostra Analysis of Trudy.app",
       author: {
         name: "Victor Alvarez",
@@ -267,7 +267,7 @@ const categoriesData = {
         width: 408,
         height: 408,
       },
-      logo: <RoyalQueenSeeds />,
+      logo: <NespressoLogo />,
       title: "+17% Subscription Orders in 4 Weeks After a 5-Minute Getboostra Analysis of Nespresso",
       author: {
         name: "Claire Dubois",
@@ -283,7 +283,7 @@ const categoriesData = {
         width: 408,
         height: 408,
       },
-      logo: <RoyalQueenSeeds />,
+      logo: <RedBullLogo />,
       title: "+19% Event Sign-Ups in 3 Weeks After a 5-Minute Getboostra Analysis of RedBull.com",
       author: {
         name: "Laura Stein",
@@ -299,7 +299,7 @@ const categoriesData = {
         width: 408,
         height: 408,
       },
-      logo: <RoyalQueenSeeds />,
+      logo: <ZaraLogo />,
       title:
         "+22% Mobile Checkout Rate in 3 Weeks After a 5-Minute Getboostra Analysis of Zara US",
       author: {
@@ -316,7 +316,7 @@ const categoriesData = {
         width: 408,
         height: 408,
       },
-      logo: <RoyalQueenSeeds />,
+      logo: <SchneiderLogo />,
       title:
         "+27% Lead Conversions in 1 Month After a 5-Minute Getboostra Analysis of Schneider-Electric.com",
       author: {
@@ -333,7 +333,7 @@ const categoriesData = {
         width: 408,
         height: 408,
       },
-      logo: <RoyalQueenSeeds />,
+      logo: <DeliverooLogo />,
       title:
         "+23% New Customer Orders in 2 Weeks After a 5-Minute Getboostra Analysis of Deliveroo.com",
       author: {
@@ -350,7 +350,7 @@ const categoriesData = {
         width: 408,
         height: 408,
       },
-      logo: <RoyalQueenSeeds />,
+      logo: <ForbesLogo />,
       title:
         "+29% Newsletter Sign-Ups in 1 Month After a 5-Minute Getboostra Analysis of Forbes.com",
       author: {
@@ -364,8 +364,8 @@ const categoriesData = {
 };
 
 export default function CarouselSection() {
+  const isMobile = useIsMobile();
   const [activeCategory, setActiveCategory] = useState<Category>("eCommerce");
-
   const currentData = categoriesData[activeCategory];
   const slides = currentData.map((data, index) => (
     <CaruselCard
@@ -382,13 +382,14 @@ export default function CarouselSection() {
   return (
     <div
       className="w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] py-[96px] md:py-[160px]"
-      // style={{
-      //   backgroundImage:
-      //     'url("/boostra-updated/jpeg-optimizer_Frame 2147230109.jpg")',
-      //   backgroundSize: "cover",
-      //   backgroundRepeat: "no-repeat",
-      //   backgroundPosition: "center",
-      // }}
+      style={{
+        backgroundImage: isMobile
+        ? 'url("/Backgrounds boostra/mobile/Background Case Studies-min.jpg")'
+        : 'url("/Backgrounds boostra/desktop/Background Case Studies-min.jpg")',
+        backgroundSize: "cover",
+        backgroundRepeat: "no-repeat",
+        backgroundPosition: "center",
+      }}
     >
       <div className="mx-auto px-4">
         <FadeInUp className="flex flex-col items-center text-center gap-3 md:gap-5 mb-[48px]">

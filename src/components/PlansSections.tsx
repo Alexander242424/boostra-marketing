@@ -112,8 +112,8 @@ export default function PlansSections() {
       className="w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] py-[96px] md:py-[160px]"
       style={{
         backgroundImage: isMobile
-          ? 'url("/boostra-updated/Mobile Gradient Background 03.webp")'
-          : 'url("/boostra-updated/Gradient Background 03.webp")',
+          ? 'url("/Backgrounds boostra/mobile/Background Pricing-min.jpg")'
+          : 'url("/Backgrounds boostra/desktop/Gradient Pricing-min.jpg")',
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
         backgroundPosition: "center",

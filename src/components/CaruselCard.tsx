@@ -62,7 +62,9 @@ export default function CaruselCard({
               <h6 className="matter-h6-reg">{title}</h6>
             </div>
             <div className="flex gap-3 items-center mt-[64px] md:mt-auto">
-              <div className="flex items-center">{author.avatar}</div>
+              <div className="flex items-center justify-center min-w-14 min-h-14 rounded-full bg-white/20 text-white matter font-[400px] text-[22px]">
+                {author.name.split(' ').map(name => name[0]).join('').toUpperCase()}
+              </div>
               <div className="flex flex-col gap-[5px]">
                 <p className="matter-p3-reg">
                   {author.name}{" "}
@@ -70,9 +72,9 @@ export default function CaruselCard({
                     · {author.position}
                   </span>
                 </p>
-                <a href="#" className="matter-p4-reg text-gradient-blue">
+                <p className="matter-p4-reg text-gradient-blue">
                   {author.website}
-                </a>
+                </p>
               </div>
             </div>
           </>
@@ -88,9 +90,9 @@ export default function CaruselCard({
             <div className="flex flex-col mt-10 gap-4">
               <div className="flex -ml-[34px] scale-[0.8]">{logo}</div>
               <div className="flex justify-between items-center">
-                <a href="#" className="matter-p4-reg text-gradient-blue">
+                <p className="matter-p4-reg text-gradient-blue">
                   {author.website}
-                </a>
+                </p>
                 <div className="flex scale-[0.8]">
                   <Stars />
                 </div>

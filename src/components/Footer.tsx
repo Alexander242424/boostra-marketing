@@ -38,8 +38,8 @@ export default function Footer() {
         className="absolute md:-top-[210px] left-1/2 transform -translate-x-1/2 w-screen h-[400px] md:h-[730px] -z-[1]"
         style={{
           backgroundImage: isMobile
-            ? 'url("/boostra-updated/Mobile Gradient Background 04.webp")'
-            : 'url("/boostra-updated/1.jpg")',
+            ? 'url("/Backgrounds boostra/mobile/Background Unlock Conversions-min.jpg")'
+            : 'url("/Backgrounds boostra/desktop/Gradient Unlock Conversions-min.jpg")',
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
           backgroundPosition: "center",

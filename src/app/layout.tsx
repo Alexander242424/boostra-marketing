@@ -4,7 +4,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import HeaderBackground from "@/components/HeaderBackground";
-import Loader from "@/components/Loader";
+// import Loader from "@/components/Loader";
 import { type Config } from "mixpanel-browser";
 import { MixpanelProvider } from "@/providers/mixpanel";
 import { Metadata } from "next";
@@ -140,7 +140,7 @@ export default function RootLayout({
       </head>
       <body className={`${Matter.variable} ${systemMono.variable} antialiased`}>
         <MixpanelProvider config={mixpanelConfig}>
-          <Loader />
+          {/* <Loader /> */}
           <div
             className="min-h-screen flex flex-col relative"
             style={{ scrollBehavior: "smooth" }}

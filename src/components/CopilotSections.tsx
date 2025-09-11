@@ -4,13 +4,22 @@ import CopilotHeaderIcon from "@/assets/copilot.svg";
 import CopilotBg from "@/assets/background/copilot-bg.svg";
 import StarsBg from "@/assets/background/stars-bg.svg";
 import { Input } from "./ui/input";
+import { useIsMobile } from "@/hooks/useIsMobile";
 
 export default function CopilotSections() {
+  const isMobile = useIsMobile();
   return (
     <div className="relative">
-      <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-screen h-[665px] lg:h-[859px] z-0">
-        <CopilotBg className="w-full h-full object-cover" />
-      </div>
+    <div
+        className="absolute top-0 left-1/2 transform -translate-x-1/2 w-screen h-screen z-0"
+        style={{
+          backgroundImage: isMobile
+            ? 'url("/Backgrounds boostra/mobile/Background Copilot-min.jpg")'
+            : 'url("/Backgrounds boostra/desktop/Background Copilot-min.jpg")',
+          backgroundSize: "cover",
+          backgroundRepeat: "no-repeat",
+        }}
+      />
 
       <div className="relative z-10 flex flex-col gap-[48px] items-center justify-center h-[665px] lg:h-[859px]">
         <div className="flex flex-col max-w-[571px] gap-4 md:gap-6 items-center">
