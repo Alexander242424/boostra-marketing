@@ -44,7 +44,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
           <input
             type={type}
             className={cn(
-              "flex-1 h-full bg-transparent text-text-primary placeholder:text-text-tertiary matter-p3-reg outline-none border-none focus:outline-none",
+              "flex-1 h-full bg-transparent text-text-primary placeholder:text-text-tertiary matter-p3-reg outline-none border-none focus:outline-none not-sm:text-[16px]!",
               onBtnClick ? "pr-32" : "",
               className
             )}

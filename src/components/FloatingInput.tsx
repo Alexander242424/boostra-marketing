@@ -93,7 +93,7 @@ export default function FloatingInput() {
               <input
                 type="text"
                 className={cn(
-                  "flex-1 h-full bg-transparent text-text-primary placeholder:text-text-tertiary matter-p4-reg outline-none border-none focus:outline-none",
+                  "flex-1 h-full bg-transparent text-text-primary placeholder:text-text-tertiary matter-p4-reg outline-none border-none focus:outline-none not-sm:text-[16px]!",
                   "pr-32"
                 )}
                 placeholder="Page URL..."
