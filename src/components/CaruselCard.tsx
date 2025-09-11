@@ -57,14 +57,12 @@ export default function CaruselCard({
               <h6 className="matter-h6-reg">{title}</h6>
             </div>
             <div className="flex gap-3 items-center mt-[64px] xl:mt-auto">
-              {author.avatar}
+              <div className="min-h-[56px] min-w-[56px]">{author.avatar}</div>
               <div className="flex flex-col gap-[5px]">
-                <p className="matter-p3-reg">
-                  {author.name}{" "}
-                  <span className="text-text-tertiary">
-                    · {author.position}
-                  </span>
-                </p>
+                <div>
+                  <p className="matter-p3-reg">{author.name}</p>
+                  <p className="text-text-tertiary">{author.position}</p>
+                </div>
                 <a href="#" className="matter-p4-reg text-gradient-blue">
                   {author.website}
                 </a>
