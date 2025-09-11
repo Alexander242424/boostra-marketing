@@ -25,7 +25,7 @@ const buttonVariants = cva(
         default: "rounded-[100px] py-[9px] px-5 matter-button-link-med",
         sm: "h-8 rounded-md gap-1.5 px-3 has-[>svg]:px-2.5",
         lg: "rounded-[100px] px-8 py-4 matter-button-link-big",
-        icon: "size-9",
+        icon: "rounded-full size-10",
       },
     },
     defaultVariants: {
