@@ -152,21 +152,21 @@ export default function Footer() {
               <div className="flex flex-col gap-4 min-w-[155px] md:min-w-fit">
                 <p className="matter-p3-med">Company</p>
                 <Link
-                  href="/terms_of_services"
+                  href="/terms-of-services"
                   className="relative group matter-p4-reg max-w-fit"
                 >
                   Terms of Use
                   <span className="absolute bottom-0 left-0 w-0 h-[1px] header-underline underline-animation"></span>
                 </Link>
                 <Link
-                  href="/privacy_policy"
+                  href="/privacy-policy"
                   className="relative group matter-p4-reg max-w-fit"
                 >
                   Privacy Policy
                   <span className="absolute bottom-0 left-0 w-0 h-[1px] header-underline underline-animation"></span>
                 </Link>
                 <Link
-                  href="/"
+                  href="/cookies-policy"
                   className="relative group matter-p4-reg max-w-fit"
                 >
                   Cookies Policy

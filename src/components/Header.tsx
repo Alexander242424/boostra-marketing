@@ -38,13 +38,24 @@ export default function Header() {
       const headerHeight = isMobile ? 66 : 72;
       const scrollPosition = window.scrollY + headerHeight + 50;
 
-      for (let i = sections.length - 1; i >= 0; i--) {
-        const section = document.getElementById(sections[i]);
-        if (section && section.offsetTop <= scrollPosition) {
-          setActiveSection(sections[i]);
-          break;
+      // Find the section we're currently in
+      let currentSection = "";
+      
+      for (const sectionId of sections) {
+        const section = document.getElementById(sectionId);
+        if (section) {
+          const sectionTop = section.offsetTop;
+          const sectionBottom = sectionTop + section.offsetHeight;
+          
+          // Check if we're within this section's bounds
+          if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
+            currentSection = sectionId;
+            break;
+          }
         }
       }
+      
+      setActiveSection(currentSection);
     };
 
     window.addEventListener("hashchange", handleHashChange);
