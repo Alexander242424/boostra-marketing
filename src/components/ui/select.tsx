@@ -123,9 +123,7 @@ function SelectItem({
         </span>
         <SelectPrimitive.ItemText>{children}</SelectPrimitive.ItemText>
       </SelectPrimitive.Item>
-      {children !== "10 report / mo" && (
-        <div className="m-[8px] h-[1px] bg-[#FFFFFF1F]"></div>
-      )}
+      <div className="m-[8px] h-[1px] bg-[#FFFFFF1F] last:hidden"></div>
     </>
   );
 }
