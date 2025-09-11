@@ -7,54 +7,42 @@ export default function TermsOfServices() {
         <div className="flex flex-col gap-4 md:gap-6">
           <h2 className="matter-h2-reg">Terms of services</h2>
           <p className="matter-p4-reg text-text-secondary">
-            These Terms of Service (&ldquo;Terms&rdquo;) govern your use of our
-            website, services, and platform (collectively, the
-            &ldquo;Service&rdquo;). By accessing or using our Service, you agree
-            to comply with and be bound by these Terms. Please read them
-            carefully before using our Service.
+            Welcome to GetBoostra ("Boostra", "we", "our", or "us"). These Terms
+            of Service ("Terms") govern your use of our website, products, and
+            services (collectively, the "Service"). By accessing or using the
+            Service, you agree to be bound by these Terms. If you do not agree,
+            you may not use the Service.
           </p>
-        </div>
-        <div className="flex flex-col gap-8 md:gap-12">
-          <div className="flex flex-col gap-5">
-            <h6 className="matter-h6-reg">Acceptance of Terms</h6>
-            <p className="matter-p4-reg text-text-secondary">
-              By using our Service, you confirm that you have read, understood,
-              and agree to be bound by these Terms and our Privacy Policy. If
-              you do not agree with these Terms, you may not access or use the
-              Service.
-            </p>
-          </div>
-        </div>
-        <div className="flex flex-col gap-8 md:gap-12">
-          <div className="flex flex-col gap-5">
-            <h6 className="matter-h6-reg">Description of the Service</h6>
-            <p className="matter-p4-reg text-text-secondary">
-              [Usability Checker Name] provides an online tool that analyzes the
-              usability and performance of websites and generates reports with
-              actionable recommendations. Our Service is designed to help you
-              improve user experience and site performance.
-            </p>
-          </div>
         </div>
         <div className="flex flex-col gap-8 md:gap-12">
           <div className="flex flex-col gap-5">
             <h6 className="matter-h6-reg">Eligibility</h6>
             <div>
               <p className="matter-p4-reg text-text-secondary">
-                To use the Service, you must:
+                You must be at least 18 years old and have the legal capacity to
+                enter into a binding contract to use the Service.
               </p>
+            </div>
+          </div>
+        </div>
+        <div className="flex flex-col gap-8 md:gap-12">
+          <div className="flex flex-col gap-5">
+            <h6 className="matter-h6-reg">Use of Service</h6>
+            <div>
               <ul className="list-disc matter-p4-reg text-text-secondary pl-5">
                 <li>
-                  Be at least 18 years old or have legal parental/guardian
-                  consent.
+                  Boostra provides AI-powered website analysis and
+                  recommendations for conversion, usability, and accessibility
+                  improvements.
                 </li>
                 <li>
-                  Provide accurate, complete, and up-to-date information when
-                  creating an account.
+                  The Service is provided for informational purposes only.
+                  Boostra does not guarantee improved conversions, revenue, or
+                  any specific results.
                 </li>
                 <li>
-                  Ensure that your use of the Service complies with all
-                  applicable laws and regulations.
+                  You may not use the Service for any unlawful, fraudulent, or
+                  abusive activity.
                 </li>
               </ul>
             </div>
@@ -62,24 +50,20 @@ export default function TermsOfServices() {
         </div>
         <div className="flex flex-col gap-8 md:gap-12">
           <div className="flex flex-col gap-5">
-            <h6 className="matter-h6-reg">Account Registration and Security</h6>
+            <h6 className="matter-h6-reg">Accounts and Security</h6>
             <div>
               <ul className="list-disc matter-p4-reg text-text-secondary pl-5">
                 <li>
-                  You must create an account to access certain features of the
-                  Service.
+                  To access the Service, you may need to create an account.
                 </li>
                 <li>
                   You are responsible for maintaining the confidentiality of
-                  your account credentials.
+                  your login credentials.
                 </li>
                 <li>
-                  You agree to notify us immediately of any unauthorized access
-                  to or use of your account.
-                </li>
-                <li>
-                  We are not liable for any loss or damage arising from
-                  unauthorized use of your account.
+                  You agree to notify us immediately at{" "}
+                  <a href="mailto:help@getboostra.com">help@getboostra.com</a>{" "}
+                  if you suspect unauthorized use of your account.
                 </li>
               </ul>
             </div>
@@ -87,27 +71,85 @@ export default function TermsOfServices() {
         </div>
         <div className="flex flex-col gap-8 md:gap-12">
           <div className="flex flex-col gap-5">
-            <h6 className="matter-h6-reg">Use of the Service</h6>
+            <h6 className="matter-h6-reg">Subscriptions and Billing</h6>
+            <div>
+              <ul className="list-disc matter-p4-reg text-text-secondary pl-5">
+                <li>Boostra operates on a monthly subscription model.</li>
+                <li>
+                  By subscribing, you authorize us to charge your chosen payment
+                  method on a recurring basis until you cancel.
+                </li>
+                <li>
+                  All sales are final. We do not offer refunds or credits for
+                  partially used subscription periods.
+                </li>
+                <li>
+                  You may cancel your subscription at any time, but access to
+                  the Service will remain active until the end of your current
+                  billing cycle.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div className="flex flex-col gap-8 md:gap-12">
+          <div className="flex flex-col gap-5">
+            <h6 className="matter-h6-reg">Intellectual Property</h6>
+            <div>
+              <ul className="list-disc matter-p4-reg text-text-secondary pl-5">
+                <li>
+                  All content, software, and technology provided by Boostra are
+                  the property of Boostra and protected by applicable
+                  intellectual property laws.
+                </li>
+                <li>
+                  You may not copy, modify, distribute, or create derivative
+                  works based on the Service without prior written consent from
+                  Boostra.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div className="flex flex-col gap-8 md:gap-12">
+          <div className="flex flex-col gap-5">
+            <h6 className="matter-h6-reg">Prohibited Activities</h6>
+            <div>
+              <ul className="list-disc matter-p4-reg text-text-secondary pl-5">
+                <li>
+                  Attempt to access the Service in a manner not provided by
+                  Boostra.
+                </li>
+                <li>
+                  Reverse engineer, scrape, or attempt to extract underlying
+                  code or algorithms.
+                </li>
+                <li>
+                  Use the Service for competitive analysis or to build a
+                  competing product.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div className="flex flex-col gap-8 md:gap-12">
+          <div className="flex flex-col gap-5">
+            <h6 className="matter-h6-reg">Disclaimer of Warranties</h6>
             <div>
               <p className="matter-p4-reg text-text-secondary">
-                You agree to use the Service only for lawful purposes and in
-                compliance with these Terms. You agree not to:
+                The Service is provided on an “as is” and “as available” basis.
+                Boostra disclaims all warranties of any kind, express or
+                implied, including fitness for a particular purpose and
+                non-infringement.
               </p>
               <ul className="list-disc matter-p4-reg text-text-secondary pl-5">
                 <li>
-                  Reverse-engineer, modify, or attempt to access the source code
-                  of the Service.
+                  We do not warrant that the Service will be uninterrupted,
+                  error-free, or secure.
                 </li>
                 <li>
-                  Use the Service to transmit spam, viruses, or any harmful
-                  code.
-                </li>
-                <li>
-                  Misuse the Service for illegal or unauthorized purposes.
-                </li>
-                <li>
-                  Violate any intellectual property rights or proprietary rights
-                  of others.
+                  Any recommendations generated by our AI are advisory only and
+                  do not guarantee results.
                 </li>
               </ul>
             </div>
@@ -115,20 +157,70 @@ export default function TermsOfServices() {
         </div>
         <div className="flex flex-col gap-8 md:gap-12">
           <div className="flex flex-col gap-5">
-            <h6 className="matter-h6-reg">Payments and Subscriptions</h6>
+            <h6 className="matter-h6-reg">Limitation of Liability</h6>
             <div>
+              <p className="matter-p4-reg text-text-secondary">
+                To the maximum extent permitted by law:
+              </p>
               <ul className="list-disc matter-p4-reg text-text-secondary pl-5">
-                <li>Some features of the Service may require payment.</li>
                 <li>
-                  By purchasing a report or subscribing to a paid plan, you
-                  agree to pay all fees and applicable taxes.
+                  Boostra shall not be liable for any indirect, incidental,
+                  special, or consequential damages.
                 </li>
                 <li>
-                  Payments are processed securely through our third-party
-                  payment processor.
+                  Our total liability for any claim arising from or related to
+                  the Service shall not exceed the amount paid by you in the
+                  last 3 months of subscription fees.
                 </li>
-                <li>All fees are non-refundable unless otherwise stated.</li>
               </ul>
+            </div>
+          </div>
+        </div>
+        <div className="flex flex-col gap-8 md:gap-12">
+          <div className="flex flex-col gap-5">
+            <h6 className="matter-h6-reg">Termination</h6>
+            <div>
+              <p className="matter-p4-reg text-text-secondary">
+                We reserve the right to suspend or terminate your account at any
+                time, with or without notice, if we believe you have violated
+                these Terms or engaged in fraudulent or abusive activity.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div className="flex flex-col gap-8 md:gap-12">
+          <div className="flex flex-col gap-5">
+            <h6 className="matter-h6-reg">Changes to Terms</h6>
+            <div>
+              <p className="matter-p4-reg text-text-secondary">
+                We may update these Terms from time to time. Updates will be
+                posted on this page with a revised “Effective Date.” Your
+                continued use of the Service after changes are posted
+                constitutes your acceptance of the revised Terms.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div className="flex flex-col gap-8 md:gap-12">
+          <div className="flex flex-col gap-5">
+            <h6 className="matter-h6-reg">Changes to Terms</h6>
+            <div>
+              <p className="matter-p4-reg text-text-secondary">
+                These Terms are governed by and construed in accordance with the
+                laws of the United States, without regard to conflict of law
+                principles.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div className="flex flex-col gap-8 md:gap-12">
+          <div className="flex flex-col gap-5">
+            <h6 className="matter-h6-reg">Contact Us</h6>
+            <div>
+              <p className="matter-p4-reg text-text-secondary">
+                For questions about these Terms, please contact us at:
+              </p>
+              <a href="mailto:help@getboostra.com">help@getboostra.com</a>
             </div>
           </div>
         </div>
