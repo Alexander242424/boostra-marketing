@@ -135,6 +135,7 @@ export default function RootLayout({
             gtag('config', 'G-NW9PFDJ198');
           `}
         </Script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
       </head>
       <body className={`${Matter.variable} ${systemMono.variable} antialiased`}>
         <MixpanelProvider config={mixpanelConfig}>
