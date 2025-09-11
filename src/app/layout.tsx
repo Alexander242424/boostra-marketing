@@ -112,15 +112,17 @@ export default function RootLayout({
         <meta property="og:site_name" content="Boostra" />
         <meta
           property="og:image"
-          content="https://getboostra.com/Assets/thumbnail.jpg"
+          content="https://getboostra.com/Assets/thumbnail.jpg?v=2"
         />
         <meta property="og:image:type" content="image/jpeg" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
 
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta
           name="twitter:image"
-          content="https://getboostra.com/Assets/thumbnail.jpg"
+          content="https://getboostra.com/Assets/thumbnail.jpg?v=2"
         />
 
         {/* Google Analytics */}
