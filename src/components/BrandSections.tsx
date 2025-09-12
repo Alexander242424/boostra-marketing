@@ -159,13 +159,13 @@ export default function BrandSections() {
 
   return (
     <AnimateOnScrollGroup className="flex flex-col py-[64px] md:pt-[130px] md:pb-[65px] gap-4 md:gap-[34px]" staggerDelay={0.05}>
-      <AnimateOnScrollItem index={0} animation="animate__fadeInUp" duration="animate__slow" className="self-center">
+      <AnimateOnScrollItem index={0} animation="animate__fadeInUp" duration="animate__fast" className="self-center">
         <p className="matter-p2-med self-center">
           Join over <span className="text-gradient-blue">5000</span> businesses
           using Boostra
         </p>
       </AnimateOnScrollItem>
-      <AnimateOnScrollItem index={1} animation="animate__fadeInUp" duration="animate__slow" className="flex flex-wrap gap-4 justify-center">
+      <AnimateOnScrollItem index={1} animation="animate__fadeInUp" duration="animate__fast" className="flex flex-wrap gap-4 justify-center">
         {logos.map((logo, index) => (
           <div
             key={index}

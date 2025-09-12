@@ -18,22 +18,22 @@ export default function EnterpriseGrade() {
   return (
     <AnimateOnScrollGroup className="flex flex-col w-full h-full gap-8 md:gap-12 items-center mt-[96px] md:mt-[160px] mb-[96px] md:mb-[160px]" staggerDelay={0.1}>
       <div className="flex flex-col items-center text-center gap-3 md:gap-6 max-w-[634px]">
-        <AnimateOnScrollItem index={0} animation="animate__fadeInUp" duration="animate__slow">
+        <AnimateOnScrollItem index={0} animation="animate__fadeInUp" duration="animate__fast">
           <h4 className="matter-h4-reg">Enterprise-grade</h4>
           <h4 className="matter-h4-reg">security & privacy</h4>
         </AnimateOnScrollItem>
-        <AnimateOnScrollItem index={1} animation="animate__fadeInUp" duration="animate__slow">
+        <AnimateOnScrollItem index={1} animation="animate__fadeInUp" duration="animate__fast">
           <p className="matter-p2-reg text-text-tertiary">
             Boostra is built with privacy by default. We collect only
             what&apos;s required for your analysis and keep all reports fully
             secure and accessible only to you.
           </p>
         </AnimateOnScrollItem>
-        <AnimateOnScrollItem index={2} animation="animate__fadeInUp" duration="animate__slow">
+        <AnimateOnScrollItem index={2} animation="animate__fadeInUp" duration="animate__fast">
           <GlobalStandartsIcon />
         </AnimateOnScrollItem>
       </div>
-      <AnimateOnScrollItem index={3} animation="animate__fadeInUp" duration="animate__slow" className="flex flex-col lg:flex-row gap-6 md:gap-8">
+      <AnimateOnScrollItem index={3} animation="animate__fadeInUp" duration="animate__fast" className="flex flex-col lg:flex-row gap-6 md:gap-8">
         {cards.map((card, index) => (
           <div
             key={index}

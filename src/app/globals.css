@@ -861,6 +861,11 @@
   animation-fill-mode: both;
 }
 
+/* Custom fast animation */
+.animate__fast {
+  animation-duration: 1s !important;
+}
+
 /* Initial state for scroll animations */
 .opacity-0 {
   opacity: 0 !important;
@@ -868,7 +873,7 @@
 }
 
 .translate-y-8 {
-  transform: translateY(2rem) !important;
+  transform: translateY(1rem) !important;
   transition: transform 0.3s ease-out;
 }
 

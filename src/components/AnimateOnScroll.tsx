@@ -62,7 +62,7 @@ export const AnimateOnScrollItem = memo(function AnimateOnScrollItem({
   children,
   className = "",
   animation = "animate__fadeInUp",
-  duration = "animate__slow",
+  duration = "animate__fast",
   delay = 0,
   index = 0,
 }: AnimateOnScrollItemProps) {
@@ -106,7 +106,7 @@ export const AnimateOnScroll = memo(function AnimateOnScroll({
   className = "",
   threshold = 0.5,
   animation = "animate__fadeInUp",
-  duration = "animate__slow",
+  duration = "animate__fast",
   delay = 0,
 }: AnimateOnScrollProps) {
   const [ref, inView] = useInView({

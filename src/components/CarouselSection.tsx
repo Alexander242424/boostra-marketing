@@ -392,14 +392,14 @@ export default function CarouselSection() {
       }}
     >
       <AnimateOnScrollGroup className="mx-auto px-4" staggerDelay={0.1}>
-        <AnimateOnScrollItem index={0} animation="animate__fadeInUp" duration="animate__slow" className="flex flex-col items-center text-center gap-3 md:gap-5 mb-[48px]">
+        <AnimateOnScrollItem index={0} animation="animate__fadeInUp" duration="animate__fast" className="flex flex-col items-center text-center gap-3 md:gap-5 mb-[48px]">
           <p className="matter-p2-med text-gradient-blue">Case Studies</p>
           <h2 className="matter-h2-reg max-w-[978px]">
             Proven conversion lifts for enterprises and online businesses
           </h2>
         </AnimateOnScrollItem>
         {/* Tabs with categories */}
-        <AnimateOnScrollItem index={1} animation="animate__fadeInUp" duration="animate__slow" className="flex max-w-fit mx-auto bg-bg-white-12 border border-bg-white-12 p-2 rounded-[30px] matter-p4-reg mb-[40px] overflow-x-scroll no-scrollbar gap-1">
+        <AnimateOnScrollItem index={1} animation="animate__fadeInUp" duration="animate__fast" className="flex max-w-fit mx-auto bg-bg-white-12 border border-bg-white-12 p-2 rounded-[30px] matter-p4-reg mb-[40px] overflow-x-scroll no-scrollbar gap-1">
           {categories.map((category) => (
             <button
               key={category}
@@ -414,7 +414,7 @@ export default function CarouselSection() {
             </button>
           ))}
         </AnimateOnScrollItem>
-        <AnimateOnScrollItem key={activeCategory} index={2} animation="animate__fadeInUp" duration="animate__slow">
+        <AnimateOnScrollItem key={activeCategory} index={2} animation="animate__fadeInUp" duration="animate__fast">
           <EmblaCarousel slides={slides} options={OPTIONS} />
         </AnimateOnScrollItem>
       </AnimateOnScrollGroup>

@@ -48,16 +48,16 @@ export default function Footer() {
       <div className="flex w-full h-full flex-col px-4 lg:px-[121px] max-w-[1512px] mx-auto">
         <AnimateOnScrollGroup className="flex flex-col items-center gap-8 my-[96px] md:mt-[89px] md:mb-[146px]" staggerDelay={0.15}>
           <div className="flex flex-col items-center text-center gap-3 md:gap-5 max-w-[800px]">
-            <AnimateOnScrollItem index={0} animation="animate__fadeInUp" duration="animate__slow">
+            <AnimateOnScrollItem index={0} animation="animate__fadeInUp" duration="animate__fast">
               <h2 className="matter-h2-reg">Unlock Conversions. Today.</h2>
             </AnimateOnScrollItem>
-            <AnimateOnScrollItem index={1} animation="animate__fadeInUp" duration="animate__slow">
+            <AnimateOnScrollItem index={1} animation="animate__fadeInUp" duration="animate__fast">
               <p className="matter-p2-reg text-text-tertiary">
                 Guaranteed or it&apos;s free
               </p>
             </AnimateOnScrollItem>
           </div>
-          <AnimateOnScrollItem index={2} animation="animate__fadeInUp" duration="animate__slow">
+          <AnimateOnScrollItem index={2} animation="animate__fadeInUp" duration="animate__fast">
             <div className="flex flex-col max-w-[740px] items-center gap-5 md:gap-3">
               <Button
                 className="max-w-fit"

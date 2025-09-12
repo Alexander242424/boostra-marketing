@@ -47,14 +47,14 @@ export default function HeroSections() {
     >
       <div className="w-full flex flex-col xl:max-w-[632px] gap-8 md:gap-12">
         <div className="flex flex-col gap-4 md:gap-8">
-          <AnimateOnScrollItem index={0} animation="animate__fadeInUp" duration="animate__slow">
+          <AnimateOnScrollItem index={0} animation="animate__fadeInUp" duration="animate__fast">
             <h1 className="matter-h1-reg text-center md:text-left">
               Meet your{" "}
               <span className="text-gradient-blue">AI Conversion</span> &
               Revenue engine.
             </h1>
           </AnimateOnScrollItem>
-          <AnimateOnScrollItem index={1} animation="animate__fadeInUp" duration="animate__slow">
+          <AnimateOnScrollItem index={1} animation="animate__fadeInUp" duration="animate__fast">
             <h1 className="matter-p1-reg text-text-tertiary text-center md:text-left xl:max-w-[495px]">
               Find what&apos;s broken, fix usability & conversions, boost
               revenue — in minutes, not weeks.
@@ -64,7 +64,7 @@ export default function HeroSections() {
         <AnimateOnScrollItem
           index={2}
           animation="animate__fadeInUp"
-          duration="animate__slow"
+          duration="animate__fast"
           className="flex flex-col gap-5 md:gap-4 items-center md:items-stretch xl:max-w-[592px]"
         >
           <div className="hover:scale-[1.02] transition-all duration-300">
@@ -89,7 +89,7 @@ export default function HeroSections() {
       <AnimateOnScrollItem
         index={3}
         animation="animate__fadeInUp"
-        duration="animate__slow"
+        duration="animate__fast"
         className="w-full h-full flex flex-col xl:max-w-[536px] xl:max-h-[528px] self-center border-[0.5px] border-[#FFFFFF20] rounded-[40px] overflow-hidden bg-[#FFFFFF10] backdrop-blur-[40px]"
       >
         <Lottie
