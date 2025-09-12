@@ -31,7 +31,7 @@ export function useBuildPortalUrl() {
         }
       }
       if (deviceId) {
-        portalUrl.searchParams.set("device", deviceId);
+        portalUrl.searchParams.set("mp_device_id", deviceId);
       }
 
       let utmCampaign: string | undefined;
