@@ -31,74 +31,111 @@ import SchneiderMobile from "@/assets/logo boostra/mobile/shneider.svg";
 import RampDesktop from "@/assets/logo boostra/desktop/ramp.svg";
 import RampMobile from "@/assets/logo boostra/mobile/ramp.svg";
 
+import GymsharkLogo from "@/assets/logo Case Studies/gymshark.svg";
+import ZaraLogo from "@/assets/logo Case Studies/zara.svg";
+import NespressoLogo from "@/assets/logo Case Studies/nespresso.svg";
+import DeliverooLogo from "@/assets/logo Case Studies/deliveroo.svg";
+import ForbesLogo from "@/assets/logo Case Studies/forbes.svg";
+import SchneiderLogo from "@/assets/logo Case Studies/schneider.svg";
+
 export default function BrandSections() {
   const isMobile = useIsMobile();
   const [openTooltip, setOpenTooltip] = useState<number | null>(null);
 
   const logos = [
     {
-      name: "nespresso_logo",
+      nameSrc: "nespresso_logo",
       src: <NespressoDesktop />,
       srcMobile: <NespressoMobile />,
       btnText: "Case Study",
+      name: "Sophie Bernard",
+      position: "Digital Marketing Manager, Nespresso",
+      description:
+        "Campaign pages performed much better after Boostra&apos;s audit. Leads increased by 23% and cost per acquisition dropped significantly.",
+      brandIcon: <NespressoLogo />,
     },
     {
-      name: "claude_logo",
+      nameSrc: "claude_logo",
       src: <ClaudeDesktop />,
       srcMobile: <ClaudeMobile />,
     },
     {
-      name: "zara_logo",
+      nameSrc: "zara_logo",
       src: <ZaraDesktop />,
       srcMobile: <ZaraMobile />,
       btnText: "Case Study",
+      name: "Michael Torres",
+      position: "eCommerce Product Manager, Zara",
+      description:
+        "We used Boostra to refine mobile navigation. It reduced bounce rates by 11% and helped customers reach products faster, which boosted sales.",
+      brandIcon: <ZaraLogo />,
     },
     {
-      name: "gs_logo",
+      nameSrc: "gs_logo",
       src: <GymsharkDesktop />,
       srcMobile: <GymsharkMobile />,
       btnText: "Case Study",
+      name: "Hannah Lewis",
+      position: "Senior UX Designer, Gymshark",
+      description:
+        "Boostra pointed out checkout bottlenecks we had missed. After implementing fixes, our cart completion rate improved by 14% in just a few weeks.",
+      brandIcon: <GymsharkLogo />,
     },
-    { 
-      name: "asos_logo", 
+    {
+      nameSrc: "asos_logo",
       src: <AsosDesktop />,
       srcMobile: <AsosMobile />,
     },
     {
-      name: "forbes_logo",
+      nameSrc: "forbes_logo",
       src: <ForbesDesktop />,
       srcMobile: <ForbesMobile />,
       btnText: "Case Study",
+      name: "Rachel Wong",
+      position: "Product Designer, Forbes",
+      description:
+        "Boostra showed us exactly what to fix in our subscription paywall. We saw a 12% uplift in sign-ups and reduced early churn",
+      brandIcon: <ForbesLogo />,
     },
     {
-      name: "okta_logo",
+      nameSrc: "okta_logo",
       src: <OktaDesktop />,
       srcMobile: <OktaMobile />,
     },
     {
-      name: "deliveroo_logo",
+      nameSrc: "deliveroo_logo",
       src: <DeliverooDesktop />,
       srcMobile: <DeliverooMobile />,
       btnText: "Case Study",
+      name: "Tom Gallagher",
+      position: "Growth Manager, Deliveroo",
+      description:
+        "Boostra gave us clarity on where customers abandoned the order flow. Checkout tweaks lifted conversions by 9% and average basket value went up.",
+      brandIcon: <DeliverooLogo />,
     },
-    { 
-      name: "buffer_logo", 
+    {
+      nameSrc: "buffer_logo",
       src: <BufferDesktop />,
       srcMobile: <BufferMobile />,
     },
-    { 
-      name: "dropbox_logo", 
+    {
+      nameSrc: "dropbox_logo",
       src: <DropboxDesktop />,
       srcMobile: <DropboxMobile />,
     },
     {
-      name: "schneider_electric",
+      nameSrc: "schneider_electric",
       src: <SchneiderDesktop />,
       srcMobile: <SchneiderMobile />,
       btnText: "Case Study",
+      name: "Oliver Becker",
+      position: "Web Experience Manager, Schneider Electric",
+      description:
+        "Boostra helped us streamline our lead generation forms. Completion rates jumped by 21%, and our sales team received better qualified leads.",
+      brandIcon: <SchneiderLogo />,
     },
-    { 
-      name: "ramp_logo", 
+    {
+      nameSrc: "ramp_logo",
       src: <RampDesktop />,
       srcMobile: <RampMobile />,
     },
@@ -124,12 +161,12 @@ export default function BrandSections() {
           >
             {isMobile && logo.srcMobile ? logo.srcMobile : logo.src}
             {logo.btnText && !isMobile && (
-              <div 
+              <div
                 className="absolute -bottom-10 right-0 text-[#3B95FE] cursor-pointer bg-bg-white-12 rounded-[100px] w-full h-full flex items-center justify-center max-w-[57.410255432128906px] max-h-[16px] md:max-w-[81px] md:max-h-[25px] tooltip-btn"
                 onClick={() => handleTooltipClick(index)}
               >
-                <Tooltip 
-                  open={openTooltip === index} 
+                <Tooltip
+                  open={openTooltip === index}
                   onOpenChange={(open) => !open && setOpenTooltip(null)}
                   delayDuration={0}
                   disableHoverableContent={false}
@@ -143,7 +180,13 @@ export default function BrandSections() {
                     onPointerDownOutside={(e) => e.preventDefault()}
                     onEscapeKeyDown={() => setOpenTooltip(null)}
                   >
-                    <BrandTooltipCard />
+                    <BrandTooltipCard
+                      name={logo.name}
+                      position={logo.position}
+                      description={logo.description}
+                      brandIcon={logo.brandIcon}
+                      buttonText={logo.btnText}
+                    />
                   </TooltipContent>
                 </Tooltip>
               </div>
