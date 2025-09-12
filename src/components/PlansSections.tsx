@@ -161,7 +161,7 @@ export default function PlansSections() {
                     )
                   : "Nan"}
               </h1>
-              <p className="matter-p2-reg text-text-tertiary">
+              <p className="matter-p2-reg pl-2 pb-1 text-text-tertiary">
                 {activeTab === "Monthly" ? "/ monthly" : "/ yearly"}
               </p>
             </div>
@@ -175,7 +175,7 @@ export default function PlansSections() {
                   <SelectValue placeholder="Select plan" />
                 </SelectTrigger>
                 <SelectContent>
-                  {currentPrices.map((price, index) => (
+                  {currentPrices.slice().reverse().map((price, index) => (
                     <SelectItem key={price.price_id} value={index.toString()}>
                       {price.credits} report{price.credits > 1 ? "s" : ""} /{" "}
                       {activeTab === "Monthly" ? "mo" : "year"}

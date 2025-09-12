@@ -8,18 +8,17 @@ import { useIsMobile } from "@/hooks/useIsMobile";
 export default function CopilotSections() {
   const isMobile = useIsMobile();
   return (
-    <div className="relative">
     <div
-        className="absolute top-0 left-1/2 transform -translate-x-1/2 w-screen h-screen z-0"
-        style={{
-          backgroundImage: isMobile
-            ? 'url("/Backgrounds boostra/mobile/Background Copilot-min.jpg")'
-            : 'url("/Backgrounds boostra/desktop/Background Copilot-min.jpg")',
-          backgroundSize: "cover",
-          backgroundRepeat: "no-repeat",
-        }}
-      />
-
+      className="w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] py-[96px] md:py-[160px]"
+      style={{
+        backgroundImage: isMobile
+          ? 'url("/Backgrounds boostra/mobile/Background Copilot-min.jpg")'
+          : 'url("/Backgrounds boostra/desktop/Background Copilot-min.jpg")',
+        backgroundSize: "cover",
+        backgroundRepeat: "no-repeat",
+        backgroundPosition: "center",
+      }}
+    >
       <div className="relative z-10 flex flex-col gap-[48px] items-center justify-center h-[665px] lg:h-[859px]">
         <div className="flex flex-col max-w-[571px] gap-4 md:gap-6 items-center">
           <CopilotHeaderIcon />

@@ -140,7 +140,7 @@ export default function RootLayout({
         </Script>
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
       </head>
-      <body className={`${Matter.variable} ${systemMono.variable} antialiased`}>
+      <body className={`${Matter.variable} ${systemMono.variable} antialiased overflow-x-hidden`}>
         <MixpanelProvider config={mixpanelConfig}>
           {/* <Loader /> */}
           <div

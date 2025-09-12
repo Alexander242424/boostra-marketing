@@ -4,6 +4,8 @@ import { useBuildPortalUrl } from "@/hooks/use-build-portal-url";
 import FadeInUp from "./FadeInUp";
 import { Button } from "./ui/button";
 import VideoPlayer from "./VideoPlayer";
+import Lottie from "lottie-react";
+import HeroVideoAnimation from "@/assets/data.json";
 
 interface InfoCardProps {
   title: [string, string];
@@ -55,14 +57,15 @@ export default function InfoCard({
       <FadeInUp>
         {videoSrc && (
           <div className=" xl:w-[788px] xl:h-[512px] object-cover rounded-[22px] md:rounded-[24px] bg-bg-white-6">
-            <VideoPlayer
+            {/* <VideoPlayer
               src={videoSrc}
               className="w-full h-full object-cover"
               autoPlay={true}
               muted={true}
               loop={true}
               controls={false}
-            />
+            /> */}
+            <Lottie className="w-full h-full" animationData={HeroVideoAnimation} loop={true} />
           </div>
         )}
       </FadeInUp>

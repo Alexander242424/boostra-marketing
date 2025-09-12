@@ -58,7 +58,7 @@ export default function RootPage() {
         <div id="case-studies">
           <RevenueOpportunities />
         </div>
-        <CopilotSections />
+        {/* <CopilotSections /> */}
         <CostSections />
         <div id="pricing">
           <PlansSections />
