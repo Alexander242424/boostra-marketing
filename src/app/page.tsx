@@ -32,7 +32,7 @@ export default function RootPage() {
             description={
               "Increase revenue growth by uncovering hidden funnel leaks and converting more visitors into customers. Make every page conversion-ready."
             }
-            btnText={"Improve Conversions"}
+            btnText={"Get Started for Free"}
             videoSrc={"/video/011MG_141_animation_1.webm"}
           />
           <InfoCard
@@ -40,7 +40,7 @@ export default function RootPage() {
             description={
               "Don&apos;t let users leave by confused interface. Identify friction points and turn them into smooth, intuitive experiences"
             }
-            btnText={"Improve Usability"}
+            btnText={"Get Started for Free"}
             videoSrc={"/video/011MG_141_animation_1.webm"}
           />
           <InfoCard
@@ -48,7 +48,7 @@ export default function RootPage() {
             description={
               "Accessibility gaps cost customers and compliance. Detect barriers and make your site usable for every visitor"
             }
-            btnText={"Improve Accessibility"}
+            btnText={"Get Started for Free"}
             videoSrc={"/video/011MG_141_animation_1.webm"}
           />
         </div>

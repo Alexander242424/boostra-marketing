@@ -75,7 +75,7 @@ export default function RevenueOpportunities() {
             });
           }}
         >
-          Get Started
+          Get Started for Free
         </Button>
       </FadeInUp>
       <FadeInUp delay={0.4} className="flex flex-col max-w-[253px] gap-[20px] ">

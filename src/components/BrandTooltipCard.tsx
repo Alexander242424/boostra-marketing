@@ -1,4 +1,4 @@
-
+"use client";
 import { Button } from "./ui/button";
 
 interface BrandTooltipCardProps {
@@ -6,7 +6,7 @@ interface BrandTooltipCardProps {
   position: string;
   description: string;
   brandIcon: React.ReactNode;
-  buttonText: string;
+  onGetStartedClick: () => void;
 }
 
 export default function BrandTooltipCard({
@@ -14,7 +14,7 @@ export default function BrandTooltipCard({
   position,
   description,
   brandIcon,
-  buttonText,
+  onGetStartedClick
 }: BrandTooltipCardProps) {
   return (
     <div className="flex flex-col gap-[24px]">
@@ -28,16 +28,19 @@ export default function BrandTooltipCard({
         </div>
         <div className="flex flex-col gap-[6px]">
           <p className="matter-p1-med">Morgan Sowden</p>
-          <p className="matter-p4-reg text-text-tertiary">
-            {position}
-          </p>
+          <p className="matter-p4-reg text-text-tertiary">{position}</p>
         </div>
       </div>
       <p className="matter-p2-reg">“{description}”</p>
       <div className="border-b-[1px] border-bg-white-12 max-h-[1px]" />
       <div className="flex justify-between items-center mt-1">
         {brandIcon}
-        <Button className="max-h-[40px] max-w-fit mt-auto">{buttonText}</Button>
+        <Button
+          className="max-h-[40px] max-w-fit mt-auto"
+          onClick={onGetStartedClick}
+        >
+          Get Started for Free
+        </Button>
       </div>
     </div>
   );

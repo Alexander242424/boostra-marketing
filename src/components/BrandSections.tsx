@@ -4,6 +4,8 @@ import FadeInUp from "./FadeInUp";
 import { Tooltip, TooltipContent, TooltipTrigger } from "./ui/tooltip";
 import BrandTooltipCard from "./BrandTooltipCard";
 import { useIsMobile } from "@/hooks/useIsMobile";
+import { useTrackEvent } from "@/hooks/telemetry";
+import { useBuildPortalUrl } from "@/hooks/use-build-portal-url";
 
 // Import logo components
 import NespressoDesktop from "@/assets/logo boostra/desktop/nespresso.svg";
@@ -41,6 +43,8 @@ import SchneiderLogo from "@/assets/logo Case Studies/schneider.svg";
 export default function BrandSections() {
   const isMobile = useIsMobile();
   const [openTooltip, setOpenTooltip] = useState<number | null>(null);
+  const trackEvent = useTrackEvent();
+  const buildPortalUrl = useBuildPortalUrl();
 
   const logos = [
     {
@@ -145,6 +149,14 @@ export default function BrandSections() {
     setOpenTooltip(openTooltip === index ? null : index);
   };
 
+  const handleGetStartedClick = () => {
+    trackEvent(`Get Started for Free Clicked`, undefined, () => {
+      window.location.href = buildPortalUrl({
+        pathname: "/register",
+      });
+    });
+  };
+
   return (
     <FadeInUp className="flex flex-col py-[64px] md:pt-[130px] md:pb-[65px] gap-4 md:gap-[34px]">
       <FadeInUp className="self-center">
@@ -189,7 +201,7 @@ export default function BrandSections() {
                       position={logo.position}
                       description={logo.description}
                       brandIcon={logo.brandIcon}
-                      buttonText={logo.btnText}
+                      onGetStartedClick={handleGetStartedClick}
                     />
                   </TooltipContent>
                 </Tooltip>

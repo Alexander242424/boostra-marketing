@@ -58,7 +58,7 @@ export default function Footer() {
             </FadeInUp>
           </div>
           <FadeInUp delay={0.4}>
-            <div className="flex flex-col max-w-[740px] gap-5 md:gap-3">
+            <div className="flex flex-col max-w-[740px] items-center gap-5 md:gap-3">
               <Button
                 className="max-w-fit"
                 size={"lg"}
@@ -70,7 +70,7 @@ export default function Footer() {
                   });
                 }}
               >
-                Get Started
+                Get started for Free
               </Button>
               <div className="flex matter-s1-reg text-text-tertiary items-center gap-[5px]">
                 <CreditCardIcon />

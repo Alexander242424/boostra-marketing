@@ -4,7 +4,6 @@ import { useEffect, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
 import { Button } from "./ui/button";
 import BigLogo from "@/assets/big-logo.svg";
-import { useNearestParentScrollListener } from "@/hooks/use-nearest-parent-scroll-listener";
 import { useBuildPortalUrl } from "@/hooks/use-build-portal-url";
 
 export default function Header() {
@@ -12,15 +11,19 @@ export default function Header() {
   const headerRef = useRef<HTMLDivElement>(null);
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState("");
-  useNearestParentScrollListener(headerRef, setIsScrolled);
   const buildPortalUrl = useBuildPortalUrl();
 
   useEffect(() => {
     // Перевіряємо, чи window існує (клієнтська сторона)
     if (typeof window === "undefined") return;
 
-
     const handleScroll = () => {
+      // Handle isScrolled state
+      const scrolled = window.scrollY > 0;
+      console.log("Scroll Y:", window.scrollY, "isScrolled:", scrolled);
+      setIsScrolled(scrolled);
+
+      // Handle active section
       const sections = [
         "solutions",
         "how-it-works",
