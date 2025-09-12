@@ -256,7 +256,7 @@ export default function PlansSections() {
         </AnimateOnScrollItem>
         <AnimateOnScrollItem index={3} animation="animate__fadeInUp" duration="animate__fast" className="flex flex-col mx-auto max-w-[253px] gap-[18px] pt-8 md:pt-12">
           <p className="matter-p1-reg text-center">
-          "Getboostra cut costs and lifted sales instantly"
+          &ldquo;Getboostra cut costs and lifted sales instantly&rdquo;
           </p>
           <div className="flex items-center justify-center gap-3">
             <AvatarIcon />

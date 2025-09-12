@@ -80,7 +80,7 @@ export default function RevenueOpportunities() {
       </AnimateOnScrollItem>
       <AnimateOnScrollItem index={6} animation="animate__fadeInUp" duration="animate__fast" className="flex flex-col max-w-[253px] gap-[20px] ">
         <p className="matter-p1-reg text-center">
-          "Minutes of analysis saved us months of spend"
+          &ldquo;Minutes of analysis saved us months of spend&rdquo;
         </p>
         <div className="flex items-center justify-center gap-3">
           <AvatarIcon />
