@@ -157,12 +157,16 @@ export default function BrandSections() {
         {logos.map((logo, index) => (
           <div
             key={index}
-            className="flex items-center justify-center w-[109px] h-[64px] md:w-[192px] md:h-[88px] relative"
+            className="block w-[100px] h-[45px] md:w-[192px] md:h-[88px] relative"
           >
-            {isMobile && logo.srcMobile ? logo.srcMobile : logo.src}
+            <div className="w-full h-full flex items-center justify-center overflow-hidden">
+              <div className="[&>svg]:w-full [&>svg]:h-full [&>svg]:max-w-full [&>svg]:max-h-full [&>svg]:object-contain">
+                {isMobile && logo.srcMobile ? logo.srcMobile : logo.src}
+              </div>
+            </div>
             {logo.btnText && !isMobile && (
               <div
-                className="absolute -bottom-10 right-0 text-[#3B95FE] cursor-pointer bg-bg-white-12 rounded-[100px] w-full h-full flex items-center justify-center max-w-[57.410255432128906px] max-h-[16px] md:max-w-[81px] md:max-h-[25px] tooltip-btn"
+                className="absolute bottom-3 left-30 text-[#3B95FE] cursor-pointer bg-bg-white-12 rounded-[100px] w-full h-full flex items-center justify-center max-w-[57.410255432128906px] max-h-[16px] md:max-w-[81px] md:max-h-[25px] tooltip-btn"
                 onClick={() => handleTooltipClick(index)}
               >
                 <Tooltip
