@@ -14,7 +14,7 @@ export default function RevenueCard({
   description,
 }: RevenueCardProps) {
   return (
-    <div className="flex flex-col bg-bg-white-10 rounded-[24px] gap-8 md:gap-[48px] p-8 md:min-w-[407px] h-full">
+    <div className="flex flex-col bg-bg-white-10 rounded-[24px] gap-8 md:gap-[48px] p-8 h-full">
       <div className="flex justify-between">
         {icon} <p className="text-text-tertiary matter-h6-reg">{number}</p>
       </div>

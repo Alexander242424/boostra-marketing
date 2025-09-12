@@ -82,7 +82,7 @@ export default function HeroSections() {
           </div>
         </FadeInUp>
       </div>
-      <FadeInUp yOffset={15} className="w-full h-full flex flex-col xl:max-w-[536px] xl:max-h-[528px] self-center border-[0.5px] border-[#FFFFFF0D] rounded-[40px] overflow-hidden bg-[#FFFFFF05] backdrop-blur-[40px]">
+      <FadeInUp yOffset={15} className="w-full h-full flex flex-col xl:max-w-[536px] xl:max-h-[528px] self-center border-[0.5px] border-[#FFFFFF20] rounded-[40px] overflow-hidden bg-[#FFFFFF10] backdrop-blur-[40px]">
         <Lottie className="w-full h-full" animationData={HeroVideoAnimation} loop={true} />
       </FadeInUp>
     </div>

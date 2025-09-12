@@ -43,9 +43,9 @@ export default function CostSections() {
           </div>
         </FadeInUp>
       </div>
-      <div className="flex flex-col lg:flex-row gap-6 md:gap-8">
+      <div className="flex flex-col xl:flex-row gap-6 md:gap-8 w-full">
         {cards.map((card, index) => (
-          <FadeInUp key={index}>
+          <FadeInUp key={index} className="flex-1">
             <CostCard
               icon={card.icon}
               title={card.title}
