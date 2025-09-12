@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { EmblaOptionsType } from "embla-carousel";
 import EmblaCarousel from "./Embla/EmblaCarousel";
 import CaruselCard from "./CaruselCard";
-import { FadeInUpGroup, FadeInUpItem } from "./FadeInUpGroup";
+import { AnimateOnScrollGroup, AnimateOnScrollItem } from "./AnimateOnScroll";
 import RoyalQueenSeeds from "@/assets/royal-queen-seeds.svg";
 import Avatar from "@/assets/Ellipse 29.svg";
 import ArchiveLogo from "@/assets/logo Case Studies/archive.svg";
@@ -391,15 +391,15 @@ export default function CarouselSection() {
         backgroundPosition: "center",
       }}
     >
-      <FadeInUpGroup className="mx-auto px-4" staggerDelay={0.1}>
-        <FadeInUpItem index={0} className="flex flex-col items-center text-center gap-3 md:gap-5 mb-[48px]">
+      <AnimateOnScrollGroup className="mx-auto px-4" staggerDelay={0.1}>
+        <AnimateOnScrollItem index={0} animation="animate__fadeInUp" duration="animate__slow" className="flex flex-col items-center text-center gap-3 md:gap-5 mb-[48px]">
           <p className="matter-p2-med text-gradient-blue">Case Studies</p>
           <h2 className="matter-h2-reg max-w-[978px]">
             Proven conversion lifts for enterprises and online businesses
           </h2>
-        </FadeInUpItem>
+        </AnimateOnScrollItem>
         {/* Tabs with categories */}
-        <FadeInUpItem index={1} className="flex max-w-fit mx-auto bg-bg-white-12 border border-bg-white-12 p-2 rounded-[30px] matter-p4-reg mb-[40px] overflow-x-scroll no-scrollbar gap-1">
+        <AnimateOnScrollItem index={1} animation="animate__fadeInUp" duration="animate__slow" className="flex max-w-fit mx-auto bg-bg-white-12 border border-bg-white-12 p-2 rounded-[30px] matter-p4-reg mb-[40px] overflow-x-scroll no-scrollbar gap-1">
           {categories.map((category) => (
             <button
               key={category}
@@ -413,11 +413,11 @@ export default function CarouselSection() {
               <p>{category}</p>
             </button>
           ))}
-        </FadeInUpItem>
-        <FadeInUpItem key={activeCategory} index={2} duration={0.5} yOffset={30}>
+        </AnimateOnScrollItem>
+        <AnimateOnScrollItem key={activeCategory} index={2} animation="animate__fadeInUp" duration="animate__slow">
           <EmblaCarousel slides={slides} options={OPTIONS} />
-        </FadeInUpItem>
-      </FadeInUpGroup>
+        </AnimateOnScrollItem>
+      </AnimateOnScrollGroup>
     </div>
   );
 }

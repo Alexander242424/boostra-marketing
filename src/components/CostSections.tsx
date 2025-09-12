@@ -3,7 +3,7 @@ import CostCard from "./CostCard";
 import CostImage1 from "@/assets/costmoney/1-min.png";
 import CostImage2 from "@/assets/costmoney/2-min.png";
 import CostImage3 from "@/assets/costmoney/3-min.png";
-import { FadeInUpGroup, FadeInUpItem } from "./FadeInUpGroup";
+import { AnimateOnScrollGroup, AnimateOnScrollItem } from "./AnimateOnScroll";
 
 export default function CostSections() {
   const cards = [
@@ -28,32 +28,32 @@ export default function CostSections() {
   ];
 
   return (
-    <FadeInUpGroup className="flex flex-col w-full h-full gap-8 md:gap-12 items-center mt-[96px] md:mt-[160px] mb-[96px] md:mb-[160px]" staggerDelay={0.1}>
+    <AnimateOnScrollGroup className="flex flex-col w-full h-full gap-8 md:gap-12 items-center mt-[96px] md:mt-[160px] mb-[96px] md:mb-[160px]" staggerDelay={0.1}>
       <div className="flex flex-col items-center text-center gap-3 md:gap-5">
-        <FadeInUpItem index={0}>
+        <AnimateOnScrollItem index={0} animation="animate__fadeInUp" duration="animate__slow">
           <p className="matter-p2-med text-gradient-blue">
             Revenue-based Solutions
           </p>
-        </FadeInUpItem>
-        <FadeInUpItem index={1}>
+        </AnimateOnScrollItem>
+        <AnimateOnScrollItem index={1} animation="animate__fadeInUp" duration="animate__slow">
           <div className="max-w-[800px]">
             <h2 className="matter-h2-reg">
               Find what&apos;s costing you conversions and revenue
             </h2>
           </div>
-        </FadeInUpItem>
+        </AnimateOnScrollItem>
       </div>
       <div className="flex flex-col xl:flex-row gap-6 md:gap-8 w-full">
         {cards.map((card, index) => (
-          <FadeInUpItem key={index} index={index + 2} className="flex-1">
+          <AnimateOnScrollItem key={index} index={index + 2} className="flex-1">
             <CostCard
               icon={card.icon}
               title={card.title}
               description={card.description}
             />
-          </FadeInUpItem>
+          </AnimateOnScrollItem>
         ))}
       </div>
-    </FadeInUpGroup>
+    </AnimateOnScrollGroup>
   );
 }

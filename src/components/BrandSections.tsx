@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import { FadeInUpGroup, FadeInUpItem } from "./FadeInUpGroup";
+import { AnimateOnScrollGroup, AnimateOnScrollItem } from "./AnimateOnScroll";
 import { Tooltip, TooltipContent, TooltipTrigger } from "./ui/tooltip";
 import BrandTooltipCard from "./BrandTooltipCard";
 import { useIsMobile } from "@/hooks/useIsMobile";
@@ -158,14 +158,14 @@ export default function BrandSections() {
   };
 
   return (
-    <FadeInUpGroup className="flex flex-col py-[64px] md:pt-[130px] md:pb-[65px] gap-4 md:gap-[34px]" staggerDelay={0.05}>
-      <FadeInUpItem index={0} className="self-center">
+    <AnimateOnScrollGroup className="flex flex-col py-[64px] md:pt-[130px] md:pb-[65px] gap-4 md:gap-[34px]" staggerDelay={0.05}>
+      <AnimateOnScrollItem index={0} animation="animate__fadeInUp" duration="animate__slow" className="self-center">
         <p className="matter-p2-med self-center">
           Join over <span className="text-gradient-blue">5000</span> businesses
           using Boostra
         </p>
-      </FadeInUpItem>
-      <FadeInUpItem index={1} className="flex flex-wrap gap-4 justify-center">
+      </AnimateOnScrollItem>
+      <AnimateOnScrollItem index={1} animation="animate__fadeInUp" duration="animate__slow" className="flex flex-wrap gap-4 justify-center">
         {logos.map((logo, index) => (
           <div
             key={index}
@@ -209,7 +209,7 @@ export default function BrandSections() {
             )}
           </div>
         ))}
-      </FadeInUpItem>
-    </FadeInUpGroup>
+      </AnimateOnScrollItem>
+    </AnimateOnScrollGroup>
   );
 }

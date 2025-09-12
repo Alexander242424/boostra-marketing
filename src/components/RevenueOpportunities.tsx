@@ -2,7 +2,7 @@ import React from "react";
 import RevenueCard from "./RevenueCard";
 import { Button } from "./ui/button";
 import AvatarIcon from "@/assets/Verizon Team.svg";
-import { FadeInUpGroup, FadeInUpItem } from "./FadeInUpGroup";
+import { AnimateOnScrollGroup, AnimateOnScrollItem } from "./AnimateOnScroll";
 import SearchIcon from "@/assets/opportunuties/Heart-Rate-Search--Streamline-Core-Neon.svg";
 import BrowserIcon from "@/assets/opportunuties/Browser-Delete--Streamline-Core-Neon.svg";
 import PazzeleIcon from "@/assets/opportunuties/Module-Puzzle-3--Streamline-Core-Neon.svg";
@@ -38,32 +38,32 @@ export default function RevenueOpportunities() {
   ];
 
   return (
-    <FadeInUpGroup className="flex flex-col w-full h-full gap-8 md:gap-12 items-center mb-[96px] md:mb-[160px]" staggerDelay={0.1}>
+    <AnimateOnScrollGroup className="flex flex-col w-full h-full gap-8 md:gap-12 items-center mb-[96px] md:mb-[160px]" staggerDelay={0.1}>
       <div className="flex flex-col items-center text-center gap-3 md:gap-5">
-        <FadeInUpItem index={0}>
+        <AnimateOnScrollItem index={0} animation="animate__fadeInUp" duration="animate__slow">
           <p className="matter-p2-med text-gradient-blue">
             Revenue-based Benefits
           </p>
-        </FadeInUpItem>
-        <FadeInUpItem index={1}>
+        </AnimateOnScrollItem>
+        <AnimateOnScrollItem index={1} animation="animate__fadeInUp" duration="animate__slow">
           <h2 className="matter-h2-reg max-w-[700px]">
             Boost your conversions in 3 simple steps
           </h2>
-        </FadeInUpItem>
+        </AnimateOnScrollItem>
       </div>
       <div className="flex flex-col xl:flex-row gap-6 md:gap-8 w-full">
         {cards.map((card, index) => (
-          <FadeInUpItem key={index} index={index + 2} className="flex-1">
+          <AnimateOnScrollItem key={index} index={index + 2} className="flex-1">
             <RevenueCard
               icon={card.icon}
               number={card.number}
               title={card.title}
               description={card.description}
             />
-          </FadeInUpItem>
+          </AnimateOnScrollItem>
         ))}
       </div>
-      <FadeInUpItem index={5}>
+      <AnimateOnScrollItem index={5} animation="animate__fadeInUp" duration="animate__slow">
         <Button
           className="max-w-fit"
           size="lg"
@@ -77,8 +77,8 @@ export default function RevenueOpportunities() {
         >
           Get Started for Free
         </Button>
-      </FadeInUpItem>
-      <FadeInUpItem index={6} className="flex flex-col max-w-[253px] gap-[20px] ">
+      </AnimateOnScrollItem>
+      <AnimateOnScrollItem index={6} animation="animate__fadeInUp" duration="animate__slow" className="flex flex-col max-w-[253px] gap-[20px] ">
         <p className="matter-p1-reg text-center">
           "Minutes of analysis saved us months of spend"
         </p>
@@ -86,7 +86,7 @@ export default function RevenueOpportunities() {
           <AvatarIcon />
           <p className="matter-p4-med">Verizon Team</p>
         </div>
-      </FadeInUpItem>
-    </FadeInUpGroup>
+      </AnimateOnScrollItem>
+    </AnimateOnScrollGroup>
   );
 }

@@ -1,7 +1,7 @@
 "use client";
 import { useTrackEvent } from "@/hooks/telemetry";
 import { useBuildPortalUrl } from "@/hooks/use-build-portal-url";
-import { FadeInUpGroup, FadeInUpItem } from "./FadeInUpGroup";
+import { AnimateOnScrollGroup, AnimateOnScrollItem } from "./AnimateOnScroll";
 import { Button } from "./ui/button";
 import VideoPlayer from "./VideoPlayer";
 import Lottie from "lottie-react";
@@ -24,21 +24,21 @@ export default function InfoCard({
   const buildPortalUrl = useBuildPortalUrl();
 
   return (
-    <FadeInUpGroup className="flex flex-col w-full xl:max-w-[788px] gap-8 md:gap-[48px] items-center mt-[64px] mb-[48px] md:mb-[160px] md:mt-0" staggerDelay={0.15}>
+    <AnimateOnScrollGroup className="flex flex-col w-full xl:max-w-[788px] gap-8 md:gap-[48px] items-center mt-[64px] mb-[48px] md:mb-[160px] md:mt-0" staggerDelay={0.15}>
       <div className="flex flex-col gap-6 md:gap-8 items-center">
         <div className="flex flex-col gap-3 md:gap-6">
-          <FadeInUpItem index={0}>
+          <AnimateOnScrollItem index={0} animation="animate__fadeInUp" duration="animate__slow">
             <h3 className="matter-h3-reg text-center">
               {title[0]} <span className="text-gradient-blue">{title[1]} </span>
             </h3>
-          </FadeInUpItem>
-          <FadeInUpItem index={1}>
+          </AnimateOnScrollItem>
+          <AnimateOnScrollItem index={1} animation="animate__fadeInUp" duration="animate__slow">
             <p className="matter-p1-reg text-text-tertiary text-center">
               {description}
             </p>
-          </FadeInUpItem>
+          </AnimateOnScrollItem>
         </div>
-        <FadeInUpItem index={2}>
+        <AnimateOnScrollItem index={2} animation="animate__fadeInUp" duration="animate__slow">
           <Button
             className="max-w-fit"
             size="lg"
@@ -52,9 +52,9 @@ export default function InfoCard({
           >
             {btnText}
           </Button>
-        </FadeInUpItem>
+        </AnimateOnScrollItem>
       </div>
-      <FadeInUpItem index={3}>
+      <AnimateOnScrollItem index={3} animation="animate__fadeInUp" duration="animate__slow">
         {videoSrc && (
           <div className=" xl:w-[788px] xl:h-[512px] object-cover rounded-[22px] md:rounded-[24px] bg-bg-white-6">
             {/* <VideoPlayer
@@ -68,7 +68,7 @@ export default function InfoCard({
             <Lottie className="w-full h-full" animationData={HeroVideoAnimation} loop={true} />
           </div>
         )}
-      </FadeInUpItem>
-    </FadeInUpGroup>
+      </AnimateOnScrollItem>
+    </AnimateOnScrollGroup>
   );
 }
