@@ -40,12 +40,12 @@ export default function RevenueOpportunities() {
   return (
     <AnimateOnScrollGroup className="flex flex-col w-full h-full gap-8 md:gap-12 items-center mb-[96px] md:mb-[160px]" staggerDelay={0.1}>
       <div className="flex flex-col items-center text-center gap-3 md:gap-5">
-        <AnimateOnScrollItem index={0} animation="animate__fadeInUp" duration="animate__fast">
+        <AnimateOnScrollItem index={0} animation="fadeInUp" duration="fast">
           <p className="matter-p2-med text-gradient-blue">
             Revenue-based Benefits
           </p>
         </AnimateOnScrollItem>
-        <AnimateOnScrollItem index={1} animation="animate__fadeInUp" duration="animate__fast">
+        <AnimateOnScrollItem index={1} animation="fadeInUp" duration="fast">
           <h2 className="matter-h2-reg max-w-[700px]">
             Boost your conversions in 3 simple steps
           </h2>
@@ -63,7 +63,7 @@ export default function RevenueOpportunities() {
           </AnimateOnScrollItem>
         ))}
       </div>
-      <AnimateOnScrollItem index={5} animation="animate__fadeInUp" duration="animate__fast">
+      <AnimateOnScrollItem index={5} animation="fadeInUp" duration="fast">
         <Button
           className="max-w-fit"
           size="lg"
@@ -78,7 +78,7 @@ export default function RevenueOpportunities() {
           Get Started for Free
         </Button>
       </AnimateOnScrollItem>
-      <AnimateOnScrollItem index={6} animation="animate__fadeInUp" duration="animate__fast" className="flex flex-col max-w-[253px] gap-[20px] ">
+      <AnimateOnScrollItem index={6} animation="fadeInUp" duration="fast" className="flex flex-col max-w-[253px] gap-[20px] ">
         <p className="matter-p1-reg text-center">
           &ldquo;Minutes of analysis saved us months of spend&rdquo;
         </p>

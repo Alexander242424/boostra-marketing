@@ -11,17 +11,17 @@ export default function QuestionsSection() {
   return (
     <AnimateOnScrollGroup className="flex flex-col mt-[96px] md:mt-[160px] gap-8 md:gap-[48px] items-center" staggerDelay={0.15}>
       <div className="flex flex-col gap-3 md:gap-6">
-        <AnimateOnScrollItem index={0} animation="animate__fadeInUp" duration="animate__fast">
+        <AnimateOnScrollItem index={0} animation="fadeInUp" duration="fast">
           <h2 className="matter-h2-reg text-center">Have Questions?</h2>
         </AnimateOnScrollItem>
-        <AnimateOnScrollItem index={1} animation="animate__fadeInUp" duration="animate__fast">
+        <AnimateOnScrollItem index={1} animation="fadeInUp" duration="fast">
           <p className="matter-p1-reg text-text-tertiary text-center xl:max-w-[634px]">
             Still have questions? Ask us directly and get expert guidance
             tailored to your business.
           </p>
         </AnimateOnScrollItem>
       </div>
-      <AnimateOnScrollItem index={2} animation="animate__fadeInUp" duration="animate__fast" className="w-full xl:max-w-[838px]">
+      <AnimateOnScrollItem index={2} animation="fadeInUp" duration="fast" className="w-full xl:max-w-[838px]">
         <Accordion type="single" collapsible>
           <AccordionItem value="item-1">
             <AccordionTrigger className="matter-p2-reg">

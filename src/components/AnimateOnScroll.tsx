@@ -1,7 +1,6 @@
 "use client";
-import React, { memo, useMemo, createContext, useContext } from "react";
+import React, { memo, useMemo, createContext, useContext, useEffect, useState } from "react";
 import { useInView } from "react-intersection-observer";
-import "animate.css";
 
 interface AnimateOnScrollContextType {
   inView: boolean;
@@ -12,6 +11,25 @@ const AnimateOnScrollContext = createContext<AnimateOnScrollContextType>({
   inView: false,
   delay: 0,
 });
+
+// Check for reduced motion preference
+const useReducedMotion = () => {
+  const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+    setPrefersReducedMotion(mediaQuery.matches);
+
+    const handleChange = (e: MediaQueryListEvent) => {
+      setPrefersReducedMotion(e.matches);
+    };
+
+    mediaQuery.addEventListener('change', handleChange);
+    return () => mediaQuery.removeEventListener('change', handleChange);
+  }, []);
+
+  return prefersReducedMotion;
+};
 
 interface AnimateOnScrollGroupProps {
   children: React.ReactNode;
@@ -61,29 +79,34 @@ interface AnimateOnScrollItemProps {
 export const AnimateOnScrollItem = memo(function AnimateOnScrollItem({
   children,
   className = "",
-  animation = "animate__fadeInUp",
-  duration = "animate__fast",
+  animation = "fadeInUp",
+  duration = "fast",
   delay = 0,
   index = 0,
 }: AnimateOnScrollItemProps) {
   const { inView, delay: staggerDelay } = useContext(AnimateOnScrollContext);
+  const prefersReducedMotion = useReducedMotion();
 
   const animationClasses = useMemo(() => {
     if (!inView) {
-      return "opacity-0 translate-y-8";
+      return "opacity-0 translate-y-4";
     }
     
-    const delayClass = delay > 0 ? `animate__delay-${Math.round(delay * 1000)}ms` : 
-                      index > 0 ? `animate__delay-${Math.round(index * staggerDelay * 1000)}ms` : "";
+    if (prefersReducedMotion) {
+      return "opacity-100 translate-y-0";
+    }
     
-    return `animate__animated ${animation} ${duration} ${delayClass}`;
-  }, [inView, animation, duration, delay, index, staggerDelay]);
+    const delayClass = delay > 0 ? `delay-${Math.round(delay * 1000)}` : 
+                      index > 0 ? `delay-${Math.round(index * staggerDelay * 1000)}` : "";
+    
+    return `animate-${animation} duration-${duration} ${delayClass}`;
+  }, [inView, animation, duration, delay, index, staggerDelay, prefersReducedMotion]);
 
   return (
     <div
-      className={`${animationClasses} ${className}`}
+      className={`transition-all ease-out ${animationClasses} ${className}`}
       style={{
-        willChange: inView ? "auto" : "transform, opacity",
+        willChange: inView && !prefersReducedMotion ? "transform, opacity" : "auto",
       }}
     >
       {children}
@@ -105,8 +128,8 @@ export const AnimateOnScroll = memo(function AnimateOnScroll({
   children,
   className = "",
   threshold = 0.5,
-  animation = "animate__fadeInUp",
-  duration = "animate__fast",
+  animation = "fadeInUp",
+  duration = "fast",
   delay = 0,
 }: AnimateOnScrollProps) {
   const [ref, inView] = useInView({
@@ -114,23 +137,28 @@ export const AnimateOnScroll = memo(function AnimateOnScroll({
     threshold,
     rootMargin: "50px 0px",
   });
+  const prefersReducedMotion = useReducedMotion();
 
   const animationClasses = useMemo(() => {
     if (!inView) {
-      return "opacity-0 translate-y-8";
+      return "opacity-0 translate-y-4";
     }
     
-    const delayClass = delay > 0 ? `animate__delay-${Math.round(delay * 1000)}ms` : "";
+    if (prefersReducedMotion) {
+      return "opacity-100 translate-y-0";
+    }
     
-    return `animate__animated ${animation} ${duration} ${delayClass}`;
-  }, [inView, animation, duration, delay]);
+    const delayClass = delay > 0 ? `delay-${Math.round(delay * 1000)}` : "";
+    
+    return `animate-${animation} duration-${duration} ${delayClass}`;
+  }, [inView, animation, duration, delay, prefersReducedMotion]);
 
   return (
     <div
       ref={ref}
-      className={`${animationClasses} ${className}`}
+      className={`transition-all ease-out ${animationClasses} ${className}`}
       style={{
-        willChange: inView ? "auto" : "transform, opacity",
+        willChange: inView && !prefersReducedMotion ? "transform, opacity" : "auto",
       }}
     >
       {children}
