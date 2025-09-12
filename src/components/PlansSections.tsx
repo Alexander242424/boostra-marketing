@@ -73,6 +73,11 @@ export default function PlansSections() {
       if (data) {
         setSubscriptionsData(data);
         setIsLoading(false);
+        // Set default to first element (largest) in reversed order
+        const monthlyPrices = data.monthly?.[0]?.prices || [];
+        if (monthlyPrices.length > 0) {
+          setSelectedPriceIndex(monthlyPrices.length - 1);
+        }
       }
     };
 
@@ -90,13 +95,20 @@ export default function PlansSections() {
   // Handle tab change
   const handleTabChange = (tab: string) => {
     setActiveTab(tab);
-    setSelectedPriceIndex(0); // Reset to first price option when changing tabs
+    // Set to first element (largest) in reversed order when changing tabs
+    const newPlan = subscriptionsData?.[tab.toLowerCase() as keyof SubscriptionsData]?.[0];
+    const newPrices = newPlan?.prices || [];
+    if (newPrices.length > 0) {
+      setSelectedPriceIndex(newPrices.length - 1);
+    }
   };
 
   // Handle price selection
   const handlePriceChange = (value: string) => {
     const index = parseInt(value);
-    setSelectedPriceIndex(index);
+    // Since we're displaying prices in reverse order, we need to convert the index
+    const actualIndex = currentPrices.length - 1 - index;
+    setSelectedPriceIndex(actualIndex);
   };
 
   if (isLoading) {
@@ -148,7 +160,7 @@ export default function PlansSections() {
           ))}
         </FadeInUp>
         <FadeInUp className="flex flex-col mx-auto border border-[#1C42FF] md:flex-row p-6 md:pt-8 md:py-8 md:pb-6 bg-bg-white-6 rounded-[24px] gap-6 md:gap-8 max-w-[838px] shadow-[0px_0px_0px_5px_#3586FF3D]">
-          <div className="flex flex-col w-full md:max-w-[274px]">
+          <div className="flex flex-col w-full md:max-w-[280px]">
             <h6 className="matter-h6-reg">
               {currentPlan?.name || "All in One"}
             </h6>
@@ -168,7 +180,7 @@ export default function PlansSections() {
             <div className="flex flex-col gap-[20px] pt-6 md:pt-8">
               {/* Dropdown with features */}
               <Select
-                value={selectedPriceIndex.toString()}
+                value={(currentPrices.length - 1 - selectedPriceIndex).toString()}
                 onValueChange={handlePriceChange}
               >
                 <SelectTrigger className="w-full">
@@ -177,7 +189,7 @@ export default function PlansSections() {
                 <SelectContent>
                   {currentPrices.slice().reverse().map((price, index) => (
                     <SelectItem key={price.price_id} value={index.toString()}>
-                      {price.credits} report{price.credits > 1 ? "s" : ""} /{" "}
+                      {price.credits} analysis{price.credits > 1 ? "es" : ""} /{" "}
                       {activeTab === "Monthly" ? "mo" : "year"}
                     </SelectItem>
                   ))}
