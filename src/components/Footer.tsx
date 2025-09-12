@@ -8,7 +8,7 @@ import InstagramIcon from "@/assets/instagramIcon.svg";
 import LogoMain from "@/assets/logo-main.tsx";
 import Link from "next/link";
 import { useIsMobile } from "@/hooks/useIsMobile";
-import FadeInUp from "./FadeInUp";
+import { FadeInUpGroup, FadeInUpItem } from "./FadeInUpGroup";
 import { useTrackEvent } from "@/hooks/telemetry";
 import { useBuildPortalUrl } from "@/hooks/use-build-portal-url";
 
@@ -46,18 +46,18 @@ export default function Footer() {
         }}
       />
       <div className="flex w-full h-full flex-col px-4 lg:px-[121px] max-w-[1512px] mx-auto">
-        <div className="flex flex-col items-center gap-8 my-[96px] md:mt-[89px] md:mb-[146px]">
+        <FadeInUpGroup className="flex flex-col items-center gap-8 my-[96px] md:mt-[89px] md:mb-[146px]" staggerDelay={0.15}>
           <div className="flex flex-col items-center text-center gap-3 md:gap-5 max-w-[800px]">
-            <FadeInUp>
+            <FadeInUpItem index={0}>
               <h2 className="matter-h2-reg">Unlock Conversions. Today.</h2>
-            </FadeInUp>
-            <FadeInUp delay={0.2}>
+            </FadeInUpItem>
+            <FadeInUpItem index={1}>
               <p className="matter-p2-reg text-text-tertiary">
                 Guaranteed or it&apos;s free
               </p>
-            </FadeInUp>
+            </FadeInUpItem>
           </div>
-          <FadeInUp delay={0.4}>
+          <FadeInUpItem index={2}>
             <div className="flex flex-col max-w-[740px] items-center gap-5 md:gap-3">
               <Button
                 className="max-w-fit"
@@ -77,8 +77,8 @@ export default function Footer() {
                 <p>No credit card required</p>
               </div>
             </div>
-          </FadeInUp>
-        </div>
+          </FadeInUpItem>
+        </FadeInUpGroup>
         <footer className="flex flex-col relative">
           <div className="absolute top-0 border-t-[1px] border-line-white-16 left-1/2 transform -translate-x-1/2 w-screen z-0" />
           <div className="flex flex-col md:flex-row mt-8 md:mt-[48px] justify-between">

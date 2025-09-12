@@ -10,7 +10,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "./ui/select";
-import FadeInUp from "./FadeInUp";
+import { FadeInUpGroup, FadeInUpItem } from "./FadeInUpGroup";
 import AvatarIcon from "@/assets/Tripadvisor Team.svg";
 import { useTrackEvent } from "@/hooks/telemetry";
 import { useBuildPortalUrl } from "@/hooks/use-build-portal-url";
@@ -131,15 +131,15 @@ export default function PlansSections() {
         backgroundPosition: "center",
       }}
     >
-      <div className="mx-auto px-4">
-        <FadeInUp className="flex flex-col items-center text-center gap-3 md:gap-5 mb-[48px]">
+      <FadeInUpGroup className="mx-auto px-4" staggerDelay={0.1}>
+        <FadeInUpItem index={0} className="flex flex-col items-center text-center gap-3 md:gap-5 mb-[48px]">
           <p className="matter-p2-med text-gradient-blue">Pricing</p>
           <h2 className="matter-h2-reg max-w-[752px]">
             Proven conversion lifts — for less than a coffee
           </h2>
-        </FadeInUp>
+        </FadeInUpItem>
         {/* Tabs with plans */}
-        <FadeInUp className="flex max-w-fit mx-auto bg-bg-white-12 border border-bg-white-12 p-2 rounded-[30px] matter-p4-reg mb-[40px] gap-1">
+        <FadeInUpItem index={1} className="flex max-w-fit mx-auto bg-bg-white-12 border border-bg-white-12 p-2 rounded-[30px] matter-p4-reg mb-[40px] gap-1">
           {tabs.map((tab) => (
             <button
               key={tab}
@@ -158,8 +158,8 @@ export default function PlansSections() {
               )}
             </button>
           ))}
-        </FadeInUp>
-        <FadeInUp className="flex flex-col mx-auto border border-[#1C42FF] md:flex-row p-6 md:pt-8 md:py-8 md:pb-6 bg-bg-white-6 rounded-[24px] gap-6 md:gap-8 max-w-[838px] shadow-[0px_0px_0px_5px_#3586FF3D]">
+        </FadeInUpItem>
+        <FadeInUpItem index={2} className="flex flex-col mx-auto border border-[#1C42FF] md:flex-row p-6 md:pt-8 md:py-8 md:pb-6 bg-bg-white-6 rounded-[24px] gap-6 md:gap-8 max-w-[838px] shadow-[0px_0px_0px_5px_#3586FF3D]">
           <div className="flex flex-col w-full md:max-w-[280px]">
             <h6 className="matter-h6-reg">
               {currentPlan?.name || "All in One"}
@@ -253,17 +253,17 @@ export default function PlansSections() {
               </div>
             </div>
           </div>
-        </FadeInUp>
-        <FadeInUp className="flex flex-col mx-auto max-w-[253px] gap-[18px] pt-8 md:pt-12">
+        </FadeInUpItem>
+        <FadeInUpItem index={3} className="flex flex-col mx-auto max-w-[253px] gap-[18px] pt-8 md:pt-12">
           <p className="matter-p1-reg text-center">
-          “Getboostra cut costs and lifted sales instantly”
+          "Getboostra cut costs and lifted sales instantly"
           </p>
           <div className="flex items-center justify-center gap-3">
             <AvatarIcon />
             <p className="matter-p4-med">Tripadvisor Team</p>
           </div>
-        </FadeInUp>
-      </div>
+        </FadeInUpItem>
+      </FadeInUpGroup>
     </div>
   );
 }
