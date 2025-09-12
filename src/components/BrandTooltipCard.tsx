@@ -27,7 +27,7 @@ export default function BrandTooltipCard({
             .toUpperCase()}
         </div>
         <div className="flex flex-col gap-[6px]">
-          <p className="matter-p1-med">Morgan Sowden</p>
+          <p className="matter-p1-med">{name}</p>
           <p className="matter-p4-reg text-text-tertiary">{position}</p>
         </div>
       </div>
