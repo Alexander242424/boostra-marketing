@@ -158,13 +158,13 @@ export default function BrandSections() {
   };
 
   return (
-    <FadeInUp className="flex flex-col py-[64px] md:pt-[130px] md:pb-[65px] gap-4 md:gap-[34px]">
-      <FadeInUp className="self-center">
+    <div className="flex flex-col py-[64px] md:pt-[130px] md:pb-[65px] gap-4 md:gap-[34px]">
+      <div className="self-center">
         <p className="matter-p2-med self-center">
           Join over <span className="text-gradient-blue">5000</span> businesses
           using Boostra
         </p>
-      </FadeInUp>
+      </div>
       <div className="flex flex-wrap gap-4 justify-center">
         {logos.map((logo, index) => (
           <div
@@ -210,6 +210,6 @@ export default function BrandSections() {
           </div>
         ))}
       </div>
-    </FadeInUp>
+    </div>
   );
 }

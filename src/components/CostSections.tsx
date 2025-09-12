@@ -30,28 +30,28 @@ export default function CostSections() {
   return (
     <div className="flex flex-col w-full h-full gap-8 md:gap-12 items-center mt-[96px] md:mt-[160px] mb-[96px] md:mb-[160px]">
       <div className="flex flex-col items-center text-center gap-3 md:gap-5">
-        <FadeInUp>
+        <div>
           <p className="matter-p2-med text-gradient-blue">
             Revenue-based Solutions
           </p>
-        </FadeInUp>
-        <FadeInUp delay={0.2}>
+        </div>
+        <div>
           <div className="max-w-[800px]">
             <h2 className="matter-h2-reg">
               Find what&apos;s costing you conversions and revenue
             </h2>
           </div>
-        </FadeInUp>
+        </div>
       </div>
       <div className="flex flex-col xl:flex-row gap-6 md:gap-8 w-full">
         {cards.map((card, index) => (
-          <FadeInUp key={index} className="flex-1">
+          <div key={index} className="flex-1">
             <CostCard
               icon={card.icon}
               title={card.title}
               description={card.description}
             />
-          </FadeInUp>
+          </div>
         ))}
       </div>
     </div>

@@ -27,18 +27,18 @@ export default function InfoCard({
     <div className="flex flex-col w-full xl:max-w-[788px] gap-8 md:gap-[48px] items-center mt-[64px] mb-[48px] md:mb-[160px] md:mt-0">
       <div className="flex flex-col gap-6 md:gap-8 items-center">
         <div className="flex flex-col gap-3 md:gap-6">
-          <FadeInUp>
+          <div>
             <h3 className="matter-h3-reg text-center">
               {title[0]} <span className="text-gradient-blue">{title[1]} </span>
             </h3>
-          </FadeInUp>
-          <FadeInUp delay={0.2}>
+          </div>
+          <div>
             <p className="matter-p1-reg text-text-tertiary text-center">
               {description}
             </p>
-          </FadeInUp>
+          </div>
         </div>
-        <FadeInUp delay={0.4}>
+        <div>
           <Button
             className="max-w-fit"
             size="lg"
@@ -52,9 +52,9 @@ export default function InfoCard({
           >
             {btnText}
           </Button>
-        </FadeInUp>
+        </div>
       </div>
-      <FadeInUp>
+      <div>
         {videoSrc && (
           <div className=" xl:w-[788px] xl:h-[512px] object-cover rounded-[22px] md:rounded-[24px] bg-bg-white-6">
             {/* <VideoPlayer
@@ -68,7 +68,7 @@ export default function InfoCard({
             <Lottie className="w-full h-full" animationData={HeroVideoAnimation} loop={true} />
           </div>
         )}
-      </FadeInUp>
+      </div>
     </div>
   );
 }

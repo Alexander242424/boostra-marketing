@@ -11,17 +11,17 @@ export default function QuestionsSection() {
   return (
     <div className="flex flex-col mt-[96px] md:mt-[160px] gap-8 md:gap-[48px] items-center">
       <div className="flex flex-col gap-3 md:gap-6">
-        <FadeInUp>
+        <div>
           <h2 className="matter-h2-reg text-center">Have Questions?</h2>
-        </FadeInUp>
-        <FadeInUp delay={0.2}>
+        </div>
+        <div>
           <p className="matter-p1-reg text-text-tertiary text-center xl:max-w-[634px]">
             Still have questions? Ask us directly and get expert guidance
             tailored to your business.
           </p>
-        </FadeInUp>
+        </div>
       </div>
-      <FadeInUp className="w-full xl:max-w-[838px]" delay={0.4}>
+      <div className="w-full xl:max-w-[838px]">
         <Accordion type="single" collapsible>
           <AccordionItem value="item-1">
             <AccordionTrigger className="matter-p2-reg">
@@ -100,7 +100,7 @@ export default function QuestionsSection() {
             </AccordionContent>
           </AccordionItem>
         </Accordion>
-      </FadeInUp>
+      </div>
     </div>
   );
 }

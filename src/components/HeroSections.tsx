@@ -44,23 +44,21 @@ export default function HeroSections() {
     <div className="flex flex-col xl:flex-row justify-between items-center sm:items-start xl:items-center gap-8 md:gap-12 pb-10 pt-8 md:pt-[72px]">
       <div className="w-full flex flex-col xl:max-w-[632px] gap-8 md:gap-12">
         <div className="flex flex-col gap-4 md:gap-8">
-          <FadeInUp yOffset={15}>
+          <div>
             <h1 className="matter-h1-reg text-center md:text-left">
               Meet your{" "}
               <span className="text-gradient-blue">AI Conversion</span> &
               Revenue engine.
             </h1>
-          </FadeInUp>
-          <FadeInUp delay={0.1} yOffset={15}>
+          </div>
+          <div>
             <h1 className="matter-p1-reg text-text-tertiary text-center md:text-left xl:max-w-[495px]">
               Find what&apos;s broken, fix usability & conversions, boost
               revenue — in minutes, not weeks.
             </h1>
-          </FadeInUp>
+          </div>
         </div>
-        <FadeInUp
-          delay={0.3}
-          yOffset={15}
+        <div
           className="flex flex-col gap-5 md:gap-4 items-center md:items-stretch xl:max-w-[592px]"
         >
           <div className="hover:scale-[1.02] transition-all duration-300">
@@ -80,11 +78,11 @@ export default function HeroSections() {
             <CreditCardIcon />
             <p>No credit card required</p>
           </div>
-        </FadeInUp>
+        </div>
       </div>
-      <FadeInUp yOffset={15} className="w-full h-full flex flex-col xl:max-w-[536px] xl:max-h-[528px] self-center border-[0.5px] border-[#FFFFFF20] rounded-[40px] overflow-hidden bg-[#FFFFFF10] backdrop-blur-[40px]">
+      <div className="w-full h-full flex flex-col xl:max-w-[536px] xl:max-h-[528px] self-center border-[0.5px] border-[#FFFFFF20] rounded-[40px] overflow-hidden bg-[#FFFFFF10] backdrop-blur-[40px]">
         <Lottie className="w-full h-full" animationData={HeroVideoAnimation} loop={true} />
-      </FadeInUp>
+      </div>
     </div>
   );
 }

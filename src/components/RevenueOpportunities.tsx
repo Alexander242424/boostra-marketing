@@ -40,30 +40,30 @@ export default function RevenueOpportunities() {
   return (
     <div className="flex flex-col w-full h-full gap-8 md:gap-12 items-center mb-[96px] md:mb-[160px]">
       <div className="flex flex-col items-center text-center gap-3 md:gap-5">
-        <FadeInUp>
+        <div>
           <p className="matter-p2-med text-gradient-blue">
             Revenue-based Benefits
           </p>
-        </FadeInUp>
-        <FadeInUp delay={0.2}>
+        </div>
+        <div>
           <h2 className="matter-h2-reg max-w-[700px]">
             Boost your conversions in 3 simple steps
           </h2>
-        </FadeInUp>
+        </div>
       </div>
       <div className="flex flex-col xl:flex-row gap-6 md:gap-8 w-full">
         {cards.map((card, index) => (
-          <FadeInUp key={index} className="flex-1">
+          <div key={index} className="flex-1">
             <RevenueCard
               icon={card.icon}
               number={card.number}
               title={card.title}
               description={card.description}
             />
-          </FadeInUp>
+          </div>
         ))}
       </div>
-      <FadeInUp delay={0.4}>
+      <div>
         <Button
           className="max-w-fit"
           size="lg"
@@ -77,8 +77,8 @@ export default function RevenueOpportunities() {
         >
           Get Started for Free
         </Button>
-      </FadeInUp>
-      <FadeInUp delay={0.4} className="flex flex-col max-w-[253px] gap-[20px] ">
+      </div>
+      <div className="flex flex-col max-w-[253px] gap-[20px] ">
         <p className="matter-p1-reg text-center">
           “Minutes of analysis saved us months of spend”
         </p>
@@ -86,7 +86,7 @@ export default function RevenueOpportunities() {
           <AvatarIcon />
           <p className="matter-p4-med">Verizon Team</p>
         </div>
-      </FadeInUp>
+      </div>
     </div>
   );
 }

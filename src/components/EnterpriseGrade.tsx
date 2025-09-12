@@ -18,22 +18,22 @@ export default function EnterpriseGrade() {
   return (
     <div className="flex flex-col w-full h-full gap-8 md:gap-12 items-center mt-[96px] md:mt-[160px] mb-[96px] md:mb-[160px]">
       <div className="flex flex-col items-center text-center gap-3 md:gap-6 max-w-[634px]">
-        <FadeInUp>
+        <div>
           <h4 className="matter-h4-reg">Enterprise-grade</h4>
           <h4 className="matter-h4-reg">security & privacy</h4>
-        </FadeInUp>
-        <FadeInUp delay={0.2}>
+        </div>
+        <div>
           <p className="matter-p2-reg text-text-tertiary">
             Boostra is built with privacy by default. We collect only
             what&apos;s required for your analysis and keep all reports fully
             secure and accessible only to you.
           </p>
-        </FadeInUp>
-        <FadeInUp delay={0.4}>
+        </div>
+        <div>
           <GlobalStandartsIcon />
-        </FadeInUp>
+        </div>
       </div>
-      <FadeInUp className="flex flex-col lg:flex-row gap-6 md:gap-8">
+      <div className="flex flex-col lg:flex-row gap-6 md:gap-8">
         {cards.map((card, index) => (
           <div
             key={index}
@@ -47,7 +47,7 @@ export default function EnterpriseGrade() {
             </div>
           </div>
         ))}
-      </FadeInUp>
+      </div>
     </div>
   );
 }
