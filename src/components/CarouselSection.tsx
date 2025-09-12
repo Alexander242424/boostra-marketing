@@ -399,7 +399,7 @@ export default function CarouselSection() {
           </h2>
         </FadeInUp>
         {/* Tabs with categories */}
-        <FadeInUp className="flex max-w-fit mx-auto bg-bg-white-12 border border-bg-white-12 p-2 rounded-[30px] matter-p4-reg mb-[40px] overflow-x-scroll no-scrollbar">
+        <FadeInUp className="flex max-w-fit mx-auto bg-bg-white-12 border border-bg-white-12 p-2 rounded-[30px] matter-p4-reg mb-[40px] overflow-x-scroll no-scrollbar gap-1">
           {categories.map((category) => (
             <button
               key={category}

@@ -127,7 +127,7 @@ export default function PlansSections() {
           </h2>
         </FadeInUp>
         {/* Tabs with plans */}
-        <FadeInUp className="flex max-w-fit mx-auto bg-bg-white-12 border border-bg-white-12 p-2 rounded-[30px] matter-p4-reg mb-[40px]">
+        <FadeInUp className="flex max-w-fit mx-auto bg-bg-white-12 border border-bg-white-12 p-2 rounded-[30px] matter-p4-reg mb-[40px] gap-1">
           {tabs.map((tab) => (
             <button
               key={tab}
