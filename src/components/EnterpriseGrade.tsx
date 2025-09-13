@@ -17,7 +17,7 @@ export default function EnterpriseGrade() {
   ];
   return (
     <AnimateOnScrollGroup className="flex flex-col w-full h-full gap-8 md:gap-12 items-center mt-[96px] md:mt-[160px] mb-[96px] md:mb-[160px]" staggerDelay={0.1}>
-      <div className="flex flex-col items-center text-center gap-3 md:gap-6 max-w-[634px]">
+      <div className="flex flex-col items-center text-center gap-3 md:gap-6 max-w-[652px]">
         <AnimateOnScrollItem index={0} animation="fadeInUp" duration="fast">
           <h4 className="matter-h4-reg">Enterprise-grade</h4>
           <h4 className="matter-h4-reg">security & privacy</h4>

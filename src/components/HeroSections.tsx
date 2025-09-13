@@ -49,8 +49,10 @@ export default function HeroSections() {
         <div className="flex flex-col gap-4 md:gap-8">
           <AnimateOnScrollItem index={0} animation="fadeInUp" duration="fast">
             <h1 className="matter-h1-reg text-center md:text-left">
-              Meet your{" "}
-              <span className="text-gradient-blue">AI Conversion</span> &
+              Meet your
+              <p className="text-gradient-blue">
+                AI Conversion &
+              </p>
               Revenue engine.
             </h1>
           </AnimateOnScrollItem>

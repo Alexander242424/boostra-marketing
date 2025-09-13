@@ -24,7 +24,7 @@ export default function InfoCard({
   const buildPortalUrl = useBuildPortalUrl();
 
   return (
-    <AnimateOnScrollGroup className="flex flex-col w-full xl:max-w-[788px] gap-8 md:gap-[48px] items-center mt-[64px] mb-[48px] md:mb-[160px] md:mt-0" staggerDelay={0.15}>
+    <AnimateOnScrollGroup className="flex flex-col w-full xl:max-w-[550px] gap-8 md:gap-[48px] items-center mt-[64px] mb-[48px] md:mb-[160px] md:mt-0" staggerDelay={0.15}>
       <div className="flex flex-col gap-6 md:gap-8 items-center">
         <div className="flex flex-col gap-3 md:gap-6">
           <AnimateOnScrollItem index={0} animation="fadeInUp" duration="fast">

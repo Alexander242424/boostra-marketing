@@ -62,7 +62,9 @@
 
   --brand-blue: linear-gradient(93.54deg, #1c42ff -3.63%, #3c99ff 98.73%);
   --brand-blue-light: linear-gradient(93.54deg, #4a68ff -3.63%, #67b0ff 98.73%);
-  --gradient-blue: linear-gradient(90deg, #0f53ff 0%, #63afff 40.87%);
+  --gradient-blue-badge: linear-gradient(94.35deg, #1C42FF 39.66%, #3C99FF 57.41%);
+
+  --gradient-blue: linear-gradient(92.04deg, #2F73FE 0.55%, #CBAFF9 39.59%, #E59AAE 73.57%);
   --gradient-blue-block: linear-gradient(
     90deg,
     #1c61ff -8.4%,
@@ -244,6 +246,13 @@
 }
 
 /* Gradient text */
+.text-gradient-blue-badge {
+  background: var(--gradient-blue-badge);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
 .text-gradient-blue {
   background: var(--gradient-blue);
   -webkit-background-clip: text;

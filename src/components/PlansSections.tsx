@@ -133,7 +133,7 @@ export default function PlansSections() {
     >
       <AnimateOnScrollGroup className="mx-auto px-4" staggerDelay={0.1}>
         <AnimateOnScrollItem index={0} animation="fadeInUp" duration="fast" className="flex flex-col items-center text-center gap-3 md:gap-5 mb-[48px]">
-          <p className="matter-p2-med text-gradient-blue">Pricing</p>
+          <p className="matter-p2-med text-gradient-blue-badge">Pricing</p>
           <h2 className="matter-h2-reg max-w-[752px]">
             Proven conversion lifts — for less than a coffee
           </h2>
@@ -152,8 +152,8 @@ export default function PlansSections() {
             >
               <p>{tab}</p>
               {tab === "Yearly" && (
-                <div className="w-full h-full min-w-[75px] min-h-[24px] items-center justify-center flex bg-[#02BF46] rounded-[100px] ml-2.5">
-                  <p className="matter-s2-med text-center">Save 20%</p>
+                <div className="w-full h-full min-w-[95px] min-h-[24px] items-center justify-center flex bg-[#02BF46] rounded-[100px] ml-2.5">
+                  <p className="matter-s2-med text-center">Save 2 months</p>
                 </div>
               )}
             </button>
@@ -189,8 +189,8 @@ export default function PlansSections() {
                 <SelectContent>
                   {currentPrices.slice().reverse().map((price, index) => (
                     <SelectItem key={price.price_id} value={index.toString()}>
-                      {price.credits} analysis{price.credits > 1 ? "es" : ""} /{" "}
-                      {activeTab === "Monthly" ? "mo" : "year"}
+                      {price.credits} analysis{price.credits > 1 ? "es" : ""}
+                      {/* {activeTab === "Monthly" ? "mo" : "year"} */}
                     </SelectItem>
                   ))}
                 </SelectContent>

@@ -393,7 +393,7 @@ export default function CarouselSection() {
     >
       <AnimateOnScrollGroup className="mx-auto px-4" staggerDelay={0.1}>
         <AnimateOnScrollItem index={0} animation="fadeInUp" duration="fast" className="flex flex-col items-center text-center gap-3 md:gap-5 mb-[48px]">
-          <p className="matter-p2-med text-gradient-blue">Case Studies</p>
+          <p className="matter-p2-med text-gradient-blue-badge">Case Studies</p>
           <h2 className="matter-h2-reg max-w-[978px]">
             Proven conversion lifts for enterprises and online businesses
           </h2>

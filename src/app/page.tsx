@@ -38,7 +38,7 @@ export default function RootPage() {
           <InfoCard
             title={["Boost", "Usability"]}
             description={
-              "Don&apos;t let users leave by confused interface. Identify friction points and turn them into smooth, intuitive experiences"
+              "Don't let users leave by confused interface. Identify friction points and turn them into smooth, intuitive experiences"
             }
             btnText={"Get Started for Free"}
             videoSrc={"/video/011MG_141_animation_1.webm"}
