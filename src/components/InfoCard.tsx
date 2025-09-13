@@ -5,7 +5,7 @@ import { AnimateOnScrollGroup, AnimateOnScrollItem } from "./AnimateOnScroll";
 import { Button } from "./ui/button";
 import VideoPlayer from "./VideoPlayer";
 import Lottie from "lottie-react";
-import HeroVideoAnimation from "@/assets/data.json";
+import VideoAnimation from "@/assets/data.json";
 
 interface InfoCardProps {
   title: [string, string];
@@ -65,7 +65,7 @@ export default function InfoCard({
               loop={true}
               controls={false}
             /> */}
-            <Lottie className="w-full h-full" animationData={HeroVideoAnimation} loop={true} />
+            <Lottie className="w-full h-full" animationData={VideoAnimation} loop={true} />
           </div>
         )}
       </AnimateOnScrollItem>

@@ -1,6 +1,6 @@
 "use client";
 import CreditCardIcon from "@/assets/credit-card.svg";
-import HeroVideoAnimation from "@/assets/data.json";
+import HeroVideoAnimation from "@/assets/HeroVideoAnimation.json";
 import GlobeIcon from "@/assets/globus.svg";
 import {
   useTrackEvent,

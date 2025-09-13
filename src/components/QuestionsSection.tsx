@@ -23,6 +23,7 @@ export default function QuestionsSection() {
       </div>
       <AnimateOnScrollItem index={2} animation="fadeInUp" duration="fast" className="w-full xl:max-w-[838px]">
         <Accordion type="single" collapsible>
+          
           <AccordionItem value="item-1">
             <AccordionTrigger className="matter-p2-reg">
               What is the analysis and solutions based on?
@@ -99,6 +100,7 @@ export default function QuestionsSection() {
               for any purpose.
             </AccordionContent>
           </AccordionItem>
+
         </Accordion>
       </AnimateOnScrollItem>
     </AnimateOnScrollGroup>
