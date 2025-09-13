@@ -56,7 +56,7 @@ export default function CaruselCard({
               <div className="flex items-center">
                 {logo}
                 <div className="ml-auto">
-                  <Stars />
+                  {/* <Stars /> */}
                 </div>
               </div>
               <h6 className="matter-h6-reg">{title}</h6>
@@ -94,7 +94,7 @@ export default function CaruselCard({
                   {author.website}
                 </p>
                 <div className="flex scale-[0.8]">
-                  <Stars />
+                  {/* <Stars /> */}
                 </div>
               </div>
             </div>
