@@ -27,13 +27,13 @@ export default function BoostingConvertion() {
           </h4>
         </div>
       ) : (
-        <div className="relative flex flex-col gap-6 z-10 text-center pb-[130px]">
+        <div className="relative flex flex-col gap-6 z-10 text-center py-[180px]">
           <h6 className="matter-h6-reg">
             On average, Boostra customers see an instant
           </h6>
-          <h4 className="matter-h4-reg text-gradient-blue">
+          <h2 className="matter-h2-reg text-gradient-blue">
             20% boost in conversions
-          </h4>
+          </h2>
         </div>
       )}
     </div>
