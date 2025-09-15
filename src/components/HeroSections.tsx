@@ -56,7 +56,7 @@ export default function HeroSections() {
               <p
                 style={{
                   background:
-                    "linear-gradient(92.04deg, #2F73FE 30%, #CBAFF9 50%)",
+                    "linear-gradient(92.04deg, #2F73FE 34.987%, #CBAFF9 57%)",
                   WebkitBackgroundClip: "text",
                   WebkitTextFillColor: "transparent",
                   backgroundClip: "text",
@@ -67,11 +67,11 @@ export default function HeroSections() {
               <p>in conversions—guaranteed</p>
             </div>
           ) : (
-            <div className="flex justify-center items-center w-fit rounded-[30px] gap-1 matter-p3-med px-4 py-[3px] bg-[linear-gradient(92.04deg,rgba(47,115,254,0.22)_0.55%,rgba(203,175,249,0.22)_39.59%,rgba(229,154,174,0.22)_73.57%)]">
+            <div className="flex justify-center items-center w-fit rounded-[30px] gap-1 matter-p4-reg px-4 py-[3px] bg-[linear-gradient(92.04deg,rgba(47,115,254,0.22)_0.55%,rgba(203,175,249,0.22)_39.59%,rgba(229,154,174,0.22)_73.57%)]">
               <p
                 style={{
                   background:
-                    "linear-gradient(92.04deg, #2F73FE 30%, #CBAFF9 50%)",
+                    "linear-gradient(92.04deg, #2F73FE 34.987%, #CBAFF9 57%)",
                   WebkitBackgroundClip: "text",
                   WebkitTextFillColor: "transparent",
                   backgroundClip: "text",
