@@ -189,7 +189,7 @@ export default function PlansSections() {
                 <SelectContent>
                   {currentPrices.slice().reverse().map((price, index) => (
                     <SelectItem key={price.price_id} value={index.toString()}>
-                      {price.credits} analysis{price.credits > 1 ? "es" : ""}
+                      {price.credits} analys{price.credits > 1 ? "es" : ""}
                       {/* {activeTab === "Monthly" ? "mo" : "year"} */}
                     </SelectItem>
                   ))}
