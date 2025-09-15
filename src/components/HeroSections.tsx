@@ -2,6 +2,7 @@
 import CreditCardIcon from "@/assets/credit-card.svg";
 import HeroVideoAnimation from "@/assets/HeroVideoAnimation.json";
 import GlobeIcon from "@/assets/globus.svg";
+import TickIcon from "@/assets/tick-01.svg";
 import {
   useTrackEvent,
   useTrackFirstValueChangeEffect,
@@ -12,6 +13,7 @@ import Lottie from "lottie-react";
 import { useState } from "react";
 import { AnimateOnScrollGroup, AnimateOnScrollItem } from "./AnimateOnScroll";
 import { Input } from "./ui/input";
+import { useIsMobile } from "@/hooks/useIsMobile";
 
 const buttonText = "Boost Page";
 
@@ -21,6 +23,7 @@ export default function HeroSections() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const buildPortalUrl = useBuildPortalUrl();
   const trackEvent = useTrackEvent();
+  const isMobile = useIsMobile();
 
   useTrackFirstValueChangeEffect("URL Input Started", undefined, [url]);
 
@@ -47,12 +50,22 @@ export default function HeroSections() {
     >
       <div className="w-full flex flex-col xl:max-w-[632px] gap-8 md:gap-12">
         <div className="flex flex-col gap-4 md:gap-8">
+        {isMobile ? (
+          <div className="flex self-center justify-center items-center w-fit rounded-[30px] gap-1 matter-p3-med px-4 py-[3px] bg-[linear-gradient(92.04deg,rgba(47,115,254,0.22)_0.55%,rgba(203,175,249,0.22)_39.59%,rgba(229,154,174,0.22)_73.57%)]">
+            <TickIcon />
+            <p className="text-gradient-blue-badge">20% boost</p>
+            <p>in conversions—guaranteed</p>
+          </div>
+        ) : (
+          <div className="flex justify-center items-center w-fit rounded-[30px] gap-1 matter-p3-med px-4 py-[3px] bg-[linear-gradient(92.04deg,rgba(47,115,254,0.22)_0.55%,rgba(203,175,249,0.22)_39.59%,rgba(229,154,174,0.22)_73.57%)]">
+            <p className="text-gradient-blue-badge">Get 15-20%</p>
+            <p>conversions in minutes — guaranteed</p>
+          </div>
+        )}
           <AnimateOnScrollItem index={0} animation="fadeInUp" duration="fast">
             <h1 className="matter-h1-reg text-center md:text-left">
               Meet your
-              <p className="text-gradient-blue">
-                AI Conversion &
-              </p>
+              <p className="text-gradient-blue">AI Conversion &</p>
               Revenue engine.
             </h1>
           </AnimateOnScrollItem>

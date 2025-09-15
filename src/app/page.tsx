@@ -1,5 +1,6 @@
 "use client";
 
+import BoostingConvertion from "@/components/BoostingConvertion";
 import BrandSections from "@/components/BrandSections";
 import CarouselSection from "@/components/CarouselSection";
 import CopilotSections from "@/components/CopilotSections";
@@ -23,6 +24,7 @@ export default function RootPage() {
         <HeroSections />
         <BrandSections />
         <TextBlock />
+        <BoostingConvertion />
         <div
           id="solutions"
           className="flex flex-col items-center md:mt-[130px]"
