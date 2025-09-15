@@ -6,7 +6,7 @@ import BoostingConvertionBgMobile from "@/assets/background/boostingConvertionMo
 export default function BoostingConvertion() {
   const isMobile = useIsMobile();
   return (
-    <div className="relative flex flex-col items-center justify-center gap-5 lg:gap-6">
+    <div className="relative flex flex-col items-center justify-center gap-5 lg:gap-6 border-b border-line-white-16">
       {/* Background Image */}
       <div className="absolute -top-[60px] lg:-top-[100px] left-0 w-full h-full inset-0 flex items-center justify-center pointer-events-none">
         {isMobile ? (
@@ -31,9 +31,9 @@ export default function BoostingConvertion() {
           <h6 className="matter-h6-reg">
             On average, Boostra customers see an instant
           </h6>
-          <h2 className="matter-h2-reg text-gradient-blue">
+          <h1 className="matter-h1-reg text-gradient-blue">
             20% boost in conversions
-          </h2>
+          </h1>
         </div>
       )}
     </div>

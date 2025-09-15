@@ -51,9 +51,10 @@ export default function HeroSections() {
       <div className="w-full flex flex-col xl:max-w-[632px] gap-8 md:gap-12">
         <div className="flex flex-col gap-4 md:gap-8">
           {isMobile ? (
-            <div className="flex self-center justify-center items-center w-fit rounded-[30px] gap-1 matter-p3-med px-4 py-[3px] bg-[linear-gradient(92.04deg,rgba(47,115,254,0.22)_0.55%,rgba(203,175,249,0.22)_39.59%,rgba(229,154,174,0.22)_73.57%)]">
+            <div className="flex self-center justify-center items-center w-fit rounded-[30px] gap-1 px-2 py-[3px] bg-[linear-gradient(92.04deg,rgba(47,115,254,0.22)_0.55%,rgba(203,175,249,0.22)_39.59%,rgba(229,154,174,0.22)_73.57%)]">
               <TickIcon />
               <p
+                className="matter-p4-med"
                 style={{
                   background:
                     "linear-gradient(92.04deg, #2F73FE 34.987%, #CBAFF9 57%)",
@@ -64,11 +65,12 @@ export default function HeroSections() {
               >
                 20% boost
               </p>
-              <p>in conversions—guaranteed</p>
+              <p className="matter-p4-reg">in conversions—guaranteed</p>
             </div>
           ) : (
-            <div className="flex justify-center items-center w-fit rounded-[30px] gap-1 matter-p4-reg px-4 py-[3px] bg-[linear-gradient(92.04deg,rgba(47,115,254,0.22)_0.55%,rgba(203,175,249,0.22)_39.59%,rgba(229,154,174,0.22)_73.57%)]">
+            <div className="flex justify-center items-center w-fit rounded-[30px] gap-1 px-2 py-[3px] bg-[linear-gradient(92.04deg,rgba(47,115,254,0.22)_0.55%,rgba(203,175,249,0.22)_39.59%,rgba(229,154,174,0.22)_73.57%)]">
               <p
+                className="matter-p4-med"
                 style={{
                   background:
                     "linear-gradient(92.04deg, #2F73FE 34.987%, #CBAFF9 57%)",
@@ -79,7 +81,9 @@ export default function HeroSections() {
               >
                 Get 15-20%
               </p>
-              <p>conversions in minutes — guaranteed</p>
+              <p className="matter-p4-reg">
+                conversions in minutes — guaranteed
+              </p>
             </div>
           )}
           <AnimateOnScrollItem index={0} animation="fadeInUp" duration="fast">
