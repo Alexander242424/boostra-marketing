@@ -50,18 +50,38 @@ export default function HeroSections() {
     >
       <div className="w-full flex flex-col xl:max-w-[632px] gap-8 md:gap-12">
         <div className="flex flex-col gap-4 md:gap-8">
-        {isMobile ? (
-          <div className="flex self-center justify-center items-center w-fit rounded-[30px] gap-1 matter-p3-med px-4 py-[3px] bg-[linear-gradient(92.04deg,rgba(47,115,254,0.22)_0.55%,rgba(203,175,249,0.22)_39.59%,rgba(229,154,174,0.22)_73.57%)]">
-            <TickIcon />
-            <p className="text-gradient-blue-badge">20% boost</p>
-            <p>in conversions—guaranteed</p>
-          </div>
-        ) : (
-          <div className="flex justify-center items-center w-fit rounded-[30px] gap-1 matter-p3-med px-4 py-[3px] bg-[linear-gradient(92.04deg,rgba(47,115,254,0.22)_0.55%,rgba(203,175,249,0.22)_39.59%,rgba(229,154,174,0.22)_73.57%)]">
-            <p className="text-gradient-blue-badge">Get 15-20%</p>
-            <p>conversions in minutes — guaranteed</p>
-          </div>
-        )}
+          {isMobile ? (
+            <div className="flex self-center justify-center items-center w-fit rounded-[30px] gap-1 matter-p3-med px-4 py-[3px] bg-[linear-gradient(92.04deg,rgba(47,115,254,0.22)_0.55%,rgba(203,175,249,0.22)_39.59%,rgba(229,154,174,0.22)_73.57%)]">
+              <TickIcon />
+              <p
+                style={{
+                  background:
+                    "linear-gradient(92.04deg, #2F73FE 30%, #CBAFF9 50%)",
+                  WebkitBackgroundClip: "text",
+                  WebkitTextFillColor: "transparent",
+                  backgroundClip: "text",
+                }}
+              >
+                20% boost
+              </p>
+              <p>in conversions—guaranteed</p>
+            </div>
+          ) : (
+            <div className="flex justify-center items-center w-fit rounded-[30px] gap-1 matter-p3-med px-4 py-[3px] bg-[linear-gradient(92.04deg,rgba(47,115,254,0.22)_0.55%,rgba(203,175,249,0.22)_39.59%,rgba(229,154,174,0.22)_73.57%)]">
+              <p
+                style={{
+                  background:
+                    "linear-gradient(92.04deg, #2F73FE 30%, #CBAFF9 50%)",
+                  WebkitBackgroundClip: "text",
+                  WebkitTextFillColor: "transparent",
+                  backgroundClip: "text",
+                }}
+              >
+                Get 15-20%
+              </p>
+              <p>conversions in minutes — guaranteed</p>
+            </div>
+          )}
           <AnimateOnScrollItem index={0} animation="fadeInUp" duration="fast">
             <h1 className="matter-h1-reg text-center md:text-left">
               Meet your
