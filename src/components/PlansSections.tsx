@@ -18,8 +18,11 @@ import { useBuildPortalUrl } from "@/hooks/use-build-portal-url";
 // Types for API data
 interface Price {
   price_id: string;
+  priceId?: string;
   price: number;
   credits: number;
+  oldPrice?: number;
+  monthPrice?: number;
 }
 
 interface Plan {
@@ -96,7 +99,8 @@ export default function PlansSections() {
   const handleTabChange = (tab: string) => {
     setActiveTab(tab);
     // Set to first element (largest) in reversed order when changing tabs
-    const newPlan = subscriptionsData?.[tab.toLowerCase() as keyof SubscriptionsData]?.[0];
+    const newPlan =
+      subscriptionsData?.[tab.toLowerCase() as keyof SubscriptionsData]?.[0];
     const newPrices = newPlan?.prices || [];
     if (newPrices.length > 0) {
       setSelectedPriceIndex(newPrices.length - 1);
@@ -132,14 +136,24 @@ export default function PlansSections() {
       }}
     >
       <AnimateOnScrollGroup className="mx-auto px-4" staggerDelay={0.1}>
-        <AnimateOnScrollItem index={0} animation="fadeInUp" duration="fast" className="flex flex-col items-center text-center gap-3 md:gap-5 mb-[48px]">
+        <AnimateOnScrollItem
+          index={0}
+          animation="fadeInUp"
+          duration="fast"
+          className="flex flex-col items-center text-center gap-3 md:gap-5 mb-[48px]"
+        >
           <p className="matter-p2-med text-gradient-blue-badge">Pricing</p>
           <h2 className="matter-h2-reg max-w-[752px]">
             Proven conversion lifts — for less than a coffee
           </h2>
         </AnimateOnScrollItem>
         {/* Tabs with plans */}
-        <AnimateOnScrollItem index={1} animation="fadeInUp" duration="fast" className="flex max-w-fit mx-auto bg-bg-white-12 border border-bg-white-12 p-2 rounded-[30px] matter-p4-reg mb-[40px] gap-1">
+        <AnimateOnScrollItem
+          index={1}
+          animation="fadeInUp"
+          duration="fast"
+          className="flex max-w-fit mx-auto bg-bg-white-12 border border-bg-white-12 p-2 rounded-[30px] matter-p4-reg mb-[40px] gap-1"
+        >
           {tabs.map((tab) => (
             <button
               key={tab}
@@ -159,8 +173,13 @@ export default function PlansSections() {
             </button>
           ))}
         </AnimateOnScrollItem>
-        <AnimateOnScrollItem index={2} animation="fadeInUp" duration="fast" className="flex flex-col mx-auto border border-[#1C42FF] md:flex-row p-6 md:pt-8 md:py-8 md:pb-6 bg-bg-white-6 rounded-[24px] gap-6 md:gap-8 max-w-[838px] shadow-[0px_0px_0px_5px_#3586FF3D]">
-          <div className="flex flex-col w-full md:max-w-[280px]">
+        <AnimateOnScrollItem
+          index={2}
+          animation="fadeInUp"
+          duration="fast"
+          className="flex flex-col mx-auto border border-[#1C42FF] md:flex-row p-6 md:pt-8 md:py-8 md:pb-6 bg-bg-white-6 rounded-[24px] gap-6 md:gap-8 max-w-[838px] shadow-[0px_0px_0px_5px_#3586FF3D]"
+        >
+          <div className="flex flex-col w-full md:max-w-[290px]">
             <h6 className="matter-h6-reg">
               {currentPlan?.name || "All in One"}
             </h6>
@@ -173,26 +192,42 @@ export default function PlansSections() {
                     )
                   : "Nan"}
               </h1>
-              <p className="matter-p2-reg pl-2 pb-1 text-text-tertiary">
-                {activeTab === "Monthly" ? "/ monthly" : "/ yearly"}
-              </p>
+              {selectedPrice?.oldPrice && (
+                <p className="matter-p2-reg pl-2 pb-1 text-text-tertiary">
+                  <span className="line-through">
+                    $
+                    {selectedPrice.oldPrice.toFixed(
+                      selectedPrice.oldPrice % 1 === 0 ? 0 : 2
+                    )}
+                  </span>
+                  {" "}
+                  {activeTab === "Monthly" ? "/ monthly" : "/ yearly"}
+                </p>
+              )}
             </div>
             <div className="flex flex-col gap-[20px] pt-6 md:pt-8">
               {/* Dropdown with features */}
               <Select
-                value={(currentPrices.length - 1 - selectedPriceIndex).toString()}
+                value={(
+                  currentPrices.length -
+                  1 -
+                  selectedPriceIndex
+                ).toString()}
                 onValueChange={handlePriceChange}
               >
                 <SelectTrigger className="w-full">
                   <SelectValue placeholder="Select plan" />
                 </SelectTrigger>
                 <SelectContent>
-                  {currentPrices.slice().reverse().map((price, index) => (
-                    <SelectItem key={price.price_id} value={index.toString()}>
-                      {price.credits} analys{price.credits > 1 ? "es" : ""}
-                      {/* {activeTab === "Monthly" ? "mo" : "year"} */}
-                    </SelectItem>
-                  ))}
+                  {currentPrices
+                    .slice()
+                    .reverse()
+                    .map((price, index) => (
+                      <SelectItem key={price.price_id} value={index.toString()}>
+                        {price.credits} analys{price.credits > 1 ? "es" : ""}
+                        {/* {activeTab === "Monthly" ? "mo" : "year"} */}
+                      </SelectItem>
+                    ))}
                 </SelectContent>
               </Select>
               <Button
@@ -254,9 +289,14 @@ export default function PlansSections() {
             </div>
           </div>
         </AnimateOnScrollItem>
-        <AnimateOnScrollItem index={3} animation="fadeInUp" duration="fast" className="flex flex-col mx-auto max-w-[253px] gap-[18px] pt-8 md:pt-12">
+        <AnimateOnScrollItem
+          index={3}
+          animation="fadeInUp"
+          duration="fast"
+          className="flex flex-col mx-auto max-w-[253px] gap-[18px] pt-8 md:pt-12"
+        >
           <p className="matter-p1-reg text-center">
-          &ldquo;Getboostra cut costs and lifted sales instantly&rdquo;
+            &ldquo;Getboostra cut costs and lifted sales instantly&rdquo;
           </p>
           <div className="flex items-center justify-center gap-3">
             <AvatarIcon />
