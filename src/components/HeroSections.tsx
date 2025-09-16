@@ -51,7 +51,7 @@ export default function HeroSections() {
       <div className="w-full flex flex-col xl:max-w-[632px] gap-8 md:gap-12">
         <div className="flex flex-col gap-4 md:gap-8">
           {isMobile ? (
-            <div className="flex self-center justify-center items-center w-fit rounded-[30px] gap-1 px-2 py-[3px] bg-[linear-gradient(92.04deg,rgba(47,115,254,0.22)_0.55%,rgba(203,175,249,0.22)_39.59%,rgba(229,154,174,0.22)_73.57%)]">
+            <div className="flex self-center justify-center items-center w-fit rounded-[30px] gap-1 px-2.5 py-[5px] bg-[linear-gradient(92.04deg,rgba(47,115,254,0.22)_0.55%,rgba(203,175,249,0.22)_39.59%,rgba(229,154,174,0.22)_73.57%)]">
               <TickIcon />
               <p
                 className="matter-p4-med"
@@ -68,7 +68,7 @@ export default function HeroSections() {
               <p className="matter-p4-reg">in conversions—guaranteed</p>
             </div>
           ) : (
-            <div className="flex justify-center items-center w-fit rounded-[30px] gap-1 px-2 py-[3px] bg-[linear-gradient(92.04deg,rgba(47,115,254,0.22)_0.55%,rgba(203,175,249,0.22)_39.59%,rgba(229,154,174,0.22)_73.57%)]">
+            <div className="flex justify-center items-center w-fit rounded-[30px] gap-1 px-2.5 py-[5px] bg-[linear-gradient(92.04deg,rgba(47,115,254,0.22)_0.55%,rgba(203,175,249,0.22)_39.59%,rgba(229,154,174,0.22)_73.57%)]">
               <p
                 className="matter-p4-med"
                 style={{

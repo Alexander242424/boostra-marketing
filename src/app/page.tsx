@@ -27,7 +27,7 @@ export default function RootPage() {
         <BoostingConvertion />
         <div
           id="solutions"
-          className="flex flex-col items-center md:mt-[130px]"
+          className="flex flex-col items-center md:mt-[180px]"
         >
           <InfoCard
             title={["Boost", "Conversions"]}
