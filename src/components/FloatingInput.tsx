@@ -104,11 +104,12 @@ export default function FloatingInput() {
               />
               <div className="absolute right-2">
                 <Button
-                  size={'icon'}
+                  // size={'icon'}
                   onClick={handleBoostPage}
                   disabled={url.trim() !== "" && !isValidUrl(url)}
                 >
-                  <ArrowRight />
+                  {/* <ArrowRight /> */}
+                  Boost Page
                 </Button>
               </div>
             </div>

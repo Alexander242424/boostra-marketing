@@ -25,7 +25,7 @@ export default function RootPage() {
         <BrandSections />
         <TextBlock />
         <BoostingConvertion />
-        <div
+        {/* <div
           id="solutions"
           className="flex flex-col items-center md:mt-[180px]"
         >
@@ -53,7 +53,7 @@ export default function RootPage() {
             btnText={"Get Started for Free"}
             videoSrc={"/video/011MG_141_animation_1.webm"}
           />
-        </div>
+        </div> */}
         <div id="how-it-works">
           <CarouselSection />
         </div>
