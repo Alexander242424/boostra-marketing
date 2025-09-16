@@ -179,7 +179,7 @@ export default function PlansSections() {
           duration="fast"
           className="flex flex-col mx-auto border border-[#1C42FF] md:flex-row p-6 md:pt-8 md:py-8 md:pb-6 bg-bg-white-6 rounded-[24px] gap-6 md:gap-8 max-w-[838px] shadow-[0px_0px_0px_5px_#3586FF3D]"
         >
-          <div className="flex flex-col w-full md:max-w-[290px]">
+          <div className="flex flex-col w-full md:max-w-[330px]">
             <h6 className="matter-h6-reg">
               {currentPlan?.name || "All in One"}
             </h6>
