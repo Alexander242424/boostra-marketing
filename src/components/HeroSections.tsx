@@ -50,74 +50,18 @@ export default function HeroSections() {
     >
       <div className="w-full flex flex-col xl:max-w-[632px] gap-8 md:gap-12">
         <div className="flex flex-col gap-4 md:gap-8">
-          <AnimateOnScrollItem index={0} animation="fadeInUp" duration="fast">
-            {/* {isMobile ? (
-              <div className="flex flex-col items-center">
-                <div className="flex justify-center items-center w-fit rounded-[30px] gap-1 px-2.5 py-[5px] bg-[linear-gradient(92.04deg,rgba(47,115,254,0.22)_0.55%,rgba(203,175,249,0.22)_39.59%,rgba(229,154,174,0.22)_73.57%)]">
-                  <TickIcon />
-                  <p
-                    className="matter-p4-med"
-                    style={{
-                      background:
-                        "linear-gradient(92.04deg, #2F73FE 34.987%, #CBAFF9 57%)",
-                      WebkitBackgroundClip: "text",
-                      WebkitTextFillColor: "transparent",
-                      backgroundClip: "text",
-                    }}
-                  >
-                    20% boost
-                  </p>
-                  <p className="matter-p4-reg">in conversions—guaranteed</p>
-                </div>
-              </div>
-            ) : (
-              <div className="flex justify-center items-center w-fit rounded-[30px] gap-1 px-2.5 py-[5px] bg-[linear-gradient(92.04deg,rgba(47,115,254,0.22)_0.55%,rgba(203,175,249,0.22)_39.59%,rgba(229,154,174,0.22)_73.57%)]">
-                <p
-                  className="matter-p4-med"
-                  style={{
-                    background:
-                      "linear-gradient(92.04deg, #2F73FE 34.987%, #CBAFF9 57%)",
-                    WebkitBackgroundClip: "text",
-                    WebkitTextFillColor: "transparent",
-                    backgroundClip: "text",
-                  }}
-                >
-                  Get 15-20%
-                </p>
-                <p className="matter-p4-reg">
-                  conversions in minutes — guaranteed
-                </p>
-              </div>
-            )} */}
-            <div className="flex flex-col not-md:items-center">
-              <div className="flex justify-center items-center w-fit rounded-[30px] gap-1 px-2.5 py-[5px] bg-[linear-gradient(92.04deg,rgba(47,115,254,0.22)_0.55%,rgba(203,175,249,0.22)_39.59%,rgba(229,154,174,0.22)_73.57%)]">
-                <p
-                  className="matter-p4-med"
-                  style={{
-                    background:
-                      "linear-gradient(92.04deg, #2F73FE 34.987%, #CBAFF9 57%)",
-                    WebkitBackgroundClip: "text",
-                    WebkitTextFillColor: "transparent",
-                    backgroundClip: "text",
-                  }}
-                >
-                  Get +15-20%
-                </p>
-                <p className="matter-p4-reg">conversions instant</p>
-              </div>
-            </div>
-          </AnimateOnScrollItem>
           <AnimateOnScrollItem index={1} animation="fadeInUp" duration="fast">
             <h1 className="matter-h1-reg text-center md:text-left">
-              Meet your
-              <p className="text-gradient-blue">AI Conversion &</p>
-              Revenue engine.
+              Meet your <br />
+              <span className="text-gradient-blue">AI Conversion </span>
+              <span className="text-[#FFFFFF3D]"> & </span> Revenue engine.
             </h1>
           </AnimateOnScrollItem>
           <AnimateOnScrollItem index={1} animation="fadeInUp" duration="fast">
             <h1 className="matter-p1-reg text-text-tertiary text-center md:text-left xl:max-w-[495px]">
-              Find what&apos;s broken, fix usability & conversions, boost
-              revenue — in minutes, not weeks.
+              <span className="text-white">Instant +35-47% Uplift in Conversions. </span>Find what's
+              broken, fix usability & conversions, boost revenue — in minutes,
+              not weeks.
             </h1>
           </AnimateOnScrollItem>
         </div>
@@ -150,13 +94,17 @@ export default function HeroSections() {
         index={4}
         animation="fadeInUp"
         duration="fast"
-        className="w-full h-full flex flex-col xl:max-w-[536px] xl:max-h-[528px] self-center border-[0.5px] border-[#FFFFFF20] rounded-[40px] overflow-hidden bg-[#FFFFFF10] backdrop-blur-[40px]"
+        className="w-full h-full flex flex-col xl:max-w-[536px] xl:max-h-[528px] self-center border-[0.5px] border-[#FFFFFF1F] rounded-[40px] overflow-hidden p-[6px]"
       >
-        <Lottie
-          className="w-full h-full"
-          animationData={HeroVideoAnimation}
-          loop={true}
-        />
+        <div className="w-full h-full rounded-[34px] relative">
+          {/* Фоновий градієнт для backdrop-blur */}
+          <div className="absolute inset-0 rounded-[34px] bg-[#00000066]"></div>
+          <Lottie
+            className="w-full h-full rounded-[34px] bg-[#00000066] relative z-10" //backdrop-blur-[0px]
+            animationData={HeroVideoAnimation}
+            loop={true}
+          />
+        </div>
       </AnimateOnScrollItem>
     </AnimateOnScrollGroup>
   );

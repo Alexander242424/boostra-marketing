@@ -2,7 +2,7 @@ import React from "react";
 
 export default function CookiesPolicy() {
   return (
-    <div className="w-full h-full flex flex-col px-4 max-w-[1270px] mx-auto items-center mt-8">
+    <div className="w-full h-full flex flex-col px-4 md:px-10 max-w-[1270px] mx-auto items-center mt-8">
       <div className="flex flex-col max-w-[710px] gap-12">
         <div className="flex flex-col gap-4 md:gap-6">
           <h2 className="matter-h2-reg">Cookie Policy</h2>

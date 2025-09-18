@@ -128,23 +128,22 @@ export default function PlansSections() {
       className="w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] py-[96px] md:py-[160px]"
       style={{
         backgroundImage: isMobile
-          ? 'url("/Backgrounds boostra/mobile/Background Pricing-min.jpg")'
-          : 'url("/Backgrounds boostra/desktop/Gradient Pricing-min.jpg")',
-        backgroundSize: "cover",
+          ? 'url("/BG/375/BG-04.jpg")'
+          : 'url("/BG/1512/04.jpg")',
+        backgroundSize: "contain",
         backgroundRepeat: "no-repeat",
         backgroundPosition: "center",
       }}
     >
-      <AnimateOnScrollGroup className="mx-auto px-4" staggerDelay={0.1}>
+      <AnimateOnScrollGroup className="mx-auto" staggerDelay={0.1}>
         <AnimateOnScrollItem
           index={0}
           animation="fadeInUp"
           duration="fast"
           className="flex flex-col items-center text-center gap-3 md:gap-5 mb-[48px]"
         >
-          <p className="matter-p2-med text-gradient-blue-badge">Pricing</p>
           <h2 className="matter-h2-reg max-w-[752px]">
-            Proven conversion lifts — for less than a coffee
+            Proven conversion lifts — <span className="text-gradient-blue"> for less than a coffee </span>
           </h2>
         </AnimateOnScrollItem>
         {/* Tabs with plans */}

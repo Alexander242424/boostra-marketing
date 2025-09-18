@@ -20,7 +20,7 @@ export default function EnterpriseGrade() {
       <div className="flex flex-col items-center text-center gap-3 md:gap-6 max-w-[652px]">
         <AnimateOnScrollItem index={0} animation="fadeInUp" duration="fast">
           <h4 className="matter-h4-reg">Enterprise-grade</h4>
-          <h4 className="matter-h4-reg">security & privacy</h4>
+          <h4 className="matter-h4-reg text-gradient-blue">security & privacy</h4>
         </AnimateOnScrollItem>
         <AnimateOnScrollItem index={1} animation="fadeInUp" duration="fast">
           <p className="matter-p2-reg text-text-tertiary">

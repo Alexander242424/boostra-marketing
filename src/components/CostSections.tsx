@@ -31,14 +31,9 @@ export default function CostSections() {
     <AnimateOnScrollGroup className="flex flex-col w-full h-full gap-8 md:gap-12 items-center mt-[96px] md:mt-[160px] mb-[96px] md:mb-[160px]" staggerDelay={0.1}>
       <div className="flex flex-col items-center text-center gap-3 md:gap-5">
         <AnimateOnScrollItem index={0} animation="fadeInUp" duration="fast">
-          <p className="matter-p2-med text-gradient-blue-badge">
-            Revenue-based Solutions
-          </p>
-        </AnimateOnScrollItem>
-        <AnimateOnScrollItem index={1} animation="fadeInUp" duration="fast">
           <div className="max-w-[800px]">
             <h2 className="matter-h2-reg">
-              Find what&apos;s costing you conversions and revenue
+              Find what&apos;s costing you <span className="text-gradient-blue"> conversions and revenue </span>
             </h2>
           </div>
         </AnimateOnScrollItem>

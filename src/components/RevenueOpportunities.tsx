@@ -44,11 +44,6 @@ export default function RevenueOpportunities() {
     >
       <div className="flex flex-col items-center text-center gap-3 md:gap-5">
         <AnimateOnScrollItem index={0} animation="fadeInUp" duration="fast">
-          <p className="matter-p2-med text-gradient-blue-badge">
-            Revenue-based Benefits
-          </p>
-        </AnimateOnScrollItem>
-        <AnimateOnScrollItem index={1} animation="fadeInUp" duration="fast">
           <h2 className="matter-h2-reg max-w-[700px]">
             Boost your conversions in 3 simple steps
           </h2>

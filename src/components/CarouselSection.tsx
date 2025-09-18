@@ -384,18 +384,17 @@ export default function CarouselSection() {
       className="w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] py-[96px] md:py-[160px]"
       style={{
         backgroundImage: isMobile
-        ? 'url("/Backgrounds boostra/mobile/Background Case Studies-min.jpg")'
-        : 'url("/Backgrounds boostra/desktop/Background Case Studies-min.jpg")',
-        backgroundSize: "cover",
+        ? 'url("/BG/375/BG-03.jpg")'
+        : 'url("/BG/1512/03.jpg")',
+        backgroundSize: "contain",
         backgroundRepeat: "no-repeat",
         backgroundPosition: "center",
       }}
     >
-      <AnimateOnScrollGroup className="mx-auto px-4" staggerDelay={0.1}>
+      <AnimateOnScrollGroup className="mx-auto" staggerDelay={0.1}>
         <AnimateOnScrollItem index={0} animation="fadeInUp" duration="fast" className="flex flex-col items-center text-center gap-3 md:gap-5 mb-[48px]">
-          <p className="matter-p2-med text-gradient-blue-badge">Case Studies</p>
           <h2 className="matter-h2-reg max-w-[978px]">
-            Proven conversion lifts for enterprises and online businesses
+            Proven conversion lifts for <span className="text-gradient-blue"> enterprises and online businesses </span>
           </h2>
         </AnimateOnScrollItem>
         {/* Tabs with categories */}

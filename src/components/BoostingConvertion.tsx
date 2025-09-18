@@ -11,7 +11,7 @@ export default function BoostingConvertion() {
         backgroundImage: isMobile
           ? 'url("/Backgrounds boostra/mobile/Background Boosting-min.png")'
           : 'url("/Backgrounds boostra/desktop/Background Boosting-min.png")',
-        backgroundSize: "cover",
+        backgroundSize: "contain",
         backgroundRepeat: "no-repeat",
         backgroundPosition: "center",
       }}
@@ -21,15 +21,13 @@ export default function BoostingConvertion() {
         animation="fadeInUp"
         duration="fast"
       >
-        {/* Background Image */}
-        {/* Content */}
         {isMobile ? (
           <div className="relative flex flex-col gap-5 z-10 text-center pb-[60px] px-[38px]">
             <h6 className="matter-h6-reg">
               On average, Boostra customers see a
             </h6>
             <h4 className="matter-h4-reg text-gradient-blue">
-              20% increase in conversions
+              35-47% boost in conversions
             </h4>
           </div>
         ) : (
@@ -38,7 +36,7 @@ export default function BoostingConvertion() {
               On average, Boostra customers see an instant
             </h6>
             <h1 className="matter-h1-reg text-gradient-blue">
-              20% boost in conversions
+              35-47% boost in conversions
             </h1>
           </div>
         )}

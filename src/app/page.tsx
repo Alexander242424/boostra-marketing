@@ -1,14 +1,18 @@
 "use client";
 
+import BoostConversionsSection from "@/components/BoostConversionsSection";
 import BoostingConvertion from "@/components/BoostingConvertion";
 import BrandSections from "@/components/BrandSections";
 import CarouselSection from "@/components/CarouselSection";
+import ConversionReady from "@/components/ConversionReady";
 import CopilotSections from "@/components/CopilotSections";
 import CostSections from "@/components/CostSections";
 import EnterpriseGrade from "@/components/EnterpriseGrade";
+import EverythingAbout from "@/components/EverythingAbout";
 import FloatingInput from "@/components/FloatingInput";
 import HeroSections from "@/components/HeroSections";
 import InfoCard from "@/components/InfoCard";
+import MarketingCardsSections from "@/components/MarketingCardsSections";
 import PlansSections from "@/components/PlansSections";
 import QuestionsSection from "@/components/QuestionsSection";
 import RevenueOpportunities from "@/components/RevenueOpportunities";
@@ -20,12 +24,18 @@ export default function RootPage() {
 
   return (
     <>
-      <div className="w-full h-full flex flex-col px-4 max-w-[1270px] mx-auto">
+      <div className="w-full h-full flex flex-col px-4 md:px-10 max-w-[1270px] mx-auto">
         <HeroSections />
         <BrandSections />
         <TextBlock />
-        <BoostingConvertion />
-        <div
+        {/* <BoostingConvertion /> */}
+        <div id="case-studies">
+          <ConversionReady />
+        </div>
+        <MarketingCardsSections/>
+        <EverythingAbout/>
+        <BoostConversionsSection/>
+        {/* <div
           id="solutions"
           className="flex flex-col items-center md:mt-[180px]"
         >
@@ -45,21 +55,21 @@ export default function RootPage() {
             btnText={"Get Started for Free"}
             videoSrc={"/video/011MG_141_animation_1.webm"}
           />
-          {/* <InfoCard
+          <InfoCard
             title={["Boost", "Accessibility"]}
             description={
               "Accessibility gaps cost customers and compliance. Detect barriers and make your site usable for every visitor"
             }
             btnText={"Get Started for Free"}
             videoSrc={"/video/011MG_141_animation_1.webm"}
-          /> */}
-        </div>
+          />
+        </div> */}
         <div id="how-it-works">
           <CarouselSection />
         </div>
-        <div id="case-studies">
+        {/* <div id="case-studies">
           <RevenueOpportunities />
-        </div>
+        </div> */}
         {/* <CopilotSections /> */}
         <CostSections />
         <div id="pricing">

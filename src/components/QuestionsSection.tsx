@@ -12,7 +12,7 @@ export default function QuestionsSection() {
     <AnimateOnScrollGroup className="flex flex-col mt-[96px] md:mt-[160px] gap-8 md:gap-[48px] items-center" staggerDelay={0.15}>
       <div className="flex flex-col gap-3 md:gap-6">
         <AnimateOnScrollItem index={0} animation="fadeInUp" duration="fast">
-          <h2 className="matter-h2-reg text-center">Have Questions?</h2>
+          <h2 className="matter-h2-reg text-center">Have <span className="text-gradient-blue"> Questions?</span></h2>
         </AnimateOnScrollItem>
         <AnimateOnScrollItem index={1} animation="fadeInUp" duration="fast">
           <p className="matter-p1-reg text-text-tertiary text-center xl:max-w-[634px]">

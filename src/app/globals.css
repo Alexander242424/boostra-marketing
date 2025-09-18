@@ -64,13 +64,11 @@
   --brand-blue-light: linear-gradient(93.54deg, #4a68ff -3.63%, #67b0ff 98.73%);
   --gradient-blue-badge: linear-gradient(94.35deg, #1C42FF 39.66%, #3C99FF 57.41%);
 
-  --gradient-blue: linear-gradient(92.04deg, #2F73FE 0.55%, #CBAFF9 39.59%, #E59AAE 73.57%);
-  --gradient-blue-block: linear-gradient(
-    90deg,
-    #1c61ff -8.4%,
-    #64aefe 46.88%,
-    #64aefe 67.41%
-  );
+  --gradient-blue: linear-gradient(90.94deg, #4689F7 -3.18%, #5FC1F9 28.33%, #D392DF 62.46%, #F2A8A6 83.99%, #F8D661 104.47%);
+
+
+  --gradient-blue-block: linear-gradient(90.94deg, #FFFFFF -3.18%, #A3DDFF 28.33%, #FADDFF 62.46%, #FFE5E5 83.99%, #FFF8E1 104.47%);
+
 }
 
 :root {

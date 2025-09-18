@@ -40,7 +40,7 @@ export default function Footer() {
           backgroundImage: isMobile
             ? 'url("/Backgrounds boostra/mobile/Background Unlock Conversions-min.jpg")'
             : 'url("/Backgrounds boostra/desktop/Gradient Unlock Conversions-min.jpg")',
-          backgroundSize: "cover",
+          backgroundSize: "contain",
           backgroundRepeat: "no-repeat",
           backgroundPosition: "center",
         }}
@@ -49,7 +49,7 @@ export default function Footer() {
         <AnimateOnScrollGroup className="flex flex-col items-center gap-8 my-[96px] md:mt-[89px] md:mb-[146px]" staggerDelay={0.15}>
           <div className="flex flex-col items-center text-center gap-3 md:gap-5 max-w-[800px]">
             <AnimateOnScrollItem index={0} animation="fadeInUp" duration="fast">
-              <h2 className="matter-h2-reg">Unlock Conversions. Today.</h2>
+              <h2 className="matter-h2-reg">Unlock Conversions. <span className="text-gradient-blue"> Today.</span></h2>
             </AnimateOnScrollItem>
             <AnimateOnScrollItem index={1} animation="fadeInUp" duration="fast">
               <p className="matter-p2-reg text-text-tertiary">

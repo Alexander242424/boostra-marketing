@@ -25,7 +25,7 @@ export default function SiteMapPage() {
   ];
 
   return (
-    <div className="w-full h-full flex flex-col px-4 max-w-[1270px] mx-auto items-center mt-8">
+    <div className="w-full h-full flex flex-col px-4 md:px-10 max-w-[1270px] mx-auto items-center mt-8">
       <div className="flex flex-col max-w-[710px] gap-6">
         <div className="flex flex-col gap-2 md:gap-3">
           <h2 className="matter-h2-reg">Site Map</h2>
