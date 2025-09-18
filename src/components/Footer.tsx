@@ -45,7 +45,7 @@ export default function Footer() {
           backgroundPosition: "center",
         }}
       />
-      <div className="flex w-full h-full flex-col px-4 lg:px-[121px] max-w-[1512px] mx-auto">
+      <div className="flex w-full h-full flex-col px-4 max-w-[1270px] mx-auto">
         <AnimateOnScrollGroup className="flex flex-col items-center gap-8 my-[96px] md:mt-[89px] md:mb-[146px]" staggerDelay={0.15}>
           <div className="flex flex-col items-center text-center gap-3 md:gap-5 max-w-[800px]">
             <AnimateOnScrollItem index={0} animation="fadeInUp" duration="fast">

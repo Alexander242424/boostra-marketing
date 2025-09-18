@@ -20,7 +20,7 @@ export default function RootPage() {
 
   return (
     <>
-      <div className="w-full h-full flex flex-col px-4 lg:px-[121px] max-w-[1512px] mx-auto">
+      <div className="w-full h-full flex flex-col px-4 max-w-[1270px] mx-auto">
         <HeroSections />
         <BrandSections />
         <TextBlock />
