@@ -59,7 +59,7 @@ export default function HeroSections() {
           </AnimateOnScrollItem>
           <AnimateOnScrollItem index={1} animation="fadeInUp" duration="fast">
             <h1 className="matter-p1-reg text-text-tertiary text-center md:text-left xl:max-w-[495px]">
-              <span className="text-white">Instant +35-47% Uplift in Conversions. </span>Find what's
+              <span className="text-white">Instant +35-47% Uplift in Conversions. </span>Find what&apos;s
               broken, fix usability & conversions, boost revenue — in minutes,
               not weeks.
             </h1>
