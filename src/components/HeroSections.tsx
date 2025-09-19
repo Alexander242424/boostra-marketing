@@ -69,7 +69,7 @@ export default function HeroSections() {
           index={3}
           animation="fadeInUp"
           duration="fast"
-          className="flex flex-col gap-5 md:gap-4 w-full self-center items-stretch md:max-w-[560px] lg:max-w-[592px]"
+          className="flex flex-col gap-5 md:gap-4 w-full self-center lg:self-start items-stretch md:max-w-[560px] lg:max-w-[592px]"
         >
           <div className="hover:scale-[1.02] transition-all duration-300">
             <Input
