@@ -45,23 +45,22 @@ export default function HeroSections() {
 
   return (
     <AnimateOnScrollGroup
-      className="flex flex-col xl:flex-row justify-between items-center sm:items-start xl:items-center gap-8 md:gap-12 pb-10 pt-8 md:pt-[72px]"
+      className="flex flex-col lg:flex-row justify-between items-center sm:items-start xl:items-center gap-8 lg:gap-12 pb-[48px] md:pb-[76px] lg:pb-0 pt-[48px] lg:pt-[96px]"
       staggerDelay={0.1}
     >
-      <div className="w-full flex flex-col xl:max-w-[632px] gap-8 md:gap-12">
-        <div className="flex flex-col gap-4 md:gap-8">
+      <div className="w-full flex flex-col gap-8 lg:min-w-[624px] lg:gap-[54px]">
+        <div className="flex flex-col gap-4 lg:gap-[42px]">
           <AnimateOnScrollItem index={1} animation="fadeInUp" duration="fast">
-            <h1 className="matter-h1-reg text-center md:text-left">
+            <h1 className="matter-h1-reg text-center lg:text-left">
               Meet your <br />
               <span className="text-gradient-blue">AI Conversion </span>
               <span className="text-[#FFFFFF3D]"> & </span> Revenue engine.
             </h1>
           </AnimateOnScrollItem>
           <AnimateOnScrollItem index={1} animation="fadeInUp" duration="fast">
-            <h1 className="matter-p1-reg text-text-tertiary text-center md:text-left xl:max-w-[495px]">
-              <span className="text-white">Instant +35-47% Uplift in Conversions. </span>Find what&apos;s
-              broken, fix usability & conversions, boost revenue — in minutes,
-              not weeks.
+            <h1 className="matter-p1-reg text-center lg:text-left lg:max-w-[413px]">
+              Get instant +35-47% Uplift in Conversions.
+              Boost revenue — in minutes, not weeks.
             </h1>
           </AnimateOnScrollItem>
         </div>
@@ -69,7 +68,7 @@ export default function HeroSections() {
           index={3}
           animation="fadeInUp"
           duration="fast"
-          className="flex flex-col gap-5 md:gap-4 items-center md:items-stretch xl:max-w-[592px]"
+          className="flex flex-col gap-5 md:gap-4 w-full items-stretch lg:max-w-[592px]"
         >
           <div className="hover:scale-[1.02] transition-all duration-300">
             <Input
@@ -94,7 +93,7 @@ export default function HeroSections() {
         index={4}
         animation="fadeInUp"
         duration="fast"
-        className="w-full h-full flex flex-col xl:max-w-[536px] xl:max-h-[528px] self-center border-[0.5px] border-[#FFFFFF1F] rounded-[40px] overflow-hidden p-[6px]"
+        className="w-full h-full flex flex-col max-w-[343px] max-h-[320px] md:max-w-[608px] md:max-h-[649px] lg:max-w-[562px] lg:max-h-[496px] self-center border-[0.5px] border-[#FFFFFF1F] rounded-[40px] overflow-hidden p-[6px]"
       >
         <div className="w-full h-full rounded-[34px] relative">
           {/* Фоновий градієнт для backdrop-blur */}

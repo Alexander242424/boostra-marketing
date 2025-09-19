@@ -20,10 +20,9 @@ export default function TextBlock() {
         animation="fadeInUp"
         duration="fast"
       >
-        <p className="matter-h4-reg xl:max-w-[877px] text-center text-gradient-blue-block">
-          Boostra is like having a Seniour UX & CRO expert who spots issues,
-          learns user behavior, and delivers instant solutions to boost
-          conversions
+        <p className="matter-h5-reg lg:max-w-[840px] text-center text-gradient-blue-block">
+          Boostra is like having a UX & CRO Expert who/ spots issues, learnsuser
+          behaviors, and delivers instant solutions to boost revenue
         </p>
       </AnimateOnScroll>
       <AnimateOnScroll

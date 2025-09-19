@@ -10,7 +10,7 @@ export function useIsMobile() {
     if (typeof window === "undefined") return;
 
     const checkIsMobile = () => {
-      setIsMobile(window.innerWidth <= 768);
+      setIsMobile(window.innerWidth <= 767);
     };
 
     checkIsMobile();

@@ -27,7 +27,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
     ref
   ) => {
     return (
-      <div className="relative flex items-center h-[72px] max-w-[343px] sm:max-w-none">
+      <div className="relative flex items-center h-[72px]">
         <div
           className={cn(
             "relative shadow-[0px_0px_0px_6px_#FFFFFF08] flex items-center w-full h-full bg-bg-white-10 border rounded-[59px] px-6 py-2 transition-all duration-200 backdrop-blur-[98.9px]",
