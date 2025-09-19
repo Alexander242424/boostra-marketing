@@ -9,8 +9,8 @@ export default function HeaderBackground() {
       className="absolute top-0 left-1/2 transform -translate-x-1/2 w-screen h-screen z-0"
       style={{
         backgroundImage: isMobile
-          ? 'url("/BG/375/BG-01.jpg")'
-          : 'url("/BG/1512/01.jpg")',
+          ? 'url("/BG/Mobile/BG-01-min.jpg")'
+          : 'url("/BG/Desktop/01-min.jpg")',
         backgroundSize: "contain",
         backgroundRepeat: "no-repeat",
       }}

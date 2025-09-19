@@ -33,16 +33,16 @@ export default function Footer() {
   };
 
   return (
-    <div className="lex flex-col relative">
+    <div className="flex flex-col relative">
       <div
         className="absolute md:-top-[210px] left-1/2 transform -translate-x-1/2 w-screen h-[400px] md:h-[730px] -z-[1]"
         style={{
           backgroundImage: isMobile
-            ? 'url("/Backgrounds boostra/mobile/Background Unlock Conversions-min.jpg")'
-            : 'url("/Backgrounds boostra/desktop/Gradient Unlock Conversions-min.jpg")',
-          backgroundSize: "contain",
+          ? 'url("/BG/Mobile/BG-05-min.jpg")'
+          : 'url("/BG/Desktop/05-min.jpg")',
+          backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
-          backgroundPosition: "center",
+          backgroundPosition: "top",
         }}
       />
       <div className="flex w-full h-full flex-col px-4 max-w-[1270px] mx-auto">

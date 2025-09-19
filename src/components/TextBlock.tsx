@@ -8,11 +8,11 @@ export default function TextBlock() {
       className="w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw]"
       style={{
         backgroundImage: isMobile
-          ? 'url("/BG/375/BG-02.jpg")'
-          : 'url("/BG/1512/02.jpg")',
+          ? 'url("/BG/Mobile/BG-02-min.jpg")'
+          : 'url("/BG/Desktop/BG-02-min.jpg")',
         backgroundSize: "contain",
         backgroundRepeat: "no-repeat",
-        backgroundPosition: "center",
+        backgroundPosition: "bottom",
       }}
     >
       <AnimateOnScroll

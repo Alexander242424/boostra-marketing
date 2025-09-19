@@ -384,11 +384,11 @@ export default function CarouselSection() {
       className="w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] py-[96px] md:py-[160px]"
       style={{
         backgroundImage: isMobile
-        ? 'url("/BG/375/BG-03.jpg")'
-        : 'url("/BG/1512/03.jpg")',
+        ? 'url("public/BG/Mobile/BG-03-min.jpg")'
+        : 'url("/BG/Desktop/BG-03-min.jpg")',
         backgroundSize: "contain",
         backgroundRepeat: "no-repeat",
-        backgroundPosition: "center",
+        backgroundPosition: "top",
       }}
     >
       <AnimateOnScrollGroup className="mx-auto" staggerDelay={0.1}>

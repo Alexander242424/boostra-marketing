@@ -128,11 +128,11 @@ export default function PlansSections() {
       className="w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] py-[96px] md:py-[160px]"
       style={{
         backgroundImage: isMobile
-          ? 'url("/BG/375/BG-04.jpg")'
-          : 'url("/BG/1512/04.jpg")',
+          ? 'url("/BG/Mobile/BG-04-min.jpg")'
+          : 'url("/BG/Desktop/BG-04-min .jpg")',
         backgroundSize: "contain",
         backgroundRepeat: "no-repeat",
-        backgroundPosition: "center",
+        backgroundPosition: "bottom",
       }}
     >
       <AnimateOnScrollGroup className="mx-auto" staggerDelay={0.1}>
