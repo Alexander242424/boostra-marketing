@@ -84,7 +84,7 @@ export default function HeroSections() {
               isDisabled={url.trim() !== "" && !isValidUrl(url)}
             />
           </div>
-          <div className="flex matter-s1-reg text-text-tertiary items-center gap-[5px] md:pl-6">
+          <div className="flex matter-s1-reg text-text-tertiary items-center justify-center lg:justify-start gap-[5px] md:pl-6">
             <CreditCardIcon />
             <p>No credit card required</p>
           </div>

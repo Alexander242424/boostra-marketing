@@ -159,8 +159,8 @@ export default function BrandSections() {
 
   return (
     <AnimateOnScrollGroup className="flex flex-col pt-12 md:pt-[48px] lg:pt-[88px] pb-12 lg:pb-0 lg:mb-8 gap-6 lg:gap-8" staggerDelay={0.05}>
-      <AnimateOnScrollItem index={0} animation="fadeInUp" duration="fast" className="self-center">
-        <p className="matter-p1-med self-center">
+      <AnimateOnScrollItem index={0} animation="fadeInUp" duration="fast" className="flex justify-center">
+        <p className="matter-p1-med self-center text-center max-w-[70%]">
           <span className="text-gradient-blue">2500+ companies </span> use Boostra to convert more
         </p>
       </AnimateOnScrollItem>
