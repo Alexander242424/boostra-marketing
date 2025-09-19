@@ -401,7 +401,7 @@ export default function CarouselSection() {
         backgroundImage: isMobile
           ? 'url("/BG/Mobile/BG-03-min.jpg")'
           : 'url("/BG/Desktop/BG-03-min.jpg")',
-        backgroundSize: "contain",
+        backgroundSize: isMobile ? "cover" : "contain",
         backgroundRepeat: "no-repeat",
         backgroundPosition: "top",
       }}

@@ -11,7 +11,7 @@ export default function HeaderBackground() {
         backgroundImage: isMobile
           ? 'url("/BG/Mobile/BG-01-min.jpg")'
           : 'url("/BG/Desktop/01-min.jpg")',
-        backgroundSize: "contain",
+        backgroundSize: isMobile ? "cover" : "contain",
         backgroundRepeat: "no-repeat",
       }}
     />

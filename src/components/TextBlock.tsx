@@ -10,7 +10,7 @@ export default function TextBlock() {
         backgroundImage: isMobile
           ? 'url("/BG/Mobile/BG-02-min.jpg")'
           : 'url("/BG/Desktop/BG-02-min.jpg")',
-        backgroundSize: "contain",
+        backgroundSize: isMobile ? "cover" : "contain",
         backgroundRepeat: "no-repeat",
         backgroundPosition: "bottom",
       }}

@@ -128,7 +128,7 @@ export default function PlansSections() {
         backgroundImage: isMobile
           ? 'url("/BG/Mobile/BG-04-min.jpg")'
           : 'url("/BG/Desktop/BG-04-min .jpg")',
-        backgroundSize: "contain",
+        backgroundSize: isMobile ? "cover" : "contain",
         backgroundRepeat: "no-repeat",
         backgroundPosition: "bottom",
       }}
