@@ -16,11 +16,16 @@ export default function EnterpriseGrade() {
     },
   ];
   return (
-    <AnimateOnScrollGroup className="flex flex-col w-full h-full gap-8 md:gap-12 items-center mt-[96px] md:mt-[160px] mb-[96px] md:mb-[160px]" staggerDelay={0.1}>
-      <div className="flex flex-col items-center text-center gap-3 md:gap-6 max-w-[652px]">
+    <AnimateOnScrollGroup
+      className="flex flex-col w-full h-full gap-8 md:gap-10 lg:gap-12 items-center mt-[48px] md:my-[64px] lg:mt-[88px] lg:mb-[120px]"
+      staggerDelay={0.1}
+    >
+      <div className="flex flex-col items-center text-center gap-3 md:gap-4 lg:gap-6 max-w-[652px]">
         <AnimateOnScrollItem index={0} animation="fadeInUp" duration="fast">
-          <h4 className="matter-h4-reg">Enterprise-grade</h4>
-          <h4 className="matter-h4-reg text-gradient-blue">security & privacy</h4>
+          <h3 className="matter-h3-reg">Enterprise-grade</h3>
+          <h3 className="matter-h3-reg text-gradient-blue">
+            security & privacy
+          </h3>
         </AnimateOnScrollItem>
         <AnimateOnScrollItem index={1} animation="fadeInUp" duration="fast">
           <p className="matter-p2-reg text-text-tertiary">
@@ -33,13 +38,18 @@ export default function EnterpriseGrade() {
           <GlobalStandartsIcon />
         </AnimateOnScrollItem>
       </div>
-      <AnimateOnScrollItem index={3} animation="fadeInUp" duration="fast" className="flex flex-col lg:flex-row gap-6 md:gap-8">
+      <AnimateOnScrollItem
+        index={3}
+        animation="fadeInUp"
+        duration="fast"
+        className="flex flex-col md:flex-row gap-4 md:gap-6"
+      >
         {cards.map((card, index) => (
           <div
             key={index}
-            className="flex flex-col bg-bg-white-10 rounded-[24px] gap-8 md:gap-[48px] p-8 max-w-[407px]"
+            className="flex flex-col bg-bg-white-10 rounded-[24px] gap-8 md:gap-[48px] p-5 lg:p-6 md:max-w-[407px]"
           >
-            <div className="flex flex-col gap-3">
+            <div className="flex flex-col gap-2 md:gap-3 md:text-center lg:text-left">
               <h6 className="matter-p1-reg">{card.title}</h6>
               <p className="matter-p4-reg text-text-tertiary">
                 {card.description}

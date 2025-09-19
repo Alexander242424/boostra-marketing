@@ -273,9 +273,9 @@
 .matter-h1-reg {
   font-family: var(--font-matter), system-ui, sans-serif !important;
   font-weight: 400;
-  font-size: 84px;
+  font-size: 78px;
   line-height: 98%;
-  letter-spacing: -4%;
+  letter-spacing: -0.04em;
 }
 
 .matter-h2-reg {
@@ -283,7 +283,7 @@
   font-weight: 400;
   font-size: 68px;
   line-height: 104%;
-  letter-spacing: -4%;
+  letter-spacing: -0.04em;
 }
 
 .matter-h3-reg {
@@ -313,9 +313,9 @@
 .matter-h6-reg {
   font-family: var(--font-matter), system-ui, sans-serif !important;
   font-weight: 400;
-  font-size: 36px;
-  line-height: 112.00000000000001%;
-  letter-spacing: -4%;
+  font-size: 28px;
+  line-height: 134%;
+  letter-spacing: -0.01em;
 }
 
 .matter-p1-reg {
@@ -470,9 +470,9 @@
   .matter-h6-reg {
     font-family: var(--font-matter), system-ui, sans-serif !important;
     font-weight: 400;
-    font-size: 28px;
-    line-height: 120%;
-    letter-spacing: -2%;
+    font-size: 24px;
+    line-height: 134%;
+    letter-spacing: -0.02em;
   }
 
   .matter-p1-reg {
@@ -628,8 +628,8 @@
     font-family: var(--font-matter), system-ui, sans-serif !important;
     font-weight: 400;
     font-size: 20px;
-    line-height: 120%;
-    letter-spacing: -2%;
+    line-height: 134%;
+    letter-spacing: -0.01em;
   }
 
   .matter-p1-reg {

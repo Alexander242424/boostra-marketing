@@ -9,8 +9,8 @@ import { AnimateOnScrollGroup, AnimateOnScrollItem } from "./AnimateOnScroll";
 
 export default function QuestionsSection() {
   return (
-    <AnimateOnScrollGroup className="flex flex-col mt-[96px] md:mt-[160px] gap-8 md:gap-[48px] items-center" staggerDelay={0.15}>
-      <div className="flex flex-col gap-3 md:gap-6">
+    <AnimateOnScrollGroup className="flex flex-col mt-[96px] mb-[48px] md:my-[64px] lg:mb-[88px] lg:mt-[104px] gap-8 md:gap-[40px] lg:gap-[48px] items-center" staggerDelay={0.15}>
+      <div className="flex flex-col gap-3 md:gap-4 lg:gap-6">
         <AnimateOnScrollItem index={0} animation="fadeInUp" duration="fast">
           <h2 className="matter-h2-reg text-center">Have <span className="text-gradient-blue"> Questions?</span></h2>
         </AnimateOnScrollItem>

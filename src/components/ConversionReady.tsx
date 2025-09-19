@@ -3,6 +3,7 @@ import React from "react";
 import GoalIcon from "@/assets/Goals.svg";
 import Image from "next/image";
 import ConversionReadyImage from "@/assets/Conversion ready,Usability,Above the fold/Conversion ready.webp";
+import { useIsMobile } from "@/hooks/useIsMobile";
 // import { AnimateOnScrollGroup, AnimateOnScrollItem } from "./AnimateOnScroll";
 const cards = [
   {
@@ -38,19 +39,21 @@ const cards = [
 ];
 
 export default function ConversionReady() {
+  const isMobile = useIsMobile();
   return (
-    <div className="flex flex-col lg:flex-row lg:gap-[100px] lg:pt-[105px]">
-      <div className="flex flex-col lg:gap-[55px]">
-        <div className="flex flex-col lg:gap-6">
+    <div className="flex flex-col lg:flex-row lg:gap-[120px] pt-[96px] md:pt-[89px] lg:pt-[104px] pb-[44px] md:pb-[88px] lg:pb-0">
+      <div className="flex flex-col md:gap-[48px] lg:gap-[55px] lg:pt-[73px] lg:pb-[67px]">
+        <div className="flex flex-col gap-4 lg:gap-6 text-center lg:text-left">
           <h3 className="matter-h3-reg">
-            Make every page{" "}
+            Make every page
+            <br />
             <span className="text-gradient-blue"> Conversion-ready</span>
           </h3>
           <p className="matter-p3-reg text-text-tertiary">
-            Increase revenue growth by uncovering hidden funnel leaks and
-            lorem...
+            Spot leaks, fix usability gaps, and lift conversions instantly — without waiting weeks for results.
           </p>
         </div>
+        {!isMobile && (
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-2 gap-4 lg:gap-6">
           {/* Cards list */}
           {cards.map((card, index) => (
@@ -65,10 +68,27 @@ export default function ConversionReady() {
             </div>
           ))}
         </div>
+        )}
       </div>
-      <div className="w-full h-auto max-w-[657px]">
+      <div className="flex flex-col justify-center w-full h-auto pt-[62px] lg:max-w-[570px] md:pt-[48px] lg:pt-0">
         <Image src={ConversionReadyImage} alt="Conversion Ready" />
       </div>
+      {isMobile && (
+        <div className="grid grid-cols-2 gap-4 pt-[38px]">
+          {/* Cards list */}
+          {cards.map((card, index) => (
+            <div className="flex gap-2" key={index}>
+              <GoalIcon className="min-w-[23px]" />
+              <div className="flex flex-col gap-1">
+                <p className="matter-p4-reg">{card.title}</p>
+                <p className="matter-s1-reg text-text-tertiary">
+                  {card.description}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+        )}
     </div>
   );
 }

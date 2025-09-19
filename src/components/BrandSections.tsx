@@ -158,11 +158,10 @@ export default function BrandSections() {
   };
 
   return (
-    <AnimateOnScrollGroup className="flex flex-col py-[64px] md:pt-[130px] md:pb-[65px] gap-4 md:gap-[34px]" staggerDelay={0.05}>
+    <AnimateOnScrollGroup className="flex flex-col pt-12 md:pt-[48px] lg:pt-[88px] pb-12 lg:pb-0 lg:mb-8 gap-6 lg:gap-8" staggerDelay={0.05}>
       <AnimateOnScrollItem index={0} animation="fadeInUp" duration="fast" className="self-center">
-        <p className="matter-p2-med self-center">
-          Join over <span className="text-gradient-blue">2500+</span> businesses
-          using Boostra
+        <p className="matter-p1-med self-center">
+          <span className="text-gradient-blue">2500+ companies </span> use Boostra to convert more
         </p>
       </AnimateOnScrollItem>
       <AnimateOnScrollItem index={1} animation="fadeInUp" duration="fast" className="flex flex-wrap gap-4 justify-center">
@@ -178,7 +177,7 @@ export default function BrandSections() {
             </div>
             {logo.btnText && !isMobile && (
               <div
-                className="absolute bottom-3 left-30 text-[#3B95FE] cursor-pointer bg-bg-white-12 rounded-[100px] w-full h-full flex items-center justify-center max-w-[57.410255432128906px] max-h-[16px] md:max-w-[81px] md:max-h-[25px] tooltip-btn"
+                className="absolute bottom-3 left-30 text-[#3B95FE] cursor-pointer bg-bg-white-12 rounded-[100px] w-full h-full flex items-center justify-center max-w-[57.410255432128906px] max-h-[16px] md:max-w-[96px] md:max-h-[25px] tooltip-btn"
                 onClick={() => handleTooltipClick(index)}
               >
                 <Tooltip

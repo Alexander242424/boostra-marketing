@@ -24,7 +24,7 @@ export default function RootPage() {
 
   return (
     <>
-      <div className="w-full h-full flex flex-col px-4 md:px-10 max-w-[1270px] mx-auto">
+      <div className="w-full h-full flex flex-col px-4 md:px-10 max-w-[1320px] mx-auto">
         <HeroSections />
         <BrandSections />
         <TextBlock />

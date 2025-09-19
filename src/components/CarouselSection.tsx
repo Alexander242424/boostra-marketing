@@ -39,7 +39,8 @@ const categoriesData = {
         height: 408,
       },
       logo: <NespressoLogo />,
-      title: "+17% Subscription Orders in 4 Weeks After a 5-Minute Getboostra Analysis of Nespresso",
+      title:
+        "+17% Subscription Orders in 4 Weeks After a 5-Minute Getboostra Analysis of Nespresso",
       author: {
         name: "Claire Dubois",
         position: "Global eCommerce Director",
@@ -72,7 +73,8 @@ const categoriesData = {
         height: 408,
       },
       logo: <GymsharkLogo />,
-      title: "+28% Account Sign-Ups in 3 Weeks After a 5-Minute Getboostra Analysis of Gymshark.com",
+      title:
+        "+28% Account Sign-Ups in 3 Weeks After a 5-Minute Getboostra Analysis of Gymshark.com",
       author: {
         name: "Sophie Bennett",
         position: "Performance Marketing Manager",
@@ -88,7 +90,8 @@ const categoriesData = {
         height: 408,
       },
       logo: <RoyalQueenSeeds />,
-      title: "+19% Repeat Purchases in 1 Month After a 5-Minute Getboostra Analysis of RoyalQueenSeeds.com",
+      title:
+        "+19% Repeat Purchases in 1 Month After a 5-Minute Getboostra Analysis of RoyalQueenSeeds.com",
       author: {
         name: "Jonas Vermeer",
         position: "Head of Online Sales",
@@ -104,7 +107,8 @@ const categoriesData = {
         height: 408,
       },
       logo: <DiamondCbdLogo />,
-      title: "+26% Add-to-Cart Rate in 3 Weeks After a 5-Minute Getboostra Analysis of DiamondCBD.com",
+      title:
+        "+26% Add-to-Cart Rate in 3 Weeks After a 5-Minute Getboostra Analysis of DiamondCBD.com",
       author: {
         name: "Rachel Kim",
         position: "Director of Conversion Optimization",
@@ -120,7 +124,8 @@ const categoriesData = {
         height: 408,
       },
       logo: <WellowLogo />,
-      title: "+31% First-Time Orders in 1 Month After a 5-Minute Getboostra Analysis of WearWellow.com",
+      title:
+        "+31% First-Time Orders in 1 Month After a 5-Minute Getboostra Analysis of WearWellow.com",
       author: {
         name: "David Lam",
         position: "VP of Growth & Retention",
@@ -136,7 +141,8 @@ const categoriesData = {
         height: 408,
       },
       logo: <MarioCapasaLogo />,
-      title: "+24% Returning Customers in 4 Weeks After a 5-Minute Getboostra Analysis of MarioCasapa.com",
+      title:
+        "+24% Returning Customers in 4 Weeks After a 5-Minute Getboostra Analysis of MarioCasapa.com",
       author: {
         name: "Lucia Romano",
         position: "Head of eCommerce",
@@ -154,7 +160,8 @@ const categoriesData = {
         height: 408,
       },
       logo: <ArchiveLogo />,
-      title: "+34% Demo Requests in 3 Weeks After a 5-Minute Getboostra Analysis of Archive.com",
+      title:
+        "+34% Demo Requests in 3 Weeks After a 5-Minute Getboostra Analysis of Archive.com",
       author: {
         name: "Alex Chen",
         position: "Chief Marketing Officer",
@@ -170,7 +177,8 @@ const categoriesData = {
         height: 408,
       },
       logo: <PaydeskLogo />,
-      title: "+38% Sign-Ups in 3 Weeks After a 5-Minute Getboostra Analysis of Journalist.net",
+      title:
+        "+38% Sign-Ups in 3 Weeks After a 5-Minute Getboostra Analysis of Journalist.net",
       author: {
         name: "Emily Harper",
         position: "VP of Product Growth",
@@ -186,7 +194,8 @@ const categoriesData = {
         height: 408,
       },
       logo: <TeamexLogo />,
-      title: "+23% Trial Activations in 2 Weeks After a 5-Minute Getboostra Analysis of Teamex.io",
+      title:
+        "+23% Trial Activations in 2 Weeks After a 5-Minute Getboostra Analysis of Teamex.io",
       author: {
         name: "Martin Keller",
         position: "Head of Customer Acquisition",
@@ -202,7 +211,8 @@ const categoriesData = {
         height: 408,
       },
       logo: <LoomLogo />,
-      title: "+18% User Retention in 1 Month After a 5-Minute Getboostra Analysis of Loom.com",
+      title:
+        "+18% User Retention in 1 Month After a 5-Minute Getboostra Analysis of Loom.com",
       author: {
         name: "Priya Patel",
         position: "Director of User Growth",
@@ -218,7 +228,8 @@ const categoriesData = {
         height: 408,
       },
       logo: <MdisruptLogo />,
-      title: "+27% Qualified Leads in 3 Weeks After a 5-Minute Getboostra Analysis of mDisrupt.com",
+      title:
+        "+27% Qualified Leads in 3 Weeks After a 5-Minute Getboostra Analysis of mDisrupt.com",
       author: {
         name: "Daniel Ortiz",
         position: "VP of Business Development",
@@ -234,7 +245,8 @@ const categoriesData = {
         height: 408,
       },
       logo: <CalendlyLogo />,
-      title: "+32% Paid Upgrades in 1 Month After a 5-Minute Getboostra Analysis of Calendly.com",
+      title:
+        "+32% Paid Upgrades in 1 Month After a 5-Minute Getboostra Analysis of Calendly.com",
       author: {
         name: "Hannah Lee",
         position: "Senior Growth Marketing Manager",
@@ -250,7 +262,8 @@ const categoriesData = {
         height: 408,
       },
       logo: <TrudyLogo />,
-      title: "+25% Active Daily Users in 3 Weeks After a 5-Minute Getboostra Analysis of Trudy.app",
+      title:
+        "+25% Active Daily Users in 3 Weeks After a 5-Minute Getboostra Analysis of Trudy.app",
       author: {
         name: "Victor Alvarez",
         position: "CEO & Co-Founder",
@@ -268,7 +281,8 @@ const categoriesData = {
         height: 408,
       },
       logo: <NespressoLogo />,
-      title: "+17% Subscription Orders in 4 Weeks After a 5-Minute Getboostra Analysis of Nespresso",
+      title:
+        "+17% Subscription Orders in 4 Weeks After a 5-Minute Getboostra Analysis of Nespresso",
       author: {
         name: "Claire Dubois",
         position: "Global eCommerce Director",
@@ -284,7 +298,8 @@ const categoriesData = {
         height: 408,
       },
       logo: <RedBullLogo />,
-      title: "+19% Event Sign-Ups in 3 Weeks After a 5-Minute Getboostra Analysis of RedBull.com",
+      title:
+        "+19% Event Sign-Ups in 3 Weeks After a 5-Minute Getboostra Analysis of RedBull.com",
       author: {
         name: "Laura Stein",
         position: "Global Head of Digital Marketing",
@@ -381,24 +396,42 @@ export default function CarouselSection() {
 
   return (
     <div
-      className="w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] py-[96px] md:py-[160px]"
+      className="w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] pb-[48px] pt-[96px] md:pb-[64px] md:pt-[128px] lg:pb-[88px] lg:pt-[176px]"
       style={{
         backgroundImage: isMobile
-        ? 'url("public/BG/Mobile/BG-03-min.jpg")'
-        : 'url("/BG/Desktop/BG-03-min.jpg")',
+          ? 'url("/BG/Mobile/BG-03-min.jpg")'
+          : 'url("/BG/Desktop/BG-03-min.jpg")',
         backgroundSize: "contain",
         backgroundRepeat: "no-repeat",
         backgroundPosition: "top",
       }}
     >
       <AnimateOnScrollGroup className="mx-auto" staggerDelay={0.1}>
-        <AnimateOnScrollItem index={0} animation="fadeInUp" duration="fast" className="flex flex-col items-center text-center gap-3 md:gap-5 mb-[48px]">
-          <h2 className="matter-h2-reg max-w-[978px]">
-            Proven conversion lifts for <span className="text-gradient-blue"> enterprises and online businesses </span>
+        <AnimateOnScrollItem
+          index={0}
+          animation="fadeInUp"
+          duration="fast"
+          className="flex flex-col items-center text-center gap-3 md:gap-5 mb-[48px]"
+        >
+          <h2 className="matter-h2-reg  max-w-[810px]">
+            Proven conversion lifts for{" "}
+            <span className="text-gradient-blue">
+              {" "}
+              enterprises and online businesses{" "}
+            </span>
           </h2>
+          <p className="matter-p2-reg text-text-tertiary max-w-[610px]">
+            Increase revenue growth by uncovering hidden funnel leaks and
+            converting more visitors into customers.
+          </p>
         </AnimateOnScrollItem>
         {/* Tabs with categories */}
-        <AnimateOnScrollItem index={1} animation="fadeInUp" duration="fast" className="flex max-w-fit mx-auto bg-bg-white-12 border border-bg-white-12 p-2 rounded-[30px] matter-p4-reg mb-[40px] overflow-x-scroll no-scrollbar gap-1">
+        <AnimateOnScrollItem
+          index={1}
+          animation="fadeInUp"
+          duration="fast"
+          className="flex max-w-fit mx-auto bg-bg-white-12 border border-bg-white-12 p-2 rounded-[30px] matter-p4-reg mb-[40px] overflow-x-scroll no-scrollbar gap-1"
+        >
           {categories.map((category) => (
             <button
               key={category}
@@ -413,7 +446,12 @@ export default function CarouselSection() {
             </button>
           ))}
         </AnimateOnScrollItem>
-        <AnimateOnScrollItem key={activeCategory} index={2} animation="fadeInUp" duration="fast">
+        <AnimateOnScrollItem
+          key={activeCategory}
+          index={2}
+          animation="fadeInUp"
+          duration="fast"
+        >
           <EmblaCarousel slides={slides} options={OPTIONS} />
         </AnimateOnScrollItem>
       </AnimateOnScrollGroup>

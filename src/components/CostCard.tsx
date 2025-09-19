@@ -10,8 +10,8 @@ interface CostCardProps {
 
 export default function CostCard({ icon, title, description }: CostCardProps) {
   return (
-    <div className="flex flex-col bg-bg-white-10 rounded-[24px] gap-8 md:gap-[48px] p-8 h-full">
-      <div className="flex flex-col gap-3">
+    <div className="flex flex-col bg-bg-white-10 rounded-[24px] gap-6 md:gap-8 p-6 md:p-5 lg:p-8 h-full">
+      <div className="flex flex-col gap-3 md:gap-4 lg:gap-3">
         <h6 className="matter-h6-reg">{title}</h6>
         <p className="matter-p3-reg text-text-tertiary">{description}</p>
       </div>

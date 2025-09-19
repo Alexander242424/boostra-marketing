@@ -76,10 +76,10 @@ export default function PlansSections() {
       if (data) {
         setSubscriptionsData(data);
         setIsLoading(false);
-        // Set default to first element (largest) in reversed order
+        // Set default to first element
         const monthlyPrices = data.monthly?.[0]?.prices || [];
         if (monthlyPrices.length > 0) {
-          setSelectedPriceIndex(monthlyPrices.length - 1);
+          setSelectedPriceIndex(0);
         }
       }
     };
@@ -98,21 +98,19 @@ export default function PlansSections() {
   // Handle tab change
   const handleTabChange = (tab: string) => {
     setActiveTab(tab);
-    // Set to first element (largest) in reversed order when changing tabs
+    // Set to first element when changing tabs
     const newPlan =
       subscriptionsData?.[tab.toLowerCase() as keyof SubscriptionsData]?.[0];
     const newPrices = newPlan?.prices || [];
     if (newPrices.length > 0) {
-      setSelectedPriceIndex(newPrices.length - 1);
+      setSelectedPriceIndex(0);
     }
   };
 
   // Handle price selection
   const handlePriceChange = (value: string) => {
     const index = parseInt(value);
-    // Since we're displaying prices in reverse order, we need to convert the index
-    const actualIndex = currentPrices.length - 1 - index;
-    setSelectedPriceIndex(actualIndex);
+    setSelectedPriceIndex(index);
   };
 
   if (isLoading) {
@@ -125,7 +123,7 @@ export default function PlansSections() {
 
   return (
     <div
-      className="w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] py-[96px] md:py-[160px]"
+      className="w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] pt-[48px] pb-[96px] md:pt-[64px] md:pb-[95px] lg:pt-[88px] lg:pb-[176px]"
       style={{
         backgroundImage: isMobile
           ? 'url("/BG/Mobile/BG-04-min.jpg")'
@@ -135,7 +133,7 @@ export default function PlansSections() {
         backgroundPosition: "bottom",
       }}
     >
-      <AnimateOnScrollGroup className="mx-auto" staggerDelay={0.1}>
+      <AnimateOnScrollGroup className="mx-auto px-4 md:px-10" staggerDelay={0.1}>
         <AnimateOnScrollItem
           index={0}
           animation="fadeInUp"
@@ -207,26 +205,19 @@ export default function PlansSections() {
             <div className="flex flex-col gap-[20px] pt-6 md:pt-8">
               {/* Dropdown with features */}
               <Select
-                value={(
-                  currentPrices.length -
-                  1 -
-                  selectedPriceIndex
-                ).toString()}
+                value={selectedPriceIndex.toString()}
                 onValueChange={handlePriceChange}
               >
                 <SelectTrigger className="w-full">
                   <SelectValue placeholder="Select plan" />
                 </SelectTrigger>
                 <SelectContent>
-                  {currentPrices
-                    .slice()
-                    .reverse()
-                    .map((price, index) => (
-                      <SelectItem key={price.price_id} value={index.toString()}>
-                        {price.credits} analys{price.credits > 1 ? "es" : ""}
-                        {/* {activeTab === "Monthly" ? "mo" : "year"} */}
-                      </SelectItem>
-                    ))}
+                  {currentPrices.map((price, index) => (
+                    <SelectItem key={price.price_id} value={index.toString()}>
+                      {price.credits} analys{price.credits > 1 ? "es" : ""}
+                      {/* {activeTab === "Monthly" ? "mo" : "year"} */}
+                    </SelectItem>
+                  ))}
                 </SelectContent>
               </Select>
               <Button

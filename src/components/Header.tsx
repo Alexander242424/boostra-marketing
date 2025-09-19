@@ -108,7 +108,7 @@ export default function Header() {
           : undefined
       }
     >
-      <div className="flex w-full h-full flex-row px-4 md:px-10 justify-between max-w-[1270px] mx-auto">
+      <div className="flex w-full h-full flex-row px-4 md:px-10 justify-between max-w-[1320px] mx-auto">
         <Link href="/" className="flex items-center header-logo cursor-pointer">
           <BigLogo />
         </Link>

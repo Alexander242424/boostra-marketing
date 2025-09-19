@@ -28,7 +28,7 @@ export default function CostSections() {
   ];
 
   return (
-    <AnimateOnScrollGroup className="flex flex-col w-full h-full gap-8 md:gap-12 items-center mt-[96px] md:mt-[160px] mb-[96px] md:mb-[160px]" staggerDelay={0.1}>
+    <AnimateOnScrollGroup className="flex flex-col w-full h-full gap-8 md:gap-12 items-center my-[48px] md:my-[64px] lg:my-[88px]" staggerDelay={0.1}>
       <div className="flex flex-col items-center text-center gap-3 md:gap-5">
         <AnimateOnScrollItem index={0} animation="fadeInUp" duration="fast">
           <div className="max-w-[800px]">
@@ -38,7 +38,7 @@ export default function CostSections() {
           </div>
         </AnimateOnScrollItem>
       </div>
-      <div className="flex flex-col xl:flex-row gap-6 md:gap-8 w-full">
+      <div className="flex flex-col xl:flex-row gap-4 md:gap-6 w-full">
         {cards.map((card, index) => (
           <AnimateOnScrollItem key={index} index={index + 2} className="flex-1">
             <CostCard

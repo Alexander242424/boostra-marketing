@@ -15,28 +15,33 @@ export default function TextBlock() {
         backgroundPosition: "bottom",
       }}
     >
-      <AnimateOnScroll
-        className="flex py-[128px] lg:pt-[176px] lg:pb-[86px] justify-center"
-        animation="fadeInUp"
-        duration="fast"
-      >
-        <p className="matter-h5-reg lg:max-w-[840px] text-center text-gradient-blue-block">
-          Boostra is like having a UX & CRO Expert who/ spots issues, learnsuser
-          behaviors, and delivers instant solutions to boost revenue
-        </p>
-      </AnimateOnScroll>
-      <AnimateOnScroll
-        className="relative flex flex-col items-center justify-center gap-5 lg:gap-6 lg:pb-[240px]"
-        animation="fadeInUp"
-        duration="fast"
-      >
-        <div className="relative flex flex-col gap-5 z-10 text-center pb-[60px] px-[38px]">
-          <h6 className="matter-h6-reg">On average, Boostra customers see a</h6>
-          <h4 className="matter-h4-reg text-gradient-blue">
-            35-47% boost in conversions
-          </h4>
-        </div>
-      </AnimateOnScroll>
+      <div className="flex flex-col gap-[64px] lg:gap-[106px] pt-[48px] pb-[96px] md:py-[128px] lg:pt-[176px] lg:pb-[248px] lg:max-w-[1000px] mx-auto">
+        <AnimateOnScroll
+          className="flex justify-center"
+          animation="fadeInUp"
+          duration="fast"
+        >
+          <p className="matter-h5-reg px-4 md:px-10 text-center text-gradient-blue-block">
+            Boostra is like having a UX & CRO Expert who spots issues,
+            learnsuser behaviors, and delivers instant solutions to boost
+            revenue
+          </p>
+        </AnimateOnScroll>
+        <AnimateOnScroll
+          className="relative flex flex-col px-4 md:px-10 items-center justify-center gap-5 lg:gap-6"
+          animation="fadeInUp"
+          duration="fast"
+        >
+          <div className="relative flex flex-col gap-4 lg:gap-[33px] text-center">
+            <p className="matter-p1-med">
+              On average, Boostra customers see an instant
+            </p>
+            <h2 className="matter-h2-reg text-gradient-blue">
+              35-47% boost in conversions
+            </h2>
+          </div>
+        </AnimateOnScroll>
+      </div>
     </div>
   );
 }

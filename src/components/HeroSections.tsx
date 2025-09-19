@@ -49,7 +49,7 @@ export default function HeroSections() {
       staggerDelay={0.1}
     >
       <div className="w-full flex flex-col gap-8 lg:min-w-[624px] lg:gap-[54px]">
-        <div className="flex flex-col gap-4 lg:gap-[42px]">
+        <div className="flex flex-col gap-4 lg:gap-[42px] self-center lg:self-start md:max-w-[560px] lg:max-w-none">
           <AnimateOnScrollItem index={1} animation="fadeInUp" duration="fast">
             <h1 className="matter-h1-reg text-center lg:text-left">
               Meet your <br />
@@ -58,8 +58,9 @@ export default function HeroSections() {
             </h1>
           </AnimateOnScrollItem>
           <AnimateOnScrollItem index={1} animation="fadeInUp" duration="fast">
-            <h1 className="matter-p1-reg text-center lg:text-left lg:max-w-[413px]">
+            <h1 className="matter-p1-reg text-center lg:text-left">
               Get instant +35-47% Uplift in Conversions.
+              <br />
               Boost revenue — in minutes, not weeks.
             </h1>
           </AnimateOnScrollItem>
@@ -68,7 +69,7 @@ export default function HeroSections() {
           index={3}
           animation="fadeInUp"
           duration="fast"
-          className="flex flex-col gap-5 md:gap-4 w-full items-stretch lg:max-w-[592px]"
+          className="flex flex-col gap-5 md:gap-4 w-full self-center items-stretch md:max-w-[560px] lg:max-w-[592px]"
         >
           <div className="hover:scale-[1.02] transition-all duration-300">
             <Input
