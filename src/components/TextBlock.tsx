@@ -27,7 +27,7 @@ export default function TextBlock() {
         </p>
       </AnimateOnScroll>
       <AnimateOnScroll
-        className="relative flex flex-col items-center justify-center gap-5 lg:gap-6 border-b-[1px] border-bg-white-6 lg:pb-[240px]"
+        className="relative flex flex-col items-center justify-center gap-5 lg:gap-6 lg:pb-[240px]"
         animation="fadeInUp"
         duration="fast"
       >
