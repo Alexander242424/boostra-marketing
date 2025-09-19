@@ -177,7 +177,7 @@ export default function BrandSections() {
             </div>
             {logo.btnText && !isMobile && (
               <div
-                className="absolute bottom-3 left-30 text-[#3B95FE] cursor-pointer bg-bg-white-12 rounded-[100px] w-full h-full flex items-center justify-center max-w-[57.410255432128906px] max-h-[16px] md:max-w-[96px] md:max-h-[25px] tooltip-btn"
+                className="absolute bottom-3 left-25 text-[#3B95FE] cursor-pointer bg-bg-white-12 rounded-[100px] w-full h-full flex items-center justify-center max-w-[57.410255432128906px] max-h-[16px] md:max-w-[96px] md:max-h-[25px] tooltip-btn"
                 onClick={() => handleTooltipClick(index)}
               >
                 <Tooltip
