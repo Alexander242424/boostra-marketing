@@ -94,7 +94,7 @@ export default function HeroSections() {
         index={4}
         animation="fadeInUp"
         duration="fast"
-        className="w-full h-full flex flex-col max-w-[343px] max-h-[320px] md:max-w-[608px] md:max-h-[649px] lg:max-w-[562px] lg:max-h-[496px] self-center border-[0.5px] border-[#FFFFFF1F] rounded-[40px] overflow-hidden p-[6px]"
+        className="w-full h-full flex flex-col max-w-[343px] max-h-[320px] md:max-w-[608px] md:max-h-[649px] lg:max-w-[562px] lg:max-h-[496px] self-center lg:self-start border-[0.5px] border-[#FFFFFF1F] rounded-[40px] overflow-hidden p-[6px]"
       >
         <div className="w-full h-full rounded-[34px] relative">
           {/* Фоновий градієнт для backdrop-blur */}
