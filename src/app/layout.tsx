@@ -57,44 +57,44 @@ export default function RootLayout({
         />
 
         {/* Favicon */}
-        <link rel="icon" href="/Assets/32 x 32.jpg" />
+        <link rel="icon" href="/Assets/32 x 32-min.jpg" />
         <link
           rel="icon"
           type="image/jpeg"
           sizes="16x16"
-          href="/Assets/16 x 16.jpg"
+          href="/Assets/16 x 16-min.jpg"
         />
         <link
           rel="icon"
           type="image/jpeg"
           sizes="24x24"
-          href="/Assets/24 x 24.jpg"
+          href="/Assets/24 x 24-min.jpg"
         />
         <link
           rel="icon"
           type="image/jpeg"
           sizes="32x32"
-          href="/Assets/32 x 32.jpg"
+          href="/Assets/32 x 32-min.jpg"
         />
         <link
           rel="icon"
           type="image/jpeg"
           sizes="64x64"
-          href="/Assets/64 x 64.jpg"
+          href="/Assets/64 x 64-min.jpg"
         />
         <link
           rel="icon"
           type="image/jpeg"
           sizes="128x128"
-          href="/Assets/128 x 128.jpg"
+          href="/Assets/128 x 128-min.jpg"
         />
         <link
           rel="icon"
           type="image/jpeg"
           sizes="512x512"
-          href="/Assets/512 x 512.jpg"
+          href="/Assets/512 x 512-min.jpg"
         />
-        <link rel="apple-touch-icon" href="/Assets/128 x 128.jpg" />
+        <link rel="apple-touch-icon" href="/Assets/128 x 128-min.jpg" />
 
         <link rel="canonical" href="https://getboostra.com/" />
 
@@ -113,7 +113,7 @@ export default function RootLayout({
         <meta property="og:site_name" content="Boostra" />
         <meta
           property="og:image"
-          content="https://getboostra.com/Assets/thumbnail.jpg?v=2"
+          content="https://getboostra.com/Assets/thumbnail-min.jpg?v=3"
         />
         <meta property="og:image:type" content="image/jpeg" />
         <meta property="og:image:width" content="1200" />
@@ -123,7 +123,7 @@ export default function RootLayout({
         <meta name="twitter:card" content="summary_large_image" />
         <meta
           name="twitter:image"
-          content="https://getboostra.com/Assets/thumbnail.jpg?v=2"
+          content="https://getboostra.com/Assets/thumbnail-min.jpg?v=3"
         />
 
         {/* Google Analytics */}
