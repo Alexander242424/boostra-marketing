@@ -34,7 +34,7 @@ export default function RootPage() {
         </div>
         <MarketingCardsSections/>
         <EverythingAbout/>
-        <BoostConversionsSection/>
+        {/* <BoostConversionsSection/> */}
         {/* <div
           id="solutions"
           className="flex flex-col items-center md:mt-[180px]"
