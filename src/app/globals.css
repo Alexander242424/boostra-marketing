@@ -273,9 +273,9 @@
 .matter-h1-reg {
   font-family: var(--font-matter), system-ui, sans-serif !important;
   font-weight: 400;
-  font-size: 78px;
+  font-size: 84px;
   line-height: 98%;
-  letter-spacing: -0.02em;
+  letter-spacing: -4%;
 }
 
 .matter-h2-reg {
@@ -283,7 +283,7 @@
   font-weight: 400;
   font-size: 68px;
   line-height: 104%;
-  letter-spacing: -0.04em;
+  letter-spacing: -4%;
 }
 
 .matter-h3-reg {
@@ -291,71 +291,76 @@
   font-weight: 400;
   font-size: 62px;
   line-height: 104%;
-  letter-spacing: -0.04em;
+  letter-spacing: -3%;
 }
 
 .matter-h4-reg {
   font-family: var(--font-matter), system-ui, sans-serif !important;
   font-weight: 400;
   font-size: 56px;
-  line-height: 110%;
-  letter-spacing: -0.02em;
+  line-height: 110.00000000000001%;
+  letter-spacing: -2%;
 }
 
 .matter-h5-reg {
   font-family: var(--font-matter), system-ui, sans-serif !important;
   font-weight: 400;
   font-size: 48px;
-  line-height: 98%;
-  letter-spacing: -0.04em;
+  line-height: 112.00000000000001%;
+  letter-spacing: -3%;
 }
 
 .matter-h6-reg {
   font-family: var(--font-matter), system-ui, sans-serif !important;
   font-weight: 400;
-  font-size: 28px;
-  line-height: 132%;
-  letter-spacing: -0.02em;
+  font-size: 36px;
+  line-height: 112.00000000000001%;
+  letter-spacing: -4%;
 }
 
 .matter-p1-reg {
   font-family: var(--font-matter), system-ui, sans-serif !important;
   font-weight: 400;
   font-size: 22px;
-  line-height: 28px;
-  letter-spacing: -0.02em;
+  line-height: 32px;
+  letter-spacing: -1%;
+  vertical-align: middle;
 }
 
 .matter-p1-med {
   font-family: var(--font-matter), system-ui, sans-serif !important;
   font-weight: 500;
   font-size: 22px;
-  line-height: 28px;
-  letter-spacing: -0.02em;
+  line-height: 142%;
+  letter-spacing: -2%;
+  vertical-align: middle;
 }
 
 .matter-p2-reg {
   font-family: var(--font-matter), system-ui, sans-serif !important;
   font-weight: 400;
   font-size: 20px;
-  line-height: 120%;
-  letter-spacing: -0.02em;
+  line-height: 142%;
+  letter-spacing: -2%;
+  vertical-align: middle;
 }
 
 .matter-p2-med {
   font-family: var(--font-matter), system-ui, sans-serif !important;
   font-weight: 500;
   font-size: 20px;
-  line-height: 120%;
-  letter-spacing: -0.02em;
+  line-height: 130%;
+  letter-spacing: -2%;
+  vertical-align: middle;
 }
 
 .matter-p3-reg {
   font-family: var(--font-matter), system-ui, sans-serif !important;
   font-weight: 400;
   font-size: 18px;
-  line-height: 28px;
-  letter-spacing: -0.02em;
+  line-height: 142%;
+  letter-spacing: -1%;
+  vertical-align: middle;
 }
 
 .matter-p3-med {
@@ -363,23 +368,8 @@
   font-weight: 500;
   font-size: 18px;
   line-height: 28px;
-  letter-spacing: -0.02em;
-}
-
-.matter-p4-reg {
-  font-family: var(--font-matter), system-ui, sans-serif !important;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 142%;
-  letter-spacing: -0.02em;
-}
-
-.matter-p4-med {
-  font-family: var(--font-matter), system-ui, sans-serif !important;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 142%;
-  letter-spacing: -0.02em;
+  letter-spacing: -2%;
+  vertical-align: middle;
 }
 
 .matter-s1-reg {
@@ -387,7 +377,8 @@
   font-weight: 400;
   font-size: 14px;
   line-height: 20px;
-  letter-spacing: -0.02em;
+  letter-spacing: -1%;
+  vertical-align: middle;
 }
 
 .matter-s1-med {
@@ -395,23 +386,26 @@
   font-weight: 500;
   font-size: 14px;
   line-height: 20px;
-  letter-spacing: -0.02em;
+  letter-spacing: -2%;
+  vertical-align: middle;
 }
 
 .matter-s2-reg {
   font-family: var(--font-matter), system-ui, sans-serif !important;
   font-weight: 400;
-  font-size: 12px;
-  line-height: 16px;
-  letter-spacing: -0.02em;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: -1%;
+  vertical-align: middle;  
 }
 
 .matter-s2-med {
   font-family: var(--font-matter), system-ui, sans-serif !important;
   font-weight: 500;
-  font-size: 12px;
-  line-height: 16px;
-  letter-spacing: -0.02em;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: -2%;
+  vertical-align: middle;
 }
 
 .matter-button-link-big {
@@ -430,14 +424,172 @@
   letter-spacing: -0.02em;
 }
 
-/* TEXT_MOBILE */
-@media screen and (max-width: 768px) {
+/* TEXT_TABLET */
+@media screen and (min-width: 376px) and (max-width: 768px) {
   .matter-h1-reg {
     font-family: var(--font-matter), system-ui, sans-serif !important;
     font-weight: 400;
-    font-size: 46px;
+    font-size: 62px;
     line-height: 104%;
+    letter-spacing: -2%;
+  }
+
+  .matter-h2-reg {
+    font-family: var(--font-matter), system-ui, sans-serif !important;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 104%;
+    letter-spacing: -4%;
+  }
+
+  .matter-h3-reg {
+    font-family: var(--font-matter), system-ui, sans-serif !important;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 120%;
+    letter-spacing: -2%;
+  }
+
+  .matter-h4-reg {
+    font-family: var(--font-matter), system-ui, sans-serif !important;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 120%;
+    letter-spacing: -2%;
+
+  }
+
+  .matter-h5-reg {
+    font-family: var(--font-matter), system-ui, sans-serif !important;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 120%;
+    letter-spacing: -2%;
+  }
+
+  .matter-h6-reg {
+    font-family: var(--font-matter), system-ui, sans-serif !important;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 120%;
+    letter-spacing: -2%;
+  }
+
+  .matter-p1-reg {
+    font-family: var(--font-matter), system-ui, sans-serif !important;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: 0%;
+    vertical-align: middle;
+  }
+
+  .matter-p1-med {
+    font-family: var(--font-matter), system-ui, sans-serif !important;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: -2%;
+    vertical-align: middle;
+  }
+
+  .matter-p2-reg {
+    font-family: var(--font-matter), system-ui, sans-serif !important;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 130%;
+    letter-spacing: -2%;
+    vertical-align: middle;
+  }
+
+  .matter-p2-med {
+    font-family: var(--font-matter), system-ui, sans-serif !important;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 130%;
+    letter-spacing: -2%;
+    vertical-align: middle;       
+  }
+
+  .matter-p3-reg {
+    font-family: var(--font-matter), system-ui, sans-serif !important;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 142%;
+    letter-spacing: -1%;
+    vertical-align: middle;
+  }
+
+  .matter-p3-med {
+    font-family: var(--font-matter), system-ui, sans-serif !important;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 28px;
+    letter-spacing: -2%;
+    vertical-align: middle;
+  }
+
+  .matter-s1-reg {
+    font-family: var(--font-matter), system-ui, sans-serif !important;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: -2%;
+    vertical-align: middle;
+  }
+
+  .matter-s1-med {
+    font-family: var(--font-matter), system-ui, sans-serif !important;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: -2%;
+    vertical-align: middle;
+  }
+
+  .matter-s2-reg {
+    font-family: var(--font-matter), system-ui, sans-serif !important;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 20px;
+    letter-spacing: -2%;
+    vertical-align: middle;
+  }
+
+  .matter-s2-med {
+    font-family: var(--font-matter), system-ui, sans-serif !important;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 20px;
+    letter-spacing: -2%;
+    vertical-align: middle;
+  }
+
+  .matter-button-link-big {
+    font-family: var(--font-matter), system-ui, sans-serif !important;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
     letter-spacing: -0.02em;
+  }
+
+  .matter-button-link-med {
+    font-family: var(--font-matter), system-ui, sans-serif !important;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+    letter-spacing: -0.02em;
+  }
+}
+
+/* TEXT_MOBILE */
+@media screen and (max-width: 375px) {
+  .matter-h1-reg {
+    font-family: var(--font-matter), system-ui, sans-serif !important;
+    font-weight: 400;
+    font-size: 42px;
+    line-height: 104%;
+    letter-spacing: -2%;
   }
 
   .matter-h2-reg {
@@ -445,15 +597,15 @@
     font-weight: 400;
     font-size: 38px;
     line-height: 104%;
-    letter-spacing: -0.04em;
+    letter-spacing: -4%;
   }
 
   .matter-h3-reg {
     font-family: var(--font-matter), system-ui, sans-serif !important;
     font-weight: 400;
-    font-size: 32px;
-    line-height: 104%;
-    letter-spacing: -0.04em;
+    font-size: 28px;
+    line-height: 120%;
+    letter-spacing: -2%;
   }
 
   .matter-h4-reg {
@@ -461,7 +613,7 @@
     font-weight: 400;
     font-size: 28px;
     line-height: 120%;
-    letter-spacing: -0.02em;
+    letter-spacing: -2%;
   }
 
   .matter-h5-reg {
@@ -469,7 +621,7 @@
     font-weight: 400;
     font-size: 24px;
     line-height: 120%;
-    letter-spacing: -0.02em;
+    letter-spacing: -2%;
   }
 
   .matter-h6-reg {
@@ -477,7 +629,7 @@
     font-weight: 400;
     font-size: 20px;
     line-height: 120%;
-    letter-spacing: -0.02em;
+    letter-spacing: -2%;
   }
 
   .matter-p1-reg {
@@ -485,7 +637,8 @@
     font-weight: 400;
     font-size: 18px;
     line-height: 24px;
-    letter-spacing: -0.02em;
+    letter-spacing: -2%;
+    vertical-align: middle;
   }
 
   .matter-p1-med {
@@ -493,7 +646,8 @@
     font-weight: 500;
     font-size: 18px;
     line-height: 24px;
-    letter-spacing: -0.02em;
+    letter-spacing: -2%;
+    vertical-align: middle;
   }
 
   .matter-p2-reg {
@@ -501,7 +655,8 @@
     font-weight: 400;
     font-size: 16px;
     line-height: 24px;
-    letter-spacing: -0.02em;
+    letter-spacing: -2%;
+    vertical-align: middle;
   }
 
   .matter-p2-med {
@@ -509,7 +664,8 @@
     font-weight: 500;
     font-size: 16px;
     line-height: 24px;
-    letter-spacing: -0.02em;
+    letter-spacing: -2%;
+    vertical-align: middle;
   }
 
   .matter-p3-reg {
@@ -517,7 +673,8 @@
     font-weight: 400;
     font-size: 14px;
     line-height: 20px;
-    letter-spacing: -0.02em;
+    letter-spacing: -2%;
+    vertical-align: middle;
   }
 
   .matter-p3-med {
@@ -525,31 +682,17 @@
     font-weight: 500;
     font-size: 14px;
     line-height: 20px;
-    letter-spacing: -0.02em;
-  }
-
-  .matter-p4-reg {
-    font-family: var(--font-matter), system-ui, sans-serif !important;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 142%;
-    letter-spacing: -0.02em;
-  }
-
-  .matter-p4-med {
-    font-family: var(--font-matter), system-ui, sans-serif !important;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 142%;
-    letter-spacing: -0.02em;
+    letter-spacing: -2%;
+    vertical-align: middle;
   }
 
   .matter-s1-reg {
     font-family: var(--font-matter), system-ui, sans-serif !important;
     font-weight: 400;
-    font-size: 12px;
-    line-height: 16px;
-    letter-spacing: -0.02em;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: -2%;
+    vertical-align: middle;
   }
 
   .matter-s1-med {
@@ -557,7 +700,8 @@
     font-weight: 500;
     font-size: 12px;
     line-height: 16px;
-    letter-spacing: -0.02em;
+    letter-spacing: -2%;
+    vertical-align: middle;
   }
 
   .matter-s2-reg {
@@ -565,7 +709,8 @@
     font-weight: 400;
     font-size: 10px;
     line-height: 14px;
-    letter-spacing: -0.02em;
+    letter-spacing: -2%;
+    vertical-align: middle;
   }
 
   .matter-s2-med {
@@ -573,7 +718,8 @@
     font-weight: 500;
     font-size: 10px;
     line-height: 14px;
-    letter-spacing: -0.02em;
+    letter-spacing: -2%;
+    vertical-align: middle;
   }
 
   .matter-button-link-big {

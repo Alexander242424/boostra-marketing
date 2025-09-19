@@ -39,7 +39,6 @@ export default function MarketingCardsSections() {
   return (
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 border-t-[1px] border-b-[1px] border-[#1A1A1A] lg:mt-[53px]">
       {/* Cards */}
-
        {marketingCards.map((card, index) => (
          <div key={index} className={`flex flex-col lg:gap-[48px] lg:p-16 ${index % 2 === 0 ? 'lg:pl-0 border-r-[1px] border-[#1A1A1A]' : 'lg:pr-0'} ${index > 1 ? 'border-t-[1px] border-[#1A1A1A]' : ''}`}>
            <div className="flex flex-col lg:gap-[48px]">

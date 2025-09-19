@@ -87,7 +87,7 @@ export default function RevenueOpportunities() {
         </p>
         <div className="flex items-center justify-center gap-3">
           <AvatarIcon />
-          <p className="matter-p4-med">Verizon Team</p>
+          <p className="matter-p3-med">Verizon Team</p>
         </div>
       </AnimateOnScrollItem>
     </AnimateOnScrollGroup>
