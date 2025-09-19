@@ -425,7 +425,7 @@
 }
 
 /* TEXT_TABLET */
-@media screen and (min-width: 376px) and (max-width: 768px) {
+@media screen and (min-width: 500px) and (max-width: 768px) {
   .matter-h1-reg {
     font-family: var(--font-matter), system-ui, sans-serif !important;
     font-weight: 400;
@@ -583,7 +583,7 @@
 }
 
 /* TEXT_MOBILE */
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 499px) {
   .matter-h1-reg {
     font-family: var(--font-matter), system-ui, sans-serif !important;
     font-weight: 400;
