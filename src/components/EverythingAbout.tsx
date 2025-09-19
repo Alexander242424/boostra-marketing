@@ -7,7 +7,7 @@ import { useIsTablet } from "@/hooks/useIsTablet";
 export default function EverythingAbout() {
   const isTablet = useIsTablet();
   return (
-    <div className="flex flex-col py-[64px] lg:flex-row lg:pt-16 lg:gap-6">
+    <div className="flex flex-col py-[64px] lg:flex-row lg:pt-16 lg:pb-20 lg:gap-6">
       <div className="flex flex-col max-w-[516px] mx-auto lg:mx-0">
         <div className="flex flex-col gap-3 md:gap-4 lg:gap-4 w-full lg:max-w-[408px]">
           <h6 className="matter-h6-reg text-center lg:text-left">

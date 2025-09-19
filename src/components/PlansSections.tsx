@@ -123,7 +123,7 @@ export default function PlansSections() {
 
   return (
     <div
-      className="w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] pt-[48px] pb-[96px] md:pt-[64px] md:pb-[95px] lg:pt-[88px] lg:pb-[176px]"
+      className="w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] pt-[48px] pb-[96px] md:pt-[64px] md:pb-[95px] lg:pb-[220px]"
       style={{
         backgroundImage: isMobile
           ? 'url("/BG/Mobile/BG-04-min.jpg")'

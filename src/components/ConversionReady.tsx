@@ -41,7 +41,7 @@ const cards = [
 export default function ConversionReady() {
   const isMobile = useIsMobile();
   return (
-    <div className="flex flex-col lg:flex-row lg:gap-[120px] pt-[96px] md:pt-[89px] lg:pt-[104px] pb-[44px] md:pb-[88px] lg:pb-0">
+    <div className="flex flex-col lg:flex-row lg:gap-[120px] pt-[96px] pb-[44px] md:pt-[89px] lg:pt-[89px] md:pb-[88px] lg:pb-0">
       <div className="flex flex-col md:gap-[48px] lg:gap-[55px] lg:pt-[73px] lg:pb-[67px]">
         <div className="flex flex-col gap-4 lg:gap-6 text-center lg:text-left">
           <h3 className="matter-h3-reg">

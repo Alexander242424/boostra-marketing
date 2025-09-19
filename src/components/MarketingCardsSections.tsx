@@ -38,16 +38,16 @@ const marketingCards = [
 
 export default function MarketingCardsSections() {
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 lg:border-t-[1px] lg:border-b-[1px] border-[#1A1A1A] lg:mt-[53px]">
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 lg:border-t-[1px] lg:border-b-[1px] border-[#242424] lg:mt-[53px]">
       {/* Cards */}
       {marketingCards.map((card, index) => (
         <div
           key={index}
-          className={`flex flex-col items-center lg:items-start lg:max-w-none py-8 md:py-[64px] lg:gap-[48px] lg:p-16 border-t-[1px] border-[#1A1A1A] lg:border-0 ${
+          className={`flex flex-col items-center lg:items-start lg:max-w-none py-8 md:py-[64px] lg:gap-[48px] lg:p-16 border-t-[1px] border-[#242424] lg:border-0 ${
             index % 2 === 0
-              ? "lg:pl-0 lg:border-r-[1px] border-[#1A1A1A]"
+              ? "lg:pl-0 lg:border-r-[1px] border-[#242424]"
               : "lg:pr-0"
-          } ${index > 1 ? "lg:border-t-[1px] border-[#1A1A1A]" : ""}`}
+          } ${index > 1 ? "lg:border-t-[1px] border-[#242424]" : ""}`}
         >
           <div className="flex flex-col gap-6 md:gap-[48px] max-w-[610px] mx-auto">
             <div className="flex flex-col gap-3 md:gap-4 lg:max-w-[516px]">
