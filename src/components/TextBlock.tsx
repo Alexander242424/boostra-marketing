@@ -33,9 +33,15 @@ export default function TextBlock() {
           duration="fast"
         >
           <div className="relative flex flex-col gap-4 lg:gap-[33px] text-center">
-            <p className="matter-p1-med">
-              On average, Boostra customers see an instant
-            </p>
+            {!isMobile ? (
+              <p className="matter-p1-med">
+                On average, Boostra customers see an instant
+              </p>
+            ) : (
+              <p className="matter-p1-med">
+                On average, Boostra customers <br /> see an instant
+              </p>
+            )}
             <h2 className="matter-h2-reg text-gradient-blue">
               35-47% boost in conversions
             </h2>
