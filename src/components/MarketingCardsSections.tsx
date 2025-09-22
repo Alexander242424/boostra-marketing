@@ -38,7 +38,7 @@ const marketingCards = [
 
 export default function MarketingCardsSections() {
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 lg:border-t-[1px] not-lg:border-b-[1px] border-[#242424] lg:mt-[53px]">
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 lg:border-t-[1px] lg:border-b-[1px] border-[#242424] lg:mt-[53px]">
       {/* Cards */}
       {marketingCards.map((card, index) => (
         <div

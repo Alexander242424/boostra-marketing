@@ -16,7 +16,7 @@ export default function TextBlock() {
       }}
     >
       <AnimateOnScrollGroup
-        className="flex flex-col gap-[64px] lg:gap-[106px] pt-[48px] pb-[96px] md:py-[128px] lg:pt-[176px] lg:pb-[248px] lg:max-w-[1000px] mx-auto"
+        className="flex flex-col gap-[64px] lg:gap-[106px] pt-[48px] pb-[96px] md:py-[128px] lg:pt-[176px] lg:pb-[248px] mx-auto"
         staggerDelay={0.3}
       >
         <AnimateOnScrollItem
@@ -25,7 +25,7 @@ export default function TextBlock() {
           animation="fadeInUp"
           duration="fast"
         >
-          <h4 className="matter-h4-reg px-4 md:px-10 text-center text-gradient-blue-block">
+          <h4 className="matter-h4-reg px-4 md:px-10 text-center text-gradient-blue-block lg:max-w-[860px]">
             Boostra is like having a UX & CRO Expert who spots issues,
             learns user behaviors, and delivers instant solutions to boost
             revenue
@@ -47,7 +47,7 @@ export default function TextBlock() {
                 On average, Boostra customers <br /> see an instant
               </p>
             )}
-            <h2 className="matter-h1-reg text-gradient-blue">
+            <h2 className="matter-h2-reg text-gradient-blue">
               35-47% boost in conversions
             </h2>
           </div>

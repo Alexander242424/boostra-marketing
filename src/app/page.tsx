@@ -19,7 +19,7 @@ export default function RootPage() {
 
   return (
     <>
-      <div className="w-full h-full flex flex-col px-4 md:px-10 max-w-[1320px] mx-auto overflow-hidden">
+      <div className="w-full h-full flex flex-col px-4 md:px-10 max-w-[1320px] mx-auto not-md:overflow-hidden">
         <HeroSections />
         <BrandSections />
         <div id="solution">
