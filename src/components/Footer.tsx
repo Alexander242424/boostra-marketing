@@ -100,7 +100,7 @@ export default function Footer() {
                   <XTwitterIcon />
                 </a>
                 <a
-                  href="https://www.instagram.com/get_boostra?igsh=MTRqZnE4enNla2kwZg=="
+                  href="https://www.instagram.com/get_boostra?igsh=MTRqZnE4enNla2kwZg%3D%3D"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
