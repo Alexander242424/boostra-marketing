@@ -47,11 +47,11 @@ export default function RootLayout({
     <html lang="en" className="dark">
       <head>
         <title>
-          Boostra - Website UX, Speed, Content &amp; Conversion Tool
+          Boostra — Make every page convert better | Conversion rate optimization | UX | Website optimization
         </title>
         <meta
           name="description"
-          content="Boostra tool analyzes UX, speed, content, and user behavior to uncover drop-off points and boost conversions through clear, data-driven website improvements"
+          content="Drop your URL and make your page conversion-ready. Boostra helps you uncover leaks, improve conversions, and grow revenue fast."
         />
 
         {/* Favicon */}
