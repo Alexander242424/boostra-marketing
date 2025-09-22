@@ -21,7 +21,7 @@ export default function HeroSections() {
   const [url, setUrl] = useState("");
   const { isValidUrl } = useUrlValidation();
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [heroAnimation, setHeroAnimation] = useState<any>(null);
+  const [heroAnimation, setHeroAnimation] = useState<object | null>(null);
   const buildPortalUrl = useBuildPortalUrl();
   const trackEvent = useTrackEvent();
   const isMobile = useIsMobile();
