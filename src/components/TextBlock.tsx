@@ -1,5 +1,5 @@
 import { useIsMobile } from "@/hooks/useIsMobile";
-import { AnimateOnScroll } from "./AnimateOnScroll";
+import { AnimateOnScrollGroup, AnimateOnScrollItem } from "./AnimateOnScroll";
 
 export default function TextBlock() {
   const isMobile = useIsMobile();
@@ -15,8 +15,12 @@ export default function TextBlock() {
         backgroundPosition: "bottom",
       }}
     >
-      <div className="flex flex-col gap-[64px] lg:gap-[106px] pt-[48px] pb-[96px] md:py-[128px] lg:pt-[176px] lg:pb-[248px] lg:max-w-[1000px] mx-auto">
-        <AnimateOnScroll
+      <AnimateOnScrollGroup
+        className="flex flex-col gap-[64px] lg:gap-[106px] pt-[48px] pb-[96px] md:py-[128px] lg:pt-[176px] lg:pb-[248px] lg:max-w-[1000px] mx-auto"
+        staggerDelay={0.3}
+      >
+        <AnimateOnScrollItem
+          index={1}
           className="flex justify-center"
           animation="fadeInUp"
           duration="fast"
@@ -26,8 +30,9 @@ export default function TextBlock() {
             learns user behaviors, and delivers instant solutions to boost
             revenue
           </h4>
-        </AnimateOnScroll>
-        <AnimateOnScroll
+        </AnimateOnScrollItem>
+        <AnimateOnScrollItem
+          index={2}
           className="relative flex flex-col px-4 md:px-10 items-center justify-center gap-5 lg:gap-6"
           animation="fadeInUp"
           duration="fast"
@@ -46,8 +51,8 @@ export default function TextBlock() {
               35-47% boost in conversions
             </h2>
           </div>
-        </AnimateOnScroll>
-      </div>
+        </AnimateOnScrollItem>
+      </AnimateOnScrollGroup>
     </div>
   );
 }
