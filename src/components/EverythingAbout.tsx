@@ -10,9 +10,9 @@ export default function EverythingAbout() {
     <div className="flex flex-col py-[64px] lg:flex-row lg:pt-16 lg:pb-20 lg:gap-6">
       <div className="flex flex-col w-full mx-auto lg:mx-0">
         <div className="flex flex-col gap-3 md:gap-4 lg:gap-4 w-full">
-          <h4 className="matter-h4-reg text-center lg:text-left">
+          <h5 className="matter-h5-reg text-center lg:text-left">
             Get to know everything about your users
-          </h4>
+          </h5>
           <p className="matter-p3-reg text-center lg:text-left">
             Turn persona insights into action. See motivations, pain points, and
             behaviors — then use them to design journeys that convert faster.

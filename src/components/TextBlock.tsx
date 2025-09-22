@@ -23,7 +23,7 @@ export default function TextBlock() {
         >
           <h4 className="matter-h4-reg px-4 md:px-10 text-center text-gradient-blue-block">
             Boostra is like having a UX & CRO Expert who spots issues,
-            learnsuser behaviors, and delivers instant solutions to boost
+            learns user behaviors, and delivers instant solutions to boost
             revenue
           </h4>
         </AnimateOnScroll>
