@@ -103,13 +103,13 @@ export default function RootLayout({
         <meta property="og:type" content="website" />
         <meta
           property="og:title"
-          content="Boostra - Website UX, Speed, Content &amp; Conversion Tool"
+          content="Boostra — Make every page convert better | Conversion rate optimization | UX | Website optimization"
         />
         <meta
           property="og:description"
-          content="Boostra tool analyzes UX, speed, content, and user behavior to uncover drop-off points and boost conversions through clear, data-driven website improvements"
+          content="Drop your URL and make your page conversion-ready. Boostra helps you uncover leaks, improve conversions, and grow revenue fast."
         />
-        <meta property="og:url" content="https://getboostra.com/" />
+        <meta property="og:url" content="https://getboostra.com" />
         <meta property="og:site_name" content="Boostra" />
         <meta
           property="og:image"
