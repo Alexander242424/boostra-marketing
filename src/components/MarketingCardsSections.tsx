@@ -51,9 +51,9 @@ export default function MarketingCardsSections() {
         >
           <div className="flex flex-col gap-6 md:gap-[48px] max-w-[610px] mx-auto">
             <div className="flex flex-col gap-3 md:gap-4 lg:max-w-[516px]">
-              <h6 className="matter-h6-reg text-center lg:text-left">
+              <h4 className="matter-h4-reg text-center lg:text-left">
                 {card.title}
-              </h6>
+              </h4>
               <p className="matter-p3-reg text-text-tertiary text-center lg:text-left">
                 {card.description}
               </p>

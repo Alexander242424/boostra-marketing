@@ -32,7 +32,7 @@ export default function CostSections() {
       <div className="flex flex-col items-center text-center gap-3 md:gap-5">
         <AnimateOnScrollItem index={0} animation="fadeInUp" duration="fast">
           <div className="max-w-[800px]">
-            <h2 className="matter-h2-reg">
+            <h2 className="matter-h3-reg">
               Find what&apos;s costing you <span className="text-gradient-blue"> conversions and revenue </span>
             </h2>
           </div>

@@ -72,7 +72,7 @@ export default function FloatingInput() {
   };
 
   return (
-    <div className="fixed bottom-6 left-1/2 transform -translate-x-1/2 z-50 w-full">
+    <div className="fixed bottom-6 left-1/2 transform -translate-x-1/2 z-50 w-full hover:scale-[1.02] transition-all duration-300 cursor-pointer">
       {isScrolled && (
         <div className="flex w-full justify-center animate-in slide-in-from-bottom-4 duration-500">
           <div className={cn(
@@ -91,9 +91,9 @@ export default function FloatingInput() {
                 <GlobeIcon />
               </div>
               <input
-                type="text"
+                type="url"
                 className={cn(
-                  "flex-1 h-full bg-transparent text-text-primary placeholder:text-text-tertiary matter-p4-reg outline-none border-none focus:outline-none not-sm:text-[16px]!",
+                  "flex-1 h-full bg-transparent text-text-primary placeholder:text-text-tertiary matter-p4-reg outline-none border-none focus:outline-none not-sm:text-[16px]! cursor-pointer",
                   "pr-32"
                 )}
                 placeholder="Page URL..."

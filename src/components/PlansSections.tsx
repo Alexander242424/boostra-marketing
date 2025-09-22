@@ -140,7 +140,7 @@ export default function PlansSections() {
           duration="fast"
           className="flex flex-col items-center text-center gap-3 md:gap-5 mb-[48px]"
         >
-          <h2 className="matter-h2-reg max-w-[752px]">
+          <h2 className="matter-h3-reg max-w-[700px]">
             Proven conversion lifts — <span className="text-gradient-blue"> for less than a coffee </span>
           </h2>
         </AnimateOnScrollItem>
@@ -163,7 +163,7 @@ export default function PlansSections() {
             >
               <p>{tab}</p>
               {tab === "Yearly" && (
-                <div className="w-full h-full min-w-[95px] min-h-[24px] items-center justify-center flex bg-[#02BF46] rounded-[100px] ml-2.5">
+                <div className="w-full h-full min-w-[110px] min-h-[24px] items-center justify-center flex bg-[#02BF46] rounded-[100px] ml-2.5">
                   <p className="matter-s2-med text-center">Save 2 months</p>
                 </div>
               )}

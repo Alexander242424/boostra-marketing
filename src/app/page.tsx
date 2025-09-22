@@ -27,13 +27,16 @@ export default function RootPage() {
       <div className="w-full h-full flex flex-col px-4 md:px-10 max-w-[1320px] mx-auto overflow-hidden">
         <HeroSections />
         <BrandSections />
-        <TextBlock />
+        <div id="solution">
+          <TextBlock />
+        </div>
         {/* <BoostingConvertion /> */}
-        <div id="case-studies">
+
+        <div id="how-it-works">
           <ConversionReady />
         </div>
-        <MarketingCardsSections/>
-        <EverythingAbout/>
+        <MarketingCardsSections />
+        <EverythingAbout />
         {/* <BoostConversionsSection/> */}
         {/* <div
           id="solutions"
@@ -64,7 +67,7 @@ export default function RootPage() {
             videoSrc={"/video/011MG_141_animation_1.webm"}
           />
         </div> */}
-        <div id="how-it-works">
+        <div id="case-studies">
           <CarouselSection />
         </div>
         {/* <div id="case-studies">

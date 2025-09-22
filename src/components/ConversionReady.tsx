@@ -44,11 +44,11 @@ export default function ConversionReady() {
     <div className="flex flex-col lg:flex-row lg:gap-[120px] pt-[96px] pb-[44px] md:pt-[89px] lg:pt-[89px] md:pb-[88px] lg:pb-0">
       <div className="flex flex-col md:gap-[48px] lg:gap-[55px] lg:pt-[73px] lg:pb-[67px]">
         <div className="flex flex-col gap-4 lg:gap-6 text-center lg:text-left">
-          <h3 className="matter-h3-reg">
+          <h2 className="matter-h3-reg">
             Make every page
             <br />
             <span className="text-gradient-blue"> Conversion-ready</span>
-          </h3>
+          </h2>
           <p className="matter-p3-reg text-text-tertiary">
             Spot leaks, fix usability gaps, and lift conversions instantly — without waiting weeks for results.
           </p>

@@ -116,17 +116,17 @@ export default function Header() {
           <nav className="hidden md:flex space-x-4 lg:space-x-8 font-matter">
             {pathname === "/" ? (
               <button
-                onClick={() => scrollToSection("solutions")}
+                onClick={() => scrollToSection("solution")}
                 className={`relative group header-text ${
                   activeSection === "solutions" ? "header-text-active" : ""
                 }`}
               >
-                Solutions
+                Solution
                 <span className="absolute bottom-0 left-0 w-0 h-[1px] header-underline underline-animation"></span>
               </button>
             ) : (
               <Link
-                href="/#solutions"
+                href="/#solution"
                 className={`relative group header-text ${
                   pathname === "/" && activeSection === "solutions" ? "header-text-active" : ""
                 }`}

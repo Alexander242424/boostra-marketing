@@ -45,7 +45,7 @@ export default function HeroSections() {
 
   return (
     <AnimateOnScrollGroup
-      className="flex flex-col lg:flex-row justify-between items-center sm:items-start xl:items-center gap-8 lg:gap-12 pb-[48px] md:pb-[76px] lg:pb-0 pt-[48px] lg:pt-[96px]"
+      className="flex flex-col lg:flex-row justify-between items-center gap-8 lg:gap-12 pb-[48px] md:pb-[76px] lg:pb-0 pt-[48px] lg:pt-[96px]"
       staggerDelay={0.1}
     >
       <div className="w-full flex flex-col gap-8 lg:min-w-[624px] lg:gap-[54px]">
@@ -78,6 +78,7 @@ export default function HeroSections() {
               iconLeft={<GlobeIcon />}
               btnText={buttonText}
               value={url}
+              type="url"
               onChange={(e) => setUrl(e.target.value)}
               onBtnClick={handleBoostPage}
               isError={url.trim() !== "" && !isValidUrl(url)}
@@ -94,7 +95,7 @@ export default function HeroSections() {
         index={4}
         animation="fadeInUp"
         duration="fast"
-        className="w-full h-full flex flex-col md:max-w-[560px] md:max-h-auto lg:max-w-[562px] lg:max-h-[496px] self-center lg:self-start border-[0.5px] border-[#FFFFFF29] rounded-[40px] overflow-hidden p-[6px]"
+        className="w-full h-full flex flex-col md:max-w-[560px] md:max-h-auto lg:max-w-[562px] lg:max-h-[496px] self-center border-[0.5px] border-[#FFFFFF29] rounded-[40px] overflow-hidden p-[6px]"
       >
         <div className="w-full h-full rounded-[34px] relative">
           {/* Фоновий градієнт для backdrop-blur */}

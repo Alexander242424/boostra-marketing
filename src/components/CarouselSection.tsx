@@ -413,7 +413,7 @@ export default function CarouselSection() {
           duration="fast"
           className="flex flex-col items-center text-center gap-3 md:gap-5 mb-[48px]"
         >
-          <h2 className="matter-h2-reg  max-w-[810px]">
+          <h2 className="matter-h3-reg  max-w-[810px]">
             Proven conversion lifts for{" "}
             <span className="text-gradient-blue">
               {" "}
