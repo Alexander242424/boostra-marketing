@@ -4,39 +4,39 @@ import UsabilityImage from "@/assets/Conversion ready,Usability,Above the fold/U
 import AbovethefoldImage from "@/assets/Conversion ready,Usability,Above the fold/Above the fold.webp";
 import AccessibilityImage from "@/assets/Conversion ready,Usability,Above the fold/Accessibility.webp";
 import SpeedLoadImage from "@/assets/Conversion ready,Usability,Above the fold/Speed Load.webp";
+import { LandingTexts } from "@/config/landing-texts";
 
-const marketingCards = [
-  {
-    title: "Get exceptional usability",
-    description:
-      "Simplify navigation and reduce friction, creating effortless user journeys that convert.",
-    image: UsabilityImage,
-    alt: "Get exceptional usability",
-  },
-  {
-    title: "Above the fold optimization",
-    description:
-      "Capture attention immediately with strategic placement of key elements and messaging.",
-    image: AbovethefoldImage,
-    alt: "Above the fold optimization",
-  },
-  {
-    title: "Accessibility compliance",
-    description:
-      "Ensure your site is accessible to all users, improving reach and user experience.",
-    image: AccessibilityImage,
-    alt: "Accessibility compliance",
-  },
-  {
-    title: "Speed and performance",
-    description:
-      "Optimize loading times and performance to keep users engaged and reduce bounce rates.",
-    image: SpeedLoadImage,
-    alt: "Speed and performance",
-  },
-];
+interface MarketingCardsSectionsProps {
+  texts: LandingTexts['marketingCards'];
+}
 
-export default function MarketingCardsSections() {
+export default function MarketingCardsSections({ texts }: MarketingCardsSectionsProps) {
+  const marketingCards = [
+    {
+      title: texts[0].title,
+      description: texts[0].description,
+      image: UsabilityImage,
+      alt: texts[0].title,
+    },
+    {
+      title: texts[1].title,
+      description: texts[1].description,
+      image: AbovethefoldImage,
+      alt: texts[1].title,
+    },
+    {
+      title: texts[2].title,
+      description: texts[2].description,
+      image: AccessibilityImage,
+      alt: texts[2].title,
+    },
+    {
+      title: texts[3].title,
+      description: texts[3].description,
+      image: SpeedLoadImage,
+      alt: texts[3].title,
+    },
+  ];
   return (
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 lg:border-t-[1px] lg:border-b-[1px] border-[#242424] lg:mt-[53px]">
       {/* Cards */}

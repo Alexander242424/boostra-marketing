@@ -1,7 +1,12 @@
 import { useIsMobile } from "@/hooks/useIsMobile";
 import { AnimateOnScrollGroup, AnimateOnScrollItem } from "./AnimateOnScroll";
+import { LandingTexts } from "@/config/landing-texts";
 
-export default function TextBlock() {
+interface TextBlockProps {
+  texts: LandingTexts['textBlock'];
+}
+
+export default function TextBlock({ texts }: TextBlockProps) {
   const isMobile = useIsMobile();
   return (
     <div
@@ -26,9 +31,7 @@ export default function TextBlock() {
           duration="fast"
         >
           <h4 className="matter-h4-reg px-4 md:px-10 text-center text-gradient-blue-block lg:max-w-[860px]">
-            Boostra is like having a UX & CRO Expert who spots issues,
-            learns user behaviors, and delivers instant solutions to boost
-            revenue
+            {texts.mainTitle}
           </h4>
         </AnimateOnScrollItem>
         <AnimateOnScrollItem
@@ -40,15 +43,15 @@ export default function TextBlock() {
           <div className="relative flex flex-col gap-4 lg:gap-[33px] text-center">
             {!isMobile ? (
               <p className="matter-p1-med">
-                On average, Boostra customers see an instant
+                {texts.averageText}
               </p>
             ) : (
               <p className="matter-p1-med">
-                On average, Boostra customers <br /> see an instant
+                {texts.averageText.replace(' see an instant', ' <br /> see an instant')}
               </p>
             )}
             <h2 className="matter-h2-reg text-gradient-blue">
-              35-47% boost in conversions
+              {texts.boostText}
             </h2>
           </div>
         </AnimateOnScrollItem>

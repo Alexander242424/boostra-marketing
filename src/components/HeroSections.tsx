@@ -2,7 +2,6 @@
 import CreditCardIcon from "@/assets/credit-card.svg";
 // HeroVideoAnimation буде завантажуватися динамічно
 import GlobeIcon from "@/assets/globus.svg";
-import TickIcon from "@/assets/tick-01.svg";
 import {
   useTrackEvent,
   useTrackFirstValueChangeEffect,
@@ -14,10 +13,13 @@ import { useState, useEffect } from "react";
 import { AnimateOnScrollGroup, AnimateOnScrollItem } from "./AnimateOnScroll";
 import { Input } from "./ui/input";
 import { useIsMobile } from "@/hooks/useIsMobile";
+import { LandingTexts } from "@/config/landing-texts";
 
-const buttonText = "Boost Page";
+interface HeroSectionsProps {
+  texts: LandingTexts['hero'];
+}
 
-export default function HeroSections() {
+export default function HeroSections({ texts }: HeroSectionsProps) {
   const [url, setUrl] = useState("");
   const { isValidUrl } = useUrlValidation();
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -40,7 +42,7 @@ export default function HeroSections() {
     if (isValidUrl(url)) {
       const finalUrl = url.trim();
       setIsSubmitting(true);
-      trackEvent(`${buttonText} Clicked`, { url: finalUrl }, () => {
+      trackEvent(`${texts.buttonText} Clicked`, { url: finalUrl }, () => {
         window.location.href = buildPortalUrl({
           pathname: "/url-loader",
           searchParams: { url: finalUrl },
@@ -59,18 +61,10 @@ export default function HeroSections() {
       <div className="w-full flex flex-col gap-8 lg:min-w-[624px] lg:gap-[54px]">
         <div className="flex flex-col gap-4 lg:gap-[42px] self-center lg:self-start md:max-w-[560px] lg:max-w-none">
           <AnimateOnScrollItem index={1} animation="fadeInUp" duration="fast">
-            <h1 className="matter-h1-reg text-center lg:text-left">
-              Meet your <br />
-              <span className="text-gradient-blue">AI Conversion </span>
-              <span className="text-[#FFFFFF3D]"> & </span> Revenue engine.
-            </h1>
+            <h1 className="matter-h1-reg text-center lg:text-left" dangerouslySetInnerHTML={{ __html: texts.title }} />
           </AnimateOnScrollItem>
           <AnimateOnScrollItem index={1} animation="fadeInUp" duration="fast">
-            <h1 className="matter-p1-reg text-center lg:text-left">
-              Get instant +35-47% Uplift in Conversions.
-              <br />
-              Boost revenue — in minutes, not weeks.
-            </h1>
+            <h1 className="matter-p1-reg text-center lg:text-left" dangerouslySetInnerHTML={{ __html: texts.subtitle }} />
           </AnimateOnScrollItem>
         </div>
         <AnimateOnScrollItem
@@ -84,7 +78,7 @@ export default function HeroSections() {
               className="cursor-pointer"
               placeholder="Page URL..."
               iconLeft={<GlobeIcon />}
-              btnText={buttonText}
+              btnText={texts.buttonText}
               value={url}
               type="url"
               onChange={(e) => setUrl(e.target.value)}
@@ -95,7 +89,7 @@ export default function HeroSections() {
           </div>
           <div className="flex matter-s1-reg text-text-tertiary items-center justify-center lg:justify-start gap-[5px] md:pl-6">
             <CreditCardIcon />
-            <p>No credit card required</p>
+            <p>{texts.noCreditCardText}</p>
           </div>
         </AnimateOnScrollItem>
       </div>

@@ -39,8 +39,13 @@ import NespressoLogo from "@/assets/logo Case Studies/nespresso.svg";
 import DeliverooLogo from "@/assets/logo Case Studies/deliveroo.svg";
 import ForbesLogo from "@/assets/logo Case Studies/forbes.svg";
 import SchneiderLogo from "@/assets/logo Case Studies/schneider.svg";
+import { LandingTexts } from "@/config/landing-texts";
 
-export default function BrandSections() {
+interface BrandSectionsProps {
+  texts: LandingTexts['brand'];
+}
+
+export default function BrandSections({ texts }: BrandSectionsProps) {
   const isMobile = useIsMobile();
   const [openTooltip, setOpenTooltip] = useState<number | null>(null);
   const trackEvent = useTrackEvent();
@@ -160,9 +165,7 @@ export default function BrandSections() {
   return (
     <AnimateOnScrollGroup className="flex flex-col pt-12 md:pt-[48px] lg:pt-[120px] pb-12 lg:pb-0 lg:mb-8 gap-6 lg:gap-8" staggerDelay={0.05}>
       <AnimateOnScrollItem index={0} animation="fadeInUp" duration="fast" className="flex justify-center">
-        <p className="matter-p1-med self-center text-center max-w-[70%]">
-          <span className="text-gradient-blue">2500+ companies </span> use Boostra to convert more
-        </p>
+        <p className="matter-p1-med self-center text-center max-w-[70%]" dangerouslySetInnerHTML={{ __html: texts.companiesText }} />
       </AnimateOnScrollItem>
       <AnimateOnScrollItem index={1} animation="fadeInUp" duration="fast" className="flex flex-wrap gap-4 justify-center">
         {logos.map((logo, index) => (
