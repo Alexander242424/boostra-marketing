@@ -25,50 +25,15 @@ export default function RootPage() {
         <div id="solution">
           <TextBlock />
         </div>
-        {/* <BoostingConvertion /> */}
 
         <div id="how-it-works">
           <ConversionReady />
         </div>
         <MarketingCardsSections />
         <EverythingAbout />
-        {/* <BoostConversionsSection/> */}
-        {/* <div
-          id="solutions"
-          className="flex flex-col items-center md:mt-[180px]"
-        >
-          <InfoCard
-            title={["Boost", "Conversions"]}
-            description={
-              "Increase revenue growth by uncovering hidden funnel leaks and converting more visitors into customers. Make every page conversion-ready."
-            }
-            btnText={"Get Started for Free"}
-            videoSrc={"/video/011MG_141_animation_1.webm"}
-          />
-          <InfoCard
-            title={["Boost", "Usability"]}
-            description={
-              "Don't let users leave by confused interface. Identify friction points and turn them into smooth, intuitive experiences"
-            }
-            btnText={"Get Started for Free"}
-            videoSrc={"/video/011MG_141_animation_1.webm"}
-          />
-          <InfoCard
-            title={["Boost", "Accessibility"]}
-            description={
-              "Accessibility gaps cost customers and compliance. Detect barriers and make your site usable for every visitor"
-            }
-            btnText={"Get Started for Free"}
-            videoSrc={"/video/011MG_141_animation_1.webm"}
-          />
-        </div> */}
         <div id="case-studies">
           <CarouselSection />
         </div>
-        {/* <div id="case-studies">
-          <RevenueOpportunities />
-        </div> */}
-        {/* <CopilotSections /> */}
         <CostSections />
         <div id="pricing">
           <PlansSections />

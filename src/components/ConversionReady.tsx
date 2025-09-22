@@ -4,7 +4,6 @@ import GoalIcon from "@/assets/Goals.svg";
 import Image from "next/image";
 import ConversionReadyImage from "@/assets/Conversion ready,Usability,Above the fold/Conversion ready.webp";
 import { useIsMobile } from "@/hooks/useIsMobile";
-// import { AnimateOnScrollGroup, AnimateOnScrollItem } from "./AnimateOnScroll";
 const cards = [
   {
     title: "Clarity in messaging",

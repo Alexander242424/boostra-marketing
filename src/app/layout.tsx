@@ -4,10 +4,8 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import HeaderBackground from "@/components/HeaderBackground";
-// import Loader from "@/components/Loader";
 import { type Config } from "mixpanel-browser";
 import { MixpanelProvider } from "@/providers/mixpanel";
-// import { Metadata } from "next";
 
 const Matter = localFont({
   src: [
