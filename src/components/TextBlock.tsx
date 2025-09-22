@@ -42,7 +42,7 @@ export default function TextBlock() {
                 On average, Boostra customers <br /> see an instant
               </p>
             )}
-            <h2 className="matter-h2-reg text-gradient-blue">
+            <h2 className="matter-h1-reg text-gradient-blue">
               35-47% boost in conversions
             </h2>
           </div>

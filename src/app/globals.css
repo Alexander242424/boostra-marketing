@@ -627,8 +627,8 @@
   .matter-h6-reg {
     font-family: var(--font-matter), system-ui, sans-serif !important;
     font-weight: 400;
-    font-size: 20px;
-    line-height: 134%;
+    font-size: 24px;
+    line-height: 120%;
     letter-spacing: -0.04em;
   }
 

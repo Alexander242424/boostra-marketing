@@ -176,19 +176,19 @@ export default function PlansSections() {
           duration="fast"
           className="flex flex-col mx-auto border border-[#1C42FF] md:flex-row p-6 md:pt-8 md:py-8 md:pb-6 bg-bg-white-6 rounded-[24px] gap-6 md:gap-8 max-w-[838px] shadow-[0px_0px_0px_5px_#3586FF3D]"
         >
-          <div className="flex flex-col w-full md:max-w-[330px]">
+          <div className="flex flex-col md:w-1/2">
             <h6 className="matter-h6-reg">
               {currentPlan?.name || "All in One"}
             </h6>
             <div className="flex pt-6 md:pt-[15px] items-end">
-              <h1 className="matter-h4-reg">
+              <span className="matter-h3-reg">
                 $
                 {selectedPrice
                   ? selectedPrice.price.toFixed(
                       selectedPrice.price % 1 === 0 ? 0 : 2
                     )
                   : "Nan"}
-              </h1>
+              </span>
               {selectedPrice?.oldPrice && (
                 <p className="matter-p2-reg pl-2 pb-1 text-text-tertiary">
                   <span className="line-through">
@@ -239,7 +239,7 @@ export default function PlansSections() {
             </p>
           </div>
           <div className="border-l border-bg-white-6" />
-          <div className="flex flex-col gap-4 md:gap-5">
+          <div className="flex flex-col gap-4 md:gap-5 md:w-1/2">
             <p className="matter-p2-reg">You will get:</p>
             <div className="flex flex-col gap-3">
               <div className="flex gap-3">

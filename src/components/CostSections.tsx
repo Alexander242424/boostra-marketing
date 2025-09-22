@@ -1,8 +1,8 @@
 import React from "react";
 import CostCard from "./CostCard";
-import CostImage1 from "@/assets/costmoney/1-min.png";
-import CostImage2 from "@/assets/costmoney/2-min.png";
-import CostImage3 from "@/assets/costmoney/3-min.png";
+import CostImage1 from "@/assets/costmoney/01-min.png";
+import CostImage2 from "@/assets/costmoney/02-min.png";
+import CostImage3 from "@/assets/costmoney/03-min.png";
 import { AnimateOnScrollGroup, AnimateOnScrollItem } from "./AnimateOnScroll";
 
 export default function CostSections() {

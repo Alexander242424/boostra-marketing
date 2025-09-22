@@ -43,7 +43,7 @@ export default function MarketingCardsSections() {
       {marketingCards.map((card, index) => (
         <div
           key={index}
-          className={`flex flex-col items-center lg:items-start lg:max-w-none py-8 md:py-[64px] lg:gap-[48px] lg:p-16 border-t-[1px] border-[#242424] lg:border-0 ${
+          className={`flex flex-col items-center lg:items-start lg:max-w-none py-12 md:py-[64px] lg:gap-[48px] lg:p-16 border-t-[1px] border-[#242424] lg:border-0 ${
             index % 2 === 0
               ? "lg:pl-0 lg:border-r-[1px] border-[#242424]"
               : "lg:pr-0"
