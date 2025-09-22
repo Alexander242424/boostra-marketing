@@ -1,21 +1,16 @@
 "use client";
 
-import BoostConversionsSection from "@/components/BoostConversionsSection";
-import BoostingConvertion from "@/components/BoostingConvertion";
 import BrandSections from "@/components/BrandSections";
 import CarouselSection from "@/components/CarouselSection";
 import ConversionReady from "@/components/ConversionReady";
-import CopilotSections from "@/components/CopilotSections";
 import CostSections from "@/components/CostSections";
 import EnterpriseGrade from "@/components/EnterpriseGrade";
 import EverythingAbout from "@/components/EverythingAbout";
 import FloatingInput from "@/components/FloatingInput";
 import HeroSections from "@/components/HeroSections";
-import InfoCard from "@/components/InfoCard";
 import MarketingCardsSections from "@/components/MarketingCardsSections";
 import PlansSections from "@/components/PlansSections";
 import QuestionsSection from "@/components/QuestionsSection";
-import RevenueOpportunities from "@/components/RevenueOpportunities";
 import TextBlock from "@/components/TextBlock";
 import { useTrackPageViewEffect } from "@/hooks/telemetry";
 
