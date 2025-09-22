@@ -1,6 +1,6 @@
 "use client";
 import CreditCardIcon from "@/assets/credit-card.svg";
-import HeroVideoAnimation from "@/assets/HeroVideoAnimation.json";
+// HeroVideoAnimation буде завантажуватися динамічно
 import GlobeIcon from "@/assets/globus.svg";
 import TickIcon from "@/assets/tick-01.svg";
 import {
@@ -9,8 +9,8 @@ import {
 } from "@/hooks/telemetry";
 import { useBuildPortalUrl } from "@/hooks/use-build-portal-url";
 import { useUrlValidation } from "@/hooks/useUrlValidation";
-import Lottie from "lottie-react";
-import { useState } from "react";
+import LottiePlayer from "./LottiePlayer";
+import { useState, useEffect } from "react";
 import { AnimateOnScrollGroup, AnimateOnScrollItem } from "./AnimateOnScroll";
 import { Input } from "./ui/input";
 import { useIsMobile } from "@/hooks/useIsMobile";
@@ -21,9 +21,17 @@ export default function HeroSections() {
   const [url, setUrl] = useState("");
   const { isValidUrl } = useUrlValidation();
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [heroAnimation, setHeroAnimation] = useState<any>(null);
   const buildPortalUrl = useBuildPortalUrl();
   const trackEvent = useTrackEvent();
   const isMobile = useIsMobile();
+
+  // Динамічне завантаження анімації
+  useEffect(() => {
+    import("@/assets/HeroVideoAnimation.json").then((animation) => {
+      setHeroAnimation(animation.default);
+    });
+  }, []);
 
   useTrackFirstValueChangeEffect("URL Input Started", undefined, [url]);
 
@@ -100,11 +108,13 @@ export default function HeroSections() {
         <div className="w-full h-full rounded-[34px] relative">
           {/* Фоновий градієнт для backdrop-blur */}
           <div className="absolute inset-0 rounded-[34px] bg-[#00000066]"></div>
-          <Lottie
-            className="w-full h-full rounded-[34px] bg-[#00000066] relative z-10" //backdrop-blur-[0px]
-            animationData={HeroVideoAnimation}
-            loop={true}
-          />
+          {heroAnimation && (
+            <LottiePlayer
+              className="w-full h-full rounded-[34px] bg-[#00000066] relative z-10" //backdrop-blur-[0px]
+              animationData={heroAnimation}
+              loop={true}
+            />
+          )}
         </div>
       </AnimateOnScrollItem>
     </AnimateOnScrollGroup>

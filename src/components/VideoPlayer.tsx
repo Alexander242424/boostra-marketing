@@ -1,6 +1,21 @@
 "use client";
 
-import { MediaPlayer, MediaProvider } from "@vidstack/react";
+import dynamic from "next/dynamic";
+import { Suspense } from "react";
+
+// Dynamic import для @vidstack/react з відключенням SSR
+const MediaPlayer = dynamic(
+  () => import("@vidstack/react").then((mod) => mod.MediaPlayer),
+  { 
+    ssr: false,
+    loading: () => <div className="w-full h-full bg-gray-200 animate-pulse rounded" />
+  }
+);
+
+const MediaProvider = dynamic(
+  () => import("@vidstack/react").then((mod) => mod.MediaProvider),
+  { ssr: false }
+);
 
 interface VideoPlayerProps {
   src: string;
@@ -44,21 +59,23 @@ export default function VideoPlayer({
   const shouldShowControls = controls; // Respect the controls prop - don't force show on iOS
 
   return (
-    <MediaPlayer
-      className={`w-full h-full ${className}`}
-      title="Video Player"
-      // aspectRatio="16 / 9"
-      controls={shouldShowControls}
-      src={src}
-      poster={poster}
-      preload="auto"
-      autoPlay={shouldAutoPlay}
-      muted={shouldMute}
-      loop={loop}
-      onError={onError}
-      playsInline={isIOS} // Required for iOS
-    >
-      <MediaProvider className="w-full h-full video-player-provider" />
-    </MediaPlayer>
+    <Suspense fallback={<div className="w-full h-full bg-gray-200 animate-pulse rounded" />}>
+      <MediaPlayer
+        className={`w-full h-full ${className}`}
+        title="Video Player"
+        // aspectRatio="16 / 9"
+        controls={shouldShowControls}
+        src={src}
+        poster={poster}
+        preload="auto"
+        autoPlay={shouldAutoPlay}
+        muted={shouldMute}
+        loop={loop}
+        onError={onError}
+        playsInline={isIOS} // Required for iOS
+      >
+        <MediaProvider className="w-full h-full video-player-provider" />
+      </MediaPlayer>
+    </Suspense>
   );
 }
